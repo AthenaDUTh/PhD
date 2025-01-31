@@ -1,43 +1,148 @@
 % !TeX root = ../../thesis.tex
-\chapter{This is introduction}\label{ch:introduction}
+\chapter{Introduction}\label{ch:introduction}
 
 \instructionsintroduction
+\section{Semiconductor Image Sensors}
 
-% Illustration on how to refer to your papers when using biblatex
-% (see second line in thesis.tex to activate biblatex)
-%\definecolor{shadecolor}{gray}{0.85}
-%\begin{shaded}
-%This chapter was previously published as:\\
-%\fullcite{VandenBroeck2011IJCAI}
-%\newpage
-%\end{shaded}
+\section{Towards Ultra-High Resolution Imagers}
 
-% Some dummy code to make sure bibtex does not complain.
-Illustration of how to include citations \cite{Meert2011PhD} and \cite{VandenBroeck2011IJCAI}. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\subsection{Replacing Color Filters with Color Splitting Waveguides}
+\subsection{Absorption Efficiency vs Response Time: A trade-off}
 
-And yet another citation \cite{FrRo2010Diffusion}.
+\begin{itemize}
+    \item Increasing the electric field (Single photon avalanche diode)
+    \item Reducing the effective charge collection depth
+    \item Antireflection, backscattering structures, and deep trench isolation technologies
+\end{itemize}
 
-% Some dummy code to get at least 1 entry in the nomenclature.
-\nomenclature{$\Theta$}{A nice symbol}
-Introducing some symbol: $\Theta$.
-
-% Some dummy code to get at least 1 entry in the list of
-% abbreviations.
-\newglossaryentry{md}{name={MD},description={molecular dynamics}}
-Introducing an acronym: \gls{md}.
-
-% Some dummy code show how to include images.
-\begin{figure}
-  \centering
-  \medskip
-  \includegraphics[width=.9\textwidth]{sine}
-  \caption[Short caption for Table of Figures]{Illustration of how to
-  include a figure (long text, should not go to Table of Figures).}
-  \label{fig:sine}
-\end{figure}
+\subsection{Beyond Silicon Detectors}
+\begin{itemize}
+    \item Provide alternatives for visible light detection (Ge, InGaAs, Organics)
+    \item Introduce perovskites as an alternative
+    \item Give examples for perovskites integrated with read-out circuits (high-level) (Wenya paper literature review)
+\end{itemize}
 
 
+\section{Perovskite-Based Photodetectors}
 
+\subsection{Properties of Perovskites}
+Perovskites were integrated into photovoltaic devices for the first time in 2009 by the Miyasaka group \cite{Kojima2009OrganometalCells}.
+
+
+\begin{itemize}
+    \item ABX3 material structure 
+    \item Phases, absorption, recombination
+    \item Versatile nature, from bulk, thin films, nanowires, QDs, etc
+\end{itemize}
+
+\subsection{From Solar cells to Photodetectors}
+\begin{itemize}
+    \item Schematic for absorption, extraction collection
+    \item Solar cell structure, role of transport layer
+    \item Transition of photodetectors - use of same structure 
+    \item Advantages of photodiodes compared to transistors, conductors, resistors 
+    \item Some examples of perovskite-based photodetectors (low dark current - and what affects, fast extraction, X-Ray detection, flexibility, etc)
+\end{itemize}
+
+\subsection{Scalable, High-Temperature Perovskites}
+
+
+Research around perovskite optoelectronic devices is mainly focused on the use of hybrid organic-inorganic perovskites deposited through solution processing methods, primarily spin-coating. 
+
+\textbf{Advantages of solution processing (spin-coating): }
+
+\begin{itemize}
+    \item Simplicity, No need for expensive and complex vacuum systems
+    \item Suitable for fast prototyping
+    \item Introducing additives has multiple advantages (modulating morphology, stabilizing perovskite phase, adjusting energy-level alignment, eliminating hysteresis, enhancing operating stability)\cite{Liu2020ACells}
+\end{itemize}
+
+
+\textbf{Disadvantages of solution processing:}
+
+\begin{itemize}
+    \item Not readily transferable to industry
+    \item Anti-solvent processing is challenging to scale-up \cite{Saki2021Solution-processedCells}.
+\end{itemize}
+
+\textbf{Advantages of thermal evaporation:}
+\begin{itemize}
+    \item Many additional methods exists (inkjet printing, spray coating, chemical vapor deposition, flash evaporation and other. Less common in literature and show lower performance compared to thermal evaporation \cite{Vaynzof2020TheProcessing}.
+    \item part from paper that describes the growth of the perovskite on the substrate    
+    \item Up until 2020, thermally-evaporated mini modules of an active area of 21cm2 had achieved the superior efficiency of 18.13\% \cite{Li2020HighlyMini-modules} - need to check if this record was broken
+    \item Post-Deposition annealing is not necessary, making it compatible with flexible optoelectronic applications \cite{Becker2019LowExperimentation}
+    \item Avoids the use of toxic solvents \cite{Zhang2020TowardCells} 
+    \item No risk of damaging the underlying layers of tandem devices \cite{Forgacs2017EfficientCells}.
+    \item Better control over thickness
+\end{itemize}
+
+
+\textbf{Disadvantages of thermal evaporation:}
+\begin{itemize}
+    \item Evaporation of perovskites that contain methylammonium is complicated due to its relatively high vapor pressure and low sticking coefficient \cite{Kim2020DepositionCH3NH3PbI3Perovskite} (Read more this publication).
+    \item Approaches of including additives are not compatible with thermal evaporation. 
+    \item Grain size of evaporated perovskites are significantly smaller compared to solution processed ones \cite{Vaynzof2020TheProcessing}.
+    \item The abundant grain boundaries not only limit the performance of the detector, but also the stability against moisture \cite{Wang2017Scaling}.
+\end{itemize}
+
+
+\textbf{Disadvantages of hybrid organic-inorganic perovskites}
+
+\begin{itemize}
+    \item Hybrid organic-inorganic perovskites are preferred for optimal performances \cite{Zhang2021All-inorganicCells}
+    \item Hybrid organic-inorganic perovskites are sensitive to thermal degradation
+    \item Most temperature-stability studies limit their scope up to 85C. \cite{Yang2023InvertedPassivation} <- this reference contains more references for other studies that evaluate tolerance up to 85C
+    \item Not suitable for applications with high thermal budget 
+    \item These conditions might be imposed by intrinsic factors (triggering of self-heating mechanisms through resistive loses) or extrinsic factors (high ambient temperature, high temperature post processing)\cite{Handa2019LargePerovskite, Dong2021SupportingFilm, Li2022StructureTemperatures}.
+\end{itemize}
+
+
+
+
+
+\textbf{Advantages of all-inorganic perovskites: }
+
+\begin{itemize}
+    \item $CsPbI_3$ exists in several phases:
+    \item The cubic $\alpha$-phase
+    \item Two quasi-perovskite phases: The tetragonal $\beta$-phase, and the orthorhombic $\gamma$-phase
+    \item The non-perovskite, orthorhombic, yellow $\delta$-phase \cite{Steele2019ThermalFilms,Mali2021ImplementingCells}. 
+       
+    
+    \item The $\alpha-$, $\beta-$, and $\gamma-$phases are similar in structure in properties
+    \item As a result, they are commonly referred to as the "black phase" without proper distinction between them \cite{Steele2019ThermalFilms, Yan2020DeterminationFilms, Sutton2018CubicExperiment}
+
+    \item The naming as black and yellow phase comes from the color films, which indicates their bandgap (xx for black phase, xx for yellow phase)
+
+    \item Therefore only the black phases are interesting for optoelectronic applications \cite{Burwig2018CrystalFilms, Steele2022AnFilms}.
+
+    \item The black phases of $CsPbI_3$ are stable at high temperature (> what number)
+
+    \item It is possible to kinetically trap the black phase at room temperature through rapid cooling
+
+    \item However, the yellow phase emerges almost instantaneously upon exposure to ambient moisture \cite{Steele2019ThermalFilms}.
+
+    \item What is triggering the conversion? Give some energy transition diagrams (Refer to Gibbs free energy and tolerance factor)
+
+    \item Besides encapsulation, many strategies have been proposed to increase the stability of $CsPbI_3$ in ambient conditions, namely: introduction of stabilizing agents, passivation of surfaces, stress introduction through laser writing, and doping with other materials (replacing iodine with other halides or replacing lead with Bismuth and tin). \cite{Li2018SurfaceCells, Li2020ApproachesCells, Steele2022AnFilms, MinSim2018PhaseApplications} - check more citations  
+    
+\end{itemize}
+
+\subsection{State of the art for evaporated, all-inorganic perovskites}
+
+\textbf{Good discussion and references for Metal Oxides as trasnport layers happens here \cite{Yang2023InvertedPassivation}}.
+
+
+\section{Scope and Aim of This Thesis}
+
+It is common to see solution-processed layers in combination with thermally evaporated perovskites. \textit{This goes in stark contrast to the solvent-free nature of thermal evaporation}. It is important to develop truly all-inorganic and all-evaporated perovskite-based photodetectors. 
+
+
+
+\begin{itemize}
+    \item Develop an all-inorganic perovskite diode (many reports use inorganic perovskites with organic TLs - this defies the purpose of using an inroganic absorber)
+    \item Evaluate the deposition conditions on performance and repeatability of the photodetector
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

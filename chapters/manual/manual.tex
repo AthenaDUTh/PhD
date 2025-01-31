@@ -2,6 +2,8 @@
 \chapter{Manual}\label{ch:manual}
 
 
+
+
 \section{Tips and Tricks}
 
 \subsection{Image on the cover page}
@@ -136,6 +138,44 @@ If you prefer to directly view the created PDF\textbf{ from the beginning }edit 
 	txs:///pdflatex | txs:///bibtex | txs:///makeglossaries | txs:///makeindex |
 	txs:///pdflatex  | txs:///pdflatex | txs:///view-pdf
 	\end{verbatim}}
+
+\begin{figure}  [htbp]
+\captionsetup[subfigure]{justification=centering}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{chapters/manual/image/Sample1.png}
+  \caption{$V_{DS} = 49 V$ }
+
+  \label{fig:chipir:IRFR:49}
+  \captionsetup{justification=centering}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{chapters/manual/image/Sample2.png}
+  \caption{$V_{DS} = 50 V$}
+  \label{fig:chipir:irfr:50}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{chapters/manual/image/Sample3.png}
+  \caption{$V_{DS} = 52 V$ }
+
+  \label{fig:chipir:irfr:52}
+  \captionsetup{justification=centering}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{chapters/manual/image/Sample4.png}
+  \caption{$V_{DS} = 54 V$}
+  \label{fig:chipir:irfr:54}
+\end{subfigure}
+
+\end{figure}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Keep the following \cleardoublepage at the end of this file, 

@@ -534,6 +534,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Now load a whole bunch of packages:
 
+\usepackage{graphicx} % For including images
+\usepackage{subcaption} % For subfigures
+\usepackage{caption} % For custom captions
+\usepackage[inkscapelatex=false]{svg}
+\usepackage{chemformula}
+\usepackage{gensymb}
+
+
 %\RequirePackage{showlabels}
 
 \RequirePackage{listings}
