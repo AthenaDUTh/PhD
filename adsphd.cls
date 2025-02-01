@@ -540,6 +540,7 @@
 \usepackage[inkscapelatex=false]{svg}
 \usepackage{chemformula}
 \usepackage{gensymb}
+\usepackage{enumerate}
 
 
 %\RequirePackage{showlabels}
