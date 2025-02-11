@@ -14,7 +14,7 @@ Initially, we lay the fundamentals aroung this caharacterization measurement, an
 
 
 
-\section{Temperature-Dependent Spectroscopic Ellipsometry (SE)}
+\section{Introduction to Spectroscopic Ellipsometry} \label{ch:ellipsometry:intro}
 
 
 Spectroscopic ellipsometry (SE) is a widely used optical characterization technique, suitable for the determination of a thin film's thickness, roughness, optical constants, and more. Its working principle can be summarized as follows: 
@@ -35,7 +35,17 @@ This change in polarization is described by two parameters, namely $\Psi$ and $\
 
 where $r_p$ and $r_s$ describe the reflection coefficient for the \textit{p}-polarized and \textit{s}-polarized light, respectively \cite{Fujiwara2018SpectroscopicCharacterization}.
 
+\begin{figure}{}
+  \centering
+  \medskip
+  \includegraphics[width=.95\textwidth]{chapters/ellipsometry/image/Model_Approach.pdf}
+  \caption{}
+  \label{fig:ellipsometry:static_models}
+\end{figure}
+
 SE data are typically collected across a wide range of wavelengths (300 nm - 2500 nm) and at various angles of incidence (between 45\degree and 85\degree). This relatively simple dataset contains ample information about the physical material properties of a thin film (including its thickness, roughness, dielectric functions, uniformity, composition, and more), however a careful model-based regression analysis is required to extrapolate them. This means that a model of the sample has to be created, which of consists of fixed and fitted parameters. Fixed parameters are the known samples properties (e.g. the dielectric function of the substrate), while fitted parameters are all the unknown properties that are under investigation. An initial "guessing" of these unknown properties is necessary, followed by an iterative data-fitting process that compares the simulated and experimental $\Psi$ and $\Delta$ values. In the end, the quality of the fitting process is described by the mean squared error (MSE), given by: 
+
+
 
 
 \begin{equation}
@@ -54,87 +64,40 @@ For the characterization of perovskite thin films via spectroscopic ellipsometry
             n(\lambda) = A + \frac{B}{\lambda^2} + \frac{C}{\lambda^4}
             \label{eq:cauchy}
         \end{equation}
-    \item Besides the A, B, and C values of equation \ref{eq:cauchy}, additional fitting parameters include the thickness of the perovskite bulk and the thickness of the roughness layer (Fig. \ref{fig:ellipsometry:static_models}). The roughness is typically simulated as an additional layer, which follows the effective medium approximation (EMA), consisting of 50\% voids and 50\% the underlying material. 
-    \item The raltively low number of fitting of paramters oft this model, as well as the small impact ofthe eroughness component in this region, make it ideal for a good approximation of the thickness of the perovskite thin film. 
+    \item Besides the A, B, and C values of equation \ref{eq:cauchy}, additional fitting parameters include the thickness of the perovskite bulk and the thickness of the roughness layer (as shown in Fig.~\ref{fig:ellipsometry:static_models}). The roughness is typically simulated as an additional layer, which follows the Bruggeman effective medium approximation (EMA), consisting of 50\% voids and 50\% bulk material, as introduced by Aspens et al \cite{Aspnes1979InvestigationEllipsometry}. 
+
+    \item The relatively low number of fitting parameters, the interference of light reflected both from the sample's surface and the interface with the substrate, as well as the small influence of surface roughness in the infrared region render the Cauchy model ideal for a good estimation of the bulk thickness. 
+
+    \item Having now bulk thickness as a fixed parameter, the Cauchy layer can be parameterized into a Kramers-Kroning consistent B-spline layer, extending the SE data range to the visible spectrum (up to 300 nm). 
+
+    \item As a last step, the bulk's dielectric constant is further parameterized into a Generator Oscillator layer. (Low roughness film in Fig.\ref{fig:ellipsometry:static_fits}).    
 
 \end{itemize}
 
+Choosing the right type and number of oscillators in the last step is critical for the accurate determination of the film's optical constants. Using too few oscillators might make it impossible to reproduce the features in the experimental data, while using too many oscillators might lead to overfitting and the generation of results with little physical meaning. For the modeling of semiconductor materials, the use of Gaussian oscillator is the simplest choice. The imaginary part of the dielectric constant ($\varepsilon_r$) can be described by three free parameters, namely the amplitude ($A$), the broadening ($C$), and the center energy ($E_0$). However, the symmetric nature of the Gaussian oscillator does not fully describe the real optical transitions is thin films, where tail states and disorder lead to asymmetric broadening. As an alternative, Tauc-Lorentz oscillators are more commonly used for the modeling of perovskite thin films. This type of oscillator has one additional parameter that describes the bandgap energy of the material ($E_g$), producing a more asymmetric and realistic ($\varepsilon)2$) shape \cite{Jellison1996ParameterizationRegion}. Therefore, the absorption from the Tauc-Lorentz oscillator is described by: 
 
-\begin{figure}{}
+\begin{equation}
+\varepsilon_2(E) =
+\begin{cases}
+\frac{A E_0 C}{E} \cdot \frac{(E - E_g)^2}{(E^2 - E_0^2)^2 + C^2 E^2}, & E > E_g \\
+0, & E \leq E_g
+\end{cases}
+\label{eq:tauc_lorentz}
+\end{equation}
+
+
+The properties of perovskite thin films have been widely studied by means of SE measurements in literature. When measurements were performed in room temperature (RT), they were mainly used for the determination of the complex optical constants for various perovskite compositions \cite{Yan2020DeterminationFilms, Zhao2018EllipsometricFilm, Loper2015ComplexSpectrophotometry, Yuan2021Moisture-stimulatedProperties}. In a few occasions, SE in room temperature was used for less common studies, such as the identification of light-induced phase segregation \cite{Bernhardt2022InPerovskites} or the evaluation of perovskite degradation under ambient conditions \cite{Marronnier2018ElectricalConditions}. On the other hand, temperature-dependent SE measurements were previously performed on perovskite thin films for the characterization of their temperature-dependent optical properties \cite{Jiang2016TemperatureEllipsometry, Chen2019CharacterizingEllipsometry}, the investigation of temperature-induced degradation \cite{Tejada2022HybridInfrared, Wang2019InEllipsometry}, and the identification of phase-transition temperatures \cite{Yuan2020InPortfolio, Yuan2021Moisture-stimulatedProperties}. The following sections will identify specific limitations in the modeling of temperature-dependent SE data, will present a novel dynamic modeling approach, and will lastly provide new insights into the in situ annealing effect on thermally evaporated \ch{CsPbI2Br} thin films.  
+
+
+\section{Temperature-Dependent SE for Perovskite Thin Films}
+
+\begin{figure}[tbp]
   \centering
   \medskip
-  \includegraphics[width=.95\textwidth]{chapters/ellipsometry/image/Model_Approach.pdf}
+  \includegraphics[width=.99\textwidth]{chapters/ellipsometry/image/experiment_description.pdf}
   \caption{}
-  \label{fig:ellipsometry:static_models}
+  \label{fig:ellipsometry:experiment_description}
 \end{figure}
-
-
-
-
-The properties of perovskite thin films have been widely studied by means of spectroscopic ellipsometry. It is an indispensable measurement for most labs, used to tune the fabrication process (via thickness estimations), extract the optical constants and use them for additional optical simulations, or extract relevant quality prameters (e.g. the Urbacj energy, bandgap, model the degradation of films 
-
-
-
-
- This measurments is typically done in the spectrun between 210 nm to 2500 nm. The perovskite is ablrorbing to part of this region and transpoarent to the rest. A common apporiach for the modeling is to rely on the tranparen region of the film, for the stimation og the thickness. Roughness dimension is much smaller than the wavelength and does not have as a strong impact, while sugan is refelcted from both the top and the bottom of the samples. For transparetn fimls, a simplified Cauchy model s typically used, which is described by the following formula. It is considered that the extinction ocefficient is 0 and that the refractive index is depednet onf the wavelenth through the formula xxxx. 
-
-The modeling of the absorptinve region is vital for the estiamtion of the optical constants and the bandgap of the material. Oscillatior-based models that represent the oscialltors of the material. Many difference models are avaialble, namely Gaussian Oscialltors, Cody-Lorentz or Tauc-Lorents. The difference among lies on the xxx properties Short explanation of each model. 
-
-In this work we opted for the use of Tauc Lorentz oscillators since they consider the xxx (see from book). 
-
-It is possible to combine a temperatyre stage and peroforam the measuremetns as a fucntion of temp. This has been done previously for perovskite films and more. Most of times the results follow a step-wise increase in the temperature, stabilization, measurment, before increasing to the ext temperature step. However, we realized that this approach conceals infomration arounf the real time evolution of the effect, 
-
-a static model has to be developed for eash static step which can be laborious, and there is also nocorrelation between two consecutuve measurements. 
-
-For this reason, we decided to employ a continuoys heating ramp and obtain the Psi and Delta as a function of time and temperature, as shown in Fig. xx. the Psi and Delta give some high-level infomration about the period in the film that a lot of changes is happening, hoewegver needs to be modelled to further understand. The approach for the model mevelopement and the corroboration of the produed results will be firther duscussed in the next section. 
-
-The appraoch for the development of this model will be described in the mext section.
-
-
-\begin{itemize}
-    \item Fundamentals of Spectroscopic Ellipsometry
-    \item Room Temperature Characterization of Perovskite Thin Films
-    \item Temperature-dependent works in literature
-    \item Description of experiment
-\end{itemize}
-
-\subsection{SE Model Development}
-
-Various Options were evaluated for the modelling of the temperatuer dependent results, according to literature and similar workds. 
-
-The most straignht forward would be to split the time scale into smaller points and develop a spearates stac model for each of those. However, the loss of conintuoity might conseal real time information. 
-
-The used software gives the option of dynamci modelling, that is the development of a model at t0, and the continuous fitting of its parameters to complete the whole time spectrum. We know that the thickness of the material is changing, the roughness is changeing (as shown formf the AFM pictures of the previous section) and also the position and intensituty of the oscillators is changing due to pahse changes, relaxatin of the badngap at high temperautres etc. This means that all the parametes of the thenitial model should be set as free (e.g. that is 24 parameters for the Tauch lorent + thickness + roughness). The continuous fitting of these paramters, is likely to lead to over-fitting behavior and the loos of physical meaning in the results. An example of thethickess an roughness evolution sis shown in Fig. xx, where abript changes in thickness and roughness are observed with little to no-physical meaning. 
-
-Then there is a dynamic moelling development that was insipred for films SiGe. Whst wash shown is that they can develop a mmodel for specific stoichioemtries (E.G. XX ) and then describe the intermediate stoichiometris as superposition of the closests ones. 
-
-we therfore realzed that we describe the material as a superpositions for a few static states that are slowly changing from one to the other. 
-
-This positions were sected from careful consideration of he film. 
-
-Moments t0 and t23 describe the initial and final state of the film, while t11 consisders the condition of the film at the higherst 300C (e.g. higher thickness due to expansion). psi and dlta reveal slo to changes happening between the 4th and the 8th minute of the epxriemetnt, threfore we develop an additional model for these two states to account for these cahnges. As it will be further discussed, these 5 models will be sufficient from the description fo the whole evolution of the film. 
-
-Nedd to develop the 5 static models and corroborate their accuracy. 
-This is more easily accessible for the models at t0 and t23, since we can do aadditional measuremmetns bfore and after the cahracterization of the film. 
-
-\subsection{Development and Corroboration of Static Models}
-
-Developing a model for the t0 is rather straight forward, due to the relatively low roughness of the film (RMS = 2, Fig. xx). Following the process desrcibed above, we use roughenss and mic of voids and below material we obtain athickness equal to xx nm, which id in good agreement with the profilometry measusmtens. W e then shoft to the partially absorptive reions, between 300 and 700 nm. Use of 6 Tauc-Lorentz Oscillators, achieve a model with an MSE of 12. As a genral rule of thumb an MSE below 20 inidcates a good fit, event though the physicallity should always be evaluated. For this reason, we extract the optical constants of the film, and use them to simulate the absorptance and reflectance of the films accorind to the transfer materix method. Fllowiwe experiementally evaluate the same parametersk in the lab doing rt measuremetns, an calculatign the A throug the relationship A= 100 - R - T. fIG shows the comparison between experiemtnal and simulated values, which confirms the accuracy of the static model at t0. 
-
-Moving to the model of t23 proves to conceal challenges due to the high roughness of th film.Specififaclly, if they same rocess as above it is not possible to obtain a good MSE. Howeve, it is possibelt ot od so if we set hte thickness as a fit paramter. follwoed, iti is nindeed possble to obtain  good MSE, however the thickness is no longer relaistc (the obtained value i 310 nm while the thickness through elliposmetry if xx nm) It is alo not physical to have athicker film at the asamte temrature, same or thinner in case with have the elimination of voids. Hoe
-
-The cause of this challenge was identified to be the increase roughness of the film. Specifially, the use onf an 50:50 EMA model is recomneded only in ase the dimension of the roughness element is less that 0.1 of the wavlenfth. This is in order to prevent sattering phenomena. The shotes wavelgnth we use of 300 nm, so the llargest roughness we culd have is 30 nm. This is close to the limiti of the EM model. In case, a larged discrepancy was observed it would be necessary to to use a multilayer approach, where the roughness is explained as a mulilayer EMA with variuous peroventages. 
-
-However, since fo thsi type of example, the condition is cloe to the limit, we realized that is ti sposble ot fix the thickness and set the percentage of voids as a fitting paremeter. INdeed, with this simple adjustment it is possible to achieve both a good MSE and a relaisitc value of the thickness. The additional compariosn with the RT values as it was described above, furthe confirms the accuracy of the modelling approach. Th percentegae of voids was found to be close to 15\% for this pparoach. Therefore, we suse the same strategy ofr hte development of the additonal models at t5 t7 and t11. 
-
-
-\subsection{Dynamic Model Developent}
-
-We followngly use the 5 static models to develop the dynamic one. 
-THe model is illustrated in figure xx. It is an EMA consisteing the 5 individal models. The paramters of these modelsa re fixed, the olume fraction si the fitted. An additioanl fitting parameter is the thickness o ht film so as to eplain the expansion, as well as the tickness of hte rouhness layer to try to indentify the changes in roughess and grain coalesence. We fit in real time. Fig xx shoes the evolution of the MSE as a function of time and tmperature, it mostly maintened below 20 which a first strong indication abotu the accuracy of the developed model. The following chapters will further examine the changes in the morphology of the otpical proporties og trhi films, drwaing comparison with additional in situ and ex situ characterization measurements. 
-
-There are two types of scatter points the red is the model we describe above, the blue scatter points is a simplered causcy-based model that is only applied to the trnspoarent region. less sensitive to roughness variations, we use it as an additional control step to verify the peroformance of the dynamic model in the partially absorptive region. Both models are mainly absorbed below 20 MSE which si a first good sign for the accuracy. 
-
 
 \begin{figure}[htbp]
     \centering
@@ -161,83 +124,18 @@ There are two types of scatter points the red is the model we describe above, th
     \label{fig:ellipsometry:raw_psi_delta}
 \end{figure}
 
+Most studies on temperature-dependent SE characterization follow an approach where they change the sample's temperature in step-wise increments or decrements, allowing for some stabilization time before moving to the next temperature step. A separate SE model is then developed for each temperature step. While this methodology ensures adequate time for potential transitions or internal structure changes, it is also likely that to conceal information around real-time effects. As an alternative, the implementation of a continuous heating ramp could be more representative of the changes that are taking place during a real annealing step. For this reason, we implemented the heating ramp shown in Fig.~\ref{fig:ellipsometry:experiment_description} for the characterization of an  \ch{CsPbI2Br} thin film, deposited on a Si substrate with 100 nm of thermally grown \ch{SiO_2}. This choice of substrate prevents complications arising from backside reflection in semitransparent substrates or multilayer interference within multilayer stacks. The sample was placed in a enclosed temperature stage that was continuously flushed with nitrogen. Starting from RT, the temperature was increased with a rate of approximately 30\degree C/min, up to 300\degree C. The sample was allowed to stabilize there for 3 minutes, before being cooled back down to RT with a rate of 35\degree C/min. An SE measurement at a fixed incident angle of 70\degree was taken approximately every 23 seconds. It would not be possible to perform varied angle SE due to the fixed position of the optical windows on the heating stage. The acquired $\Psi$ and $\Delta$ values
+as function of time are shown in Fig.~\ref{fig:ellipsometry:raw_psi_delta}. Even though this data give some high level information about the moments the sample is going through drastic changes (e.g. between the $5^{\text{th}}$ and $11^{\text{th}}$ minute of the experiment), a careful modeling is necessary to decipher them. 
 
-
-
-
-\begin{figure}[htbp]
-    \centering
-    % First row
-    \begin{subfigure}[t]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/t0_plot.pdf} % Replace with your image file
-        \caption{As-Deposited State}
-        \label{fig:ellipsometry:static_fits:t0}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/t23_fixed_thick_x_void_p.pdf} 
-        \label{fig:ellipsometry:static_fits:t23_fixed_thick_x_void}
-        % Replace with your image file
-        \caption{Annealed State - Model A}
-    \end{subfigure}
-
-    %\vspace{1em} % Space between rows
-
-    % Second row
-    \begin{subfigure}[t]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/t23_fitted_thickness.pdf} % Replace with your image file
-        \caption{Annealed State - Model B}
-        \label{fig:ellipsometry:static_fits:t23_fitted_thick}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/t23_fixed_thickness_50_v.pdf} % Replace with your image file
-        \caption{Annealed State - Model C}
-        \label{fig:ellipsometry:static_fits:t23_fixed_thick_50_void}
-    \end{subfigure}
-    \caption{}
-    \label{fig:ellipsometry:static_fits}
+\begin{figure}
+  \centering
+  \medskip
+  \includegraphics[width=.99\textwidth]{chapters/ellipsometry/image/wrong_model.pdf}
+  \caption{}
+  \label{fig:ellipsometry:wrong_model}
 \end{figure}
 
-
-\begin{figure}[htbp]
-    \centering
-    % First row
-    \begin{subfigure}[t]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/180C_3min.png} % Replace with your image file
-        \caption*{(a)}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/250C_3min.png} % Replace with your image file
-        \caption*{(b)}
-    \end{subfigure}
-
-    \vspace{1em} % Space between rows
-
-    % Second row
-    \begin{subfigure}[t]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/300C_3min.png} % Replace with your image file
-        \caption*{(c)}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/300C_15min.png} % Replace with your image file
-        \caption*{(d)}
-    \end{subfigure}
-    \caption{}
-\end{figure}
-
-
-
+However, the modeling of continuous SE data is not straightforward. One option that is facilitated by the software used for the analysis of the SE data (ComleteEASE) is the development of a static model for the initial state of the sample ($t_0$) (according to the protocol described in the previous section), followed by the dynamic fitting of its parameters as a function of time. We can expect that the thickness of the sample is changing due to thermal expansion, its roughness is increasing due to grain coalescence, and the position/energy of the oscillators are changing due to the energy that is transferred to the system. Therefore, for such a modeling approach 26 fitting parameters (1$\times$thickness, 1$\times$roughness, 6$\times$4 oscillators) should be turned-on. The continuous fitting of such a system is not only computationally heavy, it also entails the risk of overfitting. Some indicative results of such a modeling approach are demonstrated in Fig.~\ref{fig:ellipsometry:wrong_model}. Despite the fact that at the start of the experiment the MSE is reasonably low at the beginning of the measurement, it rises above 70 by the end of the experiment, pointing out to a large difference between measured and simulated data. Additionally, the predicted thickness of the film in the end of the measurement is almost 20 nm higher compared to the thickness of the as-deposited film. This is in contradiction with the profilometry results for the as-deposited and annealed state of the sample, which have approximately the same thickness, as shown in Fig.~\ref{fig:ellipsometry:profilometry}. Therefore, the continuous fitting of the initial static model is an unreliable way to model the acquired results. 
 
 
 \begin{figure}
@@ -248,7 +146,7 @@ There are two types of scatter points the red is the model we describe above, th
   \label{fig:ellipsometry:profilometry}
 \end{figure}
 
-
+An alternative modeling approach was inspired by a previous report on the modeling of aluminum gallium arsenide (\ch{Al_xGa_1_-_xAs}) optical constants as a function of composition \cite{Snyder1990ModelingComposition}. Specifically, considering that, for example, the optical constants of the compositions for $x=0.3$ and $x=0.4$ are known, then the optical constants of the intermediate composition for $x=0.35$ could be simulated through an EMA model of the two known compositions. Extending this concept to our experiment, we identified that it is possible to describe the complete temperature-dependent evolution of the perovskite thin film via a mixture of its optical constants at selected timestamps. This can be described by an EMA-based model, as shown in Fig.~\ref{fig:ellipsometry:dynamic_model}, where the bulk of the perovskite layer is a mixture of five static models, namely $sm1-t_0$, $sm-t_5$, $sm-t_7$, $sm-t_{\text{11}}$, and $sm-t_{\text{23}}$. The names of these static models represent the time frame they refer to, and they can be further distinguished in Fig.~\ref{fig:ellipsometry:raw_psi_delta}. The oscillator parameters of each static model are fixed. Only the volume fraction of each static model along with the bulk thickness and roughness thickness are set as fitting parameters. This creates a lightweight dynamic model with only 7 fitting parameters in total that can be fit in real time. The selection of these specific five static models was intentional: $sm1-t_0$ and $sm-t_{\text{23}}$ were included to account for the as-deposited and annealed state at RT, while $sm-t_{\text{11}}$ was included to account for the perovskite state at 300\degree C. Lastly, $\Psi$ and $\Delta$ values reveal that a major shift is happening to the composition of the perovskite around the $6^{\text{th}}$ minute of the experiment, motivating us to include two additional static models ($sm-t_5$ and $sm-t_7$) to account for the perovskite state before and after this shift. An essential condition for the accuracy of the dynamic EMA model is the accuracy of the constituents static models. For this reason, the following section provides a comprehensive analysis on the development of the static models, particularly for the as-deposited ($sm1-t_0$) and the annealed ($sm-t_{\text{23}}$) perovskite state, highlighting the impact of the surface roughness on the accuracy of simulated results. We specifically focus on the as-deposited and annealed state since the simulated results can be further corroborated through additional characterizations measurements before and after the annealing of the perovskite thin film. 
 
 \begin{figure}
   \centering
@@ -260,9 +158,80 @@ There are two types of scatter points the red is the model we describe above, th
 
 
 
-\section{Results and Discussion}
+\subsection{Static and Dynamic SE Model Development}
 
-\begin{figure}
+\begin{figure}[t]
+    \centering
+    % First row
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/t0_plot.pdf} % Replace with your image file
+        \caption{As-Deposited State}
+        \label{fig:ellipsometry:static_fits:t0}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/t23_fixed_thickness_50_v.pdf} 
+        % Replace with your image file
+        \caption{Annealed State - Model A}
+        \label{fig:ellipsometry:static_fits:t23_fixed_thick_50_void}
+    \end{subfigure} 
+ % Second row
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/t23_fitted_thickness.pdf} % Replace with your image file
+        \caption{Annealed State - Model B}
+        \label{fig:ellipsometry:static_fits:t23_fitted_thick}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/t23_fixed_thick_x_void_p.pdf} % Replace with your image file
+        \caption{Annealed State - Model C}
+        \label{fig:ellipsometry:static_fits:t23_fixed_thick_x_void}
+    \end{subfigure}
+    \caption{}
+    \label{fig:ellipsometry:static_fits}
+\end{figure}
+
+Developing a model for the as-deposited state ($sm1-t_0$) is rather straight forward, due to the relatively low surface roughness of the film (RMS = 2 nm, as seen in Fig.~\ref{fig:ch2:afm_before}). We consider that the interface between \ch{SiO_2} and \ch{CsPbI_2Br} is smooth with no intermixing between the layers. Following the protocol described in Section \ref{ch:ellipsometry:intro}, we extract a bulk thickness via a Cauchy model in the transparent region and get an approximation of 291 nm, which is consistent with the value provided by profilometry (295 nm in Fig.~\ref{fig:ellipsometry:profilometry}). The dielectric function of the film in the absorptive region is then modeled using 6 Tauc-Lorentz Oscillators, as shown in Fig.~\ref{fig:ellipsometry:static_models}, while the surface roughness is simulated through an additional EMA layer that consists of 50\% voids and 50\% bulk material. The fitting results of the $\Psi$ and $\Delta$ values are shown in Fig.~\ref{fig:ellipsometry:static_fits:t0}, where a good agreement between measurement and simulation is indicated via a relatively low MSE, equal to 14.7. To further corroborate the accuracy of the simulation, we extract the nk values for the as-deposited state and use them to simulate the film's absorptance and reflectance using the transfer matrix algorithm. Next, we experimentally evaluate the same parameters, via Reflectance/Transmittance measurements (R/T), considering the formula A(\%) = 100 - R(\%) - T(\%), where A stands for the film's absorptance. Fig.~\ref{fig:ellispometry:rt_as_dep} demonstrates a good agreement between experimental and simulated values, further corroborating the accuracy of the static model $sm1-t_0$.
+
+
+\begin{figure}[htbp]
+    \centering
+    % First plot
+    \begin{subfigure}[t]{0.49\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/RT_As_Deposited.pdf} % Replace with your image
+        \caption{}
+        \label{fig:ellispometry:rt_as_dep}
+    \end{subfigure}
+    \hfill % Space between the two plots
+    % Second plot
+    \begin{subfigure}[t]{0.49\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/ellipsometry/image/RT_Annealed.pdf} % Replace with your image
+        \caption{}
+        \label{fig:ellipsometry:RT_annealed}
+    \end{subfigure}
+
+    % Caption for the whole figure
+    \caption{Comparison of Absorptance and Reflectance}
+    \label{fig:ellipsometry:RT}
+\end{figure}
+
+ 
+The development of a static model for the annealed perovskite state ($sm-t_{\text{23}}$) was not as straightforward. Using a Cauchy-based model in the transparent region, predicts the bulk thickness to be equal to 289 nm, which is consistent with the profilometry measurements of the annealed film (285 nm in Fig.~\ref{fig:ellipsometry:profilometry}). However, when trying to implement a model with 6-Tauc-Lorentz oscillators in the visible range, a larger discrepancy between experimental and simulated data is observed, as indicated through a higher MSE value (MSE = 29 in Fig.~\ref{fig:ellipsometry:static_fits:t23_fixed_thick_50_void}). It is possible to obtain a lower MSE by setting the bulk thickness as a fitting parameter (MSE = 14 in Fig.~\ref{fig:ellipsometry:static_fits:t23_fitted_thick}), however the newly estimated film thickness (309 nm) no longer matches with the experimental data. This challenge is attributed to the larger surface roughness of the annealed film (RMS = 28.5 nm in Fig.~\ref{fig:ch2:afm_after}). Specifically, the use of a 50:50 EMA layer for the modeling of the surface roughness is only a convention that should be used under the condition that the dimension of the roughness structure (D) is much smaller than the wavelength of the incident light ($\lambda$), expressed through the formula $D<0.1\lambda$. When D exceeds this limit, a complex EMA multilayer is typically necessary to describe the change in polarization due to increased light scattering \cite{Akagawa2011High-precisionEllipsometry}. It was shown that the surface roughness is commonly underestimated during the modeling of perovskite thin films via spectroscopic ellipsometry, leading to erroneous estimations of the films' optical constants \cite{Fujiwara2017DeterminationMaterials}. In the case of our thermally evaporated thin films, the shortest wavelength is $\lambda=300 nm$ and we can consider that D is equivalent to the RMS roughness measured with AFM ($D ~ 29$ nm), which is close to the boundary condition of $D<0.1\lambda$. This likely explains the challenge of developing a model that simultaneously achieves a realistic bulk thickness and a low MSE. 
+
+
+
+However, considering that the boundary condition of $D<0.1\lambda$ is not exceeded, it is possible to overcome this modeling challenge without resorting to the use of complex multilayer structures. Instead, we demonstrate that it is possible to appropriately simulate the surface roughness by setting the percentage of voids in the roughness EMA layer as a fitting parameter, along with the layer's thickness. At the same time, the bulk thickness can be maintained as a fixed parameter, as illustrated in Fig.~\ref{fig:ellipsometry:static_models}. Indeed, using this approach, a lower MSE equal to 12.5 can be achieved (Fig.~\ref{fig:ellipsometry:static_fits:t23_fixed_thick_x_void}) for a roughness layer with approximately 15\% voids. To further corroborate the results of the simulation for the annealed state, we extract the nk values and use them to simulate the film's Absorptance and Reflectance, which prove to be in good agreement with the respective experimental values (Fig.~\ref{fig:ellipsometry:RT_annealed}). It has to be noted that neither experimental nor simulated data show a feature that could be attributed to the emergence of the 0D \ch{Cs_4PbI_4Br_2} phase that was revealed through the in situ GIWAXS measurements (Fig.~-giwaxs reference). This is in agreement with previous reports that investigated the emergence of the 0D \ch{Cs_4PbI_6} phase in 3D \ch{CsPbI_3} thin films \cite{Bai2019AStability}. Specifically, they showed that a discernible feature of the 0D phase only appears in the absorbance spectrum when the molar ratio between CsI and \ch{PbI_2} increases beyond 1.6:1.0. This ratio is much larger compared to the nominal ratio of CsBr:\ch{PbI_2} of 1.05:1.0 that was used for the deposition of our thin films. 
+
+Having established the accuracy of the static models for the as-deposited and annealed state, we proceed with the development of the models for the three intermediate states, namely $sm-t_5$, $sm-t_7$, $sm-t_{\text{11}}$. Since the profile of roughness increase as a function of temperature is unknown, we fix the percentage of voids in the roughness layer to 15\% for all states. \textit{Table xx provides a summary of the information for all static models, including the MSE, the thickness of the bulk layer, the thickness of the roughness layer, as well as the percentage of voids.}
+
+
+\begin{figure}[htbp]
   \centering
   \medskip
   \includegraphics[width=.99\textwidth]{chapters/ellipsometry/image/Roughness_Thickness.pdf}
@@ -271,9 +240,33 @@ There are two types of scatter points the red is the model we describe above, th
 \end{figure}
 
 
-\subsection{Thickness}
-\subsection{Roughness}
-\section{In situ annealing annealing effect on Optical Constants}
+As explained above, the changing properties of the perovskite thin film as a function of temperature can be described via an EMA model, which consists of 5 static models, mixed in different percentages. The dielectric functions of each static model are fixed, and only their volume ratio, along with the thickness of the bulk and roughness layers can vary. The percentage of voids in the roughness layer was again fixed at 15\%. Both the thickness and the optical constants of the \ch{SiO_2} layer are fixed, considering its particularly low thermal expansion coefficient ($0.5 \times 10^{-6} K^{-1}$), especially when compared to the thermal expansion coefficient of lead-iodide-based perovskites ($50\times10^{-6} K^{-1}$) \cite{Steele2019ThermalFilms}. Fig.~\ref{fig:ellipsometry:roughness_thickness} shows the evolution of MSE as a function of time and temperature, which is mostly maintained below 20 for the whole duration of the experiment. This provides a preliminary indication of the accuracy of the dynamic model, which will be further corroborated in the following sections through comparisons with literature and the results from additional characterization measurements. 
+
+\section{In Situ Annealing Effect on Structural and Dielectric Properties}
+
+Two types of scatter point are shown in Fig.~\ref{fig:ellipsometry:roughness_thickness}. The red scatter points represent the fitting results of the dynamic model (Fig.~\ref{fig:ellipsometry:dynamic_model}) in partially absorptive region (between 300 and 1000 nm). The blue scatter points represent the results of a simpler Cauchy-based model which is fitted in the transparent region (between 1000 and 2500 nm). The latter is not only more sensitive to thickness variations (due to light reflection from both the sample's surface and the sample-substrate interface),
+but also simplifies the modeling of the roughness structure (the light wavelength is much larger compared to dimensions of the surface structure). As a result, the nearly identical trend in the evolution of the sample's thickness and roughness as a function of temperature that is observed between the two types of scatter points, can further strengthen the confidence in the results of our dynamic model. 
+
+
+\begin{figure}[htbp]
+  \centering
+  \medskip
+  \includegraphics[width=1\textwidth]{chapters/ellipsometry/image/afm_all.pdf}
+  \caption{}
+  \label{fig:ellipsometry:afm_all}
+\end{figure}
+
+
+The results reveal that the sample's thickness is increasing linearly with temperature, despite the lattice phase changes that we know are happening. This is in agreement with what was observed by Marronnier et al, who used in situ synchrotron XRD measurements to report that the normalized unit cell volume of \ch{CsPbI_3} thin films varies linearly with temperature when transitioning sequentially from the the cubit to tetragonal and from tetragonal to orthorhombic phases \cite{Marronnier2018AnharmonicityCells}. Additionally, these results further agree with high thermal expansion coefficient that has been reported for lead halide perovskites, with our films exhibiting a thickness increase in the range of $1.7\times10^{-4}K^{-1}$. Of course, this value is depends a lot on the type of substrate, as an extension of the substrate-induced stress, but should anyways be taken into account when designing perovskite-based components that are meant to be exposed to high processing or operating temperatures. 
+
+The perovskites roughness shows an intriguing and potentially counter-intuitive behavior. It has been generally shown for solution-processed perovskite thin films that the longer the annealing duration (and the higher the annealing temperature - not sure) the larger the size of grains eventually becomes. Even though it is not possible to extract direct information about the size of the film's grains through an SE measurement, it has been previously shown that the simulated thickness of the model's roughness layer has a linear relationship with the film's real roughness, measured through AFM measurements \cite{Fujiwara2000AssessmentFilms}. Hence, it is logical to associate the SE-derived roughness value with the size of the film's grains. It is observed that the film's roughness remains mostly stable (between 5 and 10 nm) until approximately 200 \degree C. At this point, a sharp increase is observed, before the roughness stabilizes again to a value close to 20 nm. To validate these results, we submit different thermally evaporated \ch{CsPbI_2Br} films to various annealing conditions. Fig. xx and xx shows the AFM scan for a film annealed for 3 minutes at 180 \degree C and 250 \degree C, respectively. Indeed, when the temperature is maintained below 200 \degree C, the average grain size remains below 150 nm, similarly to the morphology of the as-deposited state, while when the annealing temperature exceeds 200 \degree C, the average grain size increases to a range between 400 and 800 nm. The temperature threshold for the grain coalescence seems to coincide with the transition from the tetragonal to the cubic phase (190 \degree C, as revealed through in situ GIWAXS). It remains unclear whether grain coalescence is a direct consequence of the phase transition or if both mechanisms merely share a similar activation energy. Regardless, the increase in surface roughness observed in the SE data could serve as a signature for evaluating the tetragonal-to-cubic phase transition temperature in alternative thermally evaporated perovskite compositions. Further increasing the annealing temperature (300 \degree C) or extending the annealing duration (300 \degree C for 15 minutes) results in only a minor increase in the film's RMS roughness (from 28.5 to 31.6 nm), consistent with the plateau in roughness observed it the SE results. This analysis highlights that the grain size of thermally evaporated perovskite thin films depends more on the nucleation during the growth of the crystal, rather than the post-deposition annealing step. Therefore, future efforts for improved film quality via larger grains should be focused on the crystallization mechanism during the deposition rather than post-deposition treatments. 
+
+
+
+
+
+
+
 
 \begin{figure}
   \centering

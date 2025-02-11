@@ -542,6 +542,8 @@
 \usepackage{gensymb}
 \usepackage{enumerate}
 
+\usepackage{adjustbox}   % To adjust figure sizes if needed
+
 
 %\RequirePackage{showlabels}
 
