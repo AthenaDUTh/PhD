@@ -1,91 +1,91 @@
 % !TeX root = ../../thesis.tex
 \chapter{From Perovskite Films to Photodetectors: Establishing a Baseline}\label{ch:material_properties}
 
-
-The beginning of this work is signified by the transition to a new evaporator chamber by Lesker. 
-
-Goal of this chapter is to give the reader a broad understanding a broad understanding of the various parameters that can be tuned during the fabrication of the perovskite-based photodetectors. 
-
-Perovskite are known for their defect tolerant structure, this means that variation from the perfect stoichiometry do not have a negative impact on the performance of the device. This has an opposite effect at the same time, that despite pursuing changes in the compsosition and the fabrication does not translate to a major impact on the the device peroformance. The first part regards the deposition of the peorovskite thin film and the characterization of its quality before and after annealing via a varierty of measurements, including UV-Vis, Photoluminescence, GIWAXS, as well as morphology through SEM and AFM. 
-
-In the second chapter, we start using this films to investigate the development of photodetector devices. After introducing the structure and the combinations of transportl layer we can use, we indeintify the drastic impact of the characterization protocol on the peroformance itself. We end up to a convention that will be used for the characterization of the devices from now onwards. 
-
-This way we proceed on presenting the baseline device architecture, including the choice of transport layers, the total deposition rate, and the samples stoichiometry. We close the chapter by introducing the silicon substrate that matches closer the substrate for the development of imagers, introducing the main differences and characteristics of the performance. 
-
-
+The inception of the work presented in this thesis began with the repurposing an older vacuum evaporation chamber, previously used of the fabrication of organic thin film electronics. A significant portion of initial efforts focused on calibrating the chamber for the deposition of inorganic perovskite layers, evaluating film quality and repeatability, as well as investigating the effect of fundamental deposition parameters on the performance of the photodetector devices. In the first part of this chapter, we investigate the structural, optical, and crystallographic properties of co-evaporated \ch{CsPbI_2Br} thin films, as well as the effect of the post-deposition annealing step. In the second part of the chapter, we use the co-evaporated films to establish a baseline for photodetector device performance, considering factors like substrate type, transport layers, deposition rate, and stoichiometry. 
 
 \section{Perovskite Deposition}
-
-
 
 \begin{figure}
   \centering
   \medskip
   \includegraphics[width=.5\textwidth]{chapters/material_properties/images/Chamber.pdf}
-  \caption[Short caption for Table of Figures]{Illustration of the deposition chamber. Two diametrically opposed sources are used for CsBr and PbI2.}
+  \caption[Short caption for Table of Figures]{Illustration of high-vacuum deposition chamber.}
   \label{fig:deposition_chamber}
 \end{figure}
 
 
 
-\begin{itemize}
-    \item Visual icon of the co-evaporation chamber and explanation of parts + add icon of the substrate holder
-    \item Sources and calibration of tooling factor - evaporation rates through spectroscopic ellipsometry (add plots that show the fitting and the average)
-    \item Selection of co-evaporation rate/ratio and why
-\end{itemize}
 
-An illustration of the deposition chamber is provided in Figure~\ref{fig:deposition_chamber}. Two diametrically opposed sources are loaded with CsBr and PbI2 powders, respectively. It was found that the replacement of fresh powders can help endure a more unfirm deposition, comparing the XRD spectra of fresh powders, and the powders post deposition. 
+An illustration of the deposition chamber is provided in Figure~\ref{fig:deposition_chamber}. Two diametrically opposed sources are loaded with \ch{CsBr} and \ch{PbI_2} powders. Two separate quartz crystal microbalances (QCMs) are used to track the deposition rate of each source. The QCMs must be calibrated accordingly to the atomic mass of the precursor they are monitoring. To achieve this, an initial approximation of the tooling factor is made based on comparison with previous depositions. Subsequently, each precursor is deposited on \ch{Si/SiO_2} substrate, and the actual thickness is measured using spectroscopic ellipsometry or profilometry. The tooling factor is then adjusted using the equation: 
 
+\begin{equation}
+    TF_{\text{actual}} = TF_{\text{approx}} \times \frac{\text{thickness(actual)}}{\text{thickness(QCM)}}
+\end{equation}
 
-Two separate quartz monitors are used to monitor the deposition rate of each source. 
-
-The quartz monitors need to be calibrated according to the atomic mass of the precursor, whose deposition rate they are supposed to be monitoring. 
-
-To do that, an initial approximation of the estimated tooling factor based on comparisons with previous deposition need to be made. 
-
-Afterwards, multiple depositions of each precursor are made on silicon substrate. 
-
-The thickeness of the deposited layer is measured using spectroscopic ellipsometry. 
-
-The tooling factor is adjusted according to the equation TFfinal = Tfinitial thickness(estimated)/thickness(real). 
-
-We deposit the layer mutliple times at different rates and different target thicknesses, to account for variablity in the system The finlan tooling factor is calculated as the average of the alla attempts. 
-
-This allows for the starting of the co-evaporation, were both rates are controlled simultaneously. While the sources are heatigng up, a global shutter is protecting the samples from the deposition
-
-Once the rates of both samples have reached the target value and are stabilized, the shutter opens and the deposition is started. 
-
-The substrate holder, which can be loaded with 9 3 by 3 cm2 samples, was kept at room temperature and was rotating with 5 rounds per minute to ensure a smoother deposition. 
-
-During the deposition, the temperature was automatically increased to maintain a constatnt evaporation rate for both sources. 
-
-When the target thickness was reached, the global shutter was closed, and the sources were cooled down to room temp. 
+To account for system variability, we deposit each layer multiple times at different rates and target thicknesses. The final tooling factor of each source is calculated based on the average of all depositions.
 
 
+Moving on to the co-evaporation of perovskite thin films, the ratio between the two sources' evaporation rates should be tuned to achieve the desired stoichiometry. For a stoichiometric film, the thickness ratio (TR) between two precursors, A and B, should be equal to: 
+
+\begin{equation}
+    TR = \frac{MolarMass(A)/Density(A)}{MolarMass(B)/Density(B)}.
+\end{equation}
+
+During the co-evaporation, a global shutter is protecting the samples while the sources are still heating up. Once both rates have reached their target value and are stabilized, the shutter is removed, initiating the deposition. The substrate holder, which can be loaded with 9 3$\times$3 $cm^2$ substrates, is kept at room temperature and rotates at 5 rounds per minute to ensure a uniform deposition. During the deposition, the temperature of each sources was continuously and automatically adjusted to maintain a constant evaporation rate. The deposition was automatically terminated once the target cumulative thickness was reached. For the development of the baseline evaporated films, a cumulative deposition rate of 0.8{\AA}/s and a \ch{CsBr:PbI_2} ratio of 1.05:1.00 was aimed for. Films were deposited with a slight excess of \ch{CsBr} since it was shown that it can improve the ambient stability of the black phase without compromising their optoelectronic properties \cite{Ma2017TheCells}. The nominal perovskite thickness was 275 nm. 
 
 \subsection{Impact of Annealing on Material Properties}
 
-This chapter explores the impact of annealing on the material properties of the as-deposited film. 
+The post-deposition annealing step of co-evaporated perovskite thin films is not strictly necessary, as the black phase can be achieved by properly tuning the deposition parameters---unlike sequentially evaporated films \cite{DongGrowthFilm}. However, thermal annealing does enhance the crystallinity of the films \cite{Frolova2017HighlyPbIsub2/sub}. 
 
-Figure 2.2 compared the morphology of an as-deposited and annealed sample. The as-deposited sample has grain size in the rage of of xx to yy nm. 
+\begin{figure}[htbp]
+    \centering
+    % First image (top)
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+        \includegraphics[width=0.85\linewidth]{chapters/material_properties/images/GIWAXS_Before_After.pdf}
+        \caption{Caption for Image 1}
+        \label{fig:ch2:giwaxs_before_after:model}
+    \end{subfigure}
 
-The film is compact with no visible cracks, piholes, or areas with varied stoichiometry.
+    \vspace{0.5cm}
+    
+    % Second image (bottom)
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+    \hspace{-1.4cm}
+        \includegraphics[width=0.68\linewidth]{chapters/material_properties/images/giwaxs_overlayed.pdf}
+        \caption{Caption for Image 2}
+        \label{fig:ch2:giwaxs_before_after:overlay}
+    \end{subfigure}
+    
+    \caption{Overall caption for the figure.}
+    \label{fig:ch2:giwaxs_before_after:}
+\end{figure}
 
-Once the sample is annealed, the averga grain size increases to approxiamtely 100 nm, followed by a significant increase in surface roughness, from 2 nm to 28.5 nm. 
 
-This is translated in the optoelctronic properties of the films. When comparing the absoloute intensity, a 3 times increase in the PL siganl is observed for the annealed perovskite. Exciation of wavelngths is 560 nm
+To investigate the effects of annealing on the properties of thermally evaporated \ch{CsPbI_2Br} thin films in detail, an as-deposited film (on a \ch{Si/SiO_2} substrate) was subjected to in-situ grazing incidence wide-angle X-ray scattering (GIWAXS). Specifically, while kept in a nitrogen environment, the sample was heated up to 300\degree C with a rate of 30\degree C/min. Once the target temperature was reached, the sample was allowed stabilize for 3 minutes before being cooled back down to room temperature at a similar rate. Fig.~\ref{fig:ch2:giwaxs_before_after:model} offers a comparison of the 1D integrated GIWAXS signals for the as-deposited and annealed perovskite states. All peaks in the diffraction pattern of the as-deposited state can be accounted for by the existence of a pure $\gamma$-\ch{CsPbI_2Br} phase, without indicating the presence any secondary phases, such as \ch{PbI_2}. This further highlights that the perovskite is formed in-situ onto the substrate. Achieving the in-situ black phase in co-evaporated \ch{CsPbI_3} thin films has previously been shown to require an elevated substrate temperature, around 50\degree C \cite{Dong2023GrowthFilm, Becker2019LowExperimentation}. The acquisition of the black perovskite phase at room temperature for our thermally evaporated films is attributed to the stabilizing effect of $Br^-$. 
 
-Fig. x compared the absorptance of the film. An additional increase of the absorptance at the spectrum beyond 500 nm is oncersver. At 560 nm, the excitation wvl of PL,  an increase from 71\% to 74\% is observed, which means that the incerase in PL intensity can not be solely attributed to the increase of the absorpatace. Contrary, it points out to imporved crystallinity and reduction of recombination centers. When comparing the normalized PL peaks, an additional change os observed, a shoulder in the peak is observed for the Annealed state. Wider FWHM is sually attribure to lower quality, however this kind of non-symmetrical broadedning was previously attribute to the self-absorbing mechanisms,close to the bandgap energy, followed by re-emission. this mechanism is exaggerated by internal light scattering, which matches with increase surfae roughness of the films. 
+The signal of the annealed perovskite state reveals the co-existence of the $\gamma$-\ch{CsPbI_2Br} phase and a 0D \ch{Cs_4PbX_6} phase, where X indicates the lattice's halogens. The main indicator for the emergence of the 0D phase is the peak that appears at 8.7 $nm^{-1}$. To further investigate the composition of the 0D phase we consider that both \ch{Cs_4PbI_6} and \ch{Cs_4PbBr_6} are stabilized in the same crystal structure (trigonal space group R-3c), which indicated that iodine and bromine can substitute for each other without altering the crystal geometry. Iodine has a larger ionic radius compared to bromine (2.2 {\AA} for $I^-$ compared to 1.96 {\AA} for $Br^-$), meaning that \ch{Cs_4PbI_6} would have larger lattice parameters than \ch{Cs_4PbBr_6} (a = b = 14.602 {\AA}, c = 18.268 {\AA} for the former, and a = b = 13.722 {\AA}, c = 17.299 {\AA} for the latter)\cite{Bhaumik2020BroadbandNanocrystals,DeBastiani2017InsideCrystals}. In our case, the lattice parameters are measured as a = b = 14.138 {\AA}, c = 17.828 {\AA}, clearly indicating that some of the iodine has been replaced by bromine.  Further analysis through Rietveld refinement, including occupancy refinement, confirms a stoichiometry of \ch{Cs_4PbI_4Br_2}. The 0D phase accounted for 10\% of the total perovskite volume, and its formation complicated the overall stoichiometry of the main phase. Its formation could potentially be attributed to the the excess of \ch{CsBr} during the co-evaporation process, however its amount is minimal and unlikely to affect the main phase's properties significantly \cite{Bai2019AStability}. 
 
-Lastly, Fig. xx shoes the transient state photoluminescence of the films, indicating a doubling of the lifetime of the carriers from 4.8 for the as-deposited state to 8.3 nm for the annealed state. 
+More information about the structure of the annealed and as-deposited state can be extracted through Fig.~\ref{fig:ch2:giwaxs_before_after:overlay}, which provides an overlay comparison of the $2\theta$ GIWAXS signals. Through this comparison, three key changes can be observed (i) a reduction in the full width at half maximum (FWHM), (ii) peak shifting, and (iii) the appearance of peak asymmetry or splitting. The FWHM of the peaks is associated with crystallite size, as expressed through Scherrer's equation: 
+ \begin{equation}
+     D = \frac{k \times \lambda}{\beta \times cos\theta},
+ \end{equation}
 
-To further investigate the crystallility and phsae transition temperature of the perovskite we further submitted the samples to in situ GIWAXS measuremernts. Fig. 2.5 compares the crystalline structure for the as-deposited and annealed state at room temperature. The as-deposited can be purely described by the considertation of the gamma CsPbI2Br phase, highlighting the ability of the perovskite to produce ttabtle films in the balck phase without any need for additional heating. This was widely investigatef FOR CsPbI3 films, but with a heated substrate. The ability to produde black film without any heat could open up a completly new realm of opeerations, such as flexible substrates that have very low temperature limiationts. 
+where k is the shape factor (0.9), $\lambda$ is the X-Ray wavelength, $\beta$ is the FWHM of the peak, and $\theta$ is the the Bragg peak position in radians. This calculation indicates that the crystallite size has nearly doubled as a result of the annealing process, increasing from 16 nm in the as-deposited state to 28 nm for the annealed one. In addition to the increase in crystallite size, the nonuniform peak shift towards right side and the appearance of peak asymmetry suggest that the annealing process has introduced macrostrain into the system. This strain could be attributed to two main factors: (i) the mismatch in the thermal expansion coefficients between the substrate and the thin film, which can induce biaxial strain at the interface \cite{Steele2019ThermalFilms}, and (ii) the coexistence of the 0D \ch{CsPbI_4Br_2} and the 3d \ch{CsPbI_2Br} phase, which may create lattice anchoring within the system \cite{Steele2022AnFilms, Saha2024Oxygen-MediatedPerformance}
 
-The crystalline peaks for the annealed state, reveal more informaiton aobut the strucutre of the film. The peaks are separeatedand additional peaks, more clearly notices at 9 nm-1 is obsefved. Thsi indicaated an increase in crystallite size, while at the same time incease stress in the lattice, the presence of the 0D Cs4PbI2Br2. However, the oD phase cannot be detected in the absorptance signal pf the perovsite (high bandgap) as it was shown that it only appears for very high difference between the two precursors.  
+\begin{figure}
+  \centering
+  \medskip
+  \includegraphics[width=\textwidth]{chapters/material_properties/images/GIWAXS_In_Situ.pdf}
+  \caption[Short caption for Table of Figures]{In Situ GIWAXS}
+  \label{fig:ch2:giwaxs_insitu}
+\end{figure}
 
-In situ measurement can provide more information about the phase transition temperatures and the point of emergence for the Specifically, it is indicated that the orthorhombic to tetragonal phase transition is achieved at 130C, while the tetragona to cubic is accomplished at 190C. The 0D phase is energing at 225C.
+Fig.~\ref{fig:ch2:giwaxs_insitu} shows the in situ reduced 1D GIWAXS data during the temperature heating ramp. The transition from the orthorhombic ($\gamma$-) to the tetragonal ($\beta$-) phase is found to take place close to 130 \degree C, while the transition to the cubic ($a$-) phase happens at approximately 190 \degree C. Lastly, the emergence of the peak at 8.7 $nm^{-1}$ at 225 \degree C indicates the emergence of the 0D \ch{Cs_4PbI_4Br_2} phase. 
 
 
+Fig.~\ref{fig:ch2:afm_sem} demonstrates the impact of this annealing step on the morphology of the perovskite film by comparing the AFM scan of the surface and the SEM image of the cross-section for the as-deposited and annealed state. The as-deposited state has grains of particularly small size, in the range of 30 - 40 nm (Fig.~\ref{fig:ch2:afm_before}), which is in agreement with previous reports on co-evaporated \ch{CsPbI_xBr_{3-x}} thin films \cite{Frolova2017HighlyPbIsub2/sub, Zhang2023SemitransparentAbsorber}. The RMS roughness is accordingly low and equal to 2 nm. Despite the small grain size, the cross-section of the film (Fig.~\ref{fig:ch2:sem_before}), shows a compact morphology without any noticeable defects, cracks or pinholes. The annealing step has a major effect on the morphology of the film, yielding a broad distribution of grain sizes, between 100 and 800 nm in diameter, as shown in the respective AFM image (Fig.~\ref{fig:ch2:afm_after}). The surface roughness has increased to 28.5 nm. At the same time, the SEM scan (Fig.~\ref{fig:ch2:sem_after}) reveals a grain-boundary-free cross-section, which is typically associated with improved optoelectronic properties. 
 
 \begin{figure}[htbp]
     \centering
@@ -104,8 +104,6 @@ In situ measurement can provide more information about the phase transition temp
         \label{fig:ch2:afm_after}
     \end{subfigure}
 
-    \vspace{1em} % Space between rows
-
     % Second row
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
@@ -120,22 +118,21 @@ In situ measurement can provide more information about the phase transition temp
         \caption{}
         \label{fig:ch2:sem_after}
     \end{subfigure}
-    \caption{AFM and SEM iamges for an as-deposited and annealed perovskite sample.}
+    \caption{AFM and SEM images for the as-deposited and annealed perovskite sample.}
     \label{fig:ch2:afm_sem}
 \end{figure}
-
 
 \begin{figure}[htbp]
     \centering
     % First row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/SSPL.pdf} 
         \caption{}
         \label{fig:ch2:sspl}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Absorptance.pdf} % Replace with your image file
         \caption{}
@@ -145,14 +142,14 @@ In situ measurement can provide more information about the phase transition temp
     \vspace{1em} % Space between rows
 
     % Second row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/SSPL_norm.pdf} % Replace with your image file
         \caption{}
         \label{fig:ch2:norm_sspl}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/TRPL_norm_double - Copy.pdf} % Replace with your image file
         \caption{}
@@ -161,38 +158,25 @@ In situ measurement can provide more information about the phase transition temp
     \caption{SSPL, TRPL, and absorptance for the an As-Deposited and an Annealed perovskite sample.}
 \end{figure}
 
-\begin{figure}
-  \centering
-  \medskip
-  \includegraphics[width=\textwidth]{chapters/material_properties/images/GIWAXS_Before_After.pdf}
-  \caption[Short caption for Table of Figures]{In Situ GIWAXS}
-  \label{fig:ch2:giwaxs_before_after}
-\end{figure}
 
 
-% % Some dummy code show how to include images.
-\begin{figure}
-  \centering
-  \medskip
-  \includegraphics[width=\textwidth]{chapters/material_properties/images/GIWAXS_In_Situ.pdf}
-  \caption[Short caption for Table of Figures]{In Situ GIWAXS}
-  \label{fig:ch2:giwaxs_insitu}
-\end{figure}
+To further investigate the impact of the annealing step on the optoelectronic properties of the film, we deposit an identical perovskite film on a glass substrate and repeat the same annealing step, allowing as to perform steady and transient state photoluminescence (SSPL and TRPL), as well as absorptance measurements for the as-deposited and annealed perovskite state. The SSPL measurement in Fig.~\ref{fig:ch2:sspl}, indicates a 3-time increase in the intensity of the PL signal for the annealed film under a 530 nm excitation. This could potentially be attributed to increased absorptance at the excitation wavelength or a to a reduction of the non-radiative recombination pathways. The absorptance of the annealed film is indeed slightly higher at 530 nm, as demonstrated in Fig.~\ref{fig:ch2:absorptance}, however it is not sufficient to justify the increase in PL intensity. Therefore, the increase in crystallite size and the reduction of grain boundaries, as discussed above, contributed to minimizing non-radiative recombination mechanisms. It has to be noted, that there is no indication for the high-bandgap 0D \ch{Cs_4PbI_4Br_2} phase in the SSPL and absorptance spectra of the perovskite. This is in agreement with what was previously reported by Bai et al., who were able to detect the 0D phase in the absorptance spectrum only for highly non-stoichiometric films \cite{Bai2019AStability}. 
 
-\begin{itemize}
-    \item Characterization of as-deposited and annealed films via AFM, SEM, SSPL, TRPL, aborptance/reflectance measurements, XPS/UPS
-    \item In situ characterization through in situ, temperature dependent GIWAXS, phase identification, phase transition identification, 0-D phase emergence, crystallite size etc
-\end{itemize}
+When comparing the normalized PL peaks for the as-deposited and annealed perovskite state, in Fig.~\ref{fig:ch2:norm_sspl}, an additional difference is observed, with the annealed film exhibiting a secondary, red-shifted shoulder inf its PL emission spectrum. This phenomenon was extensively studied by Schötz et al., and was attributed to a self-absorption of mechanism, whose impact is amplified by strong internal emissions and Urbach tail of the perovskite \cite{Schotz2020DoubleSelf-absorption}. As a resutlt, the increase in surface roughness that is introduced during the annealing of our thermally evaporated perovskite could explain the double peak emission via an increase in internal light scattering. Lastly, Fig.~\ref{fig:ch2:trpl} shows the TRPL spectra for the as-deposited and annealed perovskite state. A bi-exponential equation, described by the formula: 
+
+\begin{equation}
+    I_{PL}(t) = A_1exp(-\frac{t}{\tau_1}) + A_2exp(-\frac{t}{\tau_2}) + y_0,
+\end{equation}
+
+was able to accurately describe the decay of the both curves. Followingly, the average lifetime of the carriers was calculated using the equation: 
+\begin{equation}
+    \tau_{avg} = \frac{A_1 \tau_1^2 + A_2 \tau_2^2}{A_1 \tau_1 + A_2 \tau_2},
+\end{equation}
+
+indicating an almost doubling of the carriers' lifetime, from 4.8 ns for the as-deposited state to 8.3 ns for the annealed one.
+
 
 \section{Device Development}
-
-Main focus is on the use of thermally evaporated perovskite for photodetector devices. The structure is similar to what has been ued for solar cell fabrication, as explained in the introduction chapter. Two types of substrates are used. For fat prototyping, glass substrate with pre-patterned ITO contacts, sequential deposition of the hole transport layer, the perovskite, the electronc transport layer and the top contact. The illumination is down from the glass size. 
-
-An alterntiave silicon substrate is used for the same stack, which is more similaer to the strucutre os the imager. Silicon substrate with SiO2 dielectric, and TiN Bbottm electrodes (which define the area of the device). The stack is built in the same way, HTL, perovskite, ETL. ITO is deposited dual purpose, serves as the common contact of the devices, and allows for illumination from the top of the stack.
-
-Despite differences in illumination direction and substrate, an optimization of the stack on a glass substrate stypically translates to improvememnts for the stack on pix substrate. That is the reason why we use glass substate on for prototyping and exploration of different consitions, and then transfer the more selectd ones to the silicon substrate devices. 
-
-Despite teh different orientation of the samples, the results are always presented in a manner that the negative bias always represents the reverse bias regime of the sample. 
 
 \begin{figure}[htbp]
     \centering
@@ -200,7 +184,7 @@ Despite teh different orientation of the samples, the results are always present
     \begin{subfigure}[t]{0.49\textwidth} % Adjust width as needed
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Glass_Substrate.pdf} % Replace with your image
-        \caption{Description for subplot (a).}
+        \caption{}
         \label{fig:ch2:glass_substrate}
     \end{subfigure}
     \hfill % Space between the two plots
@@ -208,151 +192,145 @@ Despite teh different orientation of the samples, the results are always present
     \begin{subfigure}[t]{0.49\textwidth} % Adjust width as needed
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/PIX_Substrate.pdf} % Replace with your image
-        \caption{Description for subplot (b).}
+        \caption{}
         \label{fig:ch2:pix_substrate}
     \end{subfigure}
 
     % Caption for the whole figure
-    \caption{Comparison of experimentally measured and simulated Absorptance and Reflectance for the As-Deoisted and Annealed perovskite state.}
+    \caption{Substrate layouts: (a) glass substrate, and (b) silicon substrate.}
     \label{fig:ch2:types_of_substrates}
 \end{figure}
+
+
+This section provides an overview of the parameters that can be varied during the development of perovskite-based photodetectors and their impact on device performance. As shown in Fig.\ref{fig:ch2:types_of_substrates}, two types of substrates were used in this study: glass substrates pre-patterned with an ITO contact (Fig.\ref{fig:ch2:glass_substrate}) and silicon substrates, designed internally and fabricated in imec's CMOS foundry, featuring a TiN bottom contact (Fig.~\ref{fig:ch2:pix_substrate}).
+
+The fabrication process is similar for both substrate types, beginning with the deposition of the HTL (DC sputtered \ch{NiO_x}), followed by the deposition of the perovskite layer, the post-deposition annealing step, and finally, the deposition of the ETL. For glass substrates, the stack is completed by depositing Al contacts via thermal evaporation, using a shadow mask that defines 12 different devices. The device area is determined by the overlap between the ITO and Al electrodes, resulting in three different areas: 0.125 $cm^2$, 0.075 $cm^2$, and 0.025 $cm^2$. The use of variable-sized contacts allows for an analysis of the impact of device area on performance metrics.
+
+For silicon substrates, the stack is completed with the deposition of an ITO sheet via linear magreton sputtering. In this case, the device area is defined by the bottom TiN contact, which is fixed at 0.0625 $cm^2$. The illumination setup differs between the two substrates: glass substrates are illuminated from the bottom (through the glass side - Fig.~\ref{fig:ch2:glass_stack}), while silicon substrates are illuminated from the top (through the ITO side - Fig.~\ref{fig:ch2:pix_stack}). 
+
+The silicon substrates mimic the device structure used in the fabrication of imagers.2 However, due to their greater availability and accessibility, glass substrates are preferred for rapid prototyping and the screening of various deposition parameters and layers. Stacks that demonstrate promising performance are subsequently transferred and evaluated on silicon substrates. Despite the opposite orientation of the common contact, the results for both substrates are presented such that a negative bias consistently represents the reverse bias regime of the sample.
+
 
 \begin{figure}[htbp]
     \centering
     % First plot
-    \begin{subfigure}[t]{0.49\textwidth} % Adjust width as needed
+    \begin{subfigure}[t]{0.4\textwidth} % Adjust width as needed
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Glass_Stack.pdf} % Replace with your image
-        \caption{Description for subplot (a).}
+        \caption{}
         \label{fig:ch2:glass_stack}
     \end{subfigure}
     \hfill % Space between the two plots
     % Second plot
-    \begin{subfigure}[t]{0.49\textwidth} % Adjust width as needed
+    \begin{subfigure}[t]{0.4\textwidth} % Adjust width as needed
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/PIX_Stack.pdf} % Replace with your image
-        \caption{Description for subplot (b).}
+        \caption{}
         \label{fig:ch2:pix_stack}
     \end{subfigure}
 
     % Caption for the whole figure
-    \caption{Comparison of experimentally measured and simulated Absorptance and Reflectance for the As-Deoisted and Annealed perovskite state.}
+    \caption{Stack and illumination direction for (a) glass substrate, and (b) silicon substrate.}
     \label{fig:ch2:types_of_stacks}
 \end{figure}
 
+\subsection{Impact of Characterization Method and Statistical Remarks}
 
-\begin{itemize}
-    \item Options for transport layers, deposition techniques and associated challenges, NiO always below the perovskite layer, explanation of NiO annealing effect on the conductivity of the perovskite layer
-    \item Option for substrates (ITO - PIX), same stack, different source of light, masks and contacts
-    \item Most important characterization for devices, specifications of figures of merit that are followed in this thesis, considerations on yield and statistical importance of the presented results
-    \item (From Valdimir's thesis) Variations in the forward bias regime, device performance is very sensitive to small variations in resistance, it is not major focus in the work presented
-\end{itemize}
-
-\subsection{Impact of Characterization Method}
-
-The characterization of perovskite0based deivces is not straightforward due to the fluid nature. Characterized by the presence of mobile ions, which follow that applied field an aprticipate at electrochemical reactios, which are partially reversible but there is a strong timeing element. 
-
-This creates additioanl complications when electrically characterizing perovskite devices and espcially when comparing with literature. 
-
-For the most standard scans, which are the most commonly performance ones, shows the impact of scan direction, as well as the impact of the inegration time. Scan direction highly is associated with hysteresis, while the integration time, the dark current start fomr the same value, it goes lower fro the scans with longer integration. 
-
-An alternative characterization is enabled by the Paios characterzation suite, which enebles the possibility of the pulsed characterization. for each bias steop,bias is applied lin a pulsed way which is defined by the pulse duration and the measurements duration. For this demonstration, the measurement duration was fixed to 50 ms, while the pulse duration was varied between 100 and 1200 ms. In this case, the hysteresis is eliminated, however, it is clear that the longer the pulse duration the lower the levels of dark current, as well as the higher the forward current.
-
-As a last option, is the steady state measurement, wehre the bias i maintained for a prolonged period of time. Which is associated with a large drop in the current value withing the first 10s of seconds before being stabilizing. The intial crop wa found to not depend so much on mobile ions (thorugh temperature related measurements) but rather capacitive effects. Which again can be impacted by the setup between groups. At -2 V a rapid increase of the cark value is observed, which is related to the reverse-bias induced breakdown of the device and will be further discussed in chpater 4. 
-
-The impact of characterization approach extends to the EQE values, as well. Show the results for two differenct devices fabricated on the same samples. The first one was measured at 0V, and then at -1 V. While the second one wa measured t 0V, -1 V, and -2V. For both cases, the response was measured again right after with not bias, and the response is signifivalty lower compared to the riginal measurerement. However, we allowed for a 5 minute relaxation period. It was enough for the sampls biased up to -1 V to recover its original behavior, however this was not the case for the sample up to -2 V to revcover its original behavior. 
-
-This highlights the complexity aroung the characterzation of different samples. For the rest of the work, we mainly rely on forward scans for the JV cahracteristics and measure EQE from 0v -1V -2V wihout prvious bias and this order. 
-
-Even though it is not opssible to idenitfy a global value, we believ that his way allows for a fair comparison between different samples, empasizing on the trend of the impact of different modifications roather than absolute values.
-
-Another point is related to the fair representation of J-V data. 12 devices are fabricated on the same sample. Usually there are a few outliers, whose number idenifies the variability in device perforamcne. Instead of selecting a more representative curve, which unavoidanty introduces the bias to the representation of the data, we opt for presenting a more staticitcal approach, as shown in Fig. The solid lines represents the median value and the shaded are respresent the interquartile range. This way, if there are only 1 or 2 outliers, they don't show up in the statistical represntatin, while if a large valriablity is oberved, it is tranlated into a very wide interquartile range.  
-
-For example, fig xx showd
-
-Additiaonlly, the fabrcaiton tools were used for mutliple activities within the group and there were periods of idle from recovered operation. These fluctuations from time to time had a big impact on the device peroformance, it was goal to establish a baseline performance. This means similr stacks, fabricated withing different phases of the phd might exhbiti small viariaontions. This is why when drawing comparisons, we only compare samples that were fabricated in close proximitiy to each other, to prevent un-fair comparisons with older better verisions of the same samples. 
+The characterization of the electrical performance of perovskite-based devices is not straight forward due to the presence of mobile ions in the lattice, which migrate under an applied and electric field, accumulate at the contacts and potentially participate in electrochemical reactions. In mixed-halide perovskites, phase segregation is another common occurrence. These are just some of the effects that occur under illumination or external bias, making it challenging to disentangle phenomena attributed to charge carriers, mobile ions, or newly formed species within the perovskite layer. A characteristic consequence of this complexity is hysteresis in J-V measurements, which has been shown to depend not only on the scan direction and speed, but also on the composition of the perovskite, the choice of transport layers, etc. 
 
 \begin{figure}[htbp]
     \centering
 
     % First row
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Forward-Reverse-Plot.pdf}
-        \caption{Figure 1}
+        \caption{}
+        \label{fig:ch2:scan_direction}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Integration-Speed.pdf}
-        \caption{Figure 2}
+        \caption{}
+        \label{fig:ch2:scan_speed}
     \end{subfigure}
-
-    \vspace{1em} % Space between rows
 
     % Second row
     \begin{subfigure}[b]{0.35\textwidth}
-        \centering
+        \centering        
         \includegraphics[width=\textwidth]{chapters/material_properties/images/PAIOS_Pulsed_Measurement.pdf}
-        \caption{Figure 3}
+        \caption{}
+        \label{fig:ch2:pulsed_meas_PAIOS}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Pulsed-PAIOS-plot.pdf}
-        \caption{Figure 4}
+        \caption{}
+        \label{fig:ch2:pulsed_paios}
     \end{subfigure}
 
-    \vspace{1em} % Space between rows
 
     % Third row - centered figure
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Steady-State-plot.pdf}
-        \caption{Figure 5}
+        \caption{}
+        \label{fig:ch2:steady_state}
     \end{subfigure}
 
-    \caption{A figure with 3 rows: two rows of two images and one centered image.}
-    \label{fig:three_rows}
+    \caption{Impact of characterization methodology on device performance}
+    \label{fig:ch2:types_of_measurement}
 \end{figure}
+
+Most commonly, the characterization of photodetectors relies on sequential J-V scans, which can be performed in dark and under illumination. Fig.~\ref{fig:ch2:scan_direction} shows the impact of the scan direction for one of the fabricated devices, while Fig.~\ref{fig:ch2:scan_speed} demonstrates the impact of the integration time. A significant hysteresis is observed, with the value of dark current, one of the most critical figures of merit of photodetectors, being highly dependent on the characterization settings. It is possible to eliminate hysteresis in the JV data by performing a pulsed IV measurement, the principle of which is demonstrated in Fig.~\ref{fig:ch2:pulsed_paios}. Specifically, each voltage step is applied as a pulse of specific length (pulse duration). The current value for each voltage step is the extracted as the average transient current during the specified measurement duration. This approach allows the ions to re-distribute for each voltage step, eliminating the hysteresis from the JV data (minimum $J_d$ is at 0 V, as shown in Fig.~\ref{fig:ch2:pulsed_meas_PAIOS}). However, even for this type of measurement, it is clear that the duration of each voltage pulse has a major impact on the measured J-V performance, with longer pulses leading to lower values of $J_d$ and larger values of forward current (rectification). (Why?) A last option for the characterization of the perovskite-based photodiodes is steady-state measurements, where a constant bias is applied and maintained for a prolonged period, until the value of monitored current starts saturating. This is demonstrated in Fig.~\ref{fig:ch2:steady_state}. A large drop in the value of $J_d$ is observed within the first seconds of the measurement, which was previously to depend on capacitive effects, rather than the presence of mobile ions \cite{Ollearo2021UltralowGeneration}. At -2 V, an almost 3-order increase in $j_d$ is observed, which has been associated with the breaking down of the device. This mechanism is concealed when performing J-V scans of relatively small duration and will be further investigate in Chapter~\ref{ch:transport_layer}. Considering the variability of results depending on the characterization approach, we mainly utilize sequential J-V scans, performed in the forward direction for comparing various stacks, stating that despite the impact of the measurement on the results, it still allows the fair identification of trends among different conditions. 
 
 
 \begin{figure}[htbp]
     \centering
     % First plot
-    \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
+    \begin{subfigure}[t]{0.4\textwidth} % Adjust width as needed
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/EQE-1V.pdf} % Replace with your image
-        \caption{Description for subplot (a).}
+        \caption{}
         \label{fig:ch2:eqe-1V}
     \end{subfigure}
     \hfill % Space between the two plots
     % Second plot
-    \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
+    \begin{subfigure}[t]{0.4\textwidth} % Adjust width as needed
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/EQE-2V.pdf} % Replace with your image
-        \caption{Description for subplot (b).}
+        \caption{}
         \label{fig:ch2:eqe-2V}
     \end{subfigure}
 
+    
+    \begin{subfigure}[t]{0.9\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/ions.png} % Replace with your image file
+        \caption{}
+        \label{}
+    \end{subfigure}
+
     % Caption for the whole figure
-    \caption{Comparison of experimentally measured and simulated Absorptance and Reflectance for the As-Deoisted and Annealed perovskite state.}
+    \caption{Impact of measurement order on the EQE measurements.}
     \label{fig:ch2:eqe}
 \end{figure}
 
-
+The impact of the characterization approach on the acquired results extends to EQE measurements, as well. Fig.~\ref{fig:ch2:eqe-1V} and \ref{fig:ch2:eqe-2V} demonstrate the EQE results for two different devices that were fabricated on the same substrate. The EQE of the first device was measured sequentially at 0 V and -1 V, while the second device underwent measurements at 0 V, -1 V, and -2 V. Following these measurements, each device was subjected to two additional EQE measurements at 0 V: one immediately after the highest applied reverse bias (-1 V and -2 V, respectively) and another after a five-minute resting period in the dark. For both devices, the EQE at 0 V immediately after reverse biasing was significantly lower than the initial EQE measurement at 0 V. However, for the device biased up to -1 V, a five-minute resting period was sufficient to fully restore the initial EQE value. In contrast, for the device biased up to -2 V, the EQE at 0 V remained approximately 40\% lower than its initial value even after five minutes of recovery. This phenomenon could potentially be attributed to the accumulation of ions at the contacts and their potential contribution to electrochemical reactions, as demonstrated in Fig. xx. This experiment highlights the sensitivity of the acquired results to the prior biasing conditions. (Fing how much time it would take for the ions to re-distribute, and mention that is probably an electrochemical reaction that is taking place). From now on, the presented EQE results are performed on a new device, without prior bias, performed from the lowest to the highest reverse bias conditions. 
 
 \begin{figure}[htbp]
     \centering
     % First row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/High_yield_discrete.pdf} 
         \caption{}
         \label{fig:ch2:high_yield_discrete}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/High_yield_median.pdf} % Replace with your image file
         \caption{}
@@ -362,106 +340,104 @@ Additiaonlly, the fabrcaiton tools were used for mutliple activities within the 
     \vspace{1em} % Space between rows
 
     % Second row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/low_yield_discrete.pdf} % Replace with your image file
         \caption{}
         \label{fig:ch2:low_yield_discrete}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/low_yield_median.pdf} % Replace with your image file
         \caption{}
         \label{fig:ch2:low_yield_median}
     \end{subfigure}
-    \caption{SSPL, TRPL, and absorptance for the an As-Deposited and an Annealed perovskite sample.}
+    \caption{Discrete and statistical representation of J-V curves for samples with high and low variability.}
 \end{figure}
 
 
+Another important point is the related to the fair representation of the J-V data among the 12 devices on the same sample. Typically, there are a few outliers in each sample, the number of which defines the variability of a sample. This is more clearly illustrated in Fig.~\ref{fig:ch2:high_yield_discrete} and Fig.~\ref{fig:ch2:low_yield_discrete}, which represent two samples with small and large variability in device performance, respectively. In order to represent the median response of the sample, while also providing some insights into its variability we opt for presenting its performance in a statistical way, as shown in Fig.~\ref{fig:ch2:high_yield_median} and Fig.~\ref{fig:ch2:low_yield_median}, where the solid line represents the median response, while the shaded area represents the interquartile range. This way, the presence of 1 or 2 outliers in the device performance does not define the variability of the sample, which is reasonable considering the large area of the device and the likelihood of localized defects arising from process variations. 
+
+Lastly, it is important to highlight the repeatability of device performance over different time periods. The fabrication tools used in this study were shared across multiple activities within the group, with occasional periods of downtime or non-standard behavior. Given the numerous variable parameters in a lab environment, pinpointing the exact causes of performance fluctuations is challenging. Inevitably, these variations also affected the performance of baseline devices. Consequently, the same device stack, when fabricated at different stages of the PhD work, may have exhibited varying degrees of performance fluctuation. This is noted to emphasize that, in this study, only samples fabricated within close temporal proximity are compared to identify trends and draw meaningful conclusions.
 
 \subsection{Impact of Electron Transport Layer}
 
-One of the first step was to compare the performance of the as-deposited and annealed PePD, using two different ETLs, the main ones that were investigarted in the framework of this study, e-beam deposited TiO2 and thermally evaporated C60. the forward scans for TiO2 samples and c60 ones, are shown in Fig. xx and yy respetively. For TiO2, both deivces have similar performance , the annealed sample shows a smaller hysteresis. the median dark current at -2V varies between 0.7 mA.cm2 and 10 uA/cm2. The perofromance is not the same with c60. Both samples show significantly higher levels of Jd, with the as-deposited samples having a migh larger spread. This will be furthe investgated on the chapter about the optimization of the ETL, but is mainly attributed to the abundand grain bonaries of the as-deposited samples, the diffusion of C60 trhough them and the creating of metalling shorts. This is partially mitigated fot the annealed sample, which has significantly larger grain size but is not completerly eliminated. 
-
-In terms of EQE for the Tio2 samples, both as-deposited and annealed sample ehibit a similar behavior with an EQE that saturates even at 0V and is mainly above 70 \% for the whole visible range. This further highlights the possiblity of farbircating all-evaporated devices at complete room tempreature, further extensions for substrates and requires applications that need black phase at room temperature. Howver, considering the improvements in crystallinity and reduction in non-radiative recombination that were established for the annealed state, we move forward using the f;ash-annealed sample with 40 nm of TiO2 as the baseline. 
-
-
-
+The first step in exploring device performance was selecting the transport layers for the PePD stack. The requirement for vacuum-deposited inorganic transport layers introduced several significant limitations. For the HTL, DC-sputtered \ch{NiO_x} was the only sufficiently mature option. However, due to the harsh conditions of the sputtering process, \ch{NiO_x} could only be deposited before the perovskite layer. For the ETL, the two most accessible candidates were e-beam deposited \ch{TiO_2} and thermally evaporated \ch{C_{60}}. Fig.~\ref{fig:ch2:tio2_compare} and Fig.~\ref{fig:ch2:c60_compare} compare the J-V scans of PePDs with \ch{TiO_2} and \ch{C_60} as the ETL, respectively. For each ETL, two versions of the stack were evaluated: one with an as-deposited perovskite layer and one with a flash-annealed perovskite layer. In the case of the annealed perovskite, annealing was performed before ETL deposition at 300 \degree C for 5–10 seconds in nitrogen environment. This was done considering that, while the as-deposited perovskite was already in the black phase, the annealed version exhibited higher crystallinity and improved optoelectronic properties, as discussed in the previous section.
 
 \begin{figure}[htbp]
     \centering
     % First row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/TiO2-Compare.pdf} 
         \caption{}
         \label{fig:ch2:tio2_compare}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/C60-Compare.pdf} % Replace with your image file
         \caption{}
         \label{fig:ch2:c60_compare}
     \end{subfigure}
 
-    \vspace{1em} % Space between rows
 
     % Second row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/As_Dep-EQE.pdf} % Replace with your image file
         \caption{}
         \label{fig:ch2:as_dep_eqe}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Annealed_EQE.pdf} % Replace with your image file
         \caption{}
         \label{fig:ch2:annealed_eqe}
     \end{subfigure}
-    \caption{SSPL, TRPL, and absorptance for the an As-Deposited and an Annealed perovskite sample.}
+    \caption{Impact of transport layer and annealing conditions on device performance.}
 \end{figure}
+
+Both samples with \ch{TiO_2} exhibit similar levels of $J_d$ at -2 V, albeit the flash-annealed one has smaller hysteresis. The samples with \ch{C_60} exhibit significantly larger variability ans a median value of dark current at xx and yy for the as-deposited and annealed perovskite, respectively. Annealing the film seems to be reducing both the variability and the median value of dark current, however the performance is still superior compared to the samples with \ch{TiO_2}. It was previously shown that evaporated \ch{C_60} has the tendency to diffuse through the grain boundaries of the perovskite film, leading to potential shunts, and that is why it is mitigated with the annealing and larger grains. This phenomenon will be further investigated in Section xx. For this reason, for now we rely on the use of \ch{TiO_2} for the development of the baseline device stack. 
+
+In terms of EQE for the \ch{TiO_2} samples, both exhibit a very similar behavior with an EQE that is already saturated at 0 V and is mainly above 70\% for the whole visible spectrum. These results further highlight the possibility of fabricating photodetectors processed solely at room temperature, a property that could open up new pathways for use with flexible substrates. However, considering the improvements in crystallinity and reduction in non-radiative recombination that were established for the annealed state, we move forward using the the flash-annealed sample with 40 nm of \ch{TiO_2} as the baseline. 
 
 
 \subsection{Impact of Perovskite Deposition Conditions}
 
-\begin{itemize}
-    \item Part on defect tolerance of the perovskite layer and its implications on the tolerance against changes in the device characteristics by changing deposition consitions
-    \item Impact of deposition rate, ratio between precursors, annealing duration
-    \item Exploration of 3-source evaporation of CsPbI2Br films and the problems with pinholes and shunts in device performance. 
-\end{itemize}
+Beside the choice of transport layer and annealing of the perovskite, we wanted to explore the composition of the perovskite film, as well as the deposition speed on the performance. In terms of deposition rate we explore three deposition rates, ranging between 0.8, 1.2, and 1.6 {\AA}/sec. The overall performance is not drastically affected, however careful consideration of the $J_d$ at -2 V demonstrates an increase in the median value with faster deposition rate. Therefore, we maintain a deposition rate of 0.8 {\AA}/s for the rest of our experiments. 
+
+In terms of stoichiometry, we vary the \ch{CsBr}:\ch{PbI_2} ratio between 0.8:1.0 (\ch{PbI_2} excess), 1.05:1.0 (Stoich), and 1.2:1.0 (\ch{CsBr} excess). For the samples with excess of \ch{PbI_2}, a significant overshoot is observed at the TPC measurement, typically associated with the accumulation of trapped charges at the interface, that limit the extraction of photo-generated carriers. Say something about sample with excess of CsBr...
+
 
 \begin{figure}[htbp]
     \centering
     % First row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/08As-JV.pdf} 
         \caption{}
         \label{fig:ch2:0.8A/s-jv}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/12AS-JV.pdf} % Replace with your image file
         \caption{}
         \label{fig:ch2:1.2A/s-vj}
     \end{subfigure}
 
-    \vspace{1em} % Space between rows
-
     % Second row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/16AS-JV.pdf} % Replace with your image file
         \caption{}
         \label{fig:ch2:1.6A/s-jv}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Evap_Rate_Box_Plot.pdf} % Replace with your image file
         \caption{}
@@ -480,91 +456,82 @@ In terms of EQE for the Tio2 samples, both as-deposited and annealed sample ehib
     \begin{subfigure}[b]{0.3\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/08CsBr.pdf}
-        \caption{Figure 1}
+        \caption{}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.3\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/105CsBr.pdf}
-        \caption{Figure 2}
+        \caption{}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.3\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/12CsBr.pdf}
-        \caption{Figure 3}
+        \caption{}
     \end{subfigure}
 
     \vspace{1em} % Space between rows
 
     % Second row
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.28\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/TPC-08CsBr.pdf}
-        \caption{Figure 4}
+        \caption{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.28\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/TPC-105CsBr.pdf}
-        \caption{Figure 5}
+        \caption{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.28\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/tpc-12CsBr.pdf}
-        \caption{Figure 6}
+        \caption{}
     \end{subfigure}
 
     \caption{A figure with 2 rows and 3 images in each row.}
     \label{fig:two_rows_three_columns}
 \end{figure}
 
-
-
-
 \subsection{Impact of Substrate}
 
-\begin{itemize}
-    \item Comparison of JVs and EQE between glass/ITO and PIX 
-    \item Explanation of the higher resistivity of the PIX substrates through the TEM submitted samples
-    \item Proof of the high-temperature stability of the stack through annealing of the complete PIX stack post-depositions
-    \item Only possible to evaluate for PIX and not for Al, since it will diffuse in the stack 
-\end{itemize}
+So far, we have established as the baseline stack the one deposited with a total deposition rate of 0.8{\AA}/s, at a stoichiometry of 1.05:1.00 CsBr:\ch{PbI_2}, with 40 nm of \ch{TiO_2} as the ETL. At this point we can transfer the same stack to the silicon substrates (Fig.~\ref{fig:ch2:pix_stack}). 
+The device on silicon substrate exhibits significantly higher hysteresis and lower rectification, mainly attributed to the higher resistance of the TiN contact. In terms of the device's EQE, a significantly lower response at 0 V compared to the glass substrate. When increasing the bias to -1 V, it is possible to saturate, again. The slow turn-on of the diode is more explicitly illustrated at the EQE as a function of bias. 
 
 
-\begin{figure}[h!]
+
+\begin{figure}[htbp]
     \centering
-    % First row: Two figures
-    \begin{minipage}{0.48\textwidth}
+    \begin{subfigure}{0.32\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/JV_PIX_Glass.pdf} % Replace with your file
-        \caption{Figure 1 Caption}
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/JV_PIX_Glass.pdf}
+        \caption{}
         \label{fig:ch2:jv_comp_pic_glass}
-    \end{minipage}
+    \end{subfigure}
     \hfill
-    \begin{minipage}{0.48\textwidth}
+    \begin{subfigure}{0.32\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/EQE_fnm_PIX_Glass.pdf} % Replace with your file
-        \caption{Figure 2 Caption}
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/EQE_fnm_PIX_Glass.pdf}
+        \caption{}
         \label{fig:ch2:eqe_comp_pix_glass}
-    \end{minipage}
-
-    % Second row: One figure
-    \vspace{1em} % Adjust vertical space
-    \begin{minipage}{0.48\textwidth}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.32\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/EQE_fV_PIX_Glass.pdf} % Replace with your file
-        \caption{Figure 3 Caption}
-        \label{fig:ch2:eqefV_comp_pix_glass}
-    \end{minipage}
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/EQE_fV_PIX_Glass.pdf}
+        \caption{}
+        \label{fig:plot3}
+    \end{subfigure}
+    
+    \caption{A 1×3 grid of images.}
+    \label{fig:ch2:eqefV_comp_pix_glass}
 \end{figure}
 
 
-
-
-
-
+Two potential causes could be evaluated for the slower turn-on of the diode when it is fabricated on top of the Si substrate. In contrast to ITO and Al that were used as contacts for the glass substrate, which have a large difference in the work function, ITO and TiN do not have a big difference in their work function. To further evaluate this, we fabricate the same stack on glass substrate, using ITO as top and bottom contact. In this case, it is clear that EQE saturates, indicating that the built-in potential is sufficient to fully extract the generated carriers, even at 0 V. Therefore, we turn to the second possible reason that could cause the slower turn-on of the diode, and that is the potential existence of an energy barrier. To investigate this we turn to the substrate itself and the interface between TiN and \ch{NiO_x}. We submit four different substrates to TEM, one that is as-deposited, and the rest annealed in open air at 300 \degree C for 5 minutes, 30 minutes, and 60 minutes, respectively. The results are illustrated in Fig.~\ref{fig:ch2:tem_pix_substrate}. For all samples, even for the as-deposited one, a thin layer of \ch{TiO_2} is observed. Additionally, the following trend is observed: with increasing annealing duration, the thickness of the \ch{TiO_x} layer remains the same, however the levels of oxygen are increasing. TiOx could introduce an energy barrier, that is preventing the extraction of carriers at 0 V.
 
 \begin{figure}[htbp]
     \centering
@@ -581,7 +548,6 @@ In terms of EQE for the Tio2 samples, both as-deposited and annealed sample ehib
         \caption*{(b)}
     \end{subfigure}
 
-    \vspace{1em} % Space between rows
 
     % Second row
     \begin{subfigure}[t]{0.49\textwidth}
@@ -596,8 +562,12 @@ In terms of EQE for the Tio2 samples, both as-deposited and annealed sample ehib
         \caption*{(d)}
     \end{subfigure}
     \caption{TEM of TiN - NiOx interface and emergence of TiOx at the interface.}
+    \label{fig:ch2:tem_pix_substrate}
 \end{figure}
 
+\section{Conclusions}
+
+Perovskite are known for their defect tolerant structure, this means that variation from the perfect stoichiometry do not have a negative impact on the performance of the device. This has an opposite effect at the same time, that despite pursuing changes in the composition and the fabrication does not translate to a major impact on the the device performance. 
 
 
 

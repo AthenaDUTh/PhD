@@ -26,79 +26,71 @@
 \section{Perovskite-Based Photodetectors}
 
 \subsection{Properties of Perovskites}
-Perovskites were integrated into photovoltaic devices for the first time in 2009 by the Miyasaka group \cite{Kojima2009OrganometalCells}.
+
+\begin{figure}[htbp]
+    \centering
+    % First image (top)
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+        \includegraphics[width=0.85\linewidth]{chapters/introduction/image/perovskite_structure.jpg}
+        \caption{}
+        \label{fig:ch1:perovskite structure}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+    
+    % Second image (bottom)
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+    %\hspace{-1.4cm}
+        \includegraphics[width=0.85\linewidth]{chapters/introduction/image/bandgap_tunability.jpg}
+        \caption{}
+        \label{fig:ch1:bandgap_tunability}
+    \end{subfigure}
+    
+    \caption{(a) Reproduced from \cite{Lei2021MetalApplications}. (b) Reproduced from \cite{Gholipour2020BandgapMaterials}.}
+    \label{fig:ch1:perovskite_strucutre_bandgap}
+\end{figure}
 
 
-\begin{itemize}
-    \item ABX3 material structure 
-    \item Phases, absorption, recombination
-    \item Versatile nature, from bulk, thin films, nanowires, QDs, etc
-\end{itemize}
+
+The term perovskite was first used in 1839 to name the newly discovered naturally occurring mineral calcium titanate (\ch{CaTiO_3}), but it took 170 years before perovskites were integrated into photovoltaic devices by the Miyasaka group in 2009 \cite{Kojima2009OrganometalCells}. Since then, intensive scientific research has enabled single-junction perovskite cells to surpass the power conversion efficiency (PCE) of the much more mature single-junction Si solar cells ($> 26\%$). Meanwhile, perovskite-Si tandem solar cells have demonstrated PCEs beyond the Shockley-Queisser limit ($>34\%$), establishing themselves as one of the most dominant candidates for next-generation solar technologies \cite{Hasan2024StabilityReview, Noman2024ATechnology}. This rapid growth of perovskite-based solar cell technology, from its inception to its commercial realization within 15 years, is attributed to both practical advantages and the exceptional optoelectronic properties of perovskites, as well. Practical advantages include, but are not limited to, low-cost production, dependence on abundant materials, and versatile fabrication through a wide variety of methods. On the other hand, some remarkable optoelectronic properties of perovskites are their tunable and direct bandgap, high absorption coefficient, low exciton binding energy, defect tolerance, and long carrier lifetime. 
+
+Perovskites can be divided into three groups, each of which has distinct properties: three-dimensional (3D), two-dimensional (2D) or quasi-2D, and zero-dimensional (0D) perovskites (Fig.~\ref{fig:ch1:perovskite structure}). 3D perovskites can be generally described by the \ch{ABX_3} formula, where A is a 12-fold-coordinated monovalent cation such as methylammonium (\ch{MA^+}), formamidinium (\ch{FA^+}), or cesium (\ch{Cs^+}), B is a 6-fold-coordinated inorganic divalent inorganic cation such as lead (\ch{Pb^{2+}}) and tin (\ch{Sb^{2+}}), while X is a strongly electronegative monovalent halide anion (\ch{I^-}, \ch{Br^-}, and \ch{Cl^-}). As a result, mixed compositions can be pursued for each lattice site, enabling the tuning of the perovskite's bandgap across a wide range of energies (spanning from near ultraviolet (UV) to near infrared (NIR)), depending on the desired application (Fig.~\ref{fig:ch1:bandgap_tunability}).
+
+say about tolerance factor
+
 
 \subsection{From Solar cells to Photodetectors}
+
+The rapid advancements of perovskite-based solar cells sparked interest for their use in alternative optoelectronic applications, including photodiodes, light-emitting diodes (LEDs), and lasers. While solar cells operate without external bias, photodetectors typically operate in the reverse bias regime (to promote faster carrier extraction), while lasers and LEDs operate in the forward bias regime (to promote radiative charge recombination). While the diode structure is similar for all applications, the different operational regimes introduce distinct challenges for each use. Nevertheless, the operation of solar cells and photodiodes is more closely related, as they both depend on the efficient extraction of the photo-generated carriers. This process relies on the photovoltaic effect, during which the incoming light is absorbed by the active material, as long as its wavelength is equal or smaller than the bandgap, leading to the generation of electron-hole pairs (or excitons). Under the effect of the built-in potential (which may be complimented by an additional field through reverse bias), the charge carriers are extracted and collected at the respective contacts as photocurrent. 
+
+The structure that allows this process is a p-i-n diode, where the perovskite is the intrinsic layer and the built-in potential is defined by a hole transport layer (HTL) and an electron transport layer (ETL), as shown in Fig. xx. Typically, wide-band gap materials are used as transport layers, so as to act as blocking layers for the opposite type of carriers. However, it has to be noted that the diode structure is not the only perovskite-based architecture, alternative include photo conductors, and photo resistors, whose properties are summarized in the Fig. xx. However, in this work the goals is integration on imagers circuits, and fast extraction time, so the photo-diode architecture is the only one considered. 
+
+
+
+
 \begin{itemize}
     \item Schematic for absorption, extraction collection
     \item Solar cell structure, role of transport layer
     \item Transition of photodetectors - use of same structure 
     \item Advantages of photodiodes compared to transistors, conductors, resistors 
     \item Some examples of perovskite-based photodetectors (low dark current - and what affects, fast extraction, X-Ray detection, flexibility, etc)
+    \item Figures of merit for photodiodes 
 \end{itemize}
 
 \subsection{Scalable, High-Temperature Perovskites}
 
+The vast majority of studies on perovskite-base optoelectronic devices rely on the use of solution processed methods, and specifically spin-coating. This is not surprising, considering that spin-coating is a technique that is simple, easily accessible, and has low cost. These characteristics make it highly suitable for rapid prototyping and exploration of various material combination that can promote efficiency or stability. For example, during solution preparation it is common to include various additives that in turn can help modulate morphology, optimize energy level-alignment or eliminate hysteresis \cite{Liu2020ACells}. However, cell fabrication through spin-coating is not transferable to industry, due to limitation is throughput and large-area deposition. For example, a commonly used technique, anti-solvent processing has been shown to be challenging to scale-up\cite{Saki2021Solution-processedCells}.
 
-Research around perovskite optoelectronic devices is mainly focused on the use of hybrid organic-inorganic perovskites deposited through solution processing methods, primarily spin-coating. 
+Significant efforts have been made to explore alternative fabrication techniques that enable the scalable deposition of perovskite-based devices. Such methods involve solution-processed approaches (such as inkjet printing and spray coating) or vacuum-processed on (such as chemical vapor deposition or thermal evaporation). Among those, thermal evaporation is the most mature one, and in 2020 it enabled the fabrication of 21 $cm^2$ mini modules with the superior efficiency of 18.13\% \cite{Vaynzof2020TheProcessing, Li2020HighlyMini-modules}. Besides scalability, thermal evaporation offers the advantage of not necessarily requiring a post-deposition thermal annealing step, rendering highly attractive for applications that require the use of flexible substrates \cite{Becker2019LowExperimentation}. Besides that, it avoids the use of toxic solvents, allows for precise control of the deposited thickness, and prevents the risk of damaging the underlying layers in tandem structures \cite{Zhang2020TowardCells, Forgacs2017EfficientCells}
 
-\textbf{Advantages of solution processing (spin-coating): }
-
-\begin{itemize}
-    \item Simplicity, No need for expensive and complex vacuum systems
-    \item Suitable for fast prototyping
-    \item Introducing additives has multiple advantages (modulating morphology, stabilizing perovskite phase, adjusting energy-level alignment, eliminating hysteresis, enhancing operating stability)\cite{Liu2020ACells}
-\end{itemize}
+Despite the advantages of using thermal evaporation for the deposition of perovskite-based optoelectronic devices, several limitations still exist. For instance, the high vacuum pressure and low sticking coefficient of \ch{MA^+} renders its evaporation rather complicated \cite{Kim2020DepositionCH3NH3PbI3Perovskite}. At the same time, the inclusion of additives, which is crucial for improving the performance/stability of solution-processed films, is not compatible with evaporation. Lastly, evaporated perovskite films tend to have significantly smaller grain sizes, which may compromise their stability against moisture or limit device performance due to their higher defect density \cite{Vaynzof2020TheProcessing, Wang2017Scaling}.
 
 
-\textbf{Disadvantages of solution processing:}
+Besides the use of spin-coating as the fabrication technique, research around perovskite optoelectronic devices is mainly focused on the use of hybrid organic-inorganic perovskites, where the A-site cation is a mixture of \ch{MA^+}, \ch{FA^+}, and/or \ch{Cs^+}, leading to optimal performances \cite{Zhang2021All-inorganicCells}. However, perovskites that contain organic molecules are more sensitive to thermal degradation. For instance, it was shown that methylammonium-based perovskites decompose into methylamine, hydrogen iodide, and lead iodide for temperatures beyond 100 \degree C. This limitation sets hybrid organic-inorganic perovskites unsuitable for applications with high thermal budget, which may be imposed by intrinsic (triggering of self-heating mechanisms through resistive loses) or extrinsic factors (high ambient temperature, high temperature post processing) \cite{Handa2019LargePerovskite, Dong2021SupportingFilm, Li2022StructureTemperatures}. Such a condition is imposed in the case of color-splitting waveguides, which have to be bonded to the underlying photodetector structure at temperatures beyond 250 \degree C. 
 
-\begin{itemize}
-    \item Not readily transferable to industry
-    \item Anti-solvent processing is challenging to scale-up \cite{Saki2021Solution-processedCells}.
-\end{itemize}
-
-\textbf{Advantages of thermal evaporation:}
-\begin{itemize}
-    \item Many additional methods exists (inkjet printing, spray coating, chemical vapor deposition, flash evaporation and other. Less common in literature and show lower performance compared to thermal evaporation \cite{Vaynzof2020TheProcessing}.
-    \item part from paper that describes the growth of the perovskite on the substrate    
-    \item Up until 2020, thermally-evaporated mini modules of an active area of 21cm2 had achieved the superior efficiency of 18.13\% \cite{Li2020HighlyMini-modules} - need to check if this record was broken
-    \item Post-Deposition annealing is not necessary, making it compatible with flexible optoelectronic applications \cite{Becker2019LowExperimentation}
-    \item Avoids the use of toxic solvents \cite{Zhang2020TowardCells} 
-    \item No risk of damaging the underlying layers of tandem devices \cite{Forgacs2017EfficientCells}.
-    \item Better control over thickness
-\end{itemize}
-
-
-\textbf{Disadvantages of thermal evaporation:}
-\begin{itemize}
-    \item Evaporation of perovskites that contain methylammonium is complicated due to its relatively high vapor pressure and low sticking coefficient \cite{Kim2020DepositionCH3NH3PbI3Perovskite} (Read more this publication).
-    \item Approaches of including additives are not compatible with thermal evaporation. 
-    \item Grain size of evaporated perovskites are significantly smaller compared to solution processed ones \cite{Vaynzof2020TheProcessing}.
-    \item The abundant grain boundaries not only limit the performance of the detector, but also the stability against moisture \cite{Wang2017Scaling}.
-\end{itemize}
-
-
-\textbf{Disadvantages of hybrid organic-inorganic perovskites}
-
-\begin{itemize}
-    \item Hybrid organic-inorganic perovskites are preferred for optimal performances \cite{Zhang2021All-inorganicCells}
-    \item Hybrid organic-inorganic perovskites are sensitive to thermal degradation
-    \item Most temperature-stability studies limit their scope up to 85C. \cite{Yang2023InvertedPassivation} <- this reference contains more references for other studies that evaluate tolerance up to 85C
-    \item Not suitable for applications with high thermal budget 
-    \item These conditions might be imposed by intrinsic factors (triggering of self-heating mechanisms through resistive loses) or extrinsic factors (high ambient temperature, high temperature post processing)\cite{Handa2019LargePerovskite, Dong2021SupportingFilm, Li2022StructureTemperatures}.
-\end{itemize}
-
-
-
-
+Under these circumstances, all-inorganic perovskites, in the \ch{CsPbI_{x}Br_{3-x}} for $1 \le x \le 3 $ family become and attractive solution. 
 
 \textbf{Advantages of all-inorganic perovskites: }
 
@@ -129,6 +121,8 @@ Research around perovskite optoelectronic devices is mainly focused on the use o
 \end{itemize}
 
 \subsection{State of the art for evaporated, all-inorganic perovskites}
+
+Besides the use of inorganic, vacuum-deposited perovskites, the whole stack has to be inorganic and vacuum deposited. This is a condition that has not been explored so far, except for limited occasions. 
 
 \textbf{Good discussion and references for Metal Oxides as trasnport layers happens here \cite{Yang2023InvertedPassivation}}.
 
