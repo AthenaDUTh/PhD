@@ -1,5 +1,5 @@
 % !TeX root = ../../thesis.tex
-\chapter{From Perovskite Films to Photodetectors: Establishing a Baseline}\label{ch:material_properties}
+\chapter{From Perovskite Films to PePDs: Establishing a Baseline}\label{ch:material_properties}
 
 The inception of the work presented in this thesis began with the repurposing an older vacuum evaporation chamber, previously used of the fabrication of organic thin film electronics. A significant portion of initial efforts focused on calibrating the chamber for the deposition of inorganic perovskite layers, evaluating film quality and repeatability, as well as investigating the effect of fundamental deposition parameters on the performance of the photodetector devices. In the first part of this chapter, we investigate the structural, optical, and crystallographic properties of co-evaporated \ch{CsPbI_2Br} thin films, as well as the effect of the post-deposition annealing step. In the second part of the chapter, we use the co-evaporated films to establish a baseline for photodetector device performance, considering factors like substrate type, transport layers, deposition rate, and stoichiometry. 
 
@@ -178,6 +178,24 @@ indicating an almost doubling of the carriers' lifetime, from 4.8 ns for the as-
 
 \section{Device Development}
 
+\subsection{Substrate and Electrodes}
+
+\subsection{Transport Layers}
+
+A review of available transport layers and the ones we use + energetic landscape.
+
+on top of the perovskite is more critical, since sputtering is usually too aggressive for the lattice - thermal evaporation, or deposition via ALD have been previously explored 
+
+fewer options are avaialble for inorgnic HTLs - NiOx - that thy we rely solely on the use of 
+
+
+\textbf{Good discussion and references for Metal Oxides as transport layers happens here \cite{Yang2023InvertedPassivation}}.
+
+
+
+
+
+
 \begin{figure}[htbp]
     \centering
     % First plot
@@ -203,6 +221,8 @@ indicating an almost doubling of the carriers' lifetime, from 4.8 ns for the as-
 
 
 This section provides an overview of the parameters that can be varied during the development of perovskite-based photodetectors and their impact on device performance. As shown in Fig.\ref{fig:ch2:types_of_substrates}, two types of substrates were used in this study: glass substrates pre-patterned with an ITO contact (Fig.\ref{fig:ch2:glass_substrate}) and silicon substrates, designed internally and fabricated in imec's CMOS foundry, featuring a TiN bottom contact (Fig.~\ref{fig:ch2:pix_substrate}).
+
+Independetnly of the used substrate, the fabrication process is similar. For both of the 15 nm of NiOx are deposited via DC sputtering. The NiO-covered film is annealed for 5 minutes at 300 C in open air to promote the oxidataiton of the substrate. Then the perovskite is deposited, in most cases followed by a post deposition flash annealing step at 300 C for 5 seconds.- add stack diagram, taken from the paper on the ETL optimization.
 
 The fabrication process is similar for both substrate types, beginning with the deposition of the HTL (DC sputtered \ch{NiO_x}), followed by the deposition of the perovskite layer, the post-deposition annealing step, and finally, the deposition of the ETL. For glass substrates, the stack is completed by depositing Al contacts via thermal evaporation, using a shadow mask that defines 12 different devices. The device area is determined by the overlap between the ITO and Al electrodes, resulting in three different areas: 0.125 $cm^2$, 0.075 $cm^2$, and 0.025 $cm^2$. The use of variable-sized contacts allows for an analysis of the impact of device area on performance metrics.
 

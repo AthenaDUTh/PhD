@@ -4,7 +4,25 @@
 \instructionsintroduction
 \section{Semiconductor Image Sensors}
 
+Photography is an ubiquitous commodity of modern life, with applications spanning from art and entertainment, to science and space exploration, as well as surveillance and quality control.  
+
+A short flashback sets the invention of photography back in ... 
+
+Did not catch up until the invention of film 
+
+Semiconductor boom growth did not exclude advancement photodetectors through the invention of the CCD, which alsomost a decede later were completely replaced by the faster and more efficient CMOS imagers. 
+
+Progress in CMOS technology has been expanded towards various directions, including speed, shutter, as well as resolution. The following section will go into more detail about the recent advancements in increasing resolution of an imager.
+
+
 \section{Towards Ultra-High Resolution Imagers}
+
+
+Fig. provides an analysis of the pixel size increase within the past 15 years. 
+Two aspects are involved: increase of the pixel array size, as well as shrinkage of the pixel size. The former, the latter, 
+
+
+
 
 \subsection{Replacing Color Filters with Color Splitting Waveguides}
 \subsection{Absorption Efficiency vs Response Time: A trade-off}
@@ -56,82 +74,127 @@
 
 The term perovskite was first used in 1839 to name the newly discovered naturally occurring mineral calcium titanate (\ch{CaTiO_3}), but it took 170 years before perovskites were integrated into photovoltaic devices by the Miyasaka group in 2009 \cite{Kojima2009OrganometalCells}. Since then, intensive scientific research has enabled single-junction perovskite cells to surpass the power conversion efficiency (PCE) of the much more mature single-junction Si solar cells ($> 26\%$). Meanwhile, perovskite-Si tandem solar cells have demonstrated PCEs beyond the Shockley-Queisser limit ($>34\%$), establishing themselves as one of the most dominant candidates for next-generation solar technologies \cite{Hasan2024StabilityReview, Noman2024ATechnology}. This rapid growth of perovskite-based solar cell technology, from its inception to its commercial realization within 15 years, is attributed to both practical advantages and the exceptional optoelectronic properties of perovskites, as well. Practical advantages include, but are not limited to, low-cost production, dependence on abundant materials, and versatile fabrication through a wide variety of methods. On the other hand, some remarkable optoelectronic properties of perovskites are their tunable and direct bandgap, high absorption coefficient, low exciton binding energy, defect tolerance, and long carrier lifetime. 
 
+\textbf{expand more on the advantages of perovskites - explain more and give metrics}
+
 Perovskites can be divided into three groups, each of which has distinct properties: three-dimensional (3D), two-dimensional (2D) or quasi-2D, and zero-dimensional (0D) perovskites (Fig.~\ref{fig:ch1:perovskite structure}). 3D perovskites can be generally described by the \ch{ABX_3} formula, where A is a 12-fold-coordinated monovalent cation such as methylammonium (\ch{MA^+}), formamidinium (\ch{FA^+}), or cesium (\ch{Cs^+}), B is a 6-fold-coordinated inorganic divalent inorganic cation such as lead (\ch{Pb^{2+}}) and tin (\ch{Sb^{2+}}), while X is a strongly electronegative monovalent halide anion (\ch{I^-}, \ch{Br^-}, and \ch{Cl^-}). As a result, mixed compositions can be pursued for each lattice site, enabling the tuning of the perovskite's bandgap across a wide range of energies (spanning from near ultraviolet (UV) to near infrared (NIR)), depending on the desired application (Fig.~\ref{fig:ch1:bandgap_tunability}).
 
-say about tolerance factor
+\subsection{From Solar Cells to Photodetectors}
 
+The rapid advancements of perovskite-based solar cells sparked interest for their use in alternative optoelectronic applications, including photodiodes, light-emitting diodes (LEDs), and lasers. While solar cells operate without external bias, photodetectors typically operate in the reverse bias regime (to promote faster carrier extraction), while lasers and LEDs operate in the forward bias regime (to promote radiative charge recombination). While the diode structure is similar for all applications, the different operational regimes introduce distinct challenges for each use. Nevertheless, the operation of solar cells and photodiodes is more closely related, as they both depend on the efficient extraction of the photo-generated carriers. This process relies on the photovoltaic effect, during which the incoming light is absorbed by the active material, as long as its energy is equal or larger than the bandgap, leading to the generation of electron-hole pairs (or excitons). Under the effect of the built-in potential (which may be complimented by an additional field through reverse bias), the charge carriers are extracted and collected at the respective contacts as photocurrent. 
 
-\subsection{From Solar cells to Photodetectors}
+The solar cell structure, as well as the photodetectors that are developed in the framework of this thesis rely on the on the photodiode structure (Fig.~\ref{fig:ch2:types_of_detector}a), a vertical structure where the active layer is sandwiched between two charge transport layers, commonly referred to as the electron transport layer (ETL) and the hole transport layer (HTL). The role of these layers is typically twofold: (i) they promote the efficient extraction of the photo-generated carriers, and (ii) they block the injection of the opposite carrier from the electrode under the effect of reverse bias. The latter condition is only true for occasions where wide-bandgap transport layers are used. When developing the photodiode stack on top of a glass substrate, the architecture can be further distinguished in p-i-n and n-i-p, depending on the whether the perovskite is processed is processed on top of the HTL or ETL, respectively. 
 
-The rapid advancements of perovskite-based solar cells sparked interest for their use in alternative optoelectronic applications, including photodiodes, light-emitting diodes (LEDs), and lasers. While solar cells operate without external bias, photodetectors typically operate in the reverse bias regime (to promote faster carrier extraction), while lasers and LEDs operate in the forward bias regime (to promote radiative charge recombination). While the diode structure is similar for all applications, the different operational regimes introduce distinct challenges for each use. Nevertheless, the operation of solar cells and photodiodes is more closely related, as they both depend on the efficient extraction of the photo-generated carriers. This process relies on the photovoltaic effect, during which the incoming light is absorbed by the active material, as long as its wavelength is equal or smaller than the bandgap, leading to the generation of electron-hole pairs (or excitons). Under the effect of the built-in potential (which may be complimented by an additional field through reverse bias), the charge carriers are extracted and collected at the respective contacts as photocurrent. 
+The photodiode is not the only structure that is used for photo-detecting applications. Two additional types of photodetectors include the two-terminal photoconductors and the three-terminal phototransistors (Fig.~\ref{fig:ch2:types_of_detector}b and Fig.~\ref{fig:ch2:types_of_detector}c, respectively), which have both a lateral geometry. Both architectures rely on gain mechanism, which leads to a slower response time. At the same time, the relatively large spacing between the electrodes ($> 10 \mu m)$. not only requires a higher driving voltage but is also unsuitable for integration with readout circuits that have a significantly smaller pixel pitch (below 5 $\mu m)$.
 
-The structure that allows this process is a p-i-n diode, where the perovskite is the intrinsic layer and the built-in potential is defined by a hole transport layer (HTL) and an electron transport layer (ETL), as shown in Fig. xx. Typically, wide-band gap materials are used as transport layers, so as to act as blocking layers for the opposite type of carriers. However, it has to be noted that the diode structure is not the only perovskite-based architecture, alternative include photo conductors, and photo resistors, whose properties are summarized in the Fig. xx. However, in this work the goals is integration on imagers circuits, and fast extraction time, so the photo-diode architecture is the only one considered. 
+\begin{figure}
+  \centering
+  \medskip
+  \includegraphics[width=.9\textwidth]{chapters/introduction/image/types_of_detector.jpg}
+  \caption[Short caption for Table of Figures]{Photodiode, photoconductor, phototransistor, Reproduced from \cite{Yoo2021ADirections}.}
+  \label{fig:ch2:types_of_detector}
+\end{figure}
 
+\subsection{Scalable, High-Temperature PePDs}
 
-
-
-\begin{itemize}
-    \item Schematic for absorption, extraction collection
-    \item Solar cell structure, role of transport layer
-    \item Transition of photodetectors - use of same structure 
-    \item Advantages of photodiodes compared to transistors, conductors, resistors 
-    \item Some examples of perovskite-based photodetectors (low dark current - and what affects, fast extraction, X-Ray detection, flexibility, etc)
-    \item Figures of merit for photodiodes 
-\end{itemize}
-
-\subsection{Scalable, High-Temperature Perovskites}
+\begin{figure}
+  \centering
+  \medskip
+  \includegraphics[width=.99\textwidth]{chapters/introduction/image/types_of_evaporation.png}
+  \caption[Short caption for Table of Figures]{Types of evaporation: co-evaporation, single-source evaporation, sequential evaporation, Reproduced from \cite{Han2025PerovskiteCells}.}
+  \label{fig:ch2:types_of_evaporation}
+\end{figure}
 
 The vast majority of studies on perovskite-base optoelectronic devices rely on the use of solution processed methods, and specifically spin-coating. This is not surprising, considering that spin-coating is a technique that is simple, easily accessible, and has low cost. These characteristics make it highly suitable for rapid prototyping and exploration of various material combination that can promote efficiency or stability. For example, during solution preparation it is common to include various additives that in turn can help modulate morphology, optimize energy level-alignment or eliminate hysteresis \cite{Liu2020ACells}. However, cell fabrication through spin-coating is not transferable to industry, due to limitation is throughput and large-area deposition. For example, a commonly used technique, anti-solvent processing has been shown to be challenging to scale-up\cite{Saki2021Solution-processedCells}.
 
-Significant efforts have been made to explore alternative fabrication techniques that enable the scalable deposition of perovskite-based devices. Such methods involve solution-processed approaches (such as inkjet printing and spray coating) or vacuum-processed on (such as chemical vapor deposition or thermal evaporation). Among those, thermal evaporation is the most mature one, and in 2020 it enabled the fabrication of 21 $cm^2$ mini modules with the superior efficiency of 18.13\% \cite{Vaynzof2020TheProcessing, Li2020HighlyMini-modules}. Besides scalability, thermal evaporation offers the advantage of not necessarily requiring a post-deposition thermal annealing step, rendering highly attractive for applications that require the use of flexible substrates \cite{Becker2019LowExperimentation}. Besides that, it avoids the use of toxic solvents, allows for precise control of the deposited thickness, and prevents the risk of damaging the underlying layers in tandem structures \cite{Zhang2020TowardCells, Forgacs2017EfficientCells}
+Significant efforts have been made to explore alternative fabrication techniques that enable the scalable deposition of perovskite-based devices. Such methods involve solution-processed approaches (such as inkjet printing and spray coating) or vacuum-processed on (such as chemical vapor deposition or thermal evaporation). Among those, thermal evaporation is the most mature one, and in 2020 it enabled the fabrication of 21 $cm^2$ mini modules with the superior efficiency of 18.13\% \cite{Vaynzof2020TheProcessing, Li2020HighlyMini-modules}. Besides scalability, thermal evaporation offers the advantage of not necessarily requiring a post-deposition thermal annealing step, rendering highly attractive for applications that require the use of flexible substrates \cite{Becker2019LowExperimentation}. ON top of that, it avoids the use of toxic solvents, allows for precise control of the deposited thickness, and prevents the risk of damaging the underlying layers in tandem structures \cite{Zhang2020TowardCells, Forgacs2017EfficientCells}
+
+Evaporation of perovskite thin films can be categorized into co-evaporation and sequential evaporation, as shown in Fig.~\ref{fig:ch2:types_of_evaporation}a and Fig.~\ref{fig:ch2:types_of_evaporation}b, respectively. Co-evaporation entails the simultaneous evaporation of the necessary precursors, rendering the careful monitoring and maintenance of evaporation rates ratio as highly crucial. On the other hand, in sequential evaporation each precursor is deposited individually, rendering the thickness of each layer as the defining parameter for the perovskites stoichiometry. Unlike co-evaporation, a post-deposition thermal annealing step is essential for sequentially deposited films to facilitate the reaction and intermixing of precursors, enabling the formation of the perovskite film. A third option for the evaporation of perovskite thin film, which is not illustrate, is the single-source evaporation. This approach requires an initial synthesis of the perovskite via powder mixing or crystal growth. Followingly, the powder mixture or the pulverized crystals are loaded in a single substrate from which they are evaporated. 
+
 
 Despite the advantages of using thermal evaporation for the deposition of perovskite-based optoelectronic devices, several limitations still exist. For instance, the high vacuum pressure and low sticking coefficient of \ch{MA^+} renders its evaporation rather complicated \cite{Kim2020DepositionCH3NH3PbI3Perovskite}. At the same time, the inclusion of additives, which is crucial for improving the performance/stability of solution-processed films, is not compatible with evaporation. Lastly, evaporated perovskite films tend to have significantly smaller grain sizes, which may compromise their stability against moisture or limit device performance due to their higher defect density \cite{Vaynzof2020TheProcessing, Wang2017Scaling}.
 
 
-Besides the use of spin-coating as the fabrication technique, research around perovskite optoelectronic devices is mainly focused on the use of hybrid organic-inorganic perovskites, where the A-site cation is a mixture of \ch{MA^+}, \ch{FA^+}, and/or \ch{Cs^+}, leading to optimal performances \cite{Zhang2021All-inorganicCells}. However, perovskites that contain organic molecules are more sensitive to thermal degradation. For instance, it was shown that methylammonium-based perovskites decompose into methylamine, hydrogen iodide, and lead iodide for temperatures beyond 100 \degree C. This limitation sets hybrid organic-inorganic perovskites unsuitable for applications with high thermal budget, which may be imposed by intrinsic (triggering of self-heating mechanisms through resistive loses) or extrinsic factors (high ambient temperature, high temperature post processing) \cite{Handa2019LargePerovskite, Dong2021SupportingFilm, Li2022StructureTemperatures}. Such a condition is imposed in the case of color-splitting waveguides, which have to be bonded to the underlying photodetector structure at temperatures beyond 250 \degree C. 
+Besides the use of spin-coating as the fabrication technique, research around perovskite optoelectronic devices is mainly focused on the use of hybrid organic-inorganic perovskites, where the A-site cation is a mixture of \ch{MA^+}, \ch{FA^+}, and/or \ch{Cs^+}, leading to optimal performances \cite{Zhang2021All-inorganicCells}. However, perovskites that contain organic molecules are more sensitive to thermal degradation. For instance, it was shown that methylammonium-based perovskites decompose into methylamine, hydrogen iodide, and lead iodide for temperatures beyond 100 \degree C. This limitation sets hybrid organic-inorganic perovskites unsuitable for applications with high thermal budget, which may be imposed by intrinsic (triggering of self-heating mechanisms through resistive loses) or extrinsic factors (high ambient temperature, high temperature post processing) \cite{Handa2019LargePerovskite, Dong2021SupportingFilm, Li2022StructureTemperatures}. Such a condition is imposed in the case of color-splitting waveguides, which have to be bonded to the underlying photodetector structure at temperatures beyond 200 \degree C. 
 
-Under these circumstances, all-inorganic perovskites, in the \ch{CsPbI_{x}Br_{3-x}} for $1 \le x \le 3 $ family become and attractive solution. 
+\begin{figure}[htbp]
+    \centering
+    % First plot
+    \begin{subfigure}[t]{0.56\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/introduction/image/perovskite_phases.jpeg} % Replace with your image
+        \caption{}
+        \label{fig:ch2:perovskite_phases}
+    \end{subfigure}
+    \hfill % Space between the two plots
+    % Second plot
+    \begin{subfigure}[t]{0.39\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/introduction/image/perovskite_free_energy.jpeg} % Replace with your image
+        \caption{}
+        \label{fig:ch2:perovskite_free_energy}
+    \end{subfigure}
 
-\textbf{Advantages of all-inorganic perovskites: }
+    % Caption for the whole figure
+    \caption{Perovskite phases and free energy: (a) Reproduced from \cite{Steele2019ThermalFilms} (b) Reproduced from \cite{Steele2021TrojansPerovskite}.}
+    \label{fig:ch2:phases_and_free_energy}
+\end{figure}
 
-\begin{itemize}
-    \item $CsPbI_3$ exists in several phases:
-    \item The cubic $\alpha$-phase
-    \item Two quasi-perovskite phases: The tetragonal $\beta$-phase, and the orthorhombic $\gamma$-phase
-    \item The non-perovskite, orthorhombic, yellow $\delta$-phase \cite{Steele2019ThermalFilms,Mali2021ImplementingCells}. 
-       
-    
-    \item The $\alpha-$, $\beta-$, and $\gamma-$phases are similar in structure in properties
-    \item As a result, they are commonly referred to as the "black phase" without proper distinction between them \cite{Steele2019ThermalFilms, Yan2020DeterminationFilms, Sutton2018CubicExperiment}
+Under these circumstances, all-inorganic perovskites, in the \ch{CsPbI_{x}Br_{3-x}} ($0 \le x \le 3$) family become an attractive solution, since they have been proven to withstand temperatures beyond 250 \degree C \cite{Dong2021High-TemperatureCells}. The two endmembers of this composition are \ch{CsPbI_3} and \ch{CsPbBr_3}. The latter has a bandgap close to 2.3 eV ($\sim$ 540 nm), which is unsuitable for visible light detection, considering that it completely excludes the red part of the spectrum \cite{Tong2020RecentCells}. On the other hand, \ch{CsPbI_3} has a reported bandgap in the range of 1.7 eV, allowing for the detection of the complete visible light spectrum \cite{Zhao2018ThermodynamicallyPhotovoltaics}. However, \ch{CsPbI_3} exists in several phases, and the photoactive (black) phases are only stable in elevated temperatures. In room temperature, a yellow, non-perovskite phase ($\delta-$ \ch{CsPbI_3}) with significantly larger bandgap (~2.8 eV) is the thermodynamically preferred one, rendering it unsuitable for any kind of optoelectronic application \cite{Cho2021Long-termNetwork, Burwig2018CrystalFilms, Steele2022AnFilms}. The black phase consists of the $\gamma-$ (orthorhombic), $\beta-$ (tetragonal), and $\alpha-$ (cubic) phase, which are similar in structure and properties and emerge beyond 320 \degree C. It is possible to kinetically trap the black phase at room temperature through rapid cooling, however the yellow phase re-emerges almost instantaneously when the perovskite film is exposed to ambient moisture \cite{Steele2019ThermalFilms}. 
 
-    \item The naming as black and yellow phase comes from the color films, which indicates their bandgap (xx for black phase, xx for yellow phase)
+To develop a better understanding of the stability or perovskite films and ways to enhance it, it is important to introduce a few new parameters, namely the tolerance factor (t), the octahedral factor ($\mu$), and the atomic packing fraction ($\eta$). The tolerance factor, defined as:
+\begin{equation}
+    t = \frac{r_A + r_X}{\sqrt{2}(r_B + r_X)},
+\end{equation} 
 
-    \item Therefore only the black phases are interesting for optoelectronic applications \cite{Burwig2018CrystalFilms, Steele2022AnFilms}.
+where $r_A$, $r_B$, and $r_X$ are the ionic radius of the A, B, and X sites, respectively \cite{Goldschmidt1926DieKrystallochemie}. A perovskite can be formed for $0.8 < t < 1.0$, where $t = 1$ represents an ideal cubic perovskite. The octahedral factor represents the ratio between the radii of the B-site cation and the X-site anion ($\mu = r_B/r_X$), while the atomic packing factor (APF) describes the fraction of a crystal structure's total volume that is occupied by its constituent atoms. Using this parameters, Sun et al. introduced a stability descriptor ($(\mu + t)^2$), that can predict the relative stability between two perovskites and is visualized in Fig.~\ref{fig:ch2:perovskite_stable_region} \cite{Sun2017ThermodynamicPerovskites}. Taking the computational error into account, it can be seen that the \ch{CsPbI_3} composition is on the borderline between the stable and non-stable region, explaining its metastable behavior at room temperature.  
 
-    \item The black phases of $CsPbI_3$ are stable at high temperature (> what number)
+\begin{figure}[htbp]
+  \centering
+  \medskip
+  \includegraphics[width=.67\textwidth]{chapters/introduction/image/perovskite_stability.jpeg}
+  \caption[Short caption for Table of Figures]{Region of perovskite stability, Reproduced from \cite{Sun2017ThermodynamicPerovskites}.}
+  \label{fig:ch2:perovskite_stable_region}
+\end{figure}
 
-    \item It is possible to kinetically trap the black phase at room temperature through rapid cooling
+Several strategies have been explored to enhance the stability of\ch{CsPbI_3} in ambient conditions, including component engineering, additive engineering, dimensionality reduction engineering and phase mixing engineering \cite{Lei2024StabilityPerovskites}. There are also mechanical approaches, such as such as the pressure-assisted tuning of the \ch{[PbI_6]^{4-}} octahedra tilting \cite{Ke2021PreservingTilt} or the pattering of the perovskite film with a \ch{PbI_2} microgrid via laser writing \cite{Steele2022AnFilms}. Expand a bit more on these options...
 
-    \item However, the yellow phase emerges almost instantaneously upon exposure to ambient moisture \cite{Steele2019ThermalFilms}.
+Component engineering, achieved through the partial replacement of the A-, B-, or X-site, enables composition shifts toward the stable region of Fig.~\ref{fig:ch2:perovskite_stable_region}, while maintaining compatibility with thermal evaporation and avoiding the use of organic compounds. This effect can be achieved by partially replacing \ch{I^-} with \ch{Br^-}. The latter has a smaller ionic radius, effectively increasing the crystal's tolerance factor. However, a trade-off between stability and bandgap suitability arises, considering that \ch{CsPbBr3} is transparent for the red part for the visible spectrum. A reasonable compromise is reached with \ch{CsPbI_2Br}, with a bandgap in the range of $\sim$ 1.95 eV. Such a composition can be easily achieved via the co-evaporation of CsBr and \ch{PbI_2} powders in a 1.00:1.00 molar ratio. 
 
-    \item What is triggering the conversion? Give some energy transition diagrams (Refer to Gibbs free energy and tolerance factor)
 
-    \item Besides encapsulation, many strategies have been proposed to increase the stability of $CsPbI_3$ in ambient conditions, namely: introduction of stabilizing agents, passivation of surfaces, stress introduction through laser writing, and doping with other materials (replacing iodine with other halides or replacing lead with Bismuth and tin). \cite{Li2018SurfaceCells, Li2020ApproachesCells, Steele2022AnFilms, MinSim2018PhaseApplications} - check more citations  
-    
-\end{itemize}
+A variety of reports have employed the \ch{CsPbI_2Br} composition for the fabrication of solar cells and photodiodes, including deposition via thermal evaporation. However, in all cases the perovskite was combined with solution-processed and/or organic transport layers, which counterbalances the advantages of using a vacuum-deposited, inorganic active layer. In fact, besides a report previously published within our group \cite{PintorMonroy2021All-EvaporatedApplications}, and to the best of our knowledge, there is truly limited number of reports that have produced all-inorganic, vacuum-deposited perovskite optoelectronic devices. 
 
-\subsection{State of the art for evaporated, all-inorganic perovskites}
 
-Besides the use of inorganic, vacuum-deposited perovskites, the whole stack has to be inorganic and vacuum deposited. This is a condition that has not been explored so far, except for limited occasions. 
+\subsection{Performance Metrics}
 
-\textbf{Good discussion and references for Metal Oxides as trasnport layers happens here \cite{Yang2023InvertedPassivation}}.
+The definition of performance metrics for any device depends on its intended application. In our case, this is translated into the integration of the PePD on top of a silicon readout integrated circuit (ROIC), as well as the bonding of the structure with the color-splitting waveguides. The former mainly defines the metrics related to electrical performance, while the latter defines the metrics related to stability. 
+
+\begin{figure}
+  \centering
+  \medskip
+  \includegraphics[width=.99\textwidth]{chapters/introduction/image/3T_pixel_readout.png}
+  \caption[Short caption for Table of Figures]{3T pixel readout, Reproduced from \cite{Pejovic2023ColloidalInfrared}.}
+  \label{fig:ch2:readout}
+\end{figure}
+
+For a better understanding of the metrics stemming from the CMOS integration, a better understanding of the readout mechanism is crucial. In our case, this mechanism relies on the 3T pixel design, which involves the photodiode and three additional transistors, namely the reset, the source follower and the row select transistor. This schematically illustrated in Fig.~\ref{fig:ch2:readout}. A read-out cycle is defined by the duration of the  integration period ($t_{int}$). At the beginning of the integration period ($t_0$), the reset transistor is briefly turned-on, connecting the photodiode to a reference voltage in the reverse regime ($V_{bias}$). Next, the reset transistor is turned-off, however $V_{bias}$ is maintained across the photodiode, due to its internal capacitance ($C_{PD}$). During the integration period, and with the photodiode under illumination, the absorbed photons are converted to electron-hole pairs, which in turn discharge the diode's internal capacitance, effectively reducing the bias across its terminals. As a result, at the end of the integration period, the bias across the diode is $V_D$, whose value depends on the number of absorbed photons, i.e. the light intensity. Lastly, $V_D$ is buffered by the source follower transistor and read by the rest of the circuit. 
+
+The performance should be reliable across the voltage swing (100s mV to 1 V), therefore we consider the operation region up to -2 V. This is in contrast to most reports farbicating and cahracterizing perovskite-based photodiodes, which limit the operatioal scope up to -0.5 V.
+
+This procedure help us evaluate the performance of the photodiode according to the following criteria: 
+
+\textbf{Dark Current Density:}
+
+\textbf{External Quantum Efficiency:}
+High and saturated across the voltage swing (100 ms to 1 V)
+
+\textbf{Responsivity and Specific Detectivity}
+
+\textbf{Linearity:}
+
+\textbf{Response Speed:}
 
 
 \section{Scope and Aim of This Thesis}
-
-It is common to see solution-processed layers in combination with thermally evaporated perovskites. \textit{This goes in stark contrast to the solvent-free nature of thermal evaporation}. It is important to develop truly all-inorganic and all-evaporated perovskite-based photodetectors. 
-
-
 
 \begin{itemize}
     \item Develop an all-inorganic perovskite diode (many reports use inorganic perovskites with organic TLs - this defies the purpose of using an inroganic absorber)
