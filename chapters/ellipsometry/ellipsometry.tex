@@ -1,5 +1,5 @@
 % !TeX root = ../../thesis.tex
-\chapter{In-Situ Annealing Effect on Structural and Optical Properties Studied via Temperature-Dependent Spectroscopic Ellipsometry}\label{ch:ellipsometry}
+\chapter{Annealing Effect on Thermally-Evaporated \ch{CsPbI_2Br} Thin Films}\label{ch:ellipsometry}
 
 
 The GIWAXS measurements that were described in Chapter \ref{ch:material_properties} provided invaluable insights into the real-time annealing effect on thermally evaporated \ch{CsPbI2Br} thin films, including information about the phase transition temperatures, as well as the increase in crystallite size. However, GIWAXS is a rather complex and costly characterization technique, that requires access to synchrotron facilities, making it unsuitable for frequent and a lot characterization of samples. 
@@ -11,10 +11,151 @@ Looking in literaute, temperature-dependent XRD is commonly used but there is al
 In this chpater we demonstrate the use of Spectroscopic Ellipsometry when combined with a temperature stage, a fast, non-destructive optical characterization technique, that is commonly available in the vast majority of nano-electroni labs can be used to provide a wealth of information arounf the annealing effect both on the morpholgy and the otpical properties of the thin films. 
 Initially, we lay the fundamentals aroung this caharacterization measurement, and introduce the experiment. Next, we delve into the dynamic model development which is the main innovation of the this shamber. In the last section we discuss the information we can extract about our film, including its expansion, grain coalesence, phase transitions. Additoianlly, we quantify relevant parameters like the Urbach energy and the thermo-optic coefficiet whic can be vital for the caracterization of the film. 
 
+\section{Ex-Situ Annealing Effect}
+
+The post-deposition annealing step of co-evaporated perovskite thin films is not strictly necessary, as the black phase can be achieved by properly tuning the deposition parameters---unlike sequentially evaporated films \cite{DongGrowthFilm}. However, thermal annealing does enhance the crystallinity of the films \cite{Frolova2017HighlyPbIsub2/sub}. 
+
+\begin{figure}[htbp]
+    \centering
+    % First image (top)
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+        \includegraphics[width=0.85\linewidth]{chapters/material_properties/images/GIWAXS_Before_After.pdf}
+        \caption{Caption for Image 1}
+        \label{fig:ch2:giwaxs_before_after:model}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+    
+    % Second image (bottom)
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+    \hspace{-1.4cm}
+        \includegraphics[width=0.68\linewidth]{chapters/material_properties/images/giwaxs_overlayed.pdf}
+        \caption{Caption for Image 2}
+        \label{fig:ch2:giwaxs_before_after:overlay}
+    \end{subfigure}
+    
+    \caption{Overall caption for the figure.}
+    \label{fig:ch2:giwaxs_before_after:}
+\end{figure}
+
+
+To investigate the effects of annealing on the properties of thermally evaporated \ch{CsPbI_2Br} thin films in detail, an as-deposited film (on a \ch{Si/SiO_2} substrate) was subjected to in-situ grazing incidence wide-angle X-ray scattering (GIWAXS). Specifically, while kept in a nitrogen environment, the sample was heated up to 300\degree C with a rate of 30\degree C/min. Once the target temperature was reached, the sample was allowed stabilize for 3 minutes before being cooled back down to room temperature at a similar rate. Fig.~\ref{fig:ch2:giwaxs_before_after:model} offers a comparison of the 1D integrated GIWAXS signals for the as-deposited and annealed perovskite states. All peaks in the diffraction pattern of the as-deposited state can be accounted for by the existence of a pure $\gamma$-\ch{CsPbI_2Br} phase, without indicating the presence any secondary phases, such as \ch{PbI_2}. This further highlights that the perovskite is formed in-situ onto the substrate. Achieving the in-situ black phase in co-evaporated \ch{CsPbI_3} thin films has previously been shown to require an elevated substrate temperature, around 50\degree C \cite{Dong2023GrowthFilm, Becker2019LowExperimentation}. The acquisition of the black perovskite phase at room temperature for our thermally evaporated films is attributed to the stabilizing effect of $Br^-$. 
+
+The signal of the annealed perovskite state reveals the co-existence of the $\gamma$-\ch{CsPbI_2Br} phase and a 0D \ch{Cs_4PbX_6} phase, where X indicates the lattice's halogens. The main indicator for the emergence of the 0D phase is the peak that appears at 8.7 $nm^{-1}$. To further investigate the composition of the 0D phase we consider that both \ch{Cs_4PbI_6} and \ch{Cs_4PbBr_6} are stabilized in the same crystal structure (trigonal space group R-3c), which indicated that iodine and bromine can substitute for each other without altering the crystal geometry. Iodine has a larger ionic radius compared to bromine (2.2 {\AA} for $I^-$ compared to 1.96 {\AA} for $Br^-$), meaning that \ch{Cs_4PbI_6} would have larger lattice parameters than \ch{Cs_4PbBr_6} (a = b = 14.602 {\AA}, c = 18.268 {\AA} for the former, and a = b = 13.722 {\AA}, c = 17.299 {\AA} for the latter)\cite{Bhaumik2020BroadbandNanocrystals,DeBastiani2017InsideCrystals}. In our case, the lattice parameters are measured as a = b = 14.138 {\AA}, c = 17.828 {\AA}, clearly indicating that some of the iodine has been replaced by bromine.  Further analysis through Rietveld refinement, including occupancy refinement, confirms a stoichiometry of \ch{Cs_4PbI_4Br_2}. The 0D phase accounted for 10\% of the total perovskite volume, and its formation complicated the overall stoichiometry of the main phase. Its formation could potentially be attributed to the the excess of \ch{CsBr} during the co-evaporation process, however its amount is minimal and unlikely to affect the main phase's properties significantly \cite{Bai2019AStability}. 
+
+More information about the structure of the annealed and as-deposited state can be extracted through Fig.~\ref{fig:ch2:giwaxs_before_after:overlay}, which provides an overlay comparison of the $2\theta$ GIWAXS signals. Through this comparison, three key changes can be observed (i) a reduction in the full width at half maximum (FWHM), (ii) peak shifting, and (iii) the appearance of peak asymmetry or splitting. The FWHM of the peaks is associated with crystallite size, as expressed through Scherrer's equation: 
+ \begin{equation}
+     D = \frac{k \times \lambda}{\beta \times cos\theta},
+ \end{equation}
+
+where k is the shape factor (0.9), $\lambda$ is the X-Ray wavelength, $\beta$ is the FWHM of the peak, and $\theta$ is the the Bragg peak position in radians. This calculation indicates that the crystallite size has nearly doubled as a result of the annealing process, increasing from 16 nm in the as-deposited state to 28 nm for the annealed one. In addition to the increase in crystallite size, the nonuniform peak shift towards right side and the appearance of peak asymmetry suggest that the annealing process has introduced macrostrain into the system. This strain could be attributed to two main factors: (i) the mismatch in the thermal expansion coefficients between the substrate and the thin film, which can induce biaxial strain at the interface \cite{Steele2019ThermalFilms}, and (ii) the coexistence of the 0D \ch{CsPbI_4Br_2} and the 3d \ch{CsPbI_2Br} phase, which may create lattice anchoring within the system \cite{Steele2022AnFilms, Saha2024Oxygen-MediatedPerformance}
+
+\begin{figure}
+  \centering
+  \medskip
+  \includegraphics[width=\textwidth]{chapters/material_properties/images/GIWAXS_In_Situ.pdf}
+  \caption[Short caption for Table of Figures]{In Situ GIWAXS}
+  \label{fig:ch2:giwaxs_insitu}
+\end{figure}
+
+Fig.~\ref{fig:ch2:giwaxs_insitu} shows the in situ reduced 1D GIWAXS data during the temperature heating ramp. The transition from the orthorhombic ($\gamma$-) to the tetragonal ($\beta$-) phase is found to take place close to 130 \degree C, while the transition to the cubic ($a$-) phase happens at approximately 190 \degree C. Lastly, the emergence of the peak at 8.7 $nm^{-1}$ at 225 \degree C indicates the emergence of the 0D \ch{Cs_4PbI_4Br_2} phase. 
+
+
+Fig.~\ref{fig:ch2:afm_sem} demonstrates the impact of this annealing step on the morphology of the perovskite film by comparing the AFM scan of the surface and the SEM image of the cross-section for the as-deposited and annealed state. The as-deposited state has grains of particularly small size, in the range of 30 - 40 nm (Fig.~\ref{fig:ch2:afm_before}), which is in agreement with previous reports on co-evaporated \ch{CsPbI_xBr_{3-x}} thin films \cite{Frolova2017HighlyPbIsub2/sub, Zhang2023SemitransparentAbsorber}. The RMS roughness is accordingly low and equal to 2 nm. Despite the small grain size, the cross-section of the film (Fig.~\ref{fig:ch2:sem_before}), shows a compact morphology without any noticeable defects, cracks or pinholes. The annealing step has a major effect on the morphology of the film, yielding a broad distribution of grain sizes, between 100 and 800 nm in diameter, as shown in the respective AFM image (Fig.~\ref{fig:ch2:afm_after}). The surface roughness has increased to 28.5 nm. At the same time, the SEM scan (Fig.~\ref{fig:ch2:sem_after}) reveals a grain-boundary-free cross-section, which is typically associated with improved optoelectronic properties. 
+
+\begin{figure}[htbp]
+    \centering
+    % First row
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/AFM_before.pdf} 
+        \caption{}
+        \label{fig:ch2:afm_before}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/AFM_after.pdf} % Replace with your image file        
+        \caption{}
+        \label{fig:ch2:afm_after}
+    \end{subfigure}
+
+    % Second row
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/SEM_Before.pdf} 
+        \caption{}
+        \label{fig:ch2:sem_before}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/SEM_After.pdf} 
+        \caption{}
+        \label{fig:ch2:sem_after}
+    \end{subfigure}
+    \caption{AFM and SEM images for the as-deposited and annealed perovskite sample.}
+    \label{fig:ch2:afm_sem}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % First row
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/SSPL.pdf} 
+        \caption{}
+        \label{fig:ch2:sspl}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/Absorptance.pdf} % Replace with your image file
+        \caption{}
+        \label{fig:ch2:absorptance}
+    \end{subfigure}
+
+    \vspace{1em} % Space between rows
+
+    % Second row
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/SSPL_norm.pdf} % Replace with your image file
+        \caption{}
+        \label{fig:ch2:norm_sspl}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/TRPL_norm_double - Copy.pdf} % Replace with your image file
+        \caption{}
+        \label{fig:ch2:trpl}
+    \end{subfigure}
+    \caption{SSPL, TRPL, and absorptance for the an As-Deposited and an Annealed perovskite sample.}
+\end{figure}
 
 
 
-\section{Introduction to Spectroscopic Ellipsometry} \label{ch:ellipsometry:intro}
+To further investigate the impact of the annealing step on the optoelectronic properties of the film, we deposit an identical perovskite film on a glass substrate and repeat the same annealing step, allowing as to perform steady and transient state photoluminescence (SSPL and TRPL), as well as absorptance measurements for the as-deposited and annealed perovskite state. The SSPL measurement in Fig.~\ref{fig:ch2:sspl}, indicates a 3-time increase in the intensity of the PL signal for the annealed film under a 530 nm excitation. This could potentially be attributed to increased absorptance at the excitation wavelength or a to a reduction of the non-radiative recombination pathways. The absorptance of the annealed film is indeed slightly higher at 530 nm, as demonstrated in Fig.~\ref{fig:ch2:absorptance}, however it is not sufficient to justify the increase in PL intensity. Therefore, the increase in crystallite size and the reduction of grain boundaries, as discussed above, contributed to minimizing non-radiative recombination mechanisms. It has to be noted, that there is no indication for the high-bandgap 0D \ch{Cs_4PbI_4Br_2} phase in the SSPL and absorptance spectra of the perovskite. This is in agreement with what was previously reported by Bai et al., who were able to detect the 0D phase in the absorptance spectrum only for highly non-stoichiometric films \cite{Bai2019AStability}. 
+
+When comparing the normalized PL peaks for the as-deposited and annealed perovskite state, in Fig.~\ref{fig:ch2:norm_sspl}, an additional difference is observed, with the annealed film exhibiting a secondary, red-shifted shoulder inf its PL emission spectrum. This phenomenon was extensively studied by Schötz et al., and was attributed to a self-absorption of mechanism, whose impact is amplified by strong internal emissions and Urbach tail of the perovskite \cite{Schotz2020DoubleSelf-absorption}. As a resutlt, the increase in surface roughness that is introduced during the annealing of our thermally evaporated perovskite could explain the double peak emission via an increase in internal light scattering. Lastly, Fig.~\ref{fig:ch2:trpl} shows the TRPL spectra for the as-deposited and annealed perovskite state. A bi-exponential equation, described by the formula: 
+
+\begin{equation}
+    I_{PL}(t) = A_1exp(-\frac{t}{\tau_1}) + A_2exp(-\frac{t}{\tau_2}) + y_0,
+\end{equation}
+
+was able to accurately describe the decay of the both curves. Followingly, the average lifetime of the carriers was calculated using the equation: 
+\begin{equation}
+    \tau_{avg} = \frac{A_1 \tau_1^2 + A_2 \tau_2^2}{A_1 \tau_1 + A_2 \tau_2},
+\end{equation}
+
+indicating an almost doubling of the carriers' lifetime, from 4.8 ns for the as-deposited state to 8.3 ns for the annealed one.
+
+\section{In-Situ Annealing Effect Studied via Spectroscopic Ellipsometry}
+
+\subsection{Fundamentals of Spectroscopic Ellipsometry} \label{ch:ellipsometry:intro}
 
 
 Spectroscopic ellipsometry (SE) is a widely used optical characterization technique, suitable for the determination of a thin film's thickness, roughness, optical constants, and more. Its working principle can be summarized as follows: 
@@ -89,7 +230,7 @@ Choosing the right type and number of oscillators in the last step is critical f
 The properties of perovskite thin films have been widely studied by means of SE measurements in literature. When measurements were performed in room temperature (RT), they were mainly used for the determination of the complex optical constants for various perovskite compositions \cite{Yan2020DeterminationFilms, Zhao2018EllipsometricFilm, Loper2015ComplexSpectrophotometry, Yuan2021Moisture-stimulatedProperties}. In a few occasions, SE in room temperature was used for less common studies, such as the identification of light-induced phase segregation \cite{Bernhardt2022InPerovskites} or the evaluation of perovskite degradation under ambient conditions \cite{Marronnier2018ElectricalConditions}. On the other hand, temperature-dependent SE measurements were previously performed on perovskite thin films for the characterization of their temperature-dependent optical properties \cite{Jiang2016TemperatureEllipsometry, Chen2019CharacterizingEllipsometry}, the investigation of temperature-induced degradation \cite{Tejada2022HybridInfrared, Wang2019InEllipsometry}, and the identification of phase-transition temperatures \cite{Yuan2020InPortfolio, Yuan2021Moisture-stimulatedProperties}. The following sections will identify specific limitations in the modeling of temperature-dependent SE data, will present a novel dynamic modeling approach, and will lastly provide new insights into the in situ annealing effect on thermally evaporated \ch{CsPbI2Br} thin films.  
 
 
-\section{Temperature-Dependent SE for Perovskite Thin Films}
+\subsection{Temperature-Dependent Spectroscopic Ellipsometry}
 
 \begin{figure}[tbp]
   \centering
@@ -158,7 +299,7 @@ An alternative modeling approach was inspired by a previous report on the modeli
 
 
 
-\subsection{Static and Dynamic SE Model Development}
+\subsection{Static and Dynamic Model Development}
 
 \begin{figure}[t]
     \centering
@@ -242,7 +383,7 @@ Having established the accuracy of the static models for the as-deposited and an
 
 As explained above, the changing properties of the perovskite thin film as a function of temperature can be described via an EMA model, which consists of 5 static models, mixed in different percentages. The dielectric functions of each static model are fixed, and only their volume ratio, along with the thickness of the bulk and roughness layers can vary. The percentage of voids in the roughness layer was again fixed at 15\%. Both the thickness and the optical constants of the \ch{SiO_2} layer are fixed, considering its particularly low thermal expansion coefficient ($0.5 \times 10^{-6} K^{-1}$), especially when compared to the thermal expansion coefficient of lead-iodide-based perovskites ($50\times10^{-6} K^{-1}$) \cite{Steele2019ThermalFilms}. Fig.~\ref{fig:ellipsometry:roughness_thickness} shows the evolution of MSE as a function of time and temperature, which is mostly maintained below 20 for the whole duration of the experiment. This provides a preliminary indication of the accuracy of the dynamic model, which will be further corroborated in the following sections through comparisons with literature and the results from additional characterization measurements. 
 
-\section{In Situ Annealing Effect on Structural and Dielectric Properties}
+\subsection{Annealing Effect on Structural Properties}
 
 Two types of scatter point are shown in Fig.~\ref{fig:ellipsometry:roughness_thickness}. The red scatter points represent the fitting results of the dynamic model (Fig.~\ref{fig:ellipsometry:dynamic_model}) in partially absorptive region (between 300 and 1000 nm). The blue scatter points represent the results of a simpler Cauchy-based model which is fitted in the transparent region (between 1000 and 2500 nm). The latter is not only more sensitive to thickness variations (due to light reflection from both the sample's surface and the sample-substrate interface),
 but also simplifies the modeling of the roughness structure (the light wavelength is much larger compared to dimensions of the surface structure). As a result, the nearly identical trend in the evolution of the sample's thickness and roughness as a function of temperature that is observed between the two types of scatter points, can further strengthen the confidence in the results of our dynamic model. 
@@ -262,10 +403,7 @@ The results reveal that the sample's thickness is increasing linearly with tempe
 The perovskites roughness shows an intriguing and potentially counter-intuitive behavior. It has been generally shown for solution-processed perovskite thin films that the longer the annealing duration (and the higher the annealing temperature - not sure) the larger the size of grains eventually becomes. Even though it is not possible to extract direct information about the size of the film's grains through an SE measurement, it has been previously shown that the simulated thickness of the model's roughness layer has a linear relationship with the film's real roughness, measured through AFM measurements \cite{Fujiwara2000AssessmentFilms}. Hence, it is logical to associate the SE-derived roughness value with the size of the film's grains. It is observed that the film's roughness remains mostly stable (between 5 and 10 nm) until approximately 200 \degree C. At this point, a sharp increase is observed, before the roughness stabilizes again to a value close to 20 nm. To validate these results, we submit different thermally evaporated \ch{CsPbI_2Br} films to various annealing conditions. Fig. xx and xx shows the AFM scan for a film annealed for 3 minutes at 180 \degree C and 250 \degree C, respectively. Indeed, when the temperature is maintained below 200 \degree C, the average grain size remains below 150 nm, similarly to the morphology of the as-deposited state, while when the annealing temperature exceeds 200 \degree C, the average grain size increases to a range between 400 and 800 nm. The temperature threshold for the grain coalescence seems to coincide with the transition from the tetragonal to the cubic phase (190 \degree C, as revealed through in situ GIWAXS). It remains unclear whether grain coalescence is a direct consequence of the phase transition or if both mechanisms merely share a similar activation energy. Regardless, the increase in surface roughness observed in the SE data could serve as a signature for evaluating the tetragonal-to-cubic phase transition temperature in alternative thermally evaporated perovskite compositions. Further increasing the annealing temperature (300 \degree C) or extending the annealing duration (300 \degree C for 15 minutes) results in only a minor increase in the film's RMS roughness (from 28.5 to 31.6 nm), consistent with the plateau in roughness observed it the SE results. This analysis highlights that the grain size of thermally evaporated perovskite thin films depends more on the nucleation during the growth of the crystal, rather than the post-deposition annealing step. Therefore, future efforts for improved film quality via larger grains should be focused on the crystallization mechanism during the deposition rather than post-deposition treatments. 
 
 
-
-
-
-
+\subsection{Annealing Effect on Dielectric Properties}
 
 
 \begin{figure}
@@ -277,7 +415,6 @@ The perovskites roughness shows an intriguing and potentially counter-intuitive 
 \end{figure}
 
 
-\subsection{Thermo-Optic Coefficient}
 
 \begin{figure}[htbp]
     \centering
@@ -304,7 +441,7 @@ The perovskites roughness shows an intriguing and potentially counter-intuitive 
 
 
 
-\subsection{Urbach Energy}
+
 
 \begin{figure}[htbp]
     \centering
@@ -330,7 +467,6 @@ The perovskites roughness shows an intriguing and potentially counter-intuitive 
 \end{figure}
 
 
-\subsection{Critical Point Analysis}
 
 \begin{figure}[htbp]
     \centering

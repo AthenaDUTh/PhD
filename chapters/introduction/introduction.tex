@@ -4,44 +4,73 @@
 \instructionsintroduction
 \section{Semiconductor Image Sensors}
 
-Photography is an ubiquitous commodity of modern life, with applications spanning from art and entertainment, to science and space exploration, as well as surveillance and quality control.  
+Photography is a ubiquitous commodity in modern life, with applications ranging from art and entertainment to science and space exploration, as well as surveillance and quality control. The inception of this technology is set in 1814, when the french inventor Joseph Nicéphore Niépce used a process called heliography to capture the first permanent photographic image. A few decades later, the more commonly known roll-film camera was patented by George Eastman, making photography more accessible to the public.
 
-A short flashback sets the invention of photography back in ... 
+The digital imaging era starts in the middle of the 20th century, following the establishment of the semiconductor industry through the invention of the transistor. It began with the development of the charge-coupled device (CCD), which dominated the photography market until the 1990s, when complementary metal-oxide-semiconductor (CMOS) image sensors emerged. A CMOS image sensor (CIS) consists of several layers, including the microlens array, the color filter array (CFA), the photodiode, as well as the active pixel sensor (APS) circuitry. The role of each component can be summarized as following: (i) the microlens array consists of small lenses that collect and focus light onto light-sensitive areas of the sensors, (ii) the CFA consists of a mosaic of color filters that separate incoming light into red, green, and blue components, (iii) the photodiode is a silicon-based detector that converts light to electron-hole pairs, and lastly (iv) he APS circuitry, consists of multiple transistors that provide gain or buffer of the electrical charge from the photodiode.
 
-Did not catch up until the invention of film 
 
-Semiconductor boom growth did not exclude advancement photodetectors through the invention of the CCD, which alsomost a decede later were completely replaced by the faster and more efficient CMOS imagers. 
+The cost-effective, large-scale production of CMOS imagers in standard foundries, combined with their superior efficiency in power consumption and high-speed readout, has solidified their dominance in the photography market. Innovation continues to push boundaries, driving advancements in sensitivity, resolution, and compactness. Fig.~\ref{fig:ch1:pixel_size} highlights the advancement pixel size and the efforts for continuous shrinking of the pixel size, getting close to surpassing resolutions of 576 Megapixel, which is the resolution of human eyes. The following section will highlight the challenges in this way, as well as the ways to mitigate those. 
 
-Progress in CMOS technology has been expanded towards various directions, including speed, shutter, as well as resolution. The following section will go into more detail about the recent advancements in increasing resolution of an imager.
 
+\begin{figure}
+  \centering
+  \medskip
+  \includegraphics[width=.99\textwidth]{chapters/introduction/image/pixel_miniaturization.pdf}
+  \caption[Short caption for Table of Figures]{Pixel miniaturization road map, Adapted from: \cite{SookyoungRoh2025Dispersion-engineeredSensors}}
+  \label{fig:ch1:pixel_size}
+\end{figure}
 
 \section{Towards Ultra-High Resolution Imagers}
 
+The drastic progress towards ultra-high resolution imagers has been propelled my multiple breakthroughs in semiconductor technologies, including (but not limited to) stacked device integration and photodetector separation. Stacked device integration is an advanced packing approach that entails the vertical integration of pixel, logic, and analog-to-digital converter modules, effectively reducing the footprint of the CIS circuitry. This advancement was initially attributed to the through-silicon-via (TSV) technology and more recently to the Cu-Cu direct bonding technology, as illustrated in Fig.~\ref{fig:ch1:stacking_technologies} \cite{Kagawa20193DSensors}. On the Si photodiode level, miniaturization has been accelerated with the introduction of electrical and optical separation be means of deep trench isolation (DTI). This process involves the etching of the area between two neighboring photodiodes and the its filling with materials including \ch{SiO_2}, poly-Si or tungsten, effectively reducing pixel crosstalk \cite{Ahn2014AGate, Okawa2019ALevel, Kim2020ATechnology, Park20217.9Isolation}.   
 
-Fig. provides an analysis of the pixel size increase within the past 15 years. 
-Two aspects are involved: increase of the pixel array size, as well as shrinkage of the pixel size. The former, the latter, 
-
-
-
-
-\subsection{Replacing Color Filters with Color Splitting Waveguides}
-\subsection{Absorption Efficiency vs Response Time: A trade-off}
-
-\begin{itemize}
-    \item Increasing the electric field (Single photon avalanche diode)
-    \item Reducing the effective charge collection depth
-    \item Antireflection, backscattering structures, and deep trench isolation technologies
-\end{itemize}
-
-\subsection{Beyond Silicon Detectors}
-\begin{itemize}
-    \item Provide alternatives for visible light detection (Ge, InGaAs, Organics)
-    \item Introduce perovskites as an alternative
-    \item Give examples for perovskites integrated with read-out circuits (high-level) (Wenya paper literature review)
-\end{itemize}
+\begin{figure}
+  \centering
+  \medskip
+  \includegraphics[width=.8\textwidth]{chapters/introduction/image/stacking.jpg}
+  \caption[Short caption for Table of Figures]{Stacking technologies, Source: SONY}
+  \label{fig:ch1:stacking_technologies} 
+\end{figure}
 
 
-\section{Perovskite-Based Photodetectors}
+
+However, the shrinking of the pixel size sets limitations to the detector's light sensitivity, considering that amount of photons that can be detected is proportional to the square of the pixel size \cite{Kim2024FreeformSensors}. The signal-to-noise ratio (SNR) is further exacerbated by the use CFAs, such as the Bayer pattern, which allows the transmittance of only one-third of the incident visible light spectrum. This limitation has lead to the development of alternative technologies for color sensing, which rely on color splitting rather than color filtering. These technologies relies on the use of waveguides or metasurfaces, with their concept illustrated in Fig.~\ref{fig:ch1:color_routing_concept}   \cite{Nishiwaki2013EfficientSensors, Miyata2019High-SensitivityMetasurfaces, Kim2024FreeformSensors, Zou2022Pixel-levelMetasurfaces, Catrysse2022SubwavelengthEfficiency}. However, these technologies are diffraction-based, meaning that they cannot be implemented for resolutions close or beyond the Abbe limit \cite{Shramkova2024HighSeparation}. It was recently demonstrated that this limitation can be overcome with the use a multimode color-splitting waveguide that utilizes the beating pattern of the interference between a symmetric and an asymmetric mode \cite{Kang2023Wafer-level-integratedSplitters}. The inception of this technology opened the way for achieving pixel pitch in the range of 0.2 $\mu m$ and is the main motivation of the work presented in the framework of this thesis. 
+
+
+\begin{figure}[htbp]
+    \centering
+    % First plot
+    \begin{subfigure}[t]{0.49\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/introduction/image/color_router.jpg} % Replace with your image
+        \caption{}
+        \label{fig:ch1:color_routing_concept}
+    \end{subfigure}
+    \hfill % Space between the two plots
+    % Second plot
+    \begin{subfigure}[t]{0.49\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/introduction/image/gigapixel_waveguide.jpg} % Replace with your image
+        \caption{}
+        \label{fig:ch1:gigalixel:waveguide}
+    \end{subfigure}
+
+    % Caption for the whole figure
+    \caption{Perovskite phases and free energy: (a) Reproduced from \cite{Zhao2021PerfectPixels} (b) Reproduced from \cite{Kang2017HighCsPbBr3}.}
+    \label{fig:ch1:color_splitting}
+\end{figure}
+
+
+\section{Beyond Silicon Photodiodes}
+
+Amid rapid advancements in 3D stacking, pixel isolation, and color routing techniques, enhancing the performance of silicon photodiodes has become increasingly imperative. Their performance is largely governed by a well-known trade-off between absorption efficiency and response speed—a limitation primarily due to silicon's relatively low absorption coefficient for red wavelengths (> 620 nm). Typically, the photodiode thickness is in the range of 6 $\mu m$, imposing difficulties in achieving sub microsecond response \cite{Han2016ASensors}. Additionally, the proposed color splitting technology could, in principle, enable the development of photodiodes with pixel pitch as small as 0.2 $\mu m$. However, such miniaturized structures are increasingly vulnerable to electrical and optical cross-talk, and fabricating DTI structures with such high aspect ratios becomes a non-trivial challenge. 
+
+% More Si disadvantages from Ollearo thesis 
+
+These limitations have sparked interest for introducing a deferent detector material with higher absorption coefficient in combination with the Silicon readout integrated circuit (ROIC). Such materials involved germanium (Ge) or III-V semiconductors, such as indium gallium arsenide (InGaAs). Haven't these materials have not shown promise for down scaling. Another option for visible light detection has been explored organic photodiodes, which however are characterized by lower mobilities due to their bulk heterojunction structure. This points attention to an emerging class of materials, that have gained immense attention for their use in optoelectronic applications. Perovskites. 
+
+
+\section{Perovskite-Based Photodiodes}
 
 \subsection{Properties of Perovskites}
 
@@ -86,7 +115,7 @@ The solar cell structure, as well as the photodetectors that are developed in th
 
 The photodiode is not the only structure that is used for photo-detecting applications. Two additional types of photodetectors include the two-terminal photoconductors and the three-terminal phototransistors (Fig.~\ref{fig:ch2:types_of_detector}b and Fig.~\ref{fig:ch2:types_of_detector}c, respectively), which have both a lateral geometry. Both architectures rely on gain mechanism, which leads to a slower response time. At the same time, the relatively large spacing between the electrodes ($> 10 \mu m)$. not only requires a higher driving voltage but is also unsuitable for integration with readout circuits that have a significantly smaller pixel pitch (below 5 $\mu m)$.
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
   \medskip
   \includegraphics[width=.9\textwidth]{chapters/introduction/image/types_of_detector.jpg}
@@ -96,15 +125,17 @@ The photodiode is not the only structure that is used for photo-detecting applic
 
 \subsection{Scalable, High-Temperature PePDs}
 
-\begin{figure}
+
+
+The vast majority of studies on perovskite-base optoelectronic devices rely on the use of solution processed methods, and specifically spin-coating. This is not surprising, considering that spin-coating is a technique that is simple, easily accessible, and has low cost. These characteristics make it highly suitable for rapid prototyping and exploration of various material combination that can promote efficiency or stability. For example, during solution preparation it is common to include various additives that in turn can help modulate morphology, optimize energy level-alignment or eliminate hysteresis \cite{Liu2020ACells}. However, cell fabrication through spin-coating is not transferable to industry, due to limitation is throughput and large-area deposition. For example, a commonly used technique, anti-solvent processing has been shown to be challenging to scale-up\cite{Saki2021Solution-processedCells}.
+
+\begin{figure}[htbp]
   \centering
   \medskip
   \includegraphics[width=.99\textwidth]{chapters/introduction/image/types_of_evaporation.png}
   \caption[Short caption for Table of Figures]{Types of evaporation: co-evaporation, single-source evaporation, sequential evaporation, Reproduced from \cite{Han2025PerovskiteCells}.}
   \label{fig:ch2:types_of_evaporation}
 \end{figure}
-
-The vast majority of studies on perovskite-base optoelectronic devices rely on the use of solution processed methods, and specifically spin-coating. This is not surprising, considering that spin-coating is a technique that is simple, easily accessible, and has low cost. These characteristics make it highly suitable for rapid prototyping and exploration of various material combination that can promote efficiency or stability. For example, during solution preparation it is common to include various additives that in turn can help modulate morphology, optimize energy level-alignment or eliminate hysteresis \cite{Liu2020ACells}. However, cell fabrication through spin-coating is not transferable to industry, due to limitation is throughput and large-area deposition. For example, a commonly used technique, anti-solvent processing has been shown to be challenging to scale-up\cite{Saki2021Solution-processedCells}.
 
 Significant efforts have been made to explore alternative fabrication techniques that enable the scalable deposition of perovskite-based devices. Such methods involve solution-processed approaches (such as inkjet printing and spray coating) or vacuum-processed on (such as chemical vapor deposition or thermal evaporation). Among those, thermal evaporation is the most mature one, and in 2020 it enabled the fabrication of 21 $cm^2$ mini modules with the superior efficiency of 18.13\% \cite{Vaynzof2020TheProcessing, Li2020HighlyMini-modules}. Besides scalability, thermal evaporation offers the advantage of not necessarily requiring a post-deposition thermal annealing step, rendering highly attractive for applications that require the use of flexible substrates \cite{Becker2019LowExperimentation}. ON top of that, it avoids the use of toxic solvents, allows for precise control of the deposited thickness, and prevents the risk of damaging the underlying layers in tandem structures \cite{Zhang2020TowardCells, Forgacs2017EfficientCells}
 
