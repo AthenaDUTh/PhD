@@ -1,22 +1,7 @@
 % !TeX root = ../../thesis.tex
 \chapter{Materials and Methods}\label{ch:material_properties}
 
-The inception of the work presented in this thesis began with the repurposing an older vacuum evaporation chamber, previously used of the fabrication of organic thin film electronics. A significant portion of initial efforts focused on calibrating the chamber for the deposition of inorganic perovskite layers, evaluating film quality and repeatability, as well as investigating the effect of fundamental deposition parameters on the performance of the photodetector devices. In the first part of this chapter, we investigate the structural, optical, and crystallographic properties of co-evaporated \ch{CsPbI_2Br} thin films, as well as the effect of the post-deposition annealing step. In the second part of the chapter, we use the co-evaporated films to establish a baseline for photodetector device performance, considering factors like substrate type, transport layers, deposition rate, and stoichiometry. 
-
-
-\section{Experimental Methodology}
-
-\begin{enumerate}
-    \item Deposition of perovskite film on on glass or silicon substrate 
-    \item  Film characterization with AFM, UV/Vis, PL, SEM, GIWAXS, Ambient Stability
-    \item Diode development on Glass Substrates 
-    \item Initially JVs and EQE. If promising, more measurements with PAIOS 
-    \item Top-illuminated photodiodes for CMOS Integration 
-    \item Imager fabrication 
-    \item Make necessary icon if necessary 
-    
-\end{enumerate}
-
+The inception of the work presented in this thesis began with the repurposing an older vacuum evaporation chamber, previously used of the fabrication of organic thin film electronics. A significant portion of initial efforts focused on calibrating the chamber for the deposition of inorganic perovskite layers, evaluating film quality and repeatability, as well as investigating the effect of fundamental deposition parameters on the performance of the photodetector devices. This chapter outlines the experimental protocol followed in this work, detailing the deposition and characterization methods of \ch{CsPbI_2Br} thin films, as well as the development of perovskite photodiodes. The latter encompasses the selection of substrates and transport layers while also emphasizing the importance of carefully interpreting electrical characterization measurements.
 
 \section{Thermal Co-Evaporation of \ch{CsPbI_2Br} Thin Films}
 
@@ -28,16 +13,16 @@ The inception of the work presented in this thesis began with the repurposing an
   \label{fig:deposition_chamber}
 \end{figure}
 
+++high vacuum 
 
 
-
-An illustration of the deposition chamber is provided in Figure~\ref{fig:deposition_chamber}. Two diametrically opposed sources are loaded with \ch{CsBr} and \ch{PbI_2} powders. Two separate quartz crystal microbalances (QCMs) are used to track the deposition rate of each source. The QCMs must be calibrated accordingly to the atomic mass of the precursor they are monitoring. To achieve this, an initial approximation of the tooling factor is made based on comparison with previous depositions. Subsequently, each precursor is deposited on \ch{Si/SiO_2} substrate, and the actual thickness is measured using spectroscopic ellipsometry or profilometry. The tooling factor is then adjusted using the equation: 
+An illustration of the deposition chamber is provided in Figure~\ref{fig:deposition_chamber}. Two sources on opposite sides of the chamber are loaded with \ch{CsBr} and \ch{PbI_2} powders. Two separate quartz crystal microbalances (QCMs) are used to track the deposition rate of each source. The substrates are loaded on a substrate holder (\textbf{distance?}) that can hold up to nine $3\times 3$ $cm^2$ coupons. The QCMs have to be calibrated according to the atomic mass of the precursor they are monitoring. To achieve this, an initial estimation of their tooling factor is necessary. Subsequently, each precursor is deposited on \ch{Si/SiO_2} substrate, placed in the center of the substrate holder, and the actual thickness is measured using spectroscopic ellipsometry or profilometry. The tooling factor is then adjusted using the equation: 
 
 \begin{equation}
     TF_{\text{actual}} = TF_{\text{approx}} \times \frac{\text{thickness(actual)}}{\text{thickness(QCM)}}
 \end{equation}
 
-To account for system variability, we deposit each layer multiple times at different rates and target thicknesses. The final tooling factor of each source is calculated based on the average of all depositions.
+To account for system variability, we deposit each precursor multiple times at different rates and target thicknesses. The final tooling factor of each source is calculated based on the average of all depositions.
 
 
 Moving on to the co-evaporation of perovskite thin films, the ratio between the two sources' evaporation rates should be tuned to achieve the desired stoichiometry. For a stoichiometric film, the thickness ratio (TR) between two precursors, A and B, should be equal to: 
@@ -46,8 +31,33 @@ Moving on to the co-evaporation of perovskite thin films, the ratio between the 
     TR = \frac{MolarMass(A)/Density(A)}{MolarMass(B)/Density(B)}.
 \end{equation}
 
-During the co-evaporation, a global shutter is protecting the samples while the sources are still heating up. Once both rates have reached their target value and are stabilized, the shutter is removed, initiating the deposition. The substrate holder, which can be loaded with 9 3$\times$3 $cm^2$ substrates, is kept at room temperature and rotates at 5 rounds per minute to ensure a uniform deposition. During the deposition, the temperature of each sources was continuously and automatically adjusted to maintain a constant evaporation rate. The deposition was automatically terminated once the target cumulative thickness was reached. For the development of the baseline evaporated films, a cumulative deposition rate of 0.8{\AA}/s and a \ch{CsBr:PbI_2} ratio of 1.05:1.00 was aimed for. Films were deposited with a slight excess of \ch{CsBr} since it was shown that it can improve the ambient stability of the black phase without compromising their optoelectronic properties \cite{Ma2017TheCells}. The nominal perovskite thickness was 275 nm. 
+During the co-evaporation, a global shutter is protecting the samples while the sources are still heating up. Once both rates have reached their target value and are stabilized, the shutter is removed, initiating the deposition. The substrate holder is kept at room temperature and rotates at approximately 2.2 rounds per minute to ensure a uniform deposition. During the deposition, the temperature of each sources is continuously and automatically adjusted to maintain a constant evaporation rate. The deposition is automatically terminated once the target cumulative thickness is reached. For the development of the baseline evaporated films, a cumulative deposition rate of 0.8{\AA}/s and a \ch{CsBr:PbI_2} ratio of 1.05:1.00 was aimed for. Films were deposited with a slight excess of \ch{CsBr} since it was shown that it can improve the ambient stability of the black phase without compromising their optoelectronic properties \cite{Ma2017TheCells}. Following the deposition of the perovskite thin films, they where consistently stored in nitrogen environment to prevent their conversion to the photo-inactive yellow phase.
 
+
+\section{Experimental Methodology}
+
+Following the calibration of the tooling factor for each source, the following experimental methodology was implemented. Initially the co-evaporated \ch{CsPbI_2Br} films are deposited on glass or \ch{Si/SiO_2} substrates. This step aims to the characterization of the fundamental structural, compositional, crystallographic, and optical properties of the deposited films. Structural properties are mainly investigated using atomic force microscopy (AFM) and scanning electron microscopy (SEM), transmission electron microscopy (TEM), and spectroscopic ellipsometry (SE). Compositional properties are investigated using X-Ray and Ultraviolet photoelectron spectroscopy (XPS/UPS), energy dispersive X-Ray spectroscopy (EDS), as well as inductively coupled plasma mass spectrometry (ICP-MS). Crystallographic properties are investigated using synchrotron-based grazing incident wide angle X-ray scattering (GIWAXS). Optical properties are investigated using photoluminescence (PL), ultraviolet-visible spectroscopy (UV-Vis), and SE. Finally, the ambient stability of the deposited films is investigated through their exposure to the controlled environment of the lab (temperature, humidity). 
+
+
+After ensuring the high quality of the bare perovskite films, they are flowingly incorporated in the bottom-illuminated photodiode stack, using glass substrates, pre-patterned with ITO. The ITO serves as the common contact, while the device area is defined by the aluminum (Al) electrodes deposited on top of the perovskite. This step is instrumental for the screening of various parameters and their influence on device performance, including the perovskite annealing conditions or choice of transport layers. Characterization measurements used for this step mainly rely on acquisition of J-V characteristics, EQE spectral response, as well as capacitance and transient photocurrent measurements.
+
+Once the most prominent perovskite processing conditions and transport layers have been identified, it is possible to proceed to the development of the top-illuminated stack, replacing the glass substrate with a silicon one. This serves as an intermediate step before integrating the PePD top of the Si ROIC for imager fabrication. The silicon substrates are patterned with titanium nitride bottom contacts (TiN) and they are designed internally and fabricated in imec's CMOS foundry. The bottom TiN contacts define the device area, while to common contact is defined by the ITO that is deposited on top of the perovskite.  
+
+while 
+
+
+they are transferred to the top-illuminated stack, relying on the use of silicon substrates, patterned with titanium nitride (TiN) bottom contacts. In this case, the common contact (ITO) is deposited on top of the perovskite layer. These substrates, designed internally and fabricated in imec's CMOS foundry. Characterizing the performance of the photodiode stack deposited on top of silicon substrates is critical for evaluating its performance on the C
+
+the use of different contacts, as well as the opposite illumination creates diffrence in the peroformance which require the repetition of the above mentioned characterization measuremetns. 
+
+
+and allow for characterization on discrete diode level, mimicing the strucutre of the photodiode on top of the ROIC. Besides the measurements that were described above, the use of Silicon substrates allows for the additional characterization of thermal stability, as well as ambinets atmosphere stability of the whole stack. 
+
+
+TOP illuminiated photodiodes for CMOS integration. 
+
+\textit{Once the perofromance as well as the stability of the photodiode stack was assured, it was possible to tranfer the photodiode on top of the ROIC, pixels are in the 0.56 um. 
+}
 
 
 
