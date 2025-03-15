@@ -54,14 +54,14 @@ Fig.~\ref{fig:ch2:afm_sem} demonstrates the impact of this annealing step on the
 \begin{figure}[htbp]
     \centering
     % First row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/AFM_before.pdf} 
         \caption{}
         \label{fig:ch2:afm_before}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/AFM_after.pdf} % Replace with your image file        
         \caption{}
@@ -69,14 +69,14 @@ Fig.~\ref{fig:ch2:afm_sem} demonstrates the impact of this annealing step on the
     \end{subfigure}
 
     % Second row
-    \begin{subfigure}[t]{0.4\textwidth}
+    \begin{subfigure}[t]{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/SEM_Before.pdf} 
         \caption{}
         \label{fig:ch2:sem_before}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.4\textwidth}
+    \begin{subfigure}[t]{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/SEM_After.pdf} 
         \caption{}
@@ -230,12 +230,6 @@ Choosing the right type and number of oscillators in the last step is critical f
 \label{eq:tauc_lorentz}
 \end{equation}
 
-
-The properties of perovskite thin films have been widely studied by means of SE measurements in literature. When measurements were performed in room temperature (RT), they were mainly used for the determination of the complex optical constants for various perovskite compositions \cite{Yan2020DeterminationFilms, Zhao2018EllipsometricFilm, Loper2015ComplexSpectrophotometry, Yuan2021Moisture-stimulatedProperties}. In a few occasions, SE in room temperature was used for less common studies, such as the identification of light-induced phase segregation \cite{Bernhardt2022InPerovskites} or the evaluation of perovskite degradation under ambient conditions \cite{Marronnier2018ElectricalConditions}. On the other hand, temperature-dependent SE measurements were previously performed on perovskite thin films for the characterization of their temperature-dependent optical properties \cite{Jiang2016TemperatureEllipsometry, Chen2019CharacterizingEllipsometry}, the investigation of temperature-induced degradation \cite{Tejada2022HybridInfrared, Wang2019InEllipsometry}, and the identification of phase-transition temperatures \cite{Yuan2020InPortfolio, Yuan2021Moisture-stimulatedProperties}. The following sections will identify specific limitations in the modeling of temperature-dependent SE data, will present a novel dynamic modeling approach, and will lastly provide new insights into the in situ annealing effect on thermally evaporated \ch{CsPbI2Br} thin films.  
-
-
-\subsection{Temperature-Dependent Spectroscopic Ellipsometry}
-
 \begin{figure}[tbp]
   \centering
   \medskip
@@ -244,10 +238,18 @@ The properties of perovskite thin films have been widely studied by means of SE 
   \label{fig:ellipsometry:experiment_description}
 \end{figure}
 
+
+The properties of perovskite thin films have been widely studied by means of SE measurements in literature. When measurements were performed in room temperature (RT), they were mainly used for the determination of the complex optical constants for various perovskite compositions \cite{Yan2020DeterminationFilms, Zhao2018EllipsometricFilm, Loper2015ComplexSpectrophotometry, Yuan2021Moisture-stimulatedProperties}. In a few occasions, SE in room temperature was used for less common studies, such as the identification of light-induced phase segregation \cite{Bernhardt2022InPerovskites} or the evaluation of perovskite degradation under ambient conditions \cite{Marronnier2018ElectricalConditions}. On the other hand, temperature-dependent SE measurements were previously performed on perovskite thin films for the characterization of their temperature-dependent optical properties \cite{Jiang2016TemperatureEllipsometry, Chen2019CharacterizingEllipsometry}, the investigation of temperature-induced degradation \cite{Tejada2022HybridInfrared, Wang2019InEllipsometry}, and the identification of phase-transition temperatures \cite{Yuan2020InPortfolio, Yuan2021Moisture-stimulatedProperties}. The following sections will identify specific limitations in the modeling of temperature-dependent SE data, will present a novel dynamic modeling approach, and will lastly provide new insights into the in situ annealing effect on thermally evaporated \ch{CsPbI2Br} thin films.  
+
+
+\subsection{Temperature-Dependent Spectroscopic Ellipsometry}
+
+
+
 \begin{figure}[htbp]
     \centering
     % First plot
-    \begin{subfigure}[t]{0.95\textwidth} % Adjust width if needed
+    \begin{subfigure}[t]{0.9\textwidth} % Adjust width if needed
         \centering
         \includegraphics[width=\textwidth]{chapters/ellipsometry/image/Psi_Contour - MRS.pdf} % Replace with your image
         %\caption{Description for subplot (a).}
@@ -257,7 +259,7 @@ The properties of perovskite thin films have been widely studied by means of SE 
     \vspace{1em} % Space between the rows
 
     % Second plot
-    \begin{subfigure}[t]{0.95\textwidth} % Adjust width if needed
+    \begin{subfigure}[t]{0.9\textwidth} % Adjust width if needed
         \centering
         \includegraphics[width=\textwidth]{chapters/ellipsometry/image/Delta_Contour - MRS.pdf} % Replace with your image
         %\caption{Description for subplot (b).}
@@ -275,7 +277,7 @@ as function of time are shown in Fig.~\ref{fig:ellipsometry:raw_psi_delta}. Even
 \begin{figure}
   \centering
   \medskip
-  \includegraphics[width=.7\textwidth]{chapters/ellipsometry/image/wrong_model.pdf}
+  \includegraphics[width=.77\textwidth]{chapters/ellipsometry/image/wrong_model.pdf}
   \caption{}
   \label{fig:ellipsometry:wrong_model}
 \end{figure}
@@ -419,7 +421,7 @@ Beyond providing insights into the film's morphological evolution as a function 
 \end{figure}
 
 
-Fig.~\ref{fig:ellipsometry:optical_constants} provides a complete overview of the evolution of the film's optical constants during the various stages of the experiment, specifically during the heating up (Fig.~\ref{fig:ellipsometry:optical_constants}a), the stabilizing at 300\degree C (Fig.~\ref{fig:ellipsometry:optical_constants}b), and the cooling down (Fig.~\ref{fig:ellipsometry:optical_constants}c) stages. It is evident that multiple changes occur simultaneously, highlighting the overall complexity of the temperature-dependent response of perovskite thin films. If we focus on the heating up stage of the experiment, the following changes can be observed: (i) a downwards shift of the refractive index, as well as (ii) a flattening of the absorption edge and (iii) an energy shift of the excitation peaks $E_0$, $E_1$, and $E_2$ in the extinction coefficient spectrum. The reverse trends can be observed during the cooling down stage, even though it is easy to notice some difference in the 25 \degree C spectrum before and after the annealing step, indicating the co-existence of reversible and non-reversible changes. The underlying physical mechanisms will be further detailed and explained in the following paragraphs. For the stage of stabilizing at 300\degree C, the spectrum of the extinction co-efficient remains almost the same, even though an additional downwards shift can be observed in the refractive index. This characteristic is attributed to the relatively fast heating ramp ($\approx$ 30\degree C/min), and the subsequent delay between the attainment of a temperature point and the completion of potential transitions or internal structure changes. The results display that the film is reaching an equilibrium approximately 77 seconds after reaching  300 \degree C. It is important to highlight, that goal of this measurement is to observe the real-time evolution of thermally-evaporated \ch{CsPbI_2Br} thin films under the effect of increasing and decreasing temperature, rather than to precisely identify the temperature threshold for the occurrence of various mechanisms. 
+Fig.~\ref{fig:ellipsometry:optical_constants} provides a complete overview of the evolution of the film's optical constants during the various stages of the experiment, specifically during the heating up (Fig.~\ref{fig:ellipsometry:optical_constants}a), the stabilizing at 300\degree C (Fig.~\ref{fig:ellipsometry:optical_constants}b), and the cooling down (Fig.~\ref{fig:ellipsometry:optical_constants}c) stages. It is evident that multiple changes occur simultaneously, highlighting the overall complexity of the temperature-dependent response of perovskite thin films. If we focus on the heating up stage of the experiment, the following changes can be observed: (i) a downwards shift of the refractive index, as well as (ii) a flattening of the absorption edge and (iii) an energy shift of the absorption peaks $E_0$, $E_1$, and $E_2$ in the extinction coefficient spectrum. The reverse trends can be observed during the cooling down stage, even though it is easy to notice some difference in the 25 \degree C spectrum before and after the annealing step, indicating the co-existence of reversible and non-reversible changes. The underlying physical mechanisms will be further detailed and explained in the following paragraphs. For the stage of stabilizing at 300\degree C, the spectrum of the extinction co-efficient remains almost the same, even though an additional downwards shift can be observed in the refractive index. This characteristic is attributed to the relatively fast heating ramp ($\approx$ 30\degree C/min), and the subsequent delay between the attainment of a temperature point and the completion of potential transitions or internal structure changes. The results display that the film is reaching an equilibrium approximately 77 seconds after reaching  300 \degree C. It is important to highlight, that goal of this measurement is to observe the real-time evolution of thermally-evaporated \ch{CsPbI_2Br} thin films under the effect of increasing and decreasing temperature, rather than to precisely identify the temperature threshold for the occurrence of various mechanisms. 
 
 
 \begin{figure}[htbp]
@@ -499,13 +501,21 @@ In terms of perovskite research, the Urbach energy has need quantified for thin 
 
 In order to extract $E_U$ according to Eq.~\ref{eq:urbach_absorption}, it is necessary to calculate the film's absorption coefficient using the extinction coefficient spectrum ($a = \frac{4\pi k}{\lambda}$). Fig.~\ref{fig:ellipsometry:urbach_heating} and Fig.~\ref{fig:ellipsometry:urbach_cooling} present the natural logarithm of the absorption coefficient as a function of photon energy for various temperature intervals during the heating and cooling stages, respectively. $E_U$ can be following quantified through the slope of the linear fit, with Fig.~\ref{fig:ellipsometry:urbach_temp} showing $E_U$ as a function of temperature for the heating and cooling stages. 
 
-A linear dependence of $E_U$ on temperature can be observed for both stages. In a prior study on the temperature dependence of $E_U$ for \ch{CH_3NH_3PbI_3} films by Singh et al., it was shown that the orthorhombic-to-tetragonal phase transition can be identified through a minor slope change \cite{Singh2016EffectCHsub3/subNHsub3/subPbIsub3/sub}. However, the use of a relatively fast and continuous heating ramp in our case, without stabilization intervals, leads to a more gradual transition and potential co-existence of phases. Therefore, it is not possible to identify specific structural transitions. Additionally, the $E_U$ values of the cooling stage display an upwards shift compared to the respective values of the heating stage. For reference, $E_U$ at RT for the as-deposited sate is approximately equal to 19 meV, which indicates a well-ordered microstructure. The same value for the annealed state at RT is approximately equal to 33 meV, displaying a 14 meV increase. Considering that both measurements were carried out at the same temperature, Eq.~\ref{fig:ellipsometry:urbach_temp} indicates that the $E_U$ increase can only be attributed to the static term of the equation, i.e. an increase in the structural disorder. This finding comes in contrast to what was discussed in Sec.~\ref{sec:ex_situ}, which highlighted the improvements in crystalline quality of the film after the annealing step. As a result, the increase in $E_U $ is rather attributed to the temperature-induced strain in the lattice, which was indicated in the peak splitting of the GIWAXS data presented in Fig.~\ref{fig:ch2:giwaxs_before_after:} \cite{Kim2020ImpactCells}. 
+A linear dependence of $E_U$ on temperature can be observed for both stages. In a prior study on the temperature dependence of $E_U$ for \ch{CH_3NH_3PbI_3} films by Singh et al., it was shown that the orthorhombic-to-tetragonal phase transition can be identified through a minor slope change \cite{Singh2016EffectCHsub3/subNHsub3/subPbIsub3/sub}. However, the use of a relatively fast and continuous heating ramp in our case, without stabilization intervals, leads to a more gradual transition and potential co-existence of phases. Therefore, it is not possible to identify specific structural transitions. Additionally, the $E_U$ values of the cooling stage display an upwards shift compared to the respective values of the heating stage. For reference, $E_U$ at RT for the as-deposited sate is approximately equal to 19 meV, which indicates a well-ordered microstructure. The same value for the annealed state at RT is approximately equal to 33 meV, displaying a 14 meV increase. Considering that both measurements were carried out at the same temperature, Eq.~\ref{eq:urbach_temp} indicates that the $E_U$ increase can only be attributed to the static term of the equation, i.e. an increase in the structural disorder. This finding comes in contrast to what was discussed in Sec.~\ref{sec:ex_situ}, which highlighted the improvements in crystalline quality of the film after the annealing step. As a result, the increase in $E_U$ is rather attributed to the temperature-induced strain in the lattice, which was already indicated as a peak splitting in the GIWAXS data presented in Fig.~\ref{fig:ch2:giwaxs_before_after:} \cite{Kim2020ImpactCells}. 
 
 
 
 \textbf{III. Critical Point Analysis}
 
-The last part of this analysis is dedicated to a critical point analysis.
+
+The last part of this section is dedicated to the interpretation of the energy shifts of the absorption peaks (labeled as $E_0$, $E_1$, and $E_2$ in Fig.~\ref{fig:ellipsometry:optical_constants}) as a function of temperature. These peaks, known as critical points (CPs), are a fundamental characteristic of a material's dielectric function and are associated with interband transitions at high-symmetry k-points of the Brillouin zone \cite{Aspnes1983DielectricEV}. Even though these features are already prominent in the refractive index and extinction coefficient, a systematic analysis relies on the attainment of the second derivative of the dielectric function spectra, which not only enhances structural features, it suppresses spectral noise, as well. Each CP is described by the equation: 
+
+\begin{equation}
+    \frac{\partial ^2\epsilon}{\partial \omega^2} = n(n-1)Ae^{i\Phi}(\omega -E +i\Gamma)^{(n-2)},
+    \label{eq:critical_point}
+\end{equation}
+
+where $A$, $\Phi$, $E$, and $\Gamma$ describe the amplitude, phase, energy position, and broadening of the CP. The dimensionality of the CP, is defined by $n$, which is set equal to -1/2, 0, +1/2 for 1-D, 2-D, and 3-D transitions, respectively. Excitonic transitions, which were previously used to describe optical transition in perovskites, are represented by $n=-1$ \cite{Jiang2016TemperatureEllipsometry, Ceratti2021CsPbBrsub3/subAir}. These parameters can be obtained through a regression analysis of the experimental derivative with the theoretical lineshapes of Eq.~\ref{eq:critical_point}. Fig.~\ref{fig:ellipsometry:deriv} illustrates the fitting results on the real ($\epsilon_r$) and imaginary ($\epsilon_i$) part of the dielectric function for different stages of our experiment, considering the presence of three CPs, indicating a good match between experimental and simulated values. 
 
 \begin{figure}[htbp]
     \centering
@@ -530,6 +540,10 @@ The last part of this analysis is dedicated to a critical point analysis.
     \label{fig:ellipsometry:deriv}
 \end{figure}
 
+
+The most pronounced feature in Fig.~\ref{fig:ellipsometry:deriv}a-c represents the fundamental direct bandgap of the perovskite thin film ($E_0$), which is defined by antibonding Pb and halogen orbitals \cite{Mannino2020Temperature-DependentCrystals}. For an $\alpha$-\ch{CsPbI_2Br} thins films, $E_0$ results from the interband transition at the R point in the first Brillouin zone. The two additional, but less pronounced, CPs ($E_1$ and $E_2$) are mainly caused by the interband transitions at the M and X point of the Brillouin zone, respectively. From a physical point of view, $E_1$ is attributed to transitions from the 6s and 6p orbits in the \ch{Pb^{2+}} sublattice, while $E_2$ is a doublet transition owing to the charge-transfer transitions form the I/Br 3p/4p valence to the Pb 6p conduction bands \cite{Zhao2018EllipsometricFilm}.   
+
+
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}{0.34\textwidth}
@@ -552,6 +566,9 @@ The last part of this analysis is dedicated to a critical point analysis.
     \caption{A 1x3 figure layout.}
     \label{fig:ellipsometry:CP_all}
 \end{figure}
+
+
+Fig.~\ref{fig:ellipsometry:CP_all}a-c illustrate the energy position of the three CPs as a function of temperature for the heating and cooling stage of the experiment. The extracted values of the fundamental bandgap at RT (1.94 - 1.95 eV) are in good agreement with what has been previously reported for the \ch{CsPbI_2Br} composition \cite{Yuan2021Moisture-stimulatedProperties, Chen2019ThePerovskite,Parida2019Two-stepStability, Igual-Munoz2020Room-TemperaturePrecursors, Mali2021ImplementingCells}. During the heating ramp, $E_0$ is displaying blueshift, while $E_1$ and $E_2$ display a redshift, which is in agreement with what was previously reported for $CsPbBr_3$ single crystals \cite{Ceratti2021CsPbBrsub3/subAir}. The blueshift of $E_0$ can be further understood considering the dependence of the later on the lattice's expansion and consequent increase in interatom distance, which in turn leads to a lowering of the valence band minimum. Additionally, a sharp discontinuity is observed for all CPs at 140 \degree C, which according the GIWAXS data presented earlier (Fig.~\ref{fig:ch2:giwaxs_insitu}) coincides with the transition between the orthorhombic and tetragonal phases. The same discontinuity was also observed for \ch{CsPbBr_3} single crystals \cite{Mannino2020Temperature-DependentCrystals}. It is known that $E_0$ has a dependence on the tilting of the [\ch{PbX_6^{4-}}] octahedra, which is directly responsible for the phase transition, potentially explaining the origin of the discontinuity. As a result, this feature of the dynamic SE model could be used as a fingerprint for the identification of the tetragonal-to-orthorhombic phase transition for the characterization of alternative compositions, as an alternative to using synchrotron-based techniques, such as GIWAXS. On the other hand, the tetragonal-to-cubic phase transition (at approximately 200 \degree C) does not exhibit any distinguishable features, potentially attributed to the continuous tilting of the \ch{PbX_6} octahedra and the continuous change of the Pb-X bond lengths as a function of temperature \cite{Foley2015TemperaturePerovskite}. An exception to the observed trends is the energy variation of CP $E_0$ during cooling, which shows a sharp drop at the onset of the cooling process. Further investigation is required to understand this behavior.
 
 
 
