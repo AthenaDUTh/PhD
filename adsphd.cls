@@ -541,6 +541,9 @@
 \usepackage{chemformula}
 \usepackage{gensymb}
 \usepackage{enumerate}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{siunitx}
 
 \usepackage{adjustbox}   % To adjust figure sizes if needed
 

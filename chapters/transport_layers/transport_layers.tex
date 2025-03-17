@@ -317,7 +317,7 @@ With the results presented so far, it is clear that the deposition of 20 nm of \
 \end{figure}
 
 
-To further investigate the physical origin of the reverse bias instability of the 40\ch{TiO_2} sample as well as the performance variability the 40\ch{C_{60}}, we examine the EDS elemental concentration profiles of the three stacks, which are shown in Fig.~\ref{fig:etl_opt:eds_concentration}a-c. Having as reference the onset of the \ch{Pb} signal, a dashed line is drawn in each plot to indicate the start of the perovskite layer. In contrary to sample 40\c{C_{60}}, the Cs signal for sample 40\ch{TiO_2} is starting much earlier compared to Pb, I, and Br, pointing out to a significantly altered perovskite stoichiometry at the interface. The significant change in surface stoichiometry of the 40\ch{TiO_2} sample is likely responsible for increased inter-bandgap states, which enhance hole tunneling under reverse bias \cite{Huang2018IntrinsicCsPbI3, Kang2017HighCsPbBr3, Chu2020SoftDefects}. On the other hand, the elemental concentrations of sample 40\ch{C_{60}} reveal an overlapping of the Al signal and perovskite's constituents elements, further supporting the claim for incomplete surface coverage by the \ch{C_60} layer and the creation of metallic shorts that promote performance variability among devices fabricated on the same substrate. Finally, the elemental profile of sample 20\ch{C_{60}}-20\ch{TiO_2} indicate that the bilayer ETL configuration helps preserving the perovskite's surface stoichiometry, reducing the diffusion of Cs in the ETL (albeit not completely eliminating), while at the same time establishing a better separation between the Al contact and the perovskite. 
+To further investigate the physical origin of the reverse bias instability of the 40\ch{TiO_2} sample as well as the performance variability the 40\ch{C_{60}}, we examine the EDS elemental concentration profiles of the three stacks, which are shown in Fig.~\ref{fig:etl_opt:eds_concentration}a-c. Having as reference the onset of the \ch{Pb} signal, a dashed line is drawn in each plot to indicate the start of the perovskite layer. In contrast to sample 40\ch{C_{60}}, the Cs signal for sample 40\ch{TiO_2} is starting much earlier compared to Pb, I, and Br, pointing out to a significantly altered perovskite stoichiometry at the interface. The significant change in surface stoichiometry of the 40\ch{TiO_2} sample is likely responsible for increased inter-bandgap states, which enhance hole tunneling under reverse bias \cite{Huang2018IntrinsicCsPbI3, Kang2017HighCsPbBr3, Chu2020SoftDefects}. On the other hand, the elemental concentrations of sample 40\ch{C_{60}} reveal an overlapping of the Al signal and perovskite's constituents elements, further supporting the claim for incomplete surface coverage by the \ch{C_60} layer and the creation of metallic shorts that promote performance variability among devices fabricated on the same substrate. Finally, the elemental profile of sample 20\ch{C_{60}}-20\ch{TiO_2} indicates that the bilayer ETL configuration helps preserving the perovskite's surface stoichiometry, reducing the diffusion of Cs in the ETL (albeit not completely eliminating), while at the same time establishing a better separation between the Al contact and the perovskite. 
 
 
 
@@ -348,7 +348,8 @@ To further investigate the physical origin of the reverse bias instability of th
     \label{fig:etl_opt:eds_concentration}
 \end{figure}
 
-We further evaluate the interface quality through photophysical measurements, using TPC with two different light sources... 
+To further evaluate the perovskite/ETL interface quality we employ transient photocurrent (TPC) measurements, exciting the PePDs with two different light sources, a white and red (625 nm) light one. Their respective spectral profile is shown in Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}a and b, where the LED irradiance has been tuned to yield a total intensity of 44.5 $mW/cm^2$ and 25.5 $mW/cm^2$ for the white and red light source, respectively. Using different light sources leads to different carrier generation profiles within the perovskite layer, enabling the disentanglement of bulk- and interface-dominated phenomena. The carrier generation rate as a function of distance inside the perovskite layer can be simulated using the optical constants of each device layer (obtained via spectroscopic ellipsometry) as an input in the transfer matrix algorithm \cite{Burkhard2010AccountingCells}. The model developed for the simulation is illustrated in Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}c, while  the carrier generation rate within the \ch{CsPbI_2Br} layer for both light sources is shown in Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}d. 
+
 
 \begin{figure}[t]
     \centering
@@ -382,9 +383,11 @@ We further evaluate the interface quality through photophysical measurements, us
         \label{}
     \end{subfigure}
     \caption{}
-    \label{}
+    \label{fig:etl_opt:tpc_sources_and_simulation}
 \end{figure}
 
+
+A summary of TPC results for all PePDs is provided in Fig.~\ref{fig:etl_opt:tpc_comparison}a-d. For each sample and light source, the TPC response was measured at -1 and -2 V, with all curves normalized relative to the -2 V response. Starting with samples 40\ch{C_{60}} and 20\ch{C_{60}}-20\ch{TiO_2}, the photocurrent response under the effect of -1 and -2 V is similar for both illumination conditions. However, as the \ch{C_{60}} layer thickness decreases, a larger discrepancy under the effect of -1 and -2 V is observed. Specifically, the TPC response under -2 V has a square shape that corresponds to the light pulse that starts at 0 ms. In contrast, with the PePD biased at -1 V, the photocurrent initially rises as a response to the light pulse but begins to decline within a few tens of microseconds, before stabilizing at a lower value for the remainder of the light pulse. This effect is more pronounced under the effect of 625 nm illumination, although sample 40\ch{TiO_2} begins exhibiting this pattern even under white light illumination.
 
 
 \begin{figure}[htbp]
@@ -418,90 +421,26 @@ We further evaluate the interface quality through photophysical measurements, us
     \end{subfigure}
     
     \caption{A 1×4 grid of images.}
-    \label{}
+    \label{fig:etl_opt:tpc_comparison}
 \end{figure}
 
+Such phenomena of transient peaks in the TPC response of organic- and perovskite-based photodiodes were previously associated with a non-ideal charge extraction and carrier accumulation at an interface \cite{Neophytou2019EnhancingLayer, Hwang2009Drift-diffusionCells,Mcneill2009PhotocurrentEffects}. Specifically, in the presence of a defect-rich interface, in this case the perovskite/ETL interface, electrons may get trapped near the anode, leading to a local reduction of the electric field via the creation of a space-charge region. This in turn limits charge separation and promotes recombination \cite{Mcneill2009PhotocurrentEffects}. The electron trapping rate, and by extension the width of the space charge region, depends of course on the interface's defect density but also the charge generation rate in the same region \cite{Hwang2009Drift-diffusionCells}. However, Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}d revealed that the charge generation rate at the perovskite/ETL interface (Distance = 300 nm) is similar for both white and red light illumination, and equal to approximately $2\times 10^{21}s^{-1}cm^{-3}$. As a result, and taking as example the 40\ch{TiO_2} sample, we could reasonable consider similar levels of trapped-charge accumulation at the perovskite/ETL interface for both types of illumination, leading to the formation of a space-charge region of similar width. Yet, as shown in Fig.~\ref{fig:etl_opt:tpc_comparison}a, the transient peak is more pronounced under the effect of red light illumination. This is attributed to the fact that under white light illumination a larger percentage of carriers is generated closer to HTL/perovskite interface (Distance = 0 nm in Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}d), which can be more efficiently separated and extracted, dominating in the sample's TPC response. In conclusion, the diminishing TPC peak under red light illumination and -1 V bias with increasing \ch{C_{60}} layer thickness is further supporting the claim that the reverse bias breakdown is eliminated through a reduction in the density of interface trap states.
+
+Interestingly, the saturated TPC response of sample 40\ch{TiO_2} under 625 nm light illumination at -1 V is almost half compared to -2 V. On the other hand, the saturated EQE response of the same sample at 620 nm (Fig.~\ref{fig:etl_opt:static_eqe}a) is approximately equal to 70\% when the PePD is biased at -1 and -2 V. This discrepancy is attributed to the significantly lower intensity of the EQE light source (<3 $mW/cm^2$ compared to 25.5 $mW/cm^2$) and the fact that the accumulation of trapped charge at the perovskite/ETL interface is directly proportional to it \cite{Hwang2009Drift-diffusionCells,Mcneill2009PhotocurrentEffects}.
 
 \section{Impact of ETL on Response Speed}
 
-
-
-\begin{figure}[t]
-    \centering
-    % First row
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Rise_time_40TiO2.pdf} % Replace with your image file
-        \caption{}
-        \label{}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Rise_time_10_30.pdf} 
-        % Replace with your image file
-        \caption{}
-        \label{}
-    \end{subfigure} 
- % Second row
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Rise_time_20_20.pdf} % Replace with your image file
-        \caption{}
-        \label{}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Rise_time_40C60.pdf} % Replace with your image file
-        \caption{}
-        \label{}
-    \end{subfigure}
-    \caption{}
-    \label{}
-\end{figure}
-
-
-
-
-
-
-
 \begin{figure}[htbp]
     \centering
-    % First plot
-    \begin{subfigure}[t]{0.42\textwidth} % Adjust width as needed
-        \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/MOS_Structure_icon.pdf} % Replace with your image
-        \caption{}
-        \label{}
-    \end{subfigure}
-    \hfill % Space between the two plots
-    % Second plot
-    \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
-        \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/MOS_IS.pdf} % Replace with your image
-        \caption{}
-        \label{}
-    \end{subfigure}
-
-    % Caption for the whole figure
-    \caption{Reversibility and long bias}
-    \label{}
-\end{figure}
-
-
-\begin{figure}[t]
-    \centering
     % First row
-    \begin{subfigure}[t]{0.42\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/TPC_comparison.pdf} % Replace with your image file
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/TPC_comparison_v2.pdf} % Replace with your image file
         \caption{}
         \label{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.4\textwidth}
+    \begin{subfigure}[t]{0.37\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/transport_layers/images/Rise_time_f_c60_thickness.pdf} 
         % Replace with your image file
@@ -509,7 +448,7 @@ We further evaluate the interface quality through photophysical measurements, us
         \label{}
     \end{subfigure} 
  % Second row
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0.44\textwidth}
         \centering
         \hspace{-1.5cm}
         \includegraphics[width=\textwidth]{chapters/transport_layers/images/Cf_comparison.pdf} % Replace with your image file
@@ -517,29 +456,30 @@ We further evaluate the interface quality through photophysical measurements, us
         \label{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/transport_layers/images/C_f_c60_thick.pdf} % Replace with your image file
         \caption{}
         \label{}
     \end{subfigure}
     \caption{}
-    \label{}
+    \label{fig:etl_opt:rise_time_and_capacitance}
 \end{figure}
 
+Besides the investigation of the perovskite/ETL interface quality, the TPC measurements can be further used to evaluate the carrier extraction speed of the PePDs, which is defined as the time it takes for the device to respond to the transient light pulse. Fig.~\ref{fig:etl_opt:rise_time_and_capacitance}a superimposes the photoresponse of the four PePDs, biased at -2 V, during the first microseconds of the measurement under white light illumination. A distinct trend emerges, where the response becomes faster as the \ch{C_{60}} layer thickness increases. The PePDs' rise time ($\tau_r$) can be further quantified as the time required for the photocurrent to reach 90\% of its steady-state value (starting from 10\%). Fig.~\ref{fig:etl_opt:rise_time_and_capacitance}b displays the extracted $\tau_r$ as a function of the \ch{C_{60}} layer thickness, highlighting the impact of the chosen ETL configuration on the detector's speed.  
 
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}{0.32\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Cf_40C60.pdf}
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Cf_40TiO2.pdf}
         \caption{}
         \label{}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.32\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Cf_40TiO2.pdf}
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Cf_40C60.pdf}
         \caption{}
         \label{}
     \end{subfigure}
@@ -552,9 +492,77 @@ We further evaluate the interface quality through photophysical measurements, us
     \end{subfigure}
     
     \caption{A 1×3 grid of images.}
+    \label{fig:etl_opt:cf_all}
+\end{figure}
+
+
+
+Considering that the RC time constant is critical for a photodiode's response speed, we characterize the devices' capacitance as a function of frequency at 0 and -2 V (Fig.~\ref{fig:etl_opt:cf_all}a-c). For frequencies above 10 Hz, samples 40\ch{C_{60}} and 20\ch{C_{60}}-20\ch{TiO_2} have identical capacitance at 0 and -2 V, revealing that the built-in potential is sufficient to fully deplete the PePDs, without the need for additional reverse bias. This further suggests that the increase in the devices' response speed when a thicker \ch{C_{60}} layer is used can not be attributed to an extension of the depletion region within the perovskite layer itself \cite{Goushcha2017OnPhotodiodes}. The signal of the capacitance measurement for sample 40\ch{TiO_2} exhibits the same trend, even though it is collapsing to 0 and becomes more noisy for frequencies below 10 Hz, a direct aftermath of the device breakdown after reverse biasing for prolonged duration. Fig.~\ref{fig:etl_opt:rise_time_and_capacitance}c provides a overlay comparison of the C-f measurement for all PePDs in absence of any external bias. For moderate frequencies, in the range of 10Hz to 100 kHz, the capacitance of the device is inversely proportional to the thickness of the \ch{C_{60}} layer, in agreement with the observed increase in response speed ($\tau_r \propto \tau_{RC}$). Considering that the equivalent device capacitance for a series connection is equal to 
+ 
+ \begin{equation}
+    \frac{1}{C_{eq}} = \frac{1}{C_{pvkt}} + \frac{1}{C_{ETL}}
+    \label{eg:series_cap}
+ \end{equation}
+
+, the decrease in $C_{eq}$ could potentially be attributed to an extension of the depletion width within the \ch{C_{60}} layer, as it was previously numerically shown and attributed to the relatively low doping density of the material \cite{Pham2023EffectsCells}.  
+
+\begin{figure}[htbp]
+    \centering
+    % First plot
+    \begin{subfigure}[t]{0.35\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/MOS_Structure_icon.pdf} % Replace with your image
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hfill % Space between the two plots
+    % Second plot
+    \begin{subfigure}[t]{0.4\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/MOS_IS.pdf} % Replace with your image
+        \caption{}
+        \label{}
+    \end{subfigure}
+
+    % Caption for the whole figure
+    \caption{Reversibility and long bias}
     \label{}
 \end{figure}
 
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Adjust row spacing
+    \begin{tabular}{@{} l l @{}}
+        \hline
+        C [$F/cm^2$] & $7.8\times10^{-8}$\\ \hline
+        $\epsilon_0$ [$F/m$]& $8.85\times10^{-12}$ \\ \hline
+        $d_{pvkt}$ [$nm$] & $300$ \\ \hline
+        A [$cm^2$] & $0.125$ \\ \hline
+    \end{tabular}
+    \caption{Example Table with Horizontal Lines} % Caption for the table
+    \label{tab:etl_opt:er_from_pepd} % Label for referencing
+\end{table}
+
+To verify this hypothesis, we first extract perovskite's relative permittivity ($\epsilon_r$) from the C-f of sample 40\ch{TiO_2}, considering that the depletion region is limited within the \ch{CsPbI_2Br} layer and using equation $C_{pvkt} = \frac{\epsilon_r\epsilon_0A}{d}$, where $\epsilon_0$ is the vacuum permittivity, $A$ is the device area and $d$ is the perovskite thickness. Using the values that are summarized in Table~\ref{tab:etl_opt:er_from_pepd}, we extract $\epsilon_r = 26.5$. In order to corroborate this value and eliminate the influence of the ETL, we additionally fabricate a metal-oxide-semiconductor (MOS) capacitor, that employs heavily a p-doped silicon wafer as the metal contact and a thermally-grown \ch{SiO_2} (100 nm) layer as the oxide. The schematic of the MOS-stack, as well as the results of the C-f measurement at 0 and -7 V are shown in Fig.~\ref{tab:etl_opt:er_from_mos}a and b, respectively. Taken into account that the perovskite and oxide are connected in series (eq.~\ref{eg:series_cap}) and using the values of Table~\ref{tab:etl_opt:er_from_mos}, we extract $\epsilon_r = 26.9$, which is in great agreement with the value that was estimated from the 40\ch{TiO_2} sample. Finally, Fig.~\ref{fig:etl_opt:rise_time_and_capacitance}d compares the measured and numerically calculated equivalent capacitance of the PePDs as function of the \ch{C_{60}} layer, considering that the latter is fully depleted. The strong agreement between measured and calculated values further confirms our initial hypothesis that the increase in the PePDs response with increasing \ch{C_{60}} layer thickness is attributed to a reduction of the stack's RC constant, though an extension of the depletion area towards the \ch{C_{60}} layer \cite{Goushcha2017OnPhotodiodes}. 
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Adjust row spacing
+    \begin{tabular}{@{} l l @{}}
+        \hline
+        $C_{eq}$ [$F/cm^2$] & $2.4\times10^{-8}$\\ \hline
+        $\epsilon_0$ [$F/m$]& $8.85\times10^{-12}$ \\ \hline
+        $\epsilon_{r,SiO_2}$ & 3.9 \\ \hline
+        $d_{SiO_2}$ [$nm$] & $100$ \\ \hline
+        $d_{pvkt}$ [$nm$] & $300$ \\ \hline
+        A [$cm^2$] & $0.16$ \\ \hline
+    \end{tabular}
+    \caption{Example Table with Horizontal Lines} % Caption for the table
+    \label{tab:etl_opt:er_from_mos} % Label for referencing
+\end{table}
+
+This finding gives the motivation of further increasing the c-60 layer thickness to achive even faster detector response....
 
 
 \begin{figure}[htbp]
