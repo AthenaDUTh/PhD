@@ -126,7 +126,7 @@ The photodiode is not the only structure that is used for photo-detecting applic
 
 
 
-The vast majority of studies on perovskite-base optoelectronic devices rely on the use of solution processed methods, and specifically spin-coating. This is not surprising, considering that spin-coating is a technique that is simple, easily accessible, and has low cost. These characteristics make it highly suitable for rapid prototyping and exploration of various material combination that can promote efficiency or stability. For example, during solution preparation it is common to include various additives that in turn can help modulate morphology, optimize energy level-alignment or eliminate hysteresis \cite{Liu2020ACells}. However, cell fabrication through spin-coating is not transferable to industry, due to limitation is throughput and large-area deposition. For example, a commonly used technique, anti-solvent processing has been shown to be challenging to scale-up\cite{Saki2021Solution-processedCells}.
+The vast majority of studies on perovskite-base optoelectronic devices rely on the use of solution processed methods, and specifically spin-coating. This is not surprising, considering that spin-coating is a technique that is simple, easily accessible, and has low cost. These characteristics make it highly suitable for rapid prototyping and exploration of various material combination that can promote efficiency or stability. For example, during solution preparation it is common to include various additives that in turn can help modulate morphology, optimize energy level-alignment or eliminate hysteresis \cite{Liu2020ACells}. However, cell fabrication through spin-coating is not transferable to industry, due to limitation is throughput and large-area deposition. For example, a commonly used technique, anti-solvent processing, has been shown to be challenging to scale-up \cite{Saki2021Solution-processedCells}.
 
 \begin{figure}[htbp]
   \centering
@@ -194,17 +194,37 @@ Component engineering, achieved through the partial replacement of the A-, B-, o
 A variety of reports have employed the \ch{CsPbI_2Br} composition for the fabrication of solar cells and photodiodes, including deposition via thermal evaporation. However, in all cases the perovskite was combined with solution-processed and/or organic transport layers, which counterbalances the advantages of using a vacuum-deposited, inorganic active layer. In fact, besides a report previously published within our group \cite{PintorMonroy2021All-EvaporatedApplications}, and to the best of our knowledge, there is truly limited number of reports that have produced all-inorganic, vacuum-deposited perovskite optoelectronic devices. 
 
 
+\section{Scope and Aim of This Thesis}
+
 \subsection{Performance Metrics}
 
 The definition of performance metrics for any device depends on its intended application. In our case, this is translated into the integration of the PePD on top of a silicon readout integrated circuit (ROIC), as well as the bonding of the structure with the color-splitting waveguides. The former mainly defines the metrics related to electrical performance, while the latter defines the metrics related to stability. 
 
-\begin{figure}
-  \centering
-  \medskip
-  \includegraphics[width=.99\textwidth]{chapters/introduction/image/3T_pixel_readout.png}
-  \caption[Short caption for Table of Figures]{3T pixel readout, Reproduced from \cite{Pejovic2023ColloidalInfrared}.}
-  \label{fig:ch2:readout}
+
+\begin{figure}[htbp]
+    \centering
+    % First plot
+    \begin{subfigure}[t]{0.55\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/introduction/image/imager_cross_section.pdf} % Replace with your image
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hfill % Space between the two plots
+    % Second plot
+    \begin{subfigure}[t]{0.99\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/introduction/image/3T_pixel_readout.png} % Replace with your image
+        \caption{3T pixel readout, Reproduced from \cite{Pejovic2023ColloidalInfrared}.}
+        \label{}
+    \end{subfigure}
+
+    % Caption for the whole figure
+    \caption{}
+    \label{fig:ch1:cmos_roic}
 \end{figure}
+
+
 
 For a better understanding of the metrics stemming from the CMOS integration, a better understanding of the readout mechanism is crucial. In our case, this mechanism relies on the 3T pixel design, which involves the photodiode and three additional transistors, namely the reset, the source follower and the row select transistor. This schematically illustrated in Fig.~\ref{fig:ch2:readout}. A read-out cycle is defined by the duration of the  integration period ($t_{int}$). At the beginning of the integration period ($t_0$), the reset transistor is briefly turned-on, connecting the photodiode to a reference voltage in the reverse regime ($V_{bias}$). Next, the reset transistor is turned-off, however $V_{bias}$ is maintained across the photodiode, due to its internal capacitance ($C_{PD}$). During the integration period, and with the photodiode under illumination, the absorbed photons are converted to electron-hole pairs, which in turn discharge the diode's internal capacitance, effectively reducing the bias across its terminals. As a result, at the end of the integration period, the bias across the diode is $V_D$, whose value depends on the number of absorbed photons, i.e. the light intensity. Lastly, $V_D$ is buffered by the source follower transistor and read by the rest of the circuit. 
 
@@ -224,9 +244,6 @@ High and saturated across the voltage swing (100 ms to 1 V)
 \textbf{Linearity:}
 
 \textbf{Response Speed:}
-
-
-\section{Scope and Aim of This Thesis}
 
 \begin{itemize}
     \item Develop an all-inorganic perovskite diode (many reports use inorganic perovskites with organic TLs - this defies the purpose of using an inroganic absorber)

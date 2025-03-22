@@ -1,9 +1,26 @@
 % !TeX root = ../../thesis.tex
 \chapter{Materials and Methods}\label{ch:material_properties}
 
-The inception of the work presented in this thesis began with the repurposing an older vacuum evaporation chamber, previously used of the fabrication of organic thin film electronics. A significant portion of initial efforts focused on calibrating the chamber for the deposition of inorganic perovskite layers, evaluating film quality and repeatability, as well as investigating the effect of fundamental deposition parameters on the performance of the photodetector devices. This chapter outlines the experimental protocol followed in this work, detailing the deposition and characterization methods of \ch{CsPbI_2Br} thin films, as well as the development of perovskite photodiodes. The latter encompasses the selection of substrates and transport layers while also emphasizing the importance of carefully interpreting electrical characterization measurements.
+The inception of the work presented in this thesis began with the repurposing an older vacuum evaporation chamber, previously used of the fabrication of organic thin film electronics. A significant portion of initial efforts focused on calibrating the chamber for the deposition of inorganic perovskite layers, evaluating film quality and repeatability, as well as investigating the effect of fundamental deposition parameters on the performance of perovskite photodiodes. This chapter outlines the experimental protocol followed in this work, detailing the deposition and characterization methods of \ch{CsPbI_2Br} thin films, as well as the development of CMOS-imager compatible PePDs. Finally, the importance of careful interpretation of data from electrical characterization measurements is emphasized. 
 
 \section{Thermal Co-Evaporation of \ch{CsPbI_2Br} Thin Films}
+
+\subsection{Fundamentals}
+
+In general terms, the process of thermal evaporation consists of three stages: 1) Vaporization: the precursor materials, which are initially in powder form, are heated up until vaporized into molecules or atoms. 2) Transportation: given that the vacuum in the chamber is high enough, the vaporized atoms/molecules transport from their source crucibles to the substrate with minimal collisions. 3) Deposition and film growth: the precursor atoms/molecules condense on the substrate, gradually nucleating to form a film \cite{Du2022ThermalOutlook}. 
+
+The first condition for a high-quality thermal evaporation deposition is the attainment of a high vacuum in the deposition chamber. Besides the elimination of potential impurities, the vacuum level has a direct influence in the free mean path ($\lambda$) of the precursor molecules, which describes the average distance between two collisions. The relationship between $\lambda$ and vacuum pressure (P, Pa) is described by equation:
+
+\begin{equation}
+    \lambda = \frac{k_BT}{\sqrt{2}\pi d^2P},
+\end{equation}
+
+ where $k_B$ is the Boltzmann constant, $d$ is the effective molecular diameter ($\backsim 10^{-10}$ m for CsBr and \ch{PbI_2}) and T is the molecule's temperature \cite{Dong2023GrowthFilm}. Considering that the distance between source crucibles and substrate is equal to $L$, a ballistic molecule transport, i.e.  a random thermal motion of the precursors without collision processes, can be guaranteed for $\lambda >> L$. In our case, L $\approx$ 40 cm and the thermal evaporation pressure was always maintained below $\backsim 10^{-4}$~Pa, yielding a free mean path of $\lambda \approx 100$ m, satisfying the condition for ballistic transport. It has to be highlighted that this condition is only satisfied for the evaporation of inorganic precursors. Previous studies evaluated the evaporation of organic precursors (such as MAI) for the deposition of hybrid organic-inorganic perovskite thin films, however the the decomposition of MAI into more volatile compounds can lead to an up to a three order magnitude increase in background pressure, which in turn reduces the precursors' $\lambda$ \cite{Abzieher2021FromCells}.
+ 
+ Once the molecules reach the substrate, three mechanisms of film growth are possible, namely island growth (Volmer-Weber mode), layer growth (Frank-Van der Merwe mode), and layer-island growth (Stranski-Krastanov mode) \cite{Wang2024ThermallyBeyond}. The dominant mechanism depends on adsorbate-adsorbate and adsorbate-substrate bonding strength. The prevalence of the former promotes island growth, while the dominance of the later facilitates layer growth. In the case of perovskite evaporation, the primary deposition mechanism is island growth owing to the lattice mismatch between the substrate surface and the perovskite lattice \cite{Chen2018AEfficiency}. This means that the precursor molecules nucleate on the substrate surface and grow into islands, which subsequently coalesce to form a poly-crystalline film. This initial nucleation will determine the final grain size and film morphology. Regardless of the growth mechanism, whether the precursors in situ react to form the perovskite lattice also depends on their evaporation rate and substrate temperature. The sum of the precursors' kinetic energy and substrate's thermal energy should be sufficient to surmount the reaction potential barrier for the formation of the perovskite crystal \cite{DongGrowthFilm}. 
+
+\subsection{Process Development}
+
 
 \begin{figure}
   \centering
@@ -13,10 +30,8 @@ The inception of the work presented in this thesis began with the repurposing an
   \label{fig:deposition_chamber}
 \end{figure}
 
-++high vacuum 
 
-
-An illustration of the deposition chamber is provided in Figure~\ref{fig:deposition_chamber}. Two sources on opposite sides of the chamber are loaded with \ch{CsBr} and \ch{PbI_2} powders. Two separate quartz crystal microbalances (QCMs) are used to track the deposition rate of each source. The substrates are loaded on a substrate holder (\textbf{distance?}) that can hold up to nine $3\times 3$ $cm^2$ coupons. The QCMs have to be calibrated according to the atomic mass of the precursor they are monitoring. To achieve this, an initial estimation of their tooling factor is necessary. Subsequently, each precursor is deposited on \ch{Si/SiO_2} substrate, placed in the center of the substrate holder, and the actual thickness is measured using spectroscopic ellipsometry or profilometry. The tooling factor is then adjusted using the equation: 
+An illustration of the vacuum evaporation deposition chamber used in the scope of this thesis is provided in Figure~\ref{fig:deposition_chamber}. Two sources on opposite sides of the chamber are loaded with \ch{CsBr} and \ch{PbI_2} powders. Two separate quartz crystal microbalances (QCMs) are used to track the deposition rate of each source. The substrates are loaded on a substrate holder (approximately 40 $cm$ above the sources) that can hold up to nine $3\times 3$ $cm^2$ coupons. The QCMs have to be calibrated according to the atomic mass of the precursor they are monitoring. To achieve this, an initial estimation of their tooling factor is necessary. Subsequently, each precursor is deposited on \ch{Si/SiO_2} substrate, placed in the center of the substrate holder, and the actual thickness is measured using spectroscopic ellipsometry or profilometry. The tooling factor is then adjusted using the equation: 
 
 \begin{equation}
     TF_{\text{actual}} = TF_{\text{approx}} \times \frac{\text{thickness(actual)}}{\text{thickness(QCM)}}
@@ -31,55 +46,29 @@ Moving on to the co-evaporation of perovskite thin films, the ratio between the 
     TR = \frac{MolarMass(A)/Density(A)}{MolarMass(B)/Density(B)}.
 \end{equation}
 
-During the co-evaporation, a global shutter is protecting the samples while the sources are still heating up. Once both rates have reached their target value and are stabilized, the shutter is removed, initiating the deposition. The substrate holder is kept at room temperature and rotates at approximately 2.2 rounds per minute to ensure a uniform deposition. During the deposition, the temperature of each sources is continuously and automatically adjusted to maintain a constant evaporation rate. The deposition is automatically terminated once the target cumulative thickness is reached. For the development of the baseline evaporated films, a cumulative deposition rate of 0.8{\AA}/s and a \ch{CsBr:PbI_2} ratio of 1.05:1.00 was aimed for. Films were deposited with a slight excess of \ch{CsBr} since it was shown that it can improve the ambient stability of the black phase without compromising their optoelectronic properties \cite{Ma2017TheCells}. Following the deposition of the perovskite thin films, they where consistently stored in nitrogen environment to prevent their conversion to the photo-inactive yellow phase.
+During the co-evaporation, a global shutter is protecting the samples while the sources are still heating up. Once both rates have reached their target value and are stabilized, the shutter is removed, initiating the deposition. The substrate holder is kept at room temperature and rotates at approximately 2.2 rounds per minute to ensure a uniform deposition. During the deposition, the temperature of each sources is continuously and automatically adjusted to maintain a constant evaporation rate. The deposition is automatically terminated once the target cumulative thickness is reached. For the development of the baseline evaporated films, a cumulative nominal deposition rate of 0.8{\AA}/s and a \ch{CsBr:PbI_2} ratio of 1.05:1.00 was aimed for. Films were deposited with a slight excess of \ch{CsBr} since it was shown that it can improve the ambient stability of the black phase without compromising their optoelectronic properties \cite{Ma2017TheCells}. Following the deposition of the perovskite thin films, they were typically flash annealed at 300 \degree C in nitrogen environment, in which they were consistently stored to prevent their conversion to the photo-inactive yellow phase. Chapter~\ref{ch:ellipsometry} will further investigate the impact of the post-deposition thermal annealing step on the material properties of the \ch{CsPbI_2Br} film.
 
 
 \section{Experimental Methodology}
 
-Following the calibration of the tooling factor for each source, the following experimental methodology was implemented. Initially the co-evaporated \ch{CsPbI_2Br} films are deposited on glass or \ch{Si/SiO_2} substrates. This step aims to the characterization of the fundamental structural, compositional, crystallographic, and optical properties of the deposited films. Structural properties are mainly investigated using atomic force microscopy (AFM) and scanning electron microscopy (SEM), transmission electron microscopy (TEM), and spectroscopic ellipsometry (SE). Compositional properties are investigated using X-Ray and Ultraviolet photoelectron spectroscopy (XPS/UPS), energy dispersive X-Ray spectroscopy (EDS), as well as inductively coupled plasma mass spectrometry (ICP-MS). Crystallographic properties are investigated using synchrotron-based grazing incident wide angle X-ray scattering (GIWAXS). Optical properties are investigated using photoluminescence (PL), ultraviolet-visible spectroscopy (UV-Vis), and SE. Finally, the ambient stability of the deposited films is investigated through their exposure to the controlled environment of the lab (temperature, humidity). 
+\begin{figure}[htbp]
+    \centering
+    % First plot
+    \begin{subfigure}[t]{0.99\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/methodology.pdf} % Replace with your image
+    \end{subfigure}
 
+    % Caption for the whole figure
+    \caption{Methodology - Adapted from \cite{Malinowski2023ImageAbsorbers}}
+    \label{fig:ch2:methodology}
+\end{figure}
 
-After ensuring the high quality of the bare perovskite films, they are flowingly incorporated in the bottom-illuminated photodiode stack, using glass substrates, pre-patterned with ITO. The ITO serves as the common contact, while the device area is defined by the aluminum (Al) electrodes deposited on top of the perovskite. This step is instrumental for the screening of various parameters and their influence on device performance, including the perovskite annealing conditions or choice of transport layers. Characterization measurements used for this step mainly rely on acquisition of J-V characteristics, EQE spectral response, as well as capacitance and transient photocurrent measurements.
+Once the reliable and controlled deposition of \ch{CsPbI_2Br} thin films was ensured, we followed the experimental methodology illustrated in Fig.~\ref{fig:ch2:methodology} to develop CMOS imager-compatible PePDs. The use of test structures with progressively increasing complexity allows for the efficient collection of the relevant for each structure Figures of Merit (FoM). 
 
-Once the most prominent perovskite processing conditions and transport layers have been identified, it is possible to proceed to the development of the top-illuminated stack, replacing the glass substrate with a silicon one. This serves as an intermediate step before integrating the PePD top of the Si ROIC for imager fabrication. The silicon substrates are patterned with titanium nitride bottom contacts (TiN) and they are designed internally and fabricated in imec's CMOS foundry. The bottom TiN contacts define the device area, while to common contact is defined by the ITO that is deposited on top of the perovskite.  
+Initially, the co-evaporated \ch{CsPbI_2Br} thin films are deposited on glass or Si/\ch{SiO_2} substrates, aiming to an investigation of their fundamental structural, compositional, crystallographic, and optical properties. Structural properties are mainly investigated using atomic force microscopy (AFM), scanning electron microscopy (SEM), and transmission electron microscopy (TEM). Compositional properties are inspected utilizing X-Ray and Ultraviolet photoelectron spectroscopy (XPS/UPS), energy dispersive X-Ray spectroscopy (EDS), as well as inductively coupled plasma mass spectrometry (ICP-MS). Crystallographic properties are evaluated using synchrotron-based grazing incident wide angle X-ray scattering (GIWAXS). Optical properties are investigated using photoluminescence (PL) measurements, ultraviolet-visible spectroscopy (UV-Vis), and spectroscopic ellipsometry (SE). Finally, in this initial stage of material characterization, the ambient stability of the \ch{CsPbI_2Br} black phase was assessed by exposing the films to the controlled laboratory environment and monitoring their conversion to the yellow phase over time.
 
-while 
-
-
-they are transferred to the top-illuminated stack, relying on the use of silicon substrates, patterned with titanium nitride (TiN) bottom contacts. In this case, the common contact (ITO) is deposited on top of the perovskite layer. These substrates, designed internally and fabricated in imec's CMOS foundry. Characterizing the performance of the photodiode stack deposited on top of silicon substrates is critical for evaluating its performance on the C
-
-the use of different contacts, as well as the opposite illumination creates diffrence in the peroformance which require the repetition of the above mentioned characterization measuremetns. 
-
-
-and allow for characterization on discrete diode level, mimicing the strucutre of the photodiode on top of the ROIC. Besides the measurements that were described above, the use of Silicon substrates allows for the additional characterization of thermal stability, as well as ambinets atmosphere stability of the whole stack. 
-
-
-TOP illuminiated photodiodes for CMOS integration. 
-
-\textit{Once the perofromance as well as the stability of the photodiode stack was assured, it was possible to tranfer the photodiode on top of the ROIC, pixels are in the 0.56 um. 
-}
-
-
-
-\section{Development of Perovskite Photodiodes}
-
-\subsection{Substrates and Electrodes}
-
-\subsection{Transport Layers}
-
-A review of available transport layers and the ones we use + energetic landscape.
-
-on top of the perovskite is more critical, since sputtering is usually too aggressive for the lattice - thermal evaporation, or deposition via ALD have been previously explored 
-
-fewer options are avaialble for inorgnic HTLs - NiOx - that thy we rely solely on the use of 
-
-
-\textbf{Good discussion and references for Metal Oxides as transport layers happens here \cite{Yang2023InvertedPassivation}}.
-
-
-
-
-
+After ensuring the high quality of the bare perovskite films and knowing their optical properties, they are followingly incorporated into the backside illuminated (BSI) photodiode stack, which relies on the use of glass substrates, pre-patterned with semi-transparent indium tin oxide (ITO) contacts. The perovskite thin film, sandwiched between two charge transport layers (CTLs), is deposited on the glass/ITO substrate, with the stack being completed with the deposition of a reflective top contact (Al). In this configuration, the ITO stripes serve as the diodes' common contact, while the device area is defined by the opening of the top contact shadow mask, as illustrated in Fig.~\ref{fig:ch2:types_of_substrates}a. For a total of 12 devices that are defined on the same substrate, the area of the top contacts varies between 3 values (0.125, 0.075, and 0.025 $cm^2$), allowing us to disentangle area-dependent from non-area-dependent performance characteristics. The development of BSI photodiodes has the advantage of allowing rapid prototyping and the screening of various deposition parameters/layers, considering that the supply of glass/ITO substrates was inexpensive and unlimited. The characterization of the BSI PePDs typically relies on the acquisition of J-V (in dark and under illumination), EQE, as well as capacitance and transient photocurrent measurements. This protocol allows for the identification of the optimal perovskite and CTL processing conditions that ensure the lowest $J_d$ and highest EQE (or $J_{photo}$), while ensuring device performance repeatability, optimal response speed and stability of the PePDs under the effect of reverse bias. 
 
 \begin{figure}[htbp]
     \centering
@@ -100,53 +89,72 @@ fewer options are avaialble for inorgnic HTLs - NiOx - that thy we rely solely o
     \end{subfigure}
 
     % Caption for the whole figure
-    \caption{Substrate layouts: (a) glass substrate, and (b) silicon substrate.}
+    \caption{Substrate layouts: (a) glass substrate, and (b) silicon substrate. The brown area represent the area that is covered by the perovskite and the transport layers. }
     \label{fig:ch2:types_of_substrates}
 \end{figure}
+
+
+Once the performance of the BSI PePDs has been optimized, the same process flow is repeated on top of a Si substrate for the fabrication of front-side illuminated (FSI) devices. The silicon substrates (shown in Fig.~\ref{fig:ch2:types_of_substrates}b), which are designed internally and fabricated in imec's CMOS foundry, are patterned with titanium nitride (TiN) contacts that define the device area (0.0625 $cm^2$). In this case, the common contact is defined by an ITO layer that is deposited on top of the PePD stack. The TiN contacts are the same as the ones found on the image sensor, albeit without the pixel circuitry below them, therefore the performance of the discrete PDs in this stage should emulate the electrical and optical properties of the target readout interface. At this stage, the same electrical characterization measurements as in the previous step are conducted, with the only difference being the direction of illumination. Even though the choice and processing of the perovskite and CTLs is the same as in the previous step, the use of different contacts and illumination direction establish certain differences that ought to be further understood and investigated. Finally, the elimination of Al from the device stack allows for the characterization of the PePD's thermal (> 250\degree C) and ambient atmosphere stability. 
+
+The last stage, which is outside the scope of the work presented in this thesis, involves the integration of the PePD on top of the CMOS ROIC substrate (the cross-section of which was shown in Fig.~\ref{fig:ch1:cmos_roic}, which can be used to capture 2-D or 3-D images, as well as to characterize relevant parameters, related to signal conversion, spatial uniformity, and photoresponse nonuniformity \cite{Malinowski2023ImageAbsorbers, Song2024HalideImager}. 
+
+
+
+\section{Charge Transport Layers}
 
 \begin{figure}[htbp]
     \centering
     % First plot
-    \begin{subfigure}[t]{0.99\textwidth} % Adjust width as needed
+    \begin{subfigure}[t]{0.35\textwidth} % Adjust width as needed
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/methodology.pdf} % Replace with your image
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/stack_cross_section.pdf} % Replace with your image
         \caption{}
-        \label{fig:ch2:glass_substrate}
+        \label{}
+    \end{subfigure}
+    \hfill % Space between the two plots
+    % Second plot
+    \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/energy_landscape.pdf} % Replace with your image
+        \caption{}
+        \label{}
     \end{subfigure}
 
     % Caption for the whole figure
-    \caption{Methodology}
-    \label{fig:ch2:methodology}
+    \caption{Stack and Energy landscape}
+    \label{fig:ch2:stack_and_energy_landscape}
 \end{figure}
 
+Unlike perovskite thin films, which are predominantly deposited using solution processing techniques, the utilization of vacuum deposition methods is far more common in the case of CTLs. This is because, in solar cell research, the perovskite layer is typically hundreds of nanometers thick, allowing its deposition on large-area modules using techniques such as blade coating or inkjet printing. On the other hand, CTLs require only a few tens of nanometers in thickness, posing significant challenges for achieving uniform and conformal deposition over large areas using solution-processing methods \cite{Luo2025VacuumModules}. The most common vacuum deposition techniques that have been explored for the deposition of CTLs include magnetron sputtering (MS), thermal evaporation (TE), electron beam evaporation (EBE), chemical vapor deposition (CVD), atomic layer deposition (ALD), and pulsed layer deposition (PLD).
 
-This section provides an overview of the parameters that can be varied during the development of perovskite-based photodetectors and their impact on device performance. As shown in Fig.\ref{fig:ch2:types_of_substrates}, two types of substrates were used in this study: glass substrates pre-patterned with an ITO contact (Fig.\ref{fig:ch2:glass_substrate}) and silicon substrates, designed internally and fabricated in imec's CMOS foundry, featuring a TiN bottom contact (Fig.~\ref{fig:ch2:pix_substrate}).
+With the exception of TE, the rest of the aforementioned vacuum processing techniques are primarily associated with the deposition of metal oxides, most commonly including titanium oxide (\ch{TiO_2}), zinc oxide (\ch{ZnO}), tin oxide (\ch{SnO_2}), and nickel oxide (\ch{NiO_x}). The use of metal oxides automatically satisfies the condition of high-temperature tolerance that is imposed in the scope of this thesis. On the other hand, owing to its milder deposition conditions, TE allows for the utilization of a larger variety of TLs, such as \ch{C_{60}} (buckminsterfullerene), Spiro-OMeTAD (2,2',7,7'-Tetrakis[N,N-di(4-methoxyphenyl)amino]-9,9'-spirobifluorene), \ch{CuPc} (copper phthalocyanine), PTAA (Poly[bis(4-phenyl)(2,4,6-trimethylphenyl)amine), \ch{MoO_3} (molybdenum oxide), and TaTm (N4,N4,N4'',N4''-tetra([1,1'-biphenyl]-4-yl)-[1,1':4',1''-terphenyl]-4,4''-diamine). However, certain compounds, such as Spiro-OMeTAD, are know to have poor thermal stability, degrading at temperatures even below 150°C, which automatically leads to their exclusion from possible TL candidates \cite{Zhao2017EffectCells, Tumen-Ulzii2020UnderstandingTemperature, Jeong2022ChallengesCells}. 
 
-Independetnly of the used substrate, the fabrication process is similar. For both of the 15 nm of NiOx are deposited via DC sputtering. The NiO-covered film is annealed for 5 minutes at 300 C in open air to promote the oxidataiton of the substrate. Then the perovskite is deposited, in most cases followed by a post deposition flash annealing step at 300 C for 5 seconds.- add stack diagram, taken from the paper on the ETL optimization.
 
-The fabrication process is similar for both substrate types, beginning with the deposition of the HTL (DC sputtered \ch{NiO_x}), followed by the deposition of the perovskite layer, the post-deposition annealing step, and finally, the deposition of the ETL. For glass substrates, the stack is completed by depositing Al contacts via thermal evaporation, using a shadow mask that defines 12 different devices. The device area is determined by the overlap between the ITO and Al electrodes, resulting in three different areas: 0.125 $cm^2$, 0.075 $cm^2$, and 0.025 $cm^2$. The use of variable-sized contacts allows for an analysis of the impact of device area on performance metrics.
-
-For silicon substrates, the stack is completed with the deposition of an ITO sheet via linear magreton sputtering. In this case, the device area is defined by the bottom TiN contact, which is fixed at 0.0625 $cm^2$. The illumination setup differs between the two substrates: glass substrates are illuminated from the bottom (through the glass side - Fig.~\ref{fig:ch2:glass_stack}), while silicon substrates are illuminated from the top (through the ITO side - Fig.~\ref{fig:ch2:pix_stack}). 
-
-The silicon substrates mimic the device structure used in the fabrication of imagers.2 However, due to their greater availability and accessibility, glass substrates are preferred for rapid prototyping and the screening of various deposition parameters and layers. Stacks that demonstrate promising performance are subsequently transferred and evaluated on silicon substrates. Despite the opposite orientation of the common contact, the results for both substrates are presented such that a negative bias consistently represents the reverse bias regime of the sample.
+In the scope of the work presented in this thesis, DC sputtered \ch{NiO_x} was the only HTL utilized, owing its reliable and consistent performance. Due to the harsh conditions of the sputtering process, the \ch{NiO_x} was always deposited before the perovskite layer, independently of the substrate used (glass or silicon). The films were deposited via reactive sputtering of a metallic nicker target, using oxygen plasma. Post-deposition, the substrates would be annealed in open air for 5 minutes at 300 \degree
+C to reduce oxygen vacancies and increase the film's transparency. In terms of the ETL, the use of e-beam deposited \ch{TiO_2} and thermally-evaporated \ch{C_{60}} was evaluated. The cross-section of the developed PePD stack, as well as the energy levels of the constituent layers are indicated in Fig.~\ref{fig:ch2:stack_and_energy_landscape}a and b, respectively. Chapter~\ref{ch:transport_layer} will discuss in detail the influence of the ETL on the PePD's performance and reliability. 
 
 
 \section{Impact of Characterization Method and Statistical Remarks}
 
-The characterization of the electrical performance of perovskite-based devices is not straight forward due to the presence of mobile ions in the lattice, which migrate under an applied and electric field, accumulate at the contacts and potentially participate in electrochemical reactions. In mixed-halide perovskites, phase segregation is another common occurrence. These are just some of the effects that occur under illumination or external bias, making it challenging to disentangle phenomena attributed to charge carriers, mobile ions, or newly formed species within the perovskite layer. A characteristic consequence of this complexity is hysteresis in J-V measurements, which has been shown to depend not only on the scan direction and speed, but also on the composition of the perovskite, the choice of transport layers, etc. 
 
-\begin{figure}[htbp]
+
+The electrical characterization of perovskite-based devices is not a straight-forward task, as their performance is influenced by both electronic and ionic mechanisms. A direct consequence of this feature is the presence of hysteresis in J-V measurements, which has been shown to depend not only on the scan's direction and speed, but also on the composition of the perovskite layer and the choice of transport layers \cite{Snaith2014AnomalousCells,Dualeh2014ImpedanceCells}.
+The underlying cause behind such phenomena is a complex matrix of mechanisms that involves the generation, transport and annihilation of ionic defects, which is usually, simplistically, referred to as "ion migration" \cite{Xu2024BeyondPerspective}. During characterization under dark conditions, the generation of ionic defects is typically attributed to electrochemical reduction/oxidation (redox) mechanisms, such as the oxidation of the iodide anions into iodine interstitials and halide vacancies. These mobile ions and defects may further undergo reversible or irreversible reactions to a achieve a lower energy state. Some aftermaths of such  reactions might include phase segregation in mixed halide perovskites, the doping of organic HTLs or the formation of metal filaments \cite{Kerner2021OrganicDevices, Hoke2014ReversiblePhotovoltaics,Xu2023Reverse-biasCells}. The electric bias applied during a J-V scan is sufficient to promote the generation and transport of ionic defects, thus making it challenging to disentangle phenomena attributed to charge carriers, mobile ions, or newly formed species within the perovskite layer. 
+
+The presence of hysteresis in sequential J-V scans is quite dominant during the characterization of the PePDs developed in the framework of this thesis, as revealed in Fig.~\ref{fig:ch2:scan_direction} and Fig.~\ref{fig:ch2:scan_speed}, which examine the impact of scan direction and integration time, respectively. With the potential causes of this behavior ranging from the phase-segration-prone nature of the \ch{CsPbI_xBr_{3-x}} composition, the contribution of abundant grain boundaries to the generation/transport of mobile ions or the dubious role of the CTLs and metal contacts, it is impossible to pinpoint the exact origins of hysteresis in the J-V data \cite{Ghasemi2023APerovskites, Shao2016GrainFilms, Yun2016CriticalCells, Meggiolaro2019FormationPerovskites, Aristidou2017FastCells, Barker2017Defect-AssistedFilms,Li2018InorganicCells,Ighodalo2023NegligiblePerovskites}. One thing that becomes clear, however, is that defining key figures of merit, such as $J_d$, is not straightforward and should always be considered within the context of characterization settings.
+
+\begin{figure}[ht!]
     \centering
 
     % First row
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Forward-Reverse-Plot.pdf}
         \caption{}
         \label{fig:ch2:scan_direction}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
+    \hspace{1cm} % Adjust this value to bring them closer
+    \begin{subfigure}[b]{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Integration-Speed.pdf}
         \caption{}
@@ -154,23 +162,22 @@ The characterization of the electrical performance of perovskite-based devices i
     \end{subfigure}
 
     % Second row
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
         \centering        
         \includegraphics[width=\textwidth]{chapters/material_properties/images/PAIOS_Pulsed_Measurement.pdf}
         \caption{}
         \label{fig:ch2:pulsed_meas_PAIOS}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
+    \hspace{1cm} % Adjust spacing
+    \begin{subfigure}[b]{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Pulsed-PAIOS-plot.pdf}
         \caption{}
         \label{fig:ch2:pulsed_paios}
     \end{subfigure}
 
-
-    % Third row - centered figure
-    \begin{subfigure}[b]{0.4\textwidth}
+    % Third row - Centered figure
+    \begin{subfigure}[b]{0.35\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/Steady-State-plot.pdf}
         \caption{}
@@ -181,7 +188,11 @@ The characterization of the electrical performance of perovskite-based devices i
     \label{fig:ch2:types_of_measurement}
 \end{figure}
 
-Most commonly, the characterization of photodetectors relies on sequential J-V scans, which can be performed in dark and under illumination. Fig.~\ref{fig:ch2:scan_direction} shows the impact of the scan direction for one of the fabricated devices, while Fig.~\ref{fig:ch2:scan_speed} demonstrates the impact of the integration time. A significant hysteresis is observed, with the value of dark current, one of the most critical figures of merit of photodetectors, being highly dependent on the characterization settings. It is possible to eliminate hysteresis in the JV data by performing a pulsed IV measurement, the principle of which is demonstrated in Fig.~\ref{fig:ch2:pulsed_paios}. Specifically, each voltage step is applied as a pulse of specific length (pulse duration). The current value for each voltage step is the extracted as the average transient current during the specified measurement duration. This approach allows the ions to re-distribute for each voltage step, eliminating the hysteresis from the JV data (minimum $J_d$ is at 0 V, as shown in Fig.~\ref{fig:ch2:pulsed_meas_PAIOS}). However, even for this type of measurement, it is clear that the duration of each voltage pulse has a major impact on the measured J-V performance, with longer pulses leading to lower values of $J_d$ and larger values of forward current (rectification). (Why?) A last option for the characterization of the perovskite-based photodiodes is steady-state measurements, where a constant bias is applied and maintained for a prolonged period, until the value of monitored current starts saturating. This is demonstrated in Fig.~\ref{fig:ch2:steady_state}. A large drop in the value of $J_d$ is observed within the first seconds of the measurement, which was previously to depend on capacitive effects, rather than the presence of mobile ions \cite{Ollearo2021UltralowGeneration}. At -2 V, an almost 3-order increase in $j_d$ is observed, which has been associated with the breaking down of the device. This mechanism is concealed when performing J-V scans of relatively small duration and will be further investigate in Chapter~\ref{ch:transport_layer}. Considering the variability of results depending on the characterization approach, we mainly utilize sequential J-V scans, performed in the forward direction for comparing various stacks, stating that despite the impact of the measurement on the results, it still allows the fair identification of trends among different conditions. 
+
+One possible way of eliminating hysteresis in J-V data, is by employing a pulsed J-V measurement,
+the principle of which is demonstrated in Fig.~\ref{fig:ch2:pulsed_paios}. Specifically, each voltage step is applied as a pulse of specific length (pulse duration). The current value for each voltage step is then extracted as the average transient current during a measurement of specified duration at the end of the voltage pulse. This approach allows the mobile ions to re-distribute for each voltage step, eliminating the hysteresis from the J-V data (minimum $J_d$ is at 0 V, as shown in Fig.~\ref{fig:ch2:pulsed_meas_PAIOS}). However, even for this type of measurement, it is clear that the duration of each voltage pulse has a major impact on the measured J-V performance, with longer pulses leading to lower values of $J_d$ and higher rectification in the forward bias regime. A last option for the characterization of the perovskite-based photodiodes is steady-state measurements, where a constant bias is applied and maintained for a prolonged period (300 seconds), until the value of monitored current starts saturating. This is demonstrated in Fig.~\ref{fig:ch2:steady_state}. A large drop in the value of $J_d$ is observed within the first seconds of the measurement, which was previously shown to depend on capacitive effects, rather than the presence of mobile ions \cite{Ollearo2021UltralowGeneration}. At -2 V, an almost 3-order increase in $j_d$ is observed, which has been associated with the breaking down of the device. This mechanism is concealed when performing J-V scans of relatively small duration and will be further investigated in Chapter~\ref{ch:transport_layer}. 
+
+Considering the variability of results based on the characterization settings, we adopt the following methodology for characterizing our PePDs: sequential J-V scans in the forward direction (from reverse to forward biasing conditions) were initially utilized for the preliminary comparison of various stacks and processing conditions. Once the most promising candidates were identified, a more elaborate characterization was performed using steady-state measurements.  
 
 
 \begin{figure}[htbp]
@@ -207,7 +218,7 @@ Most commonly, the characterization of photodetectors relies on sequential J-V s
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/ions.png} % Replace with your image file
         \caption{}
-        \label{}
+        \label{fig:ch2:eqe_drop_mechanism}
     \end{subfigure}
 
     % Caption for the whole figure
@@ -215,9 +226,10 @@ Most commonly, the characterization of photodetectors relies on sequential J-V s
     \label{fig:ch2:eqe}
 \end{figure}
 
-The impact of the characterization approach on the acquired results extends to EQE measurements, as well. Fig.~\ref{fig:ch2:eqe-1V} and \ref{fig:ch2:eqe-2V} demonstrate the EQE results for two different devices that were fabricated on the same substrate. The EQE of the first device was measured sequentially at 0 V and -1 V, while the second device underwent measurements at 0 V, -1 V, and -2 V. Following these measurements, each device was subjected to two additional EQE measurements at 0 V: one immediately after the highest applied reverse bias (-1 V and -2 V, respectively) and another after a five-minute resting period in the dark. For both devices, the EQE at 0 V immediately after reverse biasing was significantly lower than the initial EQE measurement at 0 V. However, for the device biased up to -1 V, a five-minute resting period was sufficient to fully restore the initial EQE value. In contrast, for the device biased up to -2 V, the EQE at 0 V remained approximately 40\% lower than its initial value even after five minutes of recovery. This phenomenon could potentially be attributed to the accumulation of ions at the contacts and their potential contribution to electrochemical reactions, as demonstrated in Fig. xx. This experiment highlights the sensitivity of the acquired results to the prior biasing conditions. (Fing how much time it would take for the ions to re-distribute, and mention that is probably an electrochemical reaction that is taking place). From now on, the presented EQE results are performed on a new device, without prior bias, performed from the lowest to the highest reverse bias conditions. 
+The impact of the characterization approach on the acquired results extends to EQE measurements, as well. Fig.~\ref{fig:ch2:eqe-1V} and \ref{fig:ch2:eqe-2V} demonstrate the EQE results for two different devices that were fabricated on the same substrate. The EQE of the first device was measured sequentially at 0 V and -1 V, while the second device underwent measurements at 0 V, -1 V, and -2 V. Following these measurements, each device was subjected to two additional EQE measurements at 0 V: one immediately after the highest applied reverse bias (-1 V and -2 V, respectively) and another after a five-minute resting period in the dark. For both devices, the EQE at 0 V immediately after reverse biasing was significantly lower than the initial EQE measurement at 0 V. However, for the device biased up to -1 V, a five-minute resting period was sufficient to fully restore the initial EQE value. In contrast, for the device biased up to -2 V, the EQE at 0 V remained approximately 40\% lower than its initial value even after five minutes of recovery. This phenomenon could potentially be attributed to the mechanism that is introduced in Fig.~\ref{fig:ch2:eqe_drop_mechanism}, where the ions accumulate in response to the applied electric field (-4 V in the case of the example), so when the external bias is removed (0 V) they create a field that opposes the extraction of photo-generated carriers until they redistribute within the perovskite lattice. However, theoretical and experimental calculations estimate that the ionic field should recover withing one second \cite{Bowring2018ReverseCells}. Therefore, this mechanism cannot fully explain the reduced EQE response we observe at 0 V, even after 5 minutes of resting in the dark. In the contrary, it indicates the presence of a slower mechanism, such as the redox reactions that were discussed earlier, whose rate depends on the applied bias (hence the difference between applying -1 and -2 V). This experiment further highlights the sensitivity of acquired results on prior biasing conditions. For this reason, the EQE results presented in this work are always measured on new devices, without prior biasing, and conducted from the lowest to the highest reverse bias conditions.
 
-\begin{figure}[htbp]
+
+\begin{figure}[ht!]
     \centering
     % First row
     \begin{subfigure}[t]{0.4\textwidth}
@@ -250,15 +262,18 @@ The impact of the characterization approach on the acquired results extends to E
         \caption{}
         \label{fig:ch2:low_yield_median}
     \end{subfigure}
-    \caption{Discrete and statistical representation of J-V curves for samples with high and low variability.}
+    \caption{Discrete and statistical representation of J-V curves for samples with high and low variability. Reproduced from \cite{Bowring2018ReverseCells}}
+    \label{fig:ch2:discrete_and_median}
 \end{figure}
 
 
-Another important point is the related to the fair representation of the J-V data among the 12 devices on the same sample. Typically, there are a few outliers in each sample, the number of which defines the variability of a sample. This is more clearly illustrated in Fig.~\ref{fig:ch2:high_yield_discrete} and Fig.~\ref{fig:ch2:low_yield_discrete}, which represent two samples with small and large variability in device performance, respectively. In order to represent the median response of the sample, while also providing some insights into its variability we opt for presenting its performance in a statistical way, as shown in Fig.~\ref{fig:ch2:high_yield_median} and Fig.~\ref{fig:ch2:low_yield_median}, where the solid line represents the median response, while the shaded area represents the interquartile range. This way, the presence of 1 or 2 outliers in the device performance does not define the variability of the sample, which is reasonable considering the large area of the device and the likelihood of localized defects arising from process variations. 
+Another important remark is related to the fair representation of J-V data across the 12 devices that are typically fabricated on the same substrate. The relatively large device areas (0.025 $cm^2$ - 0.125 $cm^2$ for glass substrates and 0.0625 $cm^2$ for silicon substrates) increase the likelihood of faulty devices due to defects or process variations. The number and distribution of outliers determine the variability in the sample's performance. For this reason,
+we employ a statistical representation of J-V data, providing the median value and interquartile range for each bias point. The discrete and statistical J-V representation for a sample with small and large variability is illustrated in Fig.~\ref{fig:ch2:discrete_and_median}a-b and Fig.~\ref{fig:ch2:discrete_and_median}c-d, respectively. This approach allows for distinguishing between stochastic defects (such as scratches or dust particles that may introduce one or two outliers) and systematic defects that lead to large variability and may be attributed to the selected materials or processing conditions. 
 
-Lastly, it is important to highlight the repeatability of device performance over different time periods. The fabrication tools used in this study were shared across multiple activities within the group, with occasional periods of downtime or non-standard behavior. Given the numerous variable parameters in a lab environment, pinpointing the exact causes of performance fluctuations is challenging. Inevitably, these variations also affected the performance of baseline devices. Consequently, the same device stack, when fabricated at different stages of the PhD work, may have exhibited varying degrees of performance fluctuation. This is noted to emphasize that, in this study, only samples fabricated within close temporal proximity are compared to identify trends and draw meaningful conclusions.
 
+Lastly, it is important to address the repeatability and reliability of the PePDs fabricated in this thesis. The results presented in the following chapters correspond to devices that exhibited reproducible and consistent behavior across multiple experimental runs. However, the fabrication tools used in this study were shared across various activities within the group, sometimes experiencing periods of downtime or non-standard behavior. Consequently, fabricating an identical PePD stack in the 2nd and 4th year of the PhD may have occasionally resulted in slight variations in device performance. Given the numerous variables in a lab environment, pinpointing the exact causes of these variations becomes challenging. This is mentioned to highlight that, in the present work, only samples fabricated within close temporal proximity are compared in order to ensure meaningful conclusions, based on devices prepared under similar processing conditions.
 
+ 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

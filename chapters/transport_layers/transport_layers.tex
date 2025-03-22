@@ -354,14 +354,14 @@ To further evaluate the perovskite/ETL interface quality we employ transient pho
 \begin{figure}[t]
     \centering
     % First row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/transport_layers/images/white_led.pdf} % Replace with your image file
         \caption{}
         \label{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/transport_layers/images/red_led.pdf} 
         % Replace with your image file
@@ -369,14 +369,14 @@ To further evaluate the perovskite/ETL interface quality we employ transient pho
         \label{}
     \end{subfigure} 
  % Second row
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/transport_layers/images/transfer_matrix_model.pdf} % Replace with your image file
         \caption{}
         \label{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/transport_layers/images/Generation_Rate.pdf} % Replace with your image file
         \caption{}
@@ -384,6 +384,20 @@ To further evaluate the perovskite/ETL interface quality we employ transient pho
     \end{subfigure}
     \caption{}
     \label{fig:etl_opt:tpc_sources_and_simulation}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+    \centering
+    % Second row
+    \begin{subfigure}[t]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/nk_transfer_matrix.pdf} % Replace with your image file
+                
+    \end{subfigure}
+    \caption{Impact of scan speed}
+    \label{fig:tetl_opt:nk_transfer_materix}
 \end{figure}
 
 
@@ -562,7 +576,35 @@ To verify this hypothesis, we first extract perovskite's relative permittivity (
     \label{tab:etl_opt:er_from_mos} % Label for referencing
 \end{table}
 
-This finding gives the motivation of further increasing the c-60 layer thickness to achive even faster detector response....
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/JV_40C60_20TiO2.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/EQE_40C60_20TiO2.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/40C60-20TiO2-rise.pdf}
+        \caption{}
+    \end{subfigure}
+    
+    \caption{}
+    \label{fig:etl_opt:40C60_20TiO2}
+\end{figure}
+
+
+
+This finding implies that the carrier extraction speed could be improved by further increasing the thickness of the \ch{C_{60}} layer. To evaluate this hypothesis, we fabricated an additional sample whose ETL comprised of 40 nm of \ch{C_{60}} and 20 nm of \ch{TiO_2} (sample 40\ch{C_{60}}-20\ch{TiO_2}). The dynamic J-V scan, the spectral EQE, as well as the transient photocurrent of the respective PePD are shown in Fig.~\ref{fig:etl_opt:40C60_20TiO2}a-c. Indeed, for a device of 0.125 $cm^2$ area, an almost 10\% decrease of $\tau_r$ is achieved (from 2.17 to 1.96 $\mu s$) with regards to the 20\ch{C_{60}}-20\ch{TiO_2} sample. However, when examining the EQE spectra of the 40\ch{C_{60}}-20\ch{TiO_2} sample, it is observed that the EQE does no longer saturate at -1 V, while remaining below 70\% even when increasing the reverse bias up to -2 V. This is in stark contrast to what was observed for sample the 20\ch{C_{60}}-20\ch{TiO_2)} sample (Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}f), whose EQE response was already saturated and beyond 70\% at -1 V. Nevertheless, this trend is consistent with previous literature reports that showcased a decrease of a perovskite-based solar cell's PCE when the \ch{C_{60}} layer thickness was increased beyond 20 nm \cite{Klipfel2022C60Layer}.
 
 
 \begin{figure}[htbp]
@@ -589,8 +631,10 @@ This finding gives the motivation of further increasing the c-60 layer thickness
     \end{subfigure}
     
     \caption{A 1×3 grid of images.}
-    \label{}
+    \label{fig:etl_opt:dev_area}
 \end{figure}
+
+As a result, depending on the application, a trade-off between speed and charge carrier extraction efficiency may be necessary. However, this trade-off can avoided by reducing the diode's area, which in turn decreases its capacitance and enhances $\tau_r$ without compromising the EQE. To demonstrate this, we reduced the contact area of sample 40\ch{C_{60}} from 0.125 $cm^2$ to 0.075 $cm^2$ and 0.025 $cm^2$. Fig.~\ref{fig:etl_opt:dev_area}a illustrates the resulting decrease in capacitance, while Fig.~\ref{fig:etl_opt:dev_area}b shows the corresponding increase in response speed. The extracted $\tau_r$ as function of area, shown in Fig.~\ref{fig:etl_opt:dev_area}c, exhibits a linear relationship. For the device with 0.025 $cm^2$ area, $\tau_r$ approaches 1 $\mu s$, which approaches the detection limit of the setup, yet sub-$\mu s$ response speeds can be projected with further pixel miniaturization. 
 
 
 
