@@ -111,7 +111,7 @@ The last stage, which is outside the scope of the work presented in this thesis,
         \caption{}
         \label{}
     \end{subfigure}
-    \hfill % Space between the two plots
+    \hspace{1cm}
     % Second plot
     \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
         \centering
@@ -134,7 +134,7 @@ In the scope of the work presented in this thesis, DC sputtered \ch{NiO_x} was t
 C to reduce oxygen vacancies and increase the film's transparency. In terms of the ETL, the use of e-beam deposited \ch{TiO_2} and thermally-evaporated \ch{C_{60}} was evaluated. The cross-section of the developed PePD stack, as well as the energy levels of the constituent layers are indicated in Fig.~\ref{fig:ch2:stack_and_energy_landscape}a and b, respectively. Chapter~\ref{ch:transport_layer} will discuss in detail the influence of the ETL on the PePD's performance and reliability. 
 
 
-\section{Impact of Characterization Method and Statistical Remarks}
+\section{Impact of Characterization Methods and Statistical Remarks}
 
 
 
@@ -190,7 +190,7 @@ The presence of hysteresis in sequential J-V scans is quite dominant during the 
 
 
 One possible way of eliminating hysteresis in J-V data, is by employing a pulsed J-V measurement,
-the principle of which is demonstrated in Fig.~\ref{fig:ch2:pulsed_paios}. Specifically, each voltage step is applied as a pulse of specific length (pulse duration). The current value for each voltage step is then extracted as the average transient current during a measurement of specified duration at the end of the voltage pulse. This approach allows the mobile ions to re-distribute for each voltage step, eliminating the hysteresis from the J-V data (minimum $J_d$ is at 0 V, as shown in Fig.~\ref{fig:ch2:pulsed_meas_PAIOS}). However, even for this type of measurement, it is clear that the duration of each voltage pulse has a major impact on the measured J-V performance, with longer pulses leading to lower values of $J_d$ and higher rectification in the forward bias regime. A last option for the characterization of the perovskite-based photodiodes is steady-state measurements, where a constant bias is applied and maintained for a prolonged period (300 seconds), until the value of monitored current starts saturating. This is demonstrated in Fig.~\ref{fig:ch2:steady_state}. A large drop in the value of $J_d$ is observed within the first seconds of the measurement, which was previously shown to depend on capacitive effects, rather than the presence of mobile ions \cite{Ollearo2021UltralowGeneration}. At -2 V, an almost 3-order increase in $j_d$ is observed, which has been associated with the breaking down of the device. This mechanism is concealed when performing J-V scans of relatively small duration and will be further investigated in Chapter~\ref{ch:transport_layer}. 
+the principle of which is demonstrated in Fig.~\ref{fig:ch2:pulsed_paios}. Specifically, each voltage step is applied as a pulse of specific length (pulse duration). The current value for each voltage step is then extracted as the average transient current during a measurement of specified duration at the end of the voltage pulse. This approach allows the mobile ions to re-distribute for each voltage step, eliminating the hysteresis from the J-V data (minimum $J_d$ is at 0 V, as shown in Fig.~\ref{fig:ch2:pulsed_meas_PAIOS}). However, even for this type of measurement, it is clear that the duration of each voltage pulse has a major impact on the measured J-V performance, with longer pulses leading to lower values of $J_d$ and higher rectification in the forward bias regime. A last option for the characterization of the perovskite-based photodiodes is steady-state measurements, where a constant bias is applied and maintained for a prolonged period (300 seconds), until the value of monitored current starts saturating. This is demonstrated in Fig.~\ref{fig:ch2:steady_state}. A large drop in the value of $J_d$ is observed within the first seconds of the measurement, which was previously shown to depend on capacitive effects, rather than the presence of mobile ions \cite{Ollearo2021UltralowGeneration}. At -2 V, an almost 3-order increase in $J_d$ is observed, which has been associated with the breaking down of the device. This mechanism is concealed when performing J-V scans of relatively small duration and will be further investigated in Chapter~\ref{ch:transport_layer}. 
 
 Considering the variability of results based on the characterization settings, we adopt the following methodology for characterizing our PePDs: sequential J-V scans in the forward direction (from reverse to forward biasing conditions) were initially utilized for the preliminary comparison of various stacks and processing conditions. Once the most promising candidates were identified, a more elaborate characterization was performed using steady-state measurements.  
 
@@ -204,7 +204,7 @@ Considering the variability of results based on the characterization settings, w
         \caption{}
         \label{fig:ch2:eqe-1V}
     \end{subfigure}
-    \hfill % Space between the two plots
+    \hspace{1.5cm}
     % Second plot
     \begin{subfigure}[t]{0.4\textwidth} % Adjust width as needed
         \centering
@@ -226,7 +226,7 @@ Considering the variability of results based on the characterization settings, w
     \label{fig:ch2:eqe}
 \end{figure}
 
-The impact of the characterization approach on the acquired results extends to EQE measurements, as well. Fig.~\ref{fig:ch2:eqe-1V} and \ref{fig:ch2:eqe-2V} demonstrate the EQE results for two different devices that were fabricated on the same substrate. The EQE of the first device was measured sequentially at 0 V and -1 V, while the second device underwent measurements at 0 V, -1 V, and -2 V. Following these measurements, each device was subjected to two additional EQE measurements at 0 V: one immediately after the highest applied reverse bias (-1 V and -2 V, respectively) and another after a five-minute resting period in the dark. For both devices, the EQE at 0 V immediately after reverse biasing was significantly lower than the initial EQE measurement at 0 V. However, for the device biased up to -1 V, a five-minute resting period was sufficient to fully restore the initial EQE value. In contrast, for the device biased up to -2 V, the EQE at 0 V remained approximately 40\% lower than its initial value even after five minutes of recovery. This phenomenon could potentially be attributed to the mechanism that is introduced in Fig.~\ref{fig:ch2:eqe_drop_mechanism}, where the ions accumulate in response to the applied electric field (-4 V in the case of the example), so when the external bias is removed (0 V) they create a field that opposes the extraction of photo-generated carriers until they redistribute within the perovskite lattice. However, theoretical and experimental calculations estimate that the ionic field should recover withing one second \cite{Bowring2018ReverseCells}. Therefore, this mechanism cannot fully explain the reduced EQE response we observe at 0 V, even after 5 minutes of resting in the dark. In the contrary, it indicates the presence of a slower mechanism, such as the redox reactions that were discussed earlier, whose rate depends on the applied bias (hence the difference between applying -1 and -2 V). This experiment further highlights the sensitivity of acquired results on prior biasing conditions. For this reason, the EQE results presented in this work are always measured on new devices, without prior biasing, and conducted from the lowest to the highest reverse bias conditions.
+The impact of the characterization approach on the acquired results extends to EQE measurements, as well. Fig.~\ref{fig:ch2:eqe-1V} and \ref{fig:ch2:eqe-2V} demonstrate the EQE results for two different devices that were fabricated on the same substrate. The EQE of the first device was measured sequentially at 0 V and -1 V, while the second device underwent measurements at 0 V, -1 V, and -2 V. Following these measurements, each device was subjected to two additional EQE measurements at 0 V: one immediately after the highest applied reverse bias (-1 V and -2 V, respectively) and another after a five-minute resting period in the dark. For both devices, the EQE at 0 V immediately after reverse biasing was significantly lower than the initial EQE measurement at 0 V. However, for the device biased up to -1 V, a five-minute resting period was sufficient to fully restore the initial EQE value. In contrast, for the device biased up to -2 V, the EQE at 0 V remained approximately 40\% lower than its initial value even after five minutes of recovery. This phenomenon could potentially be attributed to the mechanism that is introduced in Fig.~\ref{fig:ch2:eqe_drop_mechanism}, where the ions accumulate in response to the applied electric field (-4 V in the case of the example), so when the external bias is removed (0 V), they create a field that opposes the extraction of photo-generated carriers until the ions redistribute within the perovskite lattice. However, theoretical and experimental calculations estimate that the ionic field should recover withing one second \cite{Bowring2018ReverseCells}. Therefore, this mechanism cannot fully explain the reduced EQE response we observe at 0 V, even after 5 minutes of resting in the dark. In the contrary, it indicates the presence of a slower mechanism, such as the redox reactions that were discussed earlier, whose rate depends on the applied bias (hence the difference between applying -1 and -2 V). This experiment further highlights the sensitivity of acquired results on prior biasing conditions. For this reason, the EQE results presented in this work are always measured on new devices, without prior biasing, and conducted from the lowest to the highest reverse bias conditions.
 
 
 \begin{figure}[ht!]
@@ -238,7 +238,7 @@ The impact of the characterization approach on the acquired results extends to E
         \caption{}
         \label{fig:ch2:high_yield_discrete}
     \end{subfigure}
-    \hfill
+    \hspace{1cm}
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/High_yield_median.pdf} % Replace with your image file
@@ -255,7 +255,7 @@ The impact of the characterization approach on the acquired results extends to E
         \caption{}
         \label{fig:ch2:low_yield_discrete}
     \end{subfigure}
-    \hfill
+    \hspace{1cm}
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{chapters/material_properties/images/low_yield_median.pdf} % Replace with your image file
@@ -271,7 +271,7 @@ Another important remark is related to the fair representation of J-V data acros
 we employ a statistical representation of J-V data, providing the median value and interquartile range for each bias point. The discrete and statistical J-V representation for a sample with small and large variability is illustrated in Fig.~\ref{fig:ch2:discrete_and_median}a-b and Fig.~\ref{fig:ch2:discrete_and_median}c-d, respectively. This approach allows for distinguishing between stochastic defects (such as scratches or dust particles that may introduce one or two outliers) and systematic defects that lead to large variability and may be attributed to the selected materials or processing conditions. 
 
 
-Lastly, it is important to address the repeatability and reliability of the PePDs fabricated in this thesis. The results presented in the following chapters correspond to devices that exhibited reproducible and consistent behavior across multiple experimental runs. However, the fabrication tools used in this study were shared across various activities within the group, sometimes experiencing periods of downtime or non-standard behavior. Consequently, fabricating an identical PePD stack in the 2nd and 4th year of the PhD may have occasionally resulted in slight variations in device performance. Given the numerous variables in a lab environment, pinpointing the exact causes of these variations becomes challenging. This is mentioned to highlight that, in the present work, only samples fabricated within close temporal proximity are compared in order to ensure meaningful conclusions, based on devices prepared under similar processing conditions.
+Lastly, it is critical to address the repeatability and reliability of the PePDs fabricated in this work. The results presented in the following chapters correspond to devices that exhibited reproducible and consistent behavior across multiple experimental runs. However, the fabrication tools used in this study were shared across various activities within the group, sometimes experiencing periods of downtime or non-standard behavior. Consequently, fabricating an identical PePD stack in the 2nd and 4th year of the PhD may have occasionally resulted in slight variations in device performance. Given the numerous variables in a lab environment, pinpointing the exact causes of these variations becomes challenging. This is mentioned to highlight that, in the present work, only samples fabricated within close temporal proximity are compared in order to ensure meaningful conclusions, based on devices prepared under similar processing conditions.
 
  
 
