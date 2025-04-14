@@ -544,8 +544,16 @@
 \usepackage{amsfonts}
 \usepackage{booktabs}
 \usepackage{siunitx}
+\usepackage{tabularx}
 
 \usepackage{adjustbox}   % To adjust figure sizes if needed
+
+\usepackage{tabularx}
+\usepackage{chemformula}  % for \ch{}
+\usepackage{array}        % for custom column formatting
+\usepackage{makecell}     % for line breaks in headers
+\renewcommand\theadfont{\bfseries} % bold header font
+\renewcommand{\arraystretch}{1.4}  % more row spacing (optional)
 
 
 %\RequirePackage{showlabels}
