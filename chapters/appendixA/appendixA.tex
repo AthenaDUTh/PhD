@@ -1,34 +1,41 @@
 % !TeX root = ../../thesis.tex
 \chapter{Fabrication and Characterization}\label{ch:appendixA}
 
+\textbf{Substrates}
+
+For thin-film characterization on $3 \times 3$ $cm^2$ coupons, two types of substrates were used: polished soda lime glass (purchased from \textbf{xxx}) and silicon substrates with 100 nm of thermally grown \ch{SiO_2}, provided by imec's fabrication facility. For wafer-level depositions in Chapter~\ref{ch:stability}, 6-inch silicon wafers (boron-doped, p-type, 1.0–36.0 $\Omega\cdot cm$) from MEMC Electronic Materials Sdn Bhd were used. Bottom-illuminated devices were fabricated on $3 \times 3$ $cm^2$ glass substrates pre-patterned with ITO stripes (15 $\Omega$, Colorado Concept Coatings). Top-illuminated devices were prepared on $3 \times 3$ $cm^2$ silicon substrates with TiN bottom contacts, designed in-house and fabricated at imec's 200 mm fab. For MIS capacitor fabrication, $3 \times 3$ $cm^2$ coupons were taken from a p-type silicon wafer (0.005–0.010 $\Omega\cdot cm$) with 100 nm of thermally grown \ch{SiO_2} and a 500 nm aluminum back contact.
+
+Glass and glass/ITO substrates were cleaned in an ultrasonic bath at 50\degree C, with sequential 10-minute immersions in Extran solution (used as a surfactant), deionized water, acetone, and isopropanol. After thorough drying them with a nitrogen gun, the substrates were transferred to a nitrogen-regulated glovebox. The same cleaning procedure was applied to the Si and Si/\ch{SiO_2} substrates, excluding the Extran and water steps. Substrates used for top-illuminated photodiodes were initially coated with a protective photoresist layer, which required two additional ultrasonic cleaning steps in acetone at 50\degree C, each lasting 15 minutes.
+
 
 \textbf{Perovskite Deposition}
 
+\ch{CsPbI_2Br} perovskite thin films were deposited via thermal co-evaporation using a Kurt J. Lesker SPECTROS system. The precursor sources were loaded with CsBr (abcr, ultra dry; 99.9\%) and PbI2 (TCI Chemicals, >98\%) powders.
+For each deposition, the crucibles would be emptied and re-loaded with $\approx$1 g of fresh material. The deposition rate of each source was individually monitored by a designated QCM sensor. Prior to the co-evaporations, the tooling factor of each sensor was calibrated by separately depositing CsBr and \ch{PbI_2} films on a Si/\ch{SiO_2} substrate and measuring the respective precursor thickness with ex situ ellipsometry (RC2 J.A. Woolam). For stoichiometric films, the rate ratio of two precursors A and B  should be equal to $\frac{evap. rate (A)}{evap.rate(B)}=\frac{molar.mass(A)/density(A)}{molar.mass(B)/density(B)}$. The cumulative evaporation rate was fixed at 0.8 \AA/s and the evaporation base pressure was maintained below $10^{-6}$ Torr. The deposition would be initiated (through the removal of the global shutter) when the rates of both sources were stabilized at their set value. During the deposition, the rate of each source was maintained at the set value via an automatic adjustment of their temperature. The substrate holder was kept at room temperature. 
+
+
 \textbf{Device Fabrication}
-\begin{enumerate}
-    \item Glass-ITO
-    \item PIX Substrates 
-    \item MOS Cap
-\end{enumerate}
+
+\ch{NiO_x} (15 nm) was deposited using DC sputtering of metallic Ni target under oxygen plasma at the base pressure of $10^{-7}-10^{-8}$ Torr in a linear sputtering system (Nebula system, Angstrom Engineering Inc.). Post deposition, the \ch{NiO_x}-coated substrates were annealed at 300\degree C for 5 min in ambient conditions. For the deposition of \ch{C_{60}}, \ch{TiO_2}, Al, and Au a high-vacuum evaporation system was used (Angstrom Engineering Inc.). For all depositions, the temperature of the substrate holder was set at 10 \degree C. \ch{C_{60}} was thermally evaporated at a rate of 0.2 \AA/s. \ch{TiO_2} was deposited via e-beam evaporation at a similar rate under a constant flow (9 sccm) of oxygen. Lastly, metal contacts were deposited via thermal evaporation at a rate of 0.4 - 0.5 \AA/s, using designated shadow masks for defining the contact area. 
+
+\textbf{Material Characterization} 
+
+\underline{Spectroscopic Ellipsometry:} All spectroscopic ellipsometry measurements were carried out using the RC2 Ellipsometer by J.A. Woolam. The thickness and optical constants of the materials used in this study were extracted after developing and fitting a model to variable angle measurements (65\degree - 75\degree) using the CompleteEASE software. The temperature-dependent spectroscopic ellipsometry measurements presented in Chapter~\ref{ch:ellipsometry}, were carried out at a single angle (70\degree) using a Linkam THMS600 Temperature Stage. The stage was continuously flushed with nitrogen and one measurement was taken every 23 seconds. The wafer-level mapping presented in Chapter~\ref{ch:stability} was obtained via single-angle measurements (70\degree) on 50 points spread across the wafers. 
 
 
-\textbf{Material Characterization}
+\underline{GIWAXS:} Temperature-dependent GIWAXS data were collected under a N2 environment at the NCD-SWEET beamline, located at the ALBA synchrotron in Cerdanyola del Vallès, Spain. A monochromatic X-ray beam with a wavelength ($\lambda$) of 0.9574 \AA and dimensions of 80 × 30 $\mu m^2$ (horizontal $\times$ vertical) was used for data acquisition, utilizing a Si(111) channel cut monochromator and a set of CRLs to collimate the X-ray beam. The scattered signal was precisely captured by a Rayonix LX255-HS area detector. To accurately determine the reciprocal q-space and sample-to-detector distance, \ch{Cr_2O_3} from NIST was utilized as a calibrant. For full penetration of the X-ray beam through the layer, an incident angle ($\alpha_i$) of 1\degree was deliberately chosen. Throughout the data acquisition process, a continuous flow of N2 was maintained for the sample. The sample temperature was controlled using a Linkam THMS600 device (0.01 \degree C accuracy) adapted for grazing incidence measurements. To analyze the collected two-dimensional (2D) images, azimuthal integration was performed using PyFAI, a reliable software tool \cite{Ashiotis2015ThePyFAI}. Subsequently, the resulting unit cell models were refined using the Le Bail method implemented in Fullprof, a comprehensive analysis software \cite{Rodriguez-Carvajal1993RecentDiffraction}.
 
-\begin{enumerate}
-    \item GIWAXS
-    \item AFM, Profilometer, SEM, Reflectance/Transmittance, SSPL and TRPL, Spectroscopic Ellipsometry
-\end{enumerate}
+\underline{Transmission Electron Microscopy:} For local analysis of the structure and composition of the complete PePD stack with TEM in Chapter~\ref{ch:transport_layer}, cross-sections (70 nm thickness) of the devices were prepared using focused ion beam (FIB) on FEI Helios Nanolab 650. Prior to FIB cutting, Pt layer was deposited as protective layer. Prepared FIB lamellas were subjected to high angle annular dark field scanning transmission electron microscopy (HAADF-STEM) imaging. The images were acquired in a low-dose (<1500 $e^-$/\AA2) regime using a probe-corrected Thermo Fisher Titan Themis Z microscope operated at 300 kV with a probe semi-convergence angle of 21 mrad and equipped with a 4 quadrant Super X detector for energy dispersive x-ray spectroscopy (EDS). Acquisition time for EDS measurements was around 1200 s. For the analysis of the TiN-\ch{NiO_x} interface in Chapter~\ref{ch:transport_layer}, a spin-on carbon (SoC) layer was used as a protective coating prior to sample preparation. An additional Pt layer was deposited using a 30 kV ion beam to protect the surface during focused ion beam (FIB) milling. Cross-sectional lamellae were then prepared using a FIB lift-out system. Imaging and analysis were performed on a Metrios transmission electron microscope operated at 200 kV, using conventional TEM and STEM in annular bright-field (ABF) modes, along with EDS for compositional analysis.
 
-The nominal thickness for each prcursor was the thickness depsited during the co-evpaoration for a nominal 1.05:1.00 CsBr to \ch{PbI_2} molar ratio, hence a nominal thickness of 164 nm for \ch{PbI_2}and 112 nm of CsBr. The thickness variation of each precursor across the whole wafer was scanned using single-angle spectroscopic ellipsometry measuremetns of 50 points across the whole wafer.
+\underline{Miscellaneous:} \textit{AFM} images were obtained using a Bruker Dimension Edge system to evaluate the film’s grain size and roughness; the measurements were carried out in air. The thickness of the samples was corroborated through \textit{profilometry} measurements in open air using a DektakXT Stylus Profiler. \textit{SSPL} and \textit{TRPL} measurements were carried out using a Hamamatsu Quantaurus-Tau Fluorescence lifetime spectrometer. The excitation light intensity was fixed at 0.1 mW. A 530 and 645 nm laser wavelength was used during the SSPL and TRPL measurement, respectively. \textit{Reflectance/Transmittance (R/T)} measurements were carried out using a Bentham PV300 Spectral Response system. A light beam from a 500 W xenon source was coupled into a Bentham MSH-300 monochromator, giving coverage over the spectral range of 350–1800 nm. A silicon photodiode with a known responsivity was used for calibration. R/T measurements were executed in the open air using a DTR6 integrating sphere with a spectral range from 350 to 700 nm.
 
 \textbf{Device Characterization}
 
-\begin{enumerate}
-    \item JV in Dark and 1-sun illumination
-    \item Spectral Response 
-    \item PAIOS for transient and capacitance measurements 
-    \item Transmission Electron Microscopy 
-\end{enumerate}
+\underline{Current-Voltage:} The current density – voltage (J-V) characteristics of the PePDs were recorded using a Keithley 2602A source-measure unit. The dynamic scans were performed using medium integration time, 0.01 V bias step and 0.01 s delay with a -2 V to 2 V direction. The J-V curves under illumination were recorded with similar settings under 1 sun AM 1.5G illumination. 
+
+\underline{Transient Photocurrent and Capacitance:} Transient photocurrent and capacitance measurements were performed using a Paios all-in-one system by Fluxim. Two different light emitting diodes were used for the device illumination with white (Cree LED XPGWHT-01-0000-00EE5) and red light (WL-SMDC SMT Mono-color Ceramic LED Waterclear 150353RS74500).
+
+\underline{External Quantum Efficiency:} The devices' EQE as a function of wavelength, bias, and time was recorded with a Stanford Research System model SR830 lock-in amplifier unit coupled with a monochromator and a 150 W halogen lamp (OSRAM HLX 64633). A low-noise current preamplifier (Stanford Research System) was used to amplify the signal. A Si photodiode with a known spectral response was used for calibration
 
 
 

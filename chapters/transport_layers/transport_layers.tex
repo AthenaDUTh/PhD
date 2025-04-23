@@ -1,14 +1,14 @@
 % !TeX root = ../../thesis.tex
-\chapter{Enhancing Photodiode Performance Through Tailored Engineering of the Electron Transport Layer}\label{ch:transport_layer}
+\chapter{Fabrication, Characterization, and Optimization of \ch{CsPbI2Br} Photodiodes}\label{ch:transport_layer}
 
 
 Write something about the introduction...
 
-\section{Bottom Illuminated Photodiodes}
+\section{Bottom-Illuminated PePDs}
 
-\subsection{Benchmarking Photodiode Performance}
+\subsection{Benchmarking Performance}
 
-Building upon prior work conducted within the group, the first step for evaluating the use of the evaporated \ch{CsPbI_2Br} thin films as a photodiode's active layer was to develop a stack that employed DC sputtered \ch{NiO_x} as the HTL and e-beam evaporated \ch{TiO_2} as the ETL \cite{PintorMonroy2021All-EvaporatedApplications}. A unique characteristic of the new composition was the possibility to acquire the $\gamma-$phase without the need of a post-deposition annealing step, therefore, it was highly relevant to compare the PePD performance of two variations: one utilizing an as-deposited perovskite and the other incorporating a flash-annealed perovskite at 300°C in a \ch{N_2} environment. The relevant results are presented in Fig.~\ref{fig:ETL_opt:annealing_impact}a-c. Results indicate that the flash annealed devices exhibit only slightly lower levels of $J_d$ at -2 V (median values are equal 9.5 and 6 $\mu A/cm^2$ for the as-deposited and annealed perovskite, respectively), while their EQE is almost identical, already saturated at 0 V and above 70\% for the most of the visible light spectrum. 
+Building upon prior work conducted within the group, the first step for evaluating the use of the evaporated \ch{CsPbI_2Br} thin films as a photodiode's active layer was to develop a stack that employed DC sputtered \ch{NiO_x} as the HTL and e-beam evaporated \ch{TiO_2} as the ETL \cite{PintorMonroy2021All-EvaporatedApplications}. A unique characteristic of the new composition was the possibility to acquire the $\gamma-$phase without the need of a post-deposition annealing step, therefore, it was highly relevant to compare the PePD performance of two variations: one utilizing an as-deposited perovskite and the other incorporating a flash-annealed perovskite at 300°C in a \ch{N_2} environment. The relevant results are presented in Figure~\ref{fig:ETL_opt:annealing_impact}a-c. Results indicate that the flash annealed devices exhibit only slightly lower levels of $J_d$ at -2 V (median values are equal 9.5 and 6 $\mu A/cm^2$ for the as-deposited and annealed perovskite, respectively), while their EQE is almost identical, already saturated at 0 V and above 70\% for the most of the visible light spectrum. 
 
 These results emphasize that, despite the improvements in film quality achieved through annealing, as described in Chapter~\ref{ch:ellipsometry} (including improvements in crystalline quality and reduction of non-radiative recombination pathways), its influence on the high-level PePD performance is not as strong. This could be a promising finding for alternative applications that require low-temperature processing of perovskite thin films, such as deposition on flexible substrates, where the as-deposited \ch{CsPbI_2Br} thin films could be employed. For the rest of the presented results, a flash annealing of the perovskite layer at 300 \degree C in \ch{N_2} is always performed before the deposition of the ETL. 
 
@@ -35,11 +35,11 @@ These results emphasize that, despite the improvements in film quality achieved 
         \caption{}
         \label{fig:ch2:annealed_eqe}
     \end{subfigure}
-    \caption{Impact of annealing on PePD performance.}
+    \caption{(a) Comparison of current density as a function of bias for two PePDs with an as-deposited and flash-annealed perovskite layer, both featuring a 40 nm \ch{TiO_2} ETL. EQE as a function of wavelength under steps of increasing reverse bias for a PePD with an (b) as-deposited and (c) flash annealed perovskite layer.}
     \label{fig:ETL_opt:annealing_impact}
 \end{figure}
 
-To further investigate the impact of the perovskite layer deposition and processing conditions on the PePD performance, we pursued two additional variations, one of the \ch{CsBr}:\ch{PbI_2} molar ratio and another of the total deposition rate. The respective results, displaying the variation of $J_d$ and $J_{photo}$ at -2 V for each condition, are shown in Fig.~\ref{fig:etl_opt:molar_and_rate}a and Fig.~\ref{fig:etl_opt:molar_and_rate}b, respectively. It is reminded that the baseline perovskite deposition conditions, rely on the use of a nominal \ch{CsBr}:\ch{PbI_2} ratio equal to 1.05:1.0 and a total deposition rate of 0.8 \AA/s. 
+To further investigate the impact of the perovskite layer deposition and processing conditions on the PePD performance, we pursued two additional variations, one of the \ch{CsBr}:\ch{PbI_2} molar ratio and another of the total deposition rate. The respective results, displaying the variation of $J_d$ and $J_{photo}$ at -2 V for each condition, are shown in Figure~\ref{fig:etl_opt:molar_and_rate}a and Figure~\ref{fig:etl_opt:molar_and_rate}b, respectively. It is reminded that the baseline perovskite deposition conditions, rely on the use of a nominal \ch{CsBr}:\ch{PbI_2} ratio equal to 1.05:1.0 and a total deposition rate of 0.8 \AA/s. 
 
 In terms of varying the precursor molar ratio, we explored two additional compositions with \ch{PbI_2} and \ch{CsBr} excess (\ch{CsBr}:\ch{PbI_2} equal to 0.8:1.0 and 1.2:1.0, respectively). The median $J_{photo}$ at -2 V was approximately equal to 13 $\mu A/cm^2$ for all compositions, while the median $J_d$ varied between 5.5 and 16 $\mu A/cm^2$. The 1.05:1.0 composition displayed the optical combination of $J_d$ levels and device variability, even though increasing the amount of CsBr in the film seemed to have a positive effect on the median $J_d$ response. Nevertheless, the difference in performance among devices with different stoichiometry remains relatively small, highlighting the defect tolerance of the perovskite thin films. This means that deviations from the 1.0:1.0 stoichiometry and consequent formation of defects or vacancies does not necessarily lead to increased levels of dark current. Therefore, the potential defect states likely have shallow energy levels that do not promote trap-assisted charge carrier generation in dark conditions.
 
@@ -60,7 +60,7 @@ In terms of varying the precursor molar ratio, we explored two additional compos
         \caption{}
         \label{fig:etl:opt:evap_rate}
     \end{subfigure}    
-    \caption{Impact of perovskite deposition parameters on device performance.}
+    \caption{(a) Statistical results of current density at -2 V in dark and under 1-sun illumination for PePDs featuring a perovskite layer with 0.8:1.0, 1.05:1.0, and 1.2:1.0 CsBr-to-\ch{PbI_2} molar ratio. (b) Statistical results of current density at -2 V in dark and under 1-sun illumination for PePDs featuring a perovskite layer deposited with 0.8, 1.2 an 1.6 \AA/s total deposition rate. }
     \label{fig:etl_opt:molar_and_rate}
 \end{figure}
 
@@ -71,7 +71,7 @@ For the evaluation of the impact of the total evaporation rate, the nominal 1.05
     N \propto \frac{F^p}{D^q}, 
 \end{equation}
 
-where N is nuclear density, F is the evaporation rate, and D is the surface diffusion coefficient \cite{Dong2023GrowthFilm}. The values $p$ and $q$ are positive and depend on the nucleation and growth mechanisms. As a result, higher evaporation rates are typically associated with the attainment of smaller grain sizes \cite{Dong2023GrowthFilm, Du2022ThermalOutlook, Shin2020ModulationDiodes}. In a study related to vacuum-deposited \ch{CsPbBr_3} light emitting diodes, Shin et al. identified that by increasing the co-evaporation rate (from 0.4 to 0.9 \AA/s) the grain size was decreased from 100-400 nm to a few tens of nanometers, followed by an enlargement of the exciton binding energy. This tuning led to the development of devices with higher luminance and current efficiency \cite{Shin2020ModulationDiodes}. On the other hand, in a study related to the development of \ch{CsPbI_3}-based solar cells, Dong et al. identified that decreasing the deposition rate did indeed lead to an increase of the average grain size, without though benefiting film crystallization and absorption ability \cite{Dong2023GrowthFilm}. As a result, the rule of thumb that was previously presented, claiming that thermally evaporated solar cells and photodetectors benefit from low deposition rates (and large grain sizes), while thermally evaporated LEDs benefit from high deposition rates (and smaller grain sizes) might be too simplistic without fully considering the complex kinetic dynamics and crystallization mechanisms \cite{Du2022ThermalOutlook}. In the case of our devices, there indeed seems to be a trend where increasing the deposition rate leads to an increase of the $J_d$, however it would not be possible to attribute this effect to a potential decrease of the grain size, especially considering the similar performance of the as-deposited and annealed device in Fig.~\ref{fig:ETL_opt:annealing_impact}. Nevertheless, considering that the use of 0.8 \AA/s yielded the lowest levels of $J_d$, it is the deposition rate used for the rest of the presented results. 
+where N is nuclear density, F is the evaporation rate, and D is the surface diffusion coefficient \cite{Dong2023GrowthFilm}. The values $p$ and $q$ are positive and depend on the nucleation and growth mechanisms. As a result, higher evaporation rates are typically associated with the attainment of smaller grain sizes \cite{Dong2023GrowthFilm, Du2022ThermalOutlook, Shin2020ModulationDiodes}. In a study related to vacuum-deposited \ch{CsPbBr_3} light emitting diodes, Shin et al. identified that by increasing the co-evaporation rate (from 0.4 to 0.9 \AA/s) the grain size was decreased from 100-400 nm to a few tens of nanometers, followed by an enlargement of the exciton binding energy. This tuning led to the development of devices with higher luminance and current efficiency \cite{Shin2020ModulationDiodes}. On the other hand, in a study related to the development of \ch{CsPbI_3}-based solar cells, Dong et al. identified that decreasing the deposition rate did indeed lead to an increase of the average grain size, without though benefiting film crystallization and absorption ability \cite{Dong2023GrowthFilm}. As a result, the rule of thumb that was previously presented, claiming that thermally evaporated solar cells and photodetectors benefit from low deposition rates (and large grain sizes), while thermally evaporated LEDs benefit from high deposition rates (and smaller grain sizes) might be too simplistic without fully considering the complex kinetic dynamics and crystallization mechanisms \cite{Du2022ThermalOutlook}. In the case of our devices, there indeed seems to be a trend where increasing the deposition rate leads to an increase of the $J_d$, however it would not be possible to attribute this effect to a potential decrease of the grain size, especially considering the similar performance of the as-deposited and annealed device in Figure~\ref{fig:ETL_opt:annealing_impact}. Nevertheless, considering that the use of 0.8 \AA/s yielded the lowest levels of $J_d$, it is the deposition rate used for the rest of the presented results. 
 
 
 \begin{figure}[htbp]
@@ -83,14 +83,14 @@ where N is nuclear density, F is the evaporation rate, and D is the surface diff
                 
     \end{subfigure}
 
-    \caption{Impact of scan speed}
+    \caption{Impact of scan integration time on the J–V characteristics of a PePD with a 40 nm \ch{TiO_2} ETL. The sharp increase in current density under reverse bias during the slow integration scan is an indication of a breaking down mechanism, which, however, is non-destructive as confirmed by the repeated J–V scan using a medium integration time.}
     \label{fig:tio2:scan_speed}
 \end{figure}
 
-The results presented thus far provide an initial benchmark for PePD performance and examine the impact of various perovskite-processing parameters. While minor variations are observed, particularly in the $J_d$ level, the impact of these parameters is rather low, highlighting the overall high quality and defect tolerance of the \ch{CsPbI_2Br} thin films. However, an interesting feature comes across when trying to characterize the PePD performance in dark conditions using different integration times. There results are presented in Fig.~\ref{fig:tio2:scan_speed}, where the standard J-V scan with medium integration time is followed by a scan with slow integration time. Even though both measurements start from similar $J_d$ levels, the scan with slow integration time displays an abrupt, almost 3-order of magnitude, increase in the $J_d$ levels while still in the reverse bias regime. The reversibility of this phenomenon is indicated by repeating the J-V scan with medium integration time, where the original performance is recovered. This pattern indicates the triggering of a reverse-bias soft breakdown mechanism, which depends not only on the magnitude of the applied reverse bias, but also its duration \cite{Bertoluzzi2021IncorporatingBias}. Such phenomena have previously been studied in the context of shaded perovskite solar cells, which must carry the current generated by adjacent illuminated cells \cite{Jiang2024ImprovedElectrodes, Ren2024MobileCells, Li2024BarrierBias,Gould2021In-OperandoBias,Razera2020InstabilityBias,Bertoluzzi2021IncorporatingBias,Wang2023PerovskiteDegradation,Bowring2018ReverseCells, Ni2021EvolutionIllumination}. Specifically, it was shown that under reverse bias ions accumulate at the perovskite/ETL interface, facilitating the tunneling of holes into the perovskite bulk due to increased band-bending. Recombination centers are thereafter generated by the oxidation of halides to natural halogens \cite{Bertoluzzi2021IncorporatingBias}. Diffusion of iodine into the fullerene-based ETL was also shown to be an aftermath of reverse biasing \cite{Razera2020InstabilityBias}. Various breakdown mitigation were proposed, including the introduction of a hole-blocking layer at the perovskite/ETL interface, the use of electrochemically inert electrodes, as well as the deposition thick planarizing polymer HTL. However, reverse-bias breakdown has not been considered in the context of PePDs, where reverse biasing is the standard operating condition. The following section provides a detailed analysis of the reverse-bias breakdown in our vacuum-deposited, all-inorganic PePDs, with a particular focus on the influence of the ETL/perovskite interface quality.
+The results presented thus far provide an initial benchmark for PePD performance and examine the impact of various perovskite-processing parameters. While minor variations are observed, particularly in the $J_d$ level, the impact of these parameters is rather low, highlighting the overall high quality and defect tolerance of the \ch{CsPbI_2Br} thin films. However, an interesting feature comes across when trying to characterize the PePD performance in dark conditions using different integration times. There results are presented in Figure~\ref{fig:tio2:scan_speed}, where the standard J-V scan with medium integration time is followed by a scan with slow integration time. Even though both measurements start from similar $J_d$ levels, the scan with slow integration time displays an abrupt, almost 3-order of magnitude, increase in the $J_d$ levels while still in the reverse bias regime. The reversibility of this phenomenon is indicated by repeating the J-V scan with medium integration time, where the original performance is recovered. This pattern indicates the triggering of a reverse-bias soft breakdown mechanism, which depends not only on the magnitude of the applied reverse bias, but also its duration \cite{Bertoluzzi2021IncorporatingBias}. Such phenomena have previously been studied in the context of shaded perovskite solar cells, which must carry the current generated by adjacent illuminated cells \cite{Jiang2024ImprovedElectrodes, Ren2024MobileCells, Li2024BarrierBias,Gould2021In-OperandoBias,Razera2020InstabilityBias,Bertoluzzi2021IncorporatingBias,Wang2023PerovskiteDegradation,Bowring2018ReverseCells, Ni2021EvolutionIllumination}. Specifically, it was shown that under reverse bias ions accumulate at the perovskite/ETL interface, facilitating the tunneling of holes into the perovskite bulk due to increased band-bending. Recombination centers are thereafter generated by the oxidation of halides to natural halogens \cite{Bertoluzzi2021IncorporatingBias}. Diffusion of iodine into the fullerene-based ETL was also shown to be an aftermath of reverse biasing \cite{Razera2020InstabilityBias}. Various breakdown mitigation were proposed, including the introduction of a hole-blocking layer at the perovskite/ETL interface, the use of electrochemically inert electrodes, as well as the deposition thick planarizing polymer HTL. However, reverse-bias breakdown has not been considered in the context of PePDs, where reverse biasing is the standard operating condition. The following section provides a detailed analysis of the reverse-bias breakdown in our vacuum-deposited, all-inorganic PePDs, with a particular focus on the influence of the ETL/perovskite interface quality.
 
 
-\subsection{Enhancing Reverse Bias Stability}
+\subsection{Enhancement of Reverse Bias Stability}
 
 \begin{figure}[htbp]
     \centering
@@ -122,11 +122,11 @@ The results presented thus far provide an initial benchmark for PePD performance
         \label{}
     \end{subfigure}
     
-    \caption{A 1×4 grid of images.}
+    \caption{(a) Schematic illustration of the bottom illuminated PePD. Variations of the ETL combinations used in this study, including (b) a single 40 nm \ch{TiO_2} layer, (c) a single 40 nm \ch{c_{60}} layer, and (d) a \ch{C_{60}} – \ch{TiO_2} bilayer, each 20 nm thick.}
     \label{fig:etl_optimization:stacks}
 \end{figure}
 
-Considering the importance of the ETL choice on the reverse-bias stability of perovskite-based diodes, we fabricated three variation of the same stack, employing 40 nm of \ch{TiO_2} (Sample 40\ch{TiO_2}), 40 nm of \ch{C_{60}} (Sample 40\ch{C_{60}}), and a 40 nm of a \ch{C_{60}}-\ch{TiO_2} bilayer (Sample 20\ch{C_{60}}-20\ch{TiO_2}) as the device's ETL, as shown in Fig.~\ref{fig:etl_optimization:stacks}a-d. Fig.~\ref{fig:etl_optimization:eds_tem_crossection}a and b displays the STEM-HAADF cross-section of the 40\ch{TiO_2} and 40\ch{C_{60}} samples, respectively, superimposed with their EDS elemental mapping. All layers are continuous and dense, with no visible pinholes, cracks or defects. 
+Considering the importance of the ETL choice on the reverse-bias stability of perovskite-based diodes, we fabricated three variation of the same stack, employing 40 nm of \ch{TiO_2} (Sample 40\ch{TiO_2}), 40 nm of \ch{C_{60}} (Sample 40\ch{C_{60}}), and a 40 nm of a \ch{C_{60}}-\ch{TiO_2} bilayer (Sample 20\ch{C_{60}}-20\ch{TiO_2}) as the device's ETL, as shown in Figure~\ref{fig:etl_optimization:stacks}a-d. Figure~\ref{fig:etl_optimization:eds_tem_crossection}a and b displays the STEM-HAADF cross-section of the 40\ch{TiO_2} and 40\ch{C_{60}} samples, respectively, superimposed with their EDS elemental mapping. All layers are continuous and dense, with no visible pinholes, cracks or defects. 
 
 
 \begin{figure}[htbp]
@@ -147,14 +147,14 @@ Considering the importance of the ETL choice on the reverse-bias stability of pe
         \label{}
     \end{subfigure}
     % Caption for the whole figure
-    \caption{EDS-TEM Cross-section.}
+    \caption{STEM-HAADF image of the (a) 40\ch{TiO_2} and (b) 40\ch{C_{60}} samples, both superimposed with the respective EDS elemental map.}
     \label{fig:etl_optimization:eds_tem_crossection}
 \end{figure}
 
-Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a-i provide a complete overview of the PePD performance for the three stack variations. Specifically, Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a-c show the dynamic J-V scan in darkness and under 1 sun illumination, Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}d-f show the spectral EQE response of a single device, and lastly Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}g-i show the static $J_d$ measurements as function of time for increasing reverse bias steps. After each measurement, each device was given an additional 300 seconds to reset in dark. Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}g highlights the sensitivity of 40\ch{TiO_2} sample to reverse bias breakdown, which is not  hinted by the dynamic scan of Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a. In more detail, $J_d$ is maintained below 0.1 $\mu A/cm_2$ after the end of the static scan at -0.5 and -1 V, however, a 3-order of magnitude increase is observed once the bias is increased to -2 V. Even though the primary goal of the work presented in this thesis targets imager applications, where the sub-ms biasing might not be sufficient for the manifestation of the $J_d$ increase, this bias sensitivity could be detrimental for alternative applications that require extensive reverse biasing. Additionally, besides the practical impact on the targeted application, the manifestation of the breakdown mechanism indicates the existence of a defective stack that might impact device performance in non-predicted ways. As a result, it is crucial that it is further understood and addressed. 
+Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a-i provide a complete overview of the PePD performance for the three stack variations. Specifically, Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a-c show the dynamic J-V scan in darkness and under 1 sun illumination, Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}d-f show the spectral EQE response of a single device, and lastly Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}g-i show the static $J_d$ measurements as function of time for increasing reverse bias steps. After each measurement, each device was given an additional 300 seconds to reset in dark. Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}g highlights the sensitivity of 40\ch{TiO_2} sample to reverse bias breakdown, which is not  hinted by the dynamic scan of Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a. In more detail, $J_d$ is maintained below 0.1 $\mu A/cm_2$ after the end of the static scan at -0.5 and -1 V, however, a 3-order of magnitude increase is observed once the bias is increased to -2 V. Even though the primary goal of the work presented in this thesis targets imager applications, where the sub-ms biasing might not be sufficient for the manifestation of the $J_d$ increase, this bias sensitivity could be detrimental for alternative applications that require extensive reverse biasing. Additionally, besides the practical impact on the targeted application, the manifestation of the breakdown mechanism indicates the existence of a defective stack that might impact device performance in non-predicted ways. As a result, it is crucial that it is further understood and addressed. 
 
 
-\begin{figure}[!ht]
+\begin{figure}[ht!]
     \centering
 
     % First row
@@ -217,14 +217,14 @@ Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a-i provide a complete overview of 
         \caption{}
     \end{subfigure}
 
-    \caption{A figure with 2 rows and 3 images in each row.}
+    \caption{Current density as a function of bias in dark and under 1-sun illumination for samples (a) 40\ch{TiO_2}, (b) 40\ch{C_{60}}, and (c) 20\ch{C_{60}}-20\ch{TiO_2}. EQE as a function of wavelength under steps of increasing reverse bias for samples (d) 40\ch{TiO_2}, (e) 40\ch{C_{60}}, and (f) 20\ch{C_{60}}-20\ch{TiO_2}. Steady state measurements of current density as a function of time in dark under steps of increasing reverse bias for samples (g) 40\ch{TiO_2}, (h) 40\ch{C_{60}}, and (i) 20\ch{C_{60}}-20\ch{TiO_2}. An additional 300~s recovery period in dark conditions was implemented between two consecutive measurements.}
     \label{fig:etl_opt:dynamicjv_eqe_staticjv}
 \end{figure}
 
-In contrary to Sample 40\ch{TiO_2}, the static $J_d$ scan of Sample 40\ch{C_{60}} (Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}h) shows an almost linear increase of $J_d$ as a function of applied reverse bias, with no indications of breaking down up to -3 V. This result further strengthens the assumption that the perovskite/ETL interface is one of the most critical factors for the reverse bias stability of a PePD. Despite the improved bias stability, Sample 40\ch{C_{60}} is also associated with a large variability in device performance, as indicated by the spread of the interquartile range in Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}b. The fact that this variability is only observed for the 40\ch{C_{60}} sample is likely due to the incomplete coverage of the perovskite film by the \ch{C_{60}} layer, which leads to the formation of contact pathways between the metal conductor and the perovskite layer \cite{Lin2015LowImaging, Younes2021EnhancingLayer}. This phenomenon seems to be aggravated by the perovskite's small grains size and amount of grain boundaries, as indicated by the comparison of J-V performance of a PePD that employs an as-deposited and flash annealed \ch{CsPbI_2Br} thin film in Fig.~\ref{fig:et_optim:c60_variability_and_1hr_stability}a). Specifically, both the median $J_d$ and the interquartile range show improvement with annealing of the perovskite layer. Nevertheless, the variability of the annealed 40\ch{C_{60}} sample is still significant and unsuitable for a reliable PePD. 
+In contrary to Sample 40\ch{TiO_2}, the static $J_d$ scan of Sample 40\ch{C_{60}} (Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}h) shows an almost linear increase of $J_d$ as a function of applied reverse bias, with no indications of breaking down up to -3 V. This result further strengthens the assumption that the perovskite/ETL interface is one of the most critical factors for the reverse bias stability of a PePD. Despite the improved bias stability, Sample 40\ch{C_{60}} is also associated with a large variability in device performance, as indicated by the spread of the interquartile range in Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}b. The fact that this variability is only observed for the 40\ch{C_{60}} sample is likely due to the incomplete coverage of the perovskite film by the \ch{C_{60}} layer, which leads to the formation of contact pathways between the metal conductor and the perovskite layer \cite{Lin2015LowImaging, Younes2021EnhancingLayer}. This phenomenon seems to be aggravated by the perovskite's small grains size and amount of grain boundaries, as indicated by the comparison of J-V performance of a PePD that employs an as-deposited and flash annealed \ch{CsPbI_2Br} thin film in Figure~\ref{fig:et_optim:c60_variability_and_1hr_stability}a). Specifically, both the median $J_d$ and the interquartile range show improvement with annealing of the perovskite layer. Nevertheless, the variability of the annealed 40\ch{C_{60}} sample is still significant and unsuitable for a reliable PePD. 
 
 
-Considering that \ch{C_{60}} is preventing the reverse bias breakdown of the PePD and the use of \ch{TiO_2} ensures higher performance repeatability, the use of a \ch{C_{60}}-\ch{TiO_2} bilayer (of 20 nm each) effectively secures both advantages, as revealed in Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}c and i. Specifically, $J_d$ remains below 0.5 $\mu A/cm^2$ when the device is biased at -2 V for 300 s and below 2 $\mu A/cm^2$ when biased at -3 V for the same duration. Additionally, there are no signs of breakdown even when biasing the device for 60 minutes at -2 V (Fig.~\ref{fig:et_optim:c60_variability_and_1hr_stability}b). Finally, even though a slight lower EQE at 0 V is observed compared to the 40\ch{TiO_2} and 40\ch{C_{60}} samples (Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}f), a saturated efficiency above 70\% across the entire visible range is attained for -1 and -2 V. 
+Considering that \ch{C_{60}} is preventing the reverse bias breakdown of the PePD and the use of \ch{TiO_2} ensures higher performance repeatability, the use of a \ch{C_{60}}-\ch{TiO_2} bilayer (of 20 nm each) effectively secures both advantages, as revealed in Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}c and i. Specifically, $J_d$ remains below 0.5 $\mu A/cm^2$ when the device is biased at -2 V for 300 s and below 2 $\mu A/cm^2$ when biased at -3 V for the same duration. Additionally, there are no signs of breakdown even when biasing the device for 60 minutes at -2 V (Figure~\ref{fig:et_optim:c60_variability_and_1hr_stability}b). Finally, even though a slight lower EQE at 0 V is observed compared to the 40\ch{TiO_2} and 40\ch{C_{60}} samples (Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}f), a saturated efficiency above 70\% across the entire visible range is attained for -1 and -2 V. 
 
 
 \begin{figure}[htbp]
@@ -246,10 +246,10 @@ Considering that \ch{C_{60}} is preventing the reverse bias breakdown of the PeP
     \end{subfigure}
 
     % Caption for the whole figure
-    \caption{Reversibility and long bias}   \label{fig:et_optim:c60_variability_and_1hr_stability}
+    \caption{(a) Impact of perovskite annealing on the median current density and interquartile range in dark conditions for PePDs that feature a 40 nm \ch{C_{60}} layer. (b) Current density as a function of time for sample 20\ch{TiO_2}-20\ch{C_{60}} under prolonged (1 hr) biasing at -2 V. No sings of breakdown are observed with the specific stack configuration.}   \label{fig:et_optim:c60_variability_and_1hr_stability}
 \end{figure}
 
-Apart from the $J_d$ stability under the effect of reverse bias, evaluating the stability of the PePD's photo-response is as critical, considering that a common concern with perovskite-based solar cells is the loss of power conversion efficiency under continuous illumination \cite{Song2022CriticalAdditives, Fu2019I2Conditions,Khadka2021InsightsJunction}. To investigate this we monitored the EQE of samples 40\ch{TiO_{2}}, 40\ch{C_{60}}, and 20\ch{C_{60}}-20\ch{TiO_2} over time, applying consecutive reverse bias steps and using two different light wavelengths (430 and 620 nm). Given that the samples are illuminated from the glass side, the absorption length of blue (430 nm) and red (620 nm) light are anticipated to correspond to the the HTL/perovskite and perovskite/ETL interface, respectively. Fig.~\ref{fig:etl_opt:static_eqe} provides a summary of the results. At 0 V, samples 40\ch{TiO_2} and 20\ch{C_{60}}-20\ch{TiO_2} display an EQE decrease when illuminated with the 620 nm light source, which however is eliminated when increasing the reverse bias to -1 V. The EQE response at -2 V as a function of time is stable even for sample 40\ch{TiO_2}, which should already be undergoing a breakdown. This indicates that the breakdown current, which is generated and saturated by the recombination of electrons and holes that are injected form the HTL and ETL side, respectively, does not hinder the extraction of photo generated carriers. Besides, as revealed in Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}, the breakdown current is still two orders of magnitude lower compared to $J_{photo}$ at -2 v. Consequently, the device's specific detective (D*) will be mainly defined by the stability of $J_d$ under reverse bias, rather than the photoresponse. For example, despite having similar EQE response under 620 nm illumination after 300 s at -2 V, sample 40\ch{TiO_2} would have one-order-of-magnitude lower D* compared to 20\ch{C_{60}}-20\ch{TiO_2} (equal to $8.8\times 10^{10}$ and  $8.8\times 10^{11}$ Jones, respectively). 
+Apart from the $J_d$ stability under the effect of reverse bias, evaluating the stability of the PePD's photo-response is as critical, considering that a common concern with perovskite-based solar cells is the loss of power conversion efficiency under continuous illumination \cite{Song2022CriticalAdditives, Fu2019I2Conditions,Khadka2021InsightsJunction}. To investigate this we monitored the EQE of samples 40\ch{TiO_{2}}, 40\ch{C_{60}}, and 20\ch{C_{60}}-20\ch{TiO_2} over time, applying consecutive reverse bias steps and using two different light wavelengths (430 and 620 nm). Given that the samples are illuminated from the glass side, the absorption length of blue (430 nm) and red (620 nm) light are anticipated to correspond to the the HTL/perovskite and perovskite/ETL interface, respectively. Figure~\ref{fig:etl_opt:static_eqe} provides a summary of the results. At 0 V, samples 40\ch{TiO_2} and 20\ch{C_{60}}-20\ch{TiO_2} display an EQE decrease when illuminated with the 620 nm light source, which however is eliminated when increasing the reverse bias to -1 V. The EQE response at -2 V as a function of time is stable even for sample 40\ch{TiO_2}, which should already be undergoing a breakdown. This indicates that the breakdown current, which is generated and saturated by the recombination of electrons and holes that are injected form the HTL and ETL side, respectively, does not hinder the extraction of photo generated carriers. Besides, as revealed in Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}, the breakdown current is still two orders of magnitude lower compared to $J_{photo}$ at -2 v. Consequently, the device's specific detective (D*) will be mainly defined by the stability of $J_d$ under reverse bias, rather than the photoresponse. For example, despite having similar EQE response under 620 nm illumination after 300 s at -2 V, sample 40\ch{TiO_2} would have one-order-of-magnitude lower D* compared to 20\ch{C_{60}}-20\ch{TiO_2} (equal to $8.8\times 10^{10}$ and  $8.8\times 10^{11}$ Jones, respectively). 
 
 
 \begin{figure}[htbp]
@@ -275,11 +275,11 @@ Apart from the $J_d$ stability under the effect of reverse bias, evaluating the 
         \label{}
     \end{subfigure}
     
-    \caption{A 1×3 grid of images.}
+    \caption{EQE as a function of time under steps of increasing reverse bias and two different illumination wavelengths (red - 620 nm and blue - 430 nm) for samples (a) 40\ch{TiO_2}, (b) 40\ch{C_{60}}, and (c) 20\ch{C_{60}}-20\ch{TiO_2}. Between two consecutive measurements on the same PePD, an additional 300~s recovery period in dark was implemented.}
     \label{fig:etl_opt:static_eqe}
 \end{figure}
 
-With the results presented so far, it is clear that the deposition of 20 nm of \ch{C_{60}} between the perovskite and the \ch{TiO_2} layer is critical for the prevention of the PePD's breakdown under the effect of reverse bias. To determine whether a minimum \ch{C_{60}} thickness is required to ensure the device's reverse bias stability, we fabricated a fourth variation of the same stack, incorporating a 10 nm \ch{C_{60}} and a 30 nm \ch{TiO_2} layer as the ETL (sample 10\ch{C_{60}}-30\ch{TiO_2} in Fig.~\ref{fig:etl_opt:10nmC60_30nmTiO2}a). The dynamic and static J-V scan, as well as the device's EQE are shown in Fig.~\ref{fig:etl_opt:10nmC60_30nmTiO2}b-d, with the 3-order-of-magnitude increase of $J_d$ under the effect of -3 V revealing that 10 nm of \ch{C_{60}} are not in fact sufficient to fully protect the perovskite layer.
+With the results presented so far, it is clear that the deposition of 20 nm of \ch{C_{60}} between the perovskite and the \ch{TiO_2} layer is critical for the prevention of the PePD's breakdown under the effect of reverse bias. To determine whether a minimum \ch{C_{60}} thickness is required to ensure the device's reverse bias stability, we fabricated a fourth variation of the same stack, incorporating a 10 nm \ch{C_{60}} and a 30 nm \ch{TiO_2} layer as the ETL (sample 10\ch{C_{60}}-30\ch{TiO_2} in Figure~\ref{fig:etl_opt:10nmC60_30nmTiO2}a). The dynamic and static J-V scan, as well as the device's EQE are shown in Figure~\ref{fig:etl_opt:10nmC60_30nmTiO2}b-d, with the 3-order-of-magnitude increase of $J_d$ under the effect of -3 V revealing that 10 nm of \ch{C_{60}} are not in fact sufficient to fully protect the perovskite layer.
 
 
 \begin{figure}[t]
@@ -313,12 +313,14 @@ With the results presented so far, it is clear that the deposition of 20 nm of \
         \caption{}
         \label{}
     \end{subfigure}
-    \caption{}
+    \caption{Characterization of a PePD with 10 nm of \ch{C_{60}} and 30 nm of \ch{TiO_2} as the ETL. (a) Schematic illustration diode structure. (b) Current density as function of bias in dark and under 1-sun illumination. (c) Steady state measurement of current density as function of time in dark under steps of increasing reverse bias. (d) EQE as a function of wavelength under steps of increasing reverse bias.}
     \label{fig:etl_opt:10nmC60_30nmTiO2}
 \end{figure}
 
+\subsection{Defect Analysis of the Perovskite/ETL Interface}
 
-To further investigate the physical origin of the reverse bias instability of the 40\ch{TiO_2} sample as well as the performance variability the 40\ch{C_{60}}, we examine the EDS elemental concentration profiles of the three stacks, which are shown in Fig.~\ref{fig:etl_opt:eds_concentration}a-c. Having as reference the onset of the \ch{Pb} signal, a dashed line is drawn in each plot to indicate the start of the perovskite layer. In contrast to sample 40\ch{C_{60}}, the Cs signal for sample 40\ch{TiO_2} is starting much earlier compared to Pb, I, and Br, pointing out to a significantly altered perovskite stoichiometry at the interface. The significant change in surface stoichiometry of the 40\ch{TiO_2} sample is likely responsible for increased inter-bandgap states, which enhance hole tunneling under reverse bias \cite{Huang2018IntrinsicCsPbI3, Kang2017HighCsPbBr3, Chu2020SoftDefects}. On the other hand, the elemental concentrations of sample 40\ch{C_{60}} reveal an overlapping of the Al signal and perovskite's constituents elements, further supporting the claim for incomplete surface coverage by the \ch{C_60} layer and the creation of metallic shorts that promote performance variability among devices fabricated on the same substrate. Finally, the elemental profile of sample 20\ch{C_{60}}-20\ch{TiO_2} indicates that the bilayer ETL configuration helps preserving the perovskite's surface stoichiometry, reducing the diffusion of Cs in the ETL (albeit not completely eliminating), while at the same time establishing a better separation between the Al contact and the perovskite. 
+
+To further investigate the physical origin of the reverse bias instability of the 40\ch{TiO_2} sample as well as the performance variability the 40\ch{C_{60}}, we examine the EDS elemental concentration profiles of the three stacks, which are shown in Figure~\ref{fig:etl_opt:eds_concentration}a-c. Having as reference the onset of the \ch{Pb} signal, a dashed line is drawn in each plot to indicate the start of the perovskite layer. In contrast to sample 40\ch{C_{60}}, the Cs signal for sample 40\ch{TiO_2} is starting much earlier compared to Pb, I, and Br, pointing out to a significantly altered perovskite stoichiometry at the interface. The significant change in surface stoichiometry of the 40\ch{TiO_2} sample is likely responsible for increased inter-bandgap states, which enhance hole tunneling under reverse bias \cite{Huang2018IntrinsicCsPbI3, Kang2017HighCsPbBr3, Chu2020SoftDefects}. On the other hand, the elemental concentrations of sample 40\ch{C_{60}} reveal an overlapping of the Al signal and perovskite's constituents elements, further supporting the claim for incomplete surface coverage by the \ch{C_60} layer and the creation of metallic shorts that promote performance variability among devices fabricated on the same substrate. Finally, the elemental profile of sample 20\ch{C_{60}}-20\ch{TiO_2} indicates that the bilayer ETL configuration helps preserving the perovskite's surface stoichiometry, reducing the diffusion of Cs in the ETL (albeit not completely eliminating), while at the same time establishing a better separation between the Al contact and the perovskite. 
 
 
 
@@ -345,11 +347,11 @@ To further investigate the physical origin of the reverse bias instability of th
         \label{}
     \end{subfigure}
     
-    \caption{A 1×3 grid of images.}
+    \caption{EDS elemental concentration profiles for samples (a) 40\ch{TiO_2}, (b) 40\ch{C_{60}}, and (c) 20\ch{C_{60}}-20\ch{TiO_2}. Signal counts are normalized with respect to the total amount of counts at each depth position. The dashed line marks the beginning of the perovskite layer, based on the rise of the Pb signal.}
     \label{fig:etl_opt:eds_concentration}
 \end{figure}
 
-To further evaluate the perovskite/ETL interface quality we employ transient photocurrent (TPC) measurements, exciting the PePDs with two different light sources, a white and red (625 nm) light one. Their respective spectral profile is shown in Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}a and b, where the LED irradiance has been tuned to yield a total intensity of 44.5 $mW/cm^2$ and 25.5 $mW/cm^2$ for the white and red light source, respectively. Using different light sources leads to different carrier generation profiles within the perovskite layer, enabling the disentanglement of bulk- and interface-dominated phenomena. The carrier generation rate as a function of distance inside the perovskite layer can be simulated using the optical constants of each device layer (obtained via spectroscopic ellipsometry) as an input in the transfer matrix algorithm \cite{Burkhard2010AccountingCells}. The model developed for the simulation is illustrated in Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}c, while  the carrier generation rate within the \ch{CsPbI_2Br} layer for both light sources is shown in Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}d. 
+To further evaluate the perovskite/ETL interface quality we employ transient photocurrent (TPC) measurements, exciting the PePDs with two different light sources, a white and red (625 nm) light one. Their respective spectral profile is shown in Figure~\ref{fig:etl_opt:tpc_sources_and_simulation}a and b, where the LED irradiance has been tuned to yield a total intensity of 44.5 $mW/cm^2$ and 25.5 $mW/cm^2$ for the white and red light source, respectively. Using different light sources leads to different carrier generation profiles within the perovskite layer, enabling the disentanglement of bulk- and interface-dominated phenomena. The carrier generation rate as a function of distance inside the perovskite layer can be simulated using the optical constants of each device layer (obtained via spectroscopic ellipsometry) as an input in the transfer matrix algorithm \cite{Burkhard2010AccountingCells}. The model developed for the simulation is illustrated in Figure~\ref{fig:etl_opt:tpc_sources_and_simulation}c, while  the carrier generation rate within the \ch{CsPbI_2Br} layer for both light sources is shown in Figure~\ref{fig:etl_opt:tpc_sources_and_simulation}d. 
 
 
 \begin{figure}[t]
@@ -383,7 +385,7 @@ To further evaluate the perovskite/ETL interface quality we employ transient pho
         \caption{}
         \label{}
     \end{subfigure}
-    \caption{}
+    \caption{(a) Spectral power distribution of the (a) white and (b) red (625 nm) LED that were used for transient photocurrent measurements. (c) Optical model used for the simulation of the charge generation rate across the perovskite layer based on the transfer-matrix algorithm. (d) Comparison of the charge generation rate across the perovskite thickness for illumination with the white and red light sources. The \ch{NiO_x}/\ch{CsPbI_2Br} interface corresponds to Distance = 0 nm, while the \ch{CsPbI_2Br}/\ch{TiO_2} interface corresponds to Distance = 300 nm.}
     \label{fig:etl_opt:tpc_sources_and_simulation}
 \end{figure}
 
@@ -397,12 +399,12 @@ To further evaluate the perovskite/ETL interface quality we employ transient pho
         \includegraphics[width=\textwidth]{chapters/transport_layers/images/nk_transfer_matrix.pdf} % Replace with your image file
                 
     \end{subfigure}
-    \caption{Impact of scan speed}
+    \caption{Optical constants of all PePD layers used for the optical simulation of the complete stack.}
     \label{fig:tetl_opt:nk_transfer_materix}
 \end{figure}
 
 
-A summary of TPC results for all PePDs is provided in Fig.~\ref{fig:etl_opt:tpc_comparison}a-d. For each sample and light source, the TPC response was measured at -1 and -2 V, with all curves normalized relative to the -2 V response. Starting with samples 40\ch{C_{60}} and 20\ch{C_{60}}-20\ch{TiO_2}, the photocurrent response under the effect of -1 and -2 V is similar for both illumination conditions. However, as the \ch{C_{60}} layer thickness decreases, a larger discrepancy under the effect of -1 and -2 V is observed. Specifically, the TPC response under -2 V has a square shape that corresponds to the light pulse that starts at 0 ms. In contrast, with the PePD biased at -1 V, the photocurrent initially rises as a response to the light pulse but begins to decline within a few tens of microseconds, before stabilizing at a lower value for the remainder of the light pulse. This effect is more pronounced under the effect of 625 nm illumination, although sample 40\ch{TiO_2} begins exhibiting this pattern even under white light illumination.
+A summary of TPC results for all PePDs is provided in Figure~\ref{fig:etl_opt:tpc_comparison}a-d. For each sample and light source, the TPC response was measured at -1 and -2 V, with all curves normalized relative to the -2 V response. Starting with samples 40\ch{C_{60}} and 20\ch{C_{60}}-20\ch{TiO_2}, the photocurrent response under the effect of -1 and -2 V is similar for both illumination conditions. However, as the \ch{C_{60}} layer thickness decreases, a larger discrepancy under the effect of -1 and -2 V is observed. Specifically, the TPC response under -2 V has a square shape that corresponds to the light pulse that starts at 0 ms. In contrast, with the PePD biased at -1 V, the photocurrent initially rises as a response to the light pulse but begins to decline within a few tens of microseconds, before stabilizing at a lower value for the remainder of the light pulse. This effect is more pronounced under the effect of 625 nm illumination, although sample 40\ch{TiO_2} begins exhibiting this pattern even under white light illumination.
 
 
 \begin{figure}[htbp]
@@ -435,17 +437,17 @@ A summary of TPC results for all PePDs is provided in Fig.~\ref{fig:etl_opt:tpc_
         \label{}
     \end{subfigure}
     
-    \caption{A 1×4 grid of images.}
+    \caption{Transient photocurrent response of samples (a) 40\ch{TiO_2}, (b) 10\ch{C_{60}}-30\ch{TiO_2}, (c) 20\ch{C_{60}}-20\ch{TiO_2}, and (d) 40\ch{C_{60}} when illuminated with a white (top) and red (bottom) light source, biased at -1 and -2 V. For each sample and illumination condition, the TPC response at -1 V has been normalized with respect to the TPC response at -2 V.}
     \label{fig:etl_opt:tpc_comparison}
 \end{figure}
 
-Such phenomena of transient peaks in the TPC response of organic- and perovskite-based photodiodes were previously associated with a non-ideal charge extraction and carrier accumulation at an interface \cite{Neophytou2019EnhancingLayer, Hwang2009Drift-diffusionCells,Mcneill2009PhotocurrentEffects}. Specifically, in the presence of a defect-rich interface, in this case the perovskite/ETL interface, electrons may get trapped near the anode, leading to a local reduction of the electric field via the creation of a space-charge region. This in turn limits charge separation and promotes recombination \cite{Mcneill2009PhotocurrentEffects}. The electron trapping rate, and by extension the width of the space charge region, depends of course on the interface's defect density but also the charge generation rate in the same region \cite{Hwang2009Drift-diffusionCells}. However, Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}d revealed that the charge generation rate at the perovskite/ETL interface (Distance = 300 nm) is similar for both white and red light illumination, and equal to approximately $2\times 10^{21}s^{-1}cm^{-3}$. As a result, and taking as example the 40\ch{TiO_2} sample, we could reasonable consider similar levels of trapped-charge accumulation at the perovskite/ETL interface for both types of illumination, leading to the formation of a space-charge region of similar width. Yet, as shown in Fig.~\ref{fig:etl_opt:tpc_comparison}a, the transient peak is more pronounced under the effect of red light illumination. This is attributed to the fact that under white light illumination a larger percentage of carriers is generated closer to HTL/perovskite interface (Distance = 0 nm in Fig.~\ref{fig:etl_opt:tpc_sources_and_simulation}d), which can be more efficiently separated and extracted, dominating in the sample's TPC response. In conclusion, the diminishing TPC peak under red light illumination and -1 V bias with increasing \ch{C_{60}} layer thickness is further supporting the claim that the reverse bias breakdown is eliminated through a reduction in the density of interface trap states.
+Such phenomena of transient peaks in the TPC response of organic- and perovskite-based photodiodes were previously associated with a non-ideal charge extraction and carrier accumulation at an interface \cite{Neophytou2019EnhancingLayer, Hwang2009Drift-diffusionCells,Mcneill2009PhotocurrentEffects}. Specifically, in the presence of a defect-rich interface, in this case the perovskite/ETL interface, electrons may get trapped near the anode, leading to a local reduction of the electric field via the creation of a space-charge region. This in turn limits charge separation and promotes recombination \cite{Mcneill2009PhotocurrentEffects}. The electron trapping rate, and by extension the width of the space charge region, depends of course on the interface's defect density but also the charge generation rate in the same region \cite{Hwang2009Drift-diffusionCells}. However, Figure~\ref{fig:etl_opt:tpc_sources_and_simulation}d revealed that the charge generation rate at the perovskite/ETL interface (Distance = 300 nm) is similar for both white and red light illumination, and equal to approximately $2\times 10^{21}s^{-1}cm^{-3}$. As a result, and taking as example the 40\ch{TiO_2} sample, we could reasonable consider similar levels of trapped-charge accumulation at the perovskite/ETL interface for both types of illumination, leading to the formation of a space-charge region of similar width. Yet, as shown in Figure~\ref{fig:etl_opt:tpc_comparison}a, the transient peak is more pronounced under the effect of red light illumination. This is attributed to the fact that under white light illumination a larger percentage of carriers is generated closer to HTL/perovskite interface (Distance = 0 nm in Figure~\ref{fig:etl_opt:tpc_sources_and_simulation}d), which can be more efficiently separated and extracted, dominating in the sample's TPC response. In conclusion, the diminishing TPC peak under red light illumination and -1 V bias with increasing \ch{C_{60}} layer thickness is further supporting the claim that the reverse bias breakdown is eliminated through a reduction in the density of interface trap states.
 
-Interestingly, the saturated TPC response of sample 40\ch{TiO_2} under 625 nm light illumination at -1 V is almost half compared to -2 V. On the other hand, the saturated EQE response of the same sample at 620 nm (Fig.~\ref{fig:etl_opt:static_eqe}a) is approximately equal to 70\% when the PePD is biased at -1 and -2 V. This discrepancy is attributed to the significantly lower intensity of the EQE light source (<3 $mW/cm^2$ compared to 25.5 $mW/cm^2$) and the fact that the accumulation of trapped charge at the perovskite/ETL interface is directly proportional to it \cite{Hwang2009Drift-diffusionCells,Mcneill2009PhotocurrentEffects}.
+Interestingly, the saturated TPC response of sample 40\ch{TiO_2} under 625 nm light illumination at -1 V is almost half compared to -2 V. On the other hand, the saturated EQE response of the same sample at 620 nm (Figure~\ref{fig:etl_opt:static_eqe}a) is approximately equal to 70\% when the PePD is biased at -1 and -2 V. This discrepancy is attributed to the significantly lower intensity of the EQE light source (<3 $mW/cm^2$ compared to 25.5 $mW/cm^2$) and the fact that the accumulation of trapped charge at the perovskite/ETL interface is directly proportional to it \cite{Hwang2009Drift-diffusionCells,Mcneill2009PhotocurrentEffects}.
 
-\subsection{Enhancing Response Speed}
+\subsection{Enhancement of Response Speed}
 
-\begin{figure}[htbp]
+\begin{figure}[ht!]
     \centering
     % First row
     \begin{subfigure}[t]{0.4\textwidth}
@@ -477,11 +479,11 @@ Interestingly, the saturated TPC response of sample 40\ch{TiO_2} under 625 nm li
         \caption{}
         \label{}
     \end{subfigure}
-    \caption{}
+    \caption{(a) Comparison of the TPC response time of PePDs with various combinations of the \ch{C_{60}}-\ch{TiO_2} bi-layer configuration when illuminated by the white light source and biased at -2 V. (b) Dependence of the PePD's rise time ($\tau_r$) on the thickness of the \ch{C_{60}} layer deposited on top of the perovskite layer. (c) Comparison of the frequency-dependent capacitance of PePDs with various combinations of the \ch{C_{60}}-\ch{TiO_2} bi-layer configuration, without the application of any external bias. (d) Comparison of the experimentally extracted PePD capacitance at $10^3$ Hz with the analytically calculated value, considering the extension of the depletion region into the \ch{C_{60}} layer.}
     \label{fig:etl_opt:rise_time_and_capacitance}
 \end{figure}
 
-Besides the investigation of the perovskite/ETL interface quality, the TPC measurements can be further used to evaluate the carrier extraction speed of the PePDs, which is defined as the time it takes for the device to respond to the transient light pulse. Fig.~\ref{fig:etl_opt:rise_time_and_capacitance}a superimposes the photoresponse of the four PePDs, biased at -2 V, during the first microseconds of the measurement under white light illumination. A distinct trend emerges, where the response becomes faster as the \ch{C_{60}} layer thickness increases. The PePDs' rise time ($\tau_r$) can be further quantified as the time required for the photocurrent to reach 90\% of its steady-state value (starting from 10\%). Fig.~\ref{fig:etl_opt:rise_time_and_capacitance}b displays the extracted $\tau_r$ as a function of the \ch{C_{60}} layer thickness, highlighting the impact of the chosen ETL configuration on the detector's speed.  
+Besides the investigation of the perovskite/ETL interface quality, the TPC measurements can be further used to evaluate the carrier extraction speed of the PePDs, which is defined as the time it takes for the device to respond to the transient light pulse. Figure~\ref{fig:etl_opt:rise_time_and_capacitance}a superimposes the photoresponse of the four PePDs, biased at -2 V, during the first microseconds of the measurement under white light illumination. A distinct trend emerges, where the response becomes faster as the \ch{C_{60}} layer thickness increases. The PePDs' rise time ($\tau_r$) can be further quantified as the time required for the photocurrent to reach 90\% of its steady-state value (starting from 10\%). Figure~\ref{fig:etl_opt:rise_time_and_capacitance}b displays the extracted $\tau_r$ as a function of the \ch{C_{60}} layer thickness, highlighting the impact of the chosen ETL configuration on the detector's speed.  
 
 \begin{figure}[htbp]
     \centering
@@ -506,13 +508,13 @@ Besides the investigation of the perovskite/ETL interface quality, the TPC measu
         \label{}
     \end{subfigure}
     
-    \caption{A 1×3 grid of images.}
+    \caption{Frequency-dependent capacitance for samples (a) 40\ch{TiO_2}, (b) 40\ch{C_{60}}, and (c) 20\ch{C_{60}}-20\ch{TiO_2}, biased at 0 V and -2 V. The collapse of the capacitance for sample 40\ch{TiO_2} at -2 V and frequencies below 10 Hz is another aftermath of the breakdown mechanism that is triggered under the effect of prolonged reverse bias.}
     \label{fig:etl_opt:cf_all}
 \end{figure}
 
 
 
-Considering that the RC time constant is critical for a photodiode's response speed, we characterize the devices' capacitance as a function of frequency at 0 and -2 V (Fig.~\ref{fig:etl_opt:cf_all}a-c). For frequencies above 10 Hz, samples 40\ch{C_{60}} and 20\ch{C_{60}}-20\ch{TiO_2} have identical capacitance at 0 and -2 V, revealing that the built-in potential is sufficient to fully deplete the PePDs, without the need for additional reverse bias. This further suggests that the increase in the devices' response speed when a thicker \ch{C_{60}} layer is used can not be attributed to an extension of the depletion region within the perovskite layer itself \cite{Goushcha2017OnPhotodiodes}. The signal of the capacitance measurement for sample 40\ch{TiO_2} exhibits the same trend, even though it is collapsing to 0 and becomes more noisy for frequencies below 10 Hz, a direct aftermath of the device breakdown after reverse biasing for prolonged duration. Fig.~\ref{fig:etl_opt:rise_time_and_capacitance}c provides a overlay comparison of the C-f measurement for all PePDs in absence of any external bias. For moderate frequencies, in the range of 10Hz to 100 kHz, the capacitance of the device is inversely proportional to the thickness of the \ch{C_{60}} layer, in agreement with the observed increase in response speed ($\tau_r \propto \tau_{RC}$). Considering that the equivalent device capacitance for a series connection is equal to 
+Considering that the RC time constant is critical for a photodiode's response speed, we characterize the devices' capacitance as a function of frequency at 0 and -2 V (Figure~\ref{fig:etl_opt:cf_all}a-c). For frequencies above 10 Hz, samples 40\ch{C_{60}} and 20\ch{C_{60}}-20\ch{TiO_2} have identical capacitance at 0 and -2 V, revealing that the built-in potential is sufficient to fully deplete the PePDs, without the need for additional reverse bias. This further suggests that the increase in the devices' response speed when a thicker \ch{C_{60}} layer is used can not be attributed to an extension of the depletion region within the perovskite layer itself \cite{Goushcha2017OnPhotodiodes}. The signal of the capacitance measurement for sample 40\ch{TiO_2} exhibits the same trend, even though it is collapsing to 0 and becomes more noisy for frequencies below 10 Hz, a direct aftermath of the device breakdown after reverse biasing for prolonged duration. Figure~\ref{fig:etl_opt:rise_time_and_capacitance}c provides a overlay comparison of the C-f measurement for all PePDs in absence of any external bias. For moderate frequencies, in the range of 10Hz to 100 kHz, the capacitance of the device is inversely proportional to the thickness of the \ch{C_{60}} layer, in agreement with the observed increase in response speed ($\tau_r \propto \tau_{RC}$). Considering that the equivalent device capacitance for a series connection is equal to 
  
  \begin{equation}
     \frac{1}{C_{eq}} = \frac{1}{C_{pvkt}} + \frac{1}{C_{ETL}}
@@ -540,7 +542,7 @@ Considering that the RC time constant is critical for a photodiode's response sp
     \end{subfigure}
 
     % Caption for the whole figure
-    \caption{Reversibility and long bias}
+    \caption{(a) Sematic illustration of the MOS capacitor, fabricated for the evaluation of the perovskite's relative permittivity. (b) Frequency dependent capacitance of the MOS structure under the effect of 0 V and -7 V. }
     \label{}
 \end{figure}
 
@@ -559,7 +561,7 @@ Considering that the RC time constant is critical for a photodiode's response sp
     \label{tab:etl_opt:er_from_pepd} % Label for referencing
 \end{table}
 
-To verify this hypothesis, we first extract perovskite's relative permittivity ($\epsilon_r$) from the C-f of sample 40\ch{TiO_2}, considering that the depletion region is limited within the \ch{CsPbI_2Br} layer and using equation $C_{pvkt} = \frac{\epsilon_r\epsilon_0A}{d}$, where $\epsilon_0$ is the vacuum permittivity, $A$ is the device area and $d$ is the perovskite thickness. Using the values that are summarized in Table~\ref{tab:etl_opt:er_from_pepd}, we extract $\epsilon_r = 26.5$. In order to corroborate this value and eliminate the influence of the ETL, we additionally fabricate a metal-oxide-semiconductor (MOS) capacitor, that employs heavily a p-doped silicon wafer as the metal contact and a thermally-grown \ch{SiO_2} (100 nm) layer as the oxide. The schematic of the MOS-stack, as well as the results of the C-f measurement at 0 and -7 V are shown in Fig.~\ref{tab:etl_opt:er_from_mos}a and b, respectively. Taken into account that the perovskite and oxide are connected in series (eq.~\ref{eg:series_cap}) and using the values of Table~\ref{tab:etl_opt:er_from_mos}, we extract $\epsilon_r = 26.9$, which is in great agreement with the value that was estimated from the 40\ch{TiO_2} sample. Finally, Fig.~\ref{fig:etl_opt:rise_time_and_capacitance}d compares the measured and numerically calculated equivalent capacitance of the PePDs as function of the \ch{C_{60}} layer, considering that the latter is fully depleted. The strong agreement between measured and calculated values further confirms our initial hypothesis that the increase in the PePDs response with increasing \ch{C_{60}} layer thickness is attributed to a reduction of the stack's RC constant, though an extension of the depletion area towards the \ch{C_{60}} layer \cite{Goushcha2017OnPhotodiodes}. 
+To verify this hypothesis, we first extract perovskite's relative permittivity ($\epsilon_r$) from the C-f of sample 40\ch{TiO_2}, considering that the depletion region is limited within the \ch{CsPbI_2Br} layer and using equation $C_{pvkt} = \frac{\epsilon_r\epsilon_0A}{d}$, where $\epsilon_0$ is the vacuum permittivity, $A$ is the device area and $d$ is the perovskite thickness. Using the values that are summarized in Table~\ref{tab:etl_opt:er_from_pepd}, we extract $\epsilon_r = 26.5$. In order to corroborate this value and eliminate the influence of the ETL, we additionally fabricate a metal-oxide-semiconductor (MOS) capacitor, that employs heavily a p-doped silicon wafer as the metal contact and a thermally-grown \ch{SiO_2} (100 nm) layer as the oxide. The schematic of the MOS-stack, as well as the results of the C-f measurement at 0 and -7 V are shown in Figure~\ref{tab:etl_opt:er_from_mos}a and b, respectively. Taken into account that the perovskite and oxide are connected in series (eq.~\ref{eg:series_cap}) and using the values of Table~\ref{tab:etl_opt:er_from_mos}, we extract $\epsilon_r = 26.9$, which is in great agreement with the value that was estimated from the 40\ch{TiO_2} sample. Finally, Figure~\ref{fig:etl_opt:rise_time_and_capacitance}d compares the measured and numerically calculated equivalent capacitance of the PePDs as function of the \ch{C_{60}} layer, considering that the latter is fully depleted. The strong agreement between measured and calculated values further confirms our initial hypothesis that the increase in the PePDs response with increasing \ch{C_{60}} layer thickness is attributed to a reduction of the stack's RC constant, though an extension of the depletion area towards the \ch{C_{60}} layer \cite{Goushcha2017OnPhotodiodes}. 
 
 \begin{table}[htbp]
     \centering
@@ -599,13 +601,13 @@ To verify this hypothesis, we first extract perovskite's relative permittivity (
         \caption{}
     \end{subfigure}
     
-    \caption{}
+    \caption{Characterization of PePD that features a 40 nm \ch{C_{60}} and a 20 nm \ch{TiO_2} bi-layer as the ETL. (a) Current density as a function of bias in dark and under 1-sun illumination. (b) EQE as a function of wavelength under steps of increasing reverse bias. (c) TPC response time for while light illumination and -2 V bias.}
     \label{fig:etl_opt:40C60_20TiO2}
 \end{figure}
 
 
 
-This finding implies that the carrier extraction speed could be improved by further increasing the thickness of the \ch{C_{60}} layer. To evaluate this hypothesis, we fabricated an additional sample whose ETL comprised of 40 nm of \ch{C_{60}} and 20 nm of \ch{TiO_2} (sample 40\ch{C_{60}}-20\ch{TiO_2}). The dynamic J-V scan, the spectral EQE, as well as the transient photocurrent of the respective PePD are shown in Fig.~\ref{fig:etl_opt:40C60_20TiO2}a-c. Indeed, for a device of 0.125 $cm^2$ area, an almost 10\% decrease of $\tau_r$ is achieved (from 2.17 to 1.96 $\mu s$) with regards to the 20\ch{C_{60}}-20\ch{TiO_2} sample. However, when examining the EQE spectra of the 40\ch{C_{60}}-20\ch{TiO_2} sample, it is observed that the EQE does no longer saturate at -1 V, while remaining below 70\% even when increasing the reverse bias up to -2 V. This is in stark contrast to what was observed for sample the 20\ch{C_{60}}-20\ch{TiO_2)} sample (Fig.~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}f), whose EQE response was already saturated and beyond 70\% at -1 V. Nevertheless, this trend is consistent with previous literature reports that showcased a decrease of a perovskite-based solar cell's PCE when the \ch{C_{60}} layer thickness was increased beyond 20 nm \cite{Klipfel2022C60Layer}.
+This finding implies that the carrier extraction speed could be improved by further increasing the thickness of the \ch{C_{60}} layer. To evaluate this hypothesis, we fabricated an additional sample whose ETL comprised of 40 nm of \ch{C_{60}} and 20 nm of \ch{TiO_2} (sample 40\ch{C_{60}}-20\ch{TiO_2}). The dynamic J-V scan, the spectral EQE, as well as the transient photocurrent of the respective PePD are shown in Figure~\ref{fig:etl_opt:40C60_20TiO2}a-c. Indeed, for a device of 0.125 $cm^2$ area, an almost 10\% decrease of $\tau_r$ is achieved (from 2.17 to 1.96 $\mu s$) with regards to the 20\ch{C_{60}}-20\ch{TiO_2} sample. However, when examining the EQE spectra of the 40\ch{C_{60}}-20\ch{TiO_2} sample, it is observed that the EQE does no longer saturate at -1 V, while remaining below 70\% even when increasing the reverse bias up to -2 V. This is in stark contrast to what was observed for sample the 20\ch{C_{60}}-20\ch{TiO_2)} sample (Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}f), whose EQE response was already saturated and beyond 70\% at -1 V. Nevertheless, this trend is consistent with previous literature reports that showcased a decrease of a perovskite-based solar cell's PCE when the \ch{C_{60}} layer thickness was increased beyond 20 nm \cite{Klipfel2022C60Layer}.
 
 
 \begin{figure}[htbp]
@@ -631,50 +633,55 @@ This finding implies that the carrier extraction speed could be improved by furt
         \label{}
     \end{subfigure}
     
-    \caption{A 1×3 grid of images.}
+    \caption{Impact of PePD contact size on the characteristics of the 40\ch{C_{60}} sample. (a) Frequency-dependent capacitance at 0 V, (b) TPC response time under white light illumination and -2 V bias, and (c) dependence of PePD's rise time on device area.}
     \label{fig:etl_opt:dev_area}
 \end{figure}
 
-As a result, depending on the application, a trade-off between speed and charge carrier extraction efficiency may be necessary. However, this trade-off can avoided by reducing the diode's area, which in turn decreases its capacitance and enhances $\tau_r$ without compromising the EQE. To demonstrate this, we reduced the contact area of sample 40\ch{C_{60}} from 0.125 $cm^2$ to 0.075 $cm^2$ and 0.025 $cm^2$. Fig.~\ref{fig:etl_opt:dev_area}a illustrates the resulting decrease in capacitance, while Fig.~\ref{fig:etl_opt:dev_area}b shows the corresponding increase in response speed. The extracted $\tau_r$ as function of area, shown in Fig.~\ref{fig:etl_opt:dev_area}c, exhibits a linear relationship. For the device with 0.025 $cm^2$ area, $\tau_r$ approaches 1 $\mu s$, which approaches the detection limit of the setup, yet sub-$\mu s$ response speeds can be projected with further pixel miniaturization. 
+As a result, depending on the application, a trade-off between speed and charge carrier extraction efficiency may be necessary. However, this trade-off can avoided by reducing the diode's area, which in turn decreases its capacitance and enhances $\tau_r$ without compromising the EQE. To demonstrate this, we reduced the contact area of sample 40\ch{C_{60}} from 0.125 $cm^2$ to 0.075 $cm^2$ and 0.025 $cm^2$. Figure~\ref{fig:etl_opt:dev_area}a illustrates the resulting decrease in capacitance, while Figure~\ref{fig:etl_opt:dev_area}b shows the corresponding increase in response speed. The extracted $\tau_r$ as function of area, shown in Figure~\ref{fig:etl_opt:dev_area}c, exhibits a linear relationship. For the device with 0.025 $cm^2$ area, $\tau_r$ approaches 1 $\mu s$, which approaches the detection limit of the setup, yet sub-$\mu s$ response speeds can be projected with further pixel miniaturization. 
 
-\section{Top Illuminated Photodiodes for CMOS Integration}
+\section{Top-Illuminated PePDs}
 
-\subsection{High-Temperature Stability}
-
-So far, we have established as the baseline stack the one deposited with a total deposition rate of 0.8{\AA}/s, at a stoichiometry of 1.05:1.00 CsBr:\ch{PbI_2}, with 40 nm of \ch{TiO_2} as the ETL. At this point we can transfer the same stack to the silicon substrates (Fig.~\ref{fig:ch2:pix_stack}). 
-The device on silicon substrate exhibits significantly higher hysteresis and lower rectification, mainly attributed to the higher resistance of the TiN contact. In terms of the device's EQE, a significantly lower response at 0 V compared to the glass substrate. When increasing the bias to -1 V, it is possible to saturate, again. The slow turn-on of the diode is more explicitly illustrated at the EQE as a function of bias. 
-
-
-
-\begin{figure}[htbp]
+\begin{figure}[ht!]
     \centering
-    \begin{subfigure}{0.32\textwidth}
+    
+     \raisebox{0.1cm}{ % Move this figure up by 1.5 cm (adjust as needed)
+    \begin{subfigure}{0.3\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/JV_PIX_Glass.pdf}
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/pix_stack_cross_section.pdf}
+        \vspace{4mm}
         \caption{}
-        \label{fig:ch2:jv_comp_pic_glass}
+        \label{}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.32\textwidth}
+    }
+    \hspace{0.5cm}
+    \begin{subfigure}{0.4\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/EQE_fnm_PIX_Glass.pdf}
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/AP40_4_JV.pdf}
         \caption{}
-        \label{fig:ch2:eqe_comp_pix_glass}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.32\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/EQE_fV_PIX_Glass.pdf}
-        \caption{}
-        \label{fig:plot3}
+        \label{}
     \end{subfigure}
     
-    \caption{A 1×3 grid of images.}
-    \label{fig:ch2:eqefV_comp_pix_glass}
+    \vspace{0.5em} % Optional vertical spacing between rows
+    
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/AP40_4_EQE.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hspace{0.5cm}
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/AP40_4_EQE_fV.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    
+    \caption{A 2×2 grid of images.}
+    \label{fig:pix_pepd:cross_section_performance}
 \end{figure}
 
-
-Two potential causes could be evaluated for the slower turn-on of the diode when it is fabricated on top of the Si substrate. In contrast to ITO and Al that were used as contacts for the glass substrate, which have a large difference in the work function, ITO and TiN do not have a big difference in their work function. To further evaluate this, we fabricate the same stack on glass substrate, using ITO as top and bottom contact. In this case, it is clear that EQE saturates, indicating that the built-in potential is sufficient to fully extract the generated carriers, even at 0 V. Therefore, we turn to the second possible reason that could cause the slower turn-on of the diode, and that is the potential existence of an energy barrier. To investigate this we turn to the substrate itself and the interface between TiN and \ch{NiO_x}. We submit four different substrates to TEM, one that is as-deposited, and the rest annealed in open air at 300 \degree C for 5 minutes, 30 minutes, and 60 minutes, respectively. The results are illustrated in Fig.~\ref{fig:ch2:tem_pix_substrate}. For all samples, even for the as-deposited one, a thin layer of \ch{TiO_2} is observed. Additionally, the following trend is observed: with increasing annealing duration, the thickness of the \ch{TiO_x} layer remains the same, however the levels of oxygen are increasing. TiOx could introduce an energy barrier, that is preventing the extraction of carriers at 0 V.
+Benefiting from the reliable and competitive performance of the bottom-illuminated photodiodes, we proceed to the fabrication and characterization of top-illuminated photodiodes, whose cross-section is illustrated in Figure~\ref{fig:pix_pepd:cross_section_performance}a. The optimal ETL configuration of 20 nm of \ch{C_{60}} and 20 nm of \ch{TiO_2} is selected for the top-illuminated PePDs, as well. For this type of photodetectors, $J_d$ at -2 V is maintained below 4 $\mu A/cm^2$, while $J_{photo}$ surpasses 10 $mA/cm^2$ in the same biasing point (Figure~\ref{fig:pix_pepd:cross_section_performance}b). Additionally, the EQE response is close to 60\% and mostly saturated at -1 V (Figure~\ref{fig:pix_pepd:cross_section_performance}c). The main difference compared to the performance of respective the bottom-illuminated PePDs (Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}c) is the delayed saturation of $J_{photo}$ and EQE as a function of reverse bias. This "turning-on" delay is more clearly illustrated in Figure~\ref{fig:pix_pepd:cross_section_performance}d, which demonstrates the EQE as a function of bias under constant mono-chromatic illumination of 500 nm, and indicates the presence of an energetic barrier that must be overcome to allow the efficient extraction of the photo-generated carriers. 
 
 \begin{figure}[htbp]
     \centering
@@ -691,21 +698,120 @@ Two potential causes could be evaluated for the slower turn-on of the diode when
         \caption*{(b)}
     \end{subfigure}
 
-
+    \vspace{0.5cm}
     % Second row
-    \begin{subfigure}[t]{0.49\textwidth}
+    \begin{subfigure}[t]{0.35\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/TEM_30_min.pdf} % Replace with your image file
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/TiN-NiO Interface_As_Dep.pdf} % Replace with your image file
         \caption*{(c)}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.49\textwidth}
+    \hspace{1.2cm}
+    \begin{subfigure}[t]{0.35\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/TEM_60_min.pdf} % Replace with your image file
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/TiN-NiO Interface_5min.pdf} % Replace with your image file
+        \caption*{(d)}
+    \end{subfigure}
+    \caption{TEM of TiN - NiOx interface and emergence of TiOx at the interface.- ABF Mode}
+    \label{fig:pix_pepd:tem_on_nio}
+\end{figure}
+
+Considering that such barrier was not present during the development of the stack on top of the glass/ITO substrates, we turn to the Si/TiN substrate and its interface with the DC-sputtered \ch{NiO_x} layer. Two \ch{NiO_x}-coated Si/TiN substrates were examined using transmission electron microscopy (TEM) on a focused ion beam (FIB)-prepared cross-section. The first substrate features the \ch{NiO_x} layer in its as-deposited state (Figure\ref{fig:pix_pepd:tem_on_nio}a and c), while the second one underwent a 5-minute annealing at 300\degree C in ambient conditions, replicating the step used in device fabrication (Figure\ref{fig:pix_pepd:tem_on_nio}b and d). Figure~\ref{fig:pix_pepd:tem_on_nio}b clearly illustrates the effect of annealing on the \ch{NiO_x} layer, marked by the elimination of the gap between the atomic concentrations of Ni and O in the relevant region. For both the as-deposited and 5-min annealed film, a thin \ch{TiO_x} layer is formed between the TiN contact and the \ch{NiO_x} transport layer. The thickness of the oxide layer appears to be unaffected by the annealing step, suggesting that oxidation likely occurs during the \ch{NiO_x} deposition itself—potentially exacerbated by the plasma environment within the vacuum chamber. As a result, the formation of this thin \ch{TiO_x} layer could be held accountable for the presence of the energy barrier in the top-illuminated PePDs. 
+
+This issue could be possible resolved with the replacement of TiN with a non-oxidizing contact. During the time of this study, the only fab-compatible alternative was the use of copper as the bottom contact. However, Cu is known to severely oxidize under elevated temperatures, rendering it an unsuitable choice for our thermally-stable PePDs. As a result, future efforts on the elimination of the \ch{TiO_x} barrier should be focused on the choice and processing conditions of the HTL, the introduction of passivation layers that prevent oxidation or the inversion of the stack. 
+
+
+\begin{figure}[htbp]
+    \centering
+    % First row
+    \begin{subfigure}[t]{0.53\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/JV_f_illumination.pdf} % Replace with your image file
+        \caption*{(a)}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/linearity.pdf} % Replace with your image file
+        \caption*{(b)}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+    % Second row
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/TPC.pdf} % Replace with your image file
+        \caption*{(c)}
+    \end{subfigure}
+    \hspace{1.2cm}
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/TPC_rise_fall.pdf} % Replace with your image file
         \caption*{(d)}
     \end{subfigure}
     \caption{TEM of TiN - NiOx interface and emergence of TiOx at the interface.}
-    \label{fig:ch2:tem_pix_substrate}
+    \label{fig:pix_pepd_linearity_and_tpc}
+\end{figure}
+
+Further information about the quality of the PePD can be extracted through the measurement of its photoresponse as a function of increasing incident light intensity (Figure~\ref{fig:pix_pepd_linearity_and_tpc}a). Based on this, we can extract the linear dynamic range (LDR) of the PePD, which is measured in units of dB and defines the span of light intensity range within which the device output is linear to the incident light intensity. The PePDs fabricated in the context of this study have at least 80 dB of LDR in the bias span between -1 and -2 V (Figure~\ref{fig:pix_pepd_linearity_and_tpc}b). 
+
+Lastly, we measure the transient photocurrent response at -2 V using a white light source with a total intensity of 46 $mW/cm^2$ (Figure~\ref{fig:pix_pepd_linearity_and_tpc}c). In contrary to the TPC response of the bottom illuminated photodiodes (Figure~\ref{fig:etl_opt:tpc_comparison}), the top illuminated PePDs exhibit a sharp transient peak when the stimulus is changing, i.e. during the turning on and off of the light source. Previous studies attributed this pattern to a capacitive component of the stack \cite{Bisquert2023TransientPhotodetectors} (need ot explain more). Nevertheless, the response time of the PePD (area = 0.0625 $cm^2$) remains in the same range as the bottom-illuminated PePDs, with the rise ($\tau_r$) and fall times ($\tau_f$) equal to 2.5 and 3 $\mu s$, respectively (Figure~\ref{fig:pix_pepd_linearity_and_tpc}d). 
+
+
+\subsection{Evaluation of High-Temperature Stability}
+
+The last part of this section aims to investigate the high-temperature tolearance of the stack. 
+
+The used layers are known to indivisually withstand temperatures beyond 200 degrees, it is necessary to evaluate if the whole stack can bt exposed to such temperatures, without problems. T
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.33\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/JV_Before_After.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/TPC_Before_After.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hfill
+        \begin{subfigure}{0.33\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/IS_Before_After.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    
+    \caption{A 1×3 grid of images.}
+    \label{}
+\end{figure}
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.55\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/material_properties/images/TEM_60_min.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hspace{1cm}
+    \raisebox{0.65cm}{ % adjust this value as needed
+        \begin{subfigure}{0.28\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{chapters/transport_layers/images/TiN-NiO Interface_60min.pdf}
+            \caption{}
+            \label{}
+        \end{subfigure}
+    }
+    
+    \caption{A 1×3 grid of images.}
+    \label{}
 \end{figure}
 
 

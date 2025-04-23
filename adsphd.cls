@@ -488,7 +488,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Default values and other settings
-\author{Guust}{Flater}
+\author{Athina}{Papadopoulou}
 \@supervisor{Prof.~dr.~ir.~Supervisor}{}
 \@president{Prof.~dr.~ir.~The~Chairman}{}
 \@jurymember{Prof.~dr.~ir.~The~One}{}
@@ -545,6 +545,7 @@
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{tabularx}
+\usepackage{cite}
 
 \usepackage{adjustbox}   % To adjust figure sizes if needed
 
