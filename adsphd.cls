@@ -546,7 +546,9 @@
 \usepackage{siunitx}
 \usepackage{tabularx}
 \usepackage{cite}
-
+\usepackage{rotfloat}
+\usepackage{float}
+\usepackage{multirow}
 \usepackage{adjustbox}   % To adjust figure sizes if needed
 
 \usepackage{tabularx}
