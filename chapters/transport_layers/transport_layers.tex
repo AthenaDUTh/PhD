@@ -1,16 +1,15 @@
 % !TeX root = ../../thesis.tex
 \chapter{Fabrication, Characterization, and Optimization of \ch{CsPbI2Br} Photodiodes}\label{ch:transport_layer}
 
-(Still need a small introduction)
+
+Having established the optical, structural, and morphological properties of thermally co-evaporated \ch{CsPbI_2Br} thin films, the next step involves their integration into photodiodes for the evaluation of their optoelectronic properties. Although photodiodes designed for photovoltaic and photodetecting applications can share identical structures, differences in biasing regimes and end-use operation lead to distinct figures of merit for evaluating their performance. Both applications share the requirement for optimal absorption and extraction of the photo-generated carriers, typically quantified through the current density under illumination ($J_{photo}$) and external quantum efficiency (EQE). For photodetecting applications, the minimization of dark current ($J_d$) is of utmost importance for developing detectors with high sensitivity to signals of low intensity. On the other hand, solar cells benefit more from improvements in the open circuit voltage ($V_{oc}$), which further translate into enhanced power conversion efficiency (PCE). Nevertheless, equation $V_{oc} = \frac{nkT}{q}ln(\frac{J_{photo}}{J_{d}}+1)$, where n is the diode's ideality factor and kT/q is thermal voltage, reveals that improvements in $V_{oc}$ can be translated into lower $J_d$ and vice versa. 
+
+The current response of a photodiode in dark conditions in the reverse bias regime is affected by multiple mechanisms which act concurrently. Specifically, $J_d$ is the sum of several current sources, including diffusion of minority carriers, thermally-activated generation-recombination, trap-assisted or band-to-band tunneling, and leakage through shunting paths. Various strategies for decreasing $J_d$ have been investigated, such as the promotion of perovskites with larger grains for the elimination of shunt pathways \cite{Jang2022PreventionPhotodetection, Yang2024High-PerformancePathways}, the annihilation of bulk defects for the restriction of trap-assisted tunneling \cite{Furlan2022TuningDetectivity, Yao2019High-Rubidium-Formamidinium-RatioStability, Li2020Self-poweredStability}, and lastly the increment of the interfacial energy offset between the perovskite and charge transport layers to suppress interfacial thermal charge generation \cite{Ollearo2021UltralowGeneration, Martinez-Goyeneche2024Vacuum-DepositedDetection, Ollearo2022MultidimensionalPhotodiodes}. 
+
+Nonetheless, most of the aforementioned studies limit their operational voltage range to -0.5 V, as higher reverse biases exacerbate tunneling effects and increase the risk of reverse-bias breakdown. This is in contrast to our intended application, which requires reliable operation up until, at least, -2 V for reasons described in Section~\ref{sec:scope_and_aim}. In this chapter we detail our efforts to develop efficient and reliable all-inorganic, vacuum-deposited PePDs. Beginning with the fabrication of bottom-illuminated photodiodes on transparent substrates, we investigate the impact of perovskite deposition conditions and the choice of ETL. The latter proves critical to both device reliability and response speed. Subsequently, the optimized stack is transferred to silicon substrates for the characterization of the top-illuminated configuration, with special emphasis given on its high-temperature tolerance.
 
 
-After the establishment of the optical morphological nad structural of the CsPbI2Br thin films, the next step is their introduction in the photodiode stack for the characterization of their optoelectroinc prpoeties. Initially, bottom illuminated PePDS are wvaluated, developed on top of glass usbtrates with ITO contact.s Thorugh this prototyping phase the impact of the the perovskite annealing, precursor stichiometry and totatl evaporation rate are evaluated for the device peroformance. During this study, a reverse breakign down mechanism is revealed, whish is triggered ofr biases as low as -1 v, posing a threat to the reliable operation of the developed photodiodes. An extnsive study, reveals that th choice of ETL, thorugh the interface defects, has one of the lergest construbutions of the reverse bias stability, with th. aAdditionally, the use od ETL can hel minimize the variability in device peroformance amonf the same samples, as well as reduce the response time of the photodiode. 
-
-The optimized photodiode is then trasnfered to top illuminated configureation though the use of Si/TiN substratew, which are a more accessible alternaive of the imager substrates. Most improtant figures of merit are defined. As a lst step we wevaluate the high-tempreature stability of the stakc by exposing it to an environemnt of 205 degree C for 660 minutes, confirming its potential for apliication with higher thermal budger, 
-
-
-
-\section{Bottom-Illuminated PePDs}
+\section{Development of Bottom-Illuminated PePDs}
 
 \subsection{Benchmarking Performance}
 
@@ -744,7 +743,7 @@ To benchmark the performance of our PePDs against prior studies utilizing therma
 \end{sidewaystable}
 \clearpage
 
-\section{Top-Illuminated PePDs}
+\section{Development of Top-Illuminated PePDs}
 
 \begin{figure}[ht!]
     \centering

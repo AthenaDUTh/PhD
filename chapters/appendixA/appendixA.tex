@@ -38,6 +38,30 @@ For each deposition, the crucibles would be emptied and re-loaded with $\approx$
 \underline{External Quantum Efficiency:} The devices' EQE as a function of wavelength, bias, and time was recorded with a Stanford Research System model SR830 lock-in amplifier unit coupled with a monochromator and a 150 W halogen lamp (OSRAM HLX 64633). A low-noise current preamplifier (Stanford Research System) was used to amplify the signal. A Si photodiode with a known spectral response was used for calibration
 
 
+Besides the value of $J_d$, a common metric used to characterize the sensitivity of photodiodes and to provide a fair comparison among different devices is the specific detectivity ($D^*$), described by equation: 
+
+\begin{equation}
+    D^* = \frac{R\sqrt{A\Delta f}}{i_n},
+\end{equation}
+
+where R is the device's responsivity and $i_n$ is the noise current spectral density. R represents the ratio of the output electrical signal with regards to the input optical power and can be calculated as a function of wavelength based on the EQE values through: 
+
+\begin{equation}
+    R = \frac{e}{hc/\lambda} \times EQE \quad [AW^{-1}],    
+\end{equation}
+
+where h is Planck's constant, c is the speed of light, and $\lambda$ is the incoming wavelength. Additionally, $i_n$ arises from spontaneous fluctuations in current in dark conditions and is composed of frequency-independent (shot noise: $i_{shot}$ and thermal noise: $i_{therm}$) and 
+frequency dependent ($i_{1/f}$) contributions. In research around thin film photodiodes, it is commonly considered that the shot noise dominant source of noise, which even though leads to an overestimation of the specific detectivity, allows for a ballpark comparison of different device architectures and processing conditions:  
+
+\begin{equation}
+    D^* = \frac{R}{\sqrt{2eJ_d}}
+\end{equation}  
+
+Additional parameters, relevant for the characterization of perovskite photodiodes 
+
+Additinal paramters of interest include the linearity, i.e. the increase in jphoto with increasing incidebt power, as well as the respose speed which is defined by xx
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Keep the following \cleardoublepage at the end of this file, 
