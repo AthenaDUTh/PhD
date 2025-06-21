@@ -549,7 +549,9 @@
 \usepackage{rotfloat}
 \usepackage{float}
 \usepackage{multirow}
-\usepackage{adjustbox}   % To adjust figure sizes if needed
+\usepackage{adjustbox}
+\usepackage{longtable}
+% To adjust figure sizes if needed
 
 \usepackage{tabularx}
 \usepackage{chemformula}  % for \ch{}

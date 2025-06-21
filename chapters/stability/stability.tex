@@ -1,8 +1,8 @@
 % !TeX root = ../../thesis.tex
-\chapter{Ambient Stability of Thermally Co-Evaporated \ch{CsPbI_2Br} Thin Films}\label{ch:stability}
+\chapter{Ambient Stability of Thermally Co-Evaporated \ch{CsPbI2Br} Thin Films}\label{ch:stability}
 
 
-So far, thermally co-evaporated \ch{CsPbI_2Br} thin films have enabled the fabrication of vacuum-deposited photodiodes with competitive performance and excellent high-temperature tolerance. However, one critical aspect, which is also one of the inherent limitations of \ch{CsPbI_xBr_{3-x}} (1<x<3) perovskites, remains unaddressed: their phase instability, particularly in the presence of moisture. In this chapter, we explore the factors influencing perovskite phase instability, with a particular emphasis on thermally evaporated thin films. Followingly, we attempt to benchmark the stability of our thermally co-evaporated \ch{CsPbI_2Br} thin films, however challenges in the reproducibility of experimental data motivates us to adopt a combinatorial, high-throughput experimentation approach. The latter allows us to investigate the impact of precursor stoichiometry, substrate type, and perovskite thickness. Building on these insights, we fabricate top-illuminated PePDs and assess their performance over multiple days of exposure to open-air conditions.
+So far, thermally co-evaporated \ch{CsPbI_2Br} thin films have enabled the fabrication of vacuum-deposited photodiodes with competitive performance and excellent high-temperature tolerance. However, one critical aspect, which is also one of the inherent limitations of \ch{CsPbI_xBr_{3-x}} $(1<x\leq3)$ perovskites, remains unaddressed: their phase instability, particularly in the presence of moisture. In this chapter, we explore the factors influencing perovskite phase instability, with a particular emphasis on thermally evaporated thin films. Followingly, we attempt to benchmark the stability of our thermally co-evaporated \ch{CsPbI_2Br} thin films, however challenges in the reproducibility of experimental data motivates us to adopt a combinatorial, high-throughput experimentation approach. The latter allows us to investigate the impact of precursor stoichiometry, substrate type, and perovskite thickness. Building on these insights, we fabricate top-illuminated PePDs and assess their performance over multiple days of exposure to open-air conditions.
 
 
 \section{Origins of Ambient (In)-Stability}
@@ -10,8 +10,8 @@ So far, thermally co-evaporated \ch{CsPbI_2Br} thin films have enabled the fabri
 As discussed in Section~\ref{ch1:scalable_high_temp}, the perovskite compositions \ch{CsPbI_3} and \ch{CsPbI_2Br} exist in two distinct structural forms: the black phase (which includes cubic, tetragonal, and orthorhombic polymorphs) and the yellow phase. For \ch{CsPbI_3}, the thermodynamically favored phase at room temperature is the yellow one, which, due to its significantly larger bandgap ($\sim$2.8 eV), is unsuitable for optoelectronic applications. While it is possible to "trap" the black phase at room temperature under inert conditions (e.g., in a nitrogen environment), it remains prone to conversion \cite{Steele2021TrojansPerovskite}. The yellow phase rapidly re-emerges upon mild heating (around 60\degree C) or exposure to ambient moisture. In the former case, the thermal energy is sufficient to overcome the activation barrier for the phase transition \cite{Steele2019ThermalFilms}. In the latter, water molecules adsorbed on the perovskite surface act as catalysts, promoting the formation of halide vacancies, which, in turn, lowers the free energy barrier between the two phases \cite{Dastidar2016HighIodide, Kang2017HighCsPbBr3, Lin2018ThermochromicCells, Lin2021KineticsPerovskite}. 
 
 
-The challenges of stabilizing the black perovskite phase at room temperature (in inert environment), as well as the prevention of conversion at mild temperatures are both successfully tackled with the introduction of \ch{Br^-} into the lattice and the formation of the \ch{CsPbI_2Br} composition \cite{Sutton2016Bandgap-TunableCells}. For example, \ch{CsPbI_2Br} thin films can be stored unaltered in a N2 glovebox for months or even years, while the black phase is retained even under continuous heating from room temperature to beyond 300\degree 
-C \cite{Papadopoulou2024InEllipsometry}. The enhanced stability is attributed to the smaller ionic radius of \ch{Br^-}, which, in turn, increases the Goldschmidt tolerance factor (Eq.~\ref{eq:tolerance_factor}) of the composition. However, the issue of phase conversion upon exposure to ambient moisture remains unresolved, with reported stabilities ranging from just a few minutes to several days \cite{Zhu2022UnderstandingPerovskites, Zheng2021ImprovedCells, Mariotti2018StabilityDevices}. 
+The challenges of stabilizing the black perovskite phase at room temperature (in inert environment), as well as the prevention of conversion at mild temperatures are both successfully tackled with the introduction of \ch{Br^-} into the lattice and the formation of the \ch{CsPbI_2Br} compositional variant \cite{Sutton2016Bandgap-TunableCells}. For example, \ch{CsPbI_2Br} thin films can be stored unaltered in a N2 glovebox for months or, possibly, even years, while the black phase is retained even under continuous heating from room temperature to beyond 300\degree 
+C \cite{Papadopoulou2024InEllipsometry}. The enhanced stability is attributed to the smaller ionic radius of \ch{Br^-}, which, in turn, increases the Goldschmidt tolerance factor (Eq.~\ref{eq:tolerance_factor}) of the composition. However, the issue of phase conversion upon exposure to ambient moisture remains unresolved. Even though there is a clear improvement compared to the instantaneous conversion of the \ch{CsPbI_3} composition, the reported ambient stability of the \ch{CsPbI_2Br} films present a large variability, that ranges from just a few minutes to several days \cite{Zhu2022UnderstandingPerovskites, Zheng2021ImprovedCells, Mariotti2018StabilityDevices}. 
 
 Strategies to improve the ambient stability of \ch{CsPbI_3} and \ch{CsPbI_2Br} have been primarily investigated for solution processed, and more specifically spin-coated, thin films. These techniques can be distinguished into i) \ch{ABX_3} site doping, ii) incorporation of additives into the perovskite solution, iii) surface functionalization, or iv) dimensionality engineering \cite{Jin2024PhaseDevices}. However, due to the fundamentally different deposition conditions and crystal growth involved in thermal co-evaporation, the effectiveness of these strategies might be inherently non-transferable or difficult to replicate in vacuum-deposited perovskite systems. For instance, the approaches of surface functionalization and additive inclusion typically rely on the use of organic components, such as DMAI (dimethylammonium iodide), PEAI (phenethylammonium iodide), \ch{DETAI_3} (diethylenetriamine iodide), which could potentially compromise the thermal stability of our device stack. The strategy of introducing \ch{ABX_3} site doping might seem more easily transferable through the co-evaporation of necessary precursors. For instance, the use of bismuth (Bi) as a B-site dopant has been shown to drastically improve the stability of $\gamma-$\ch{CsPbI_2Br} solution-processed thin films \cite{Hu2017BismuthCells}. However, when Yang et al. attempted to deposit \ch{CsPb_{0.96}Bi_{0.04}I_3} thin films via the co-evaporation of CsI and \ch{Pb_{1-x}Bi_xI_2} powders, they discovered that, when evaporated, the targeted composition is not a thermodynamically favored black phase system, despite its improved tolerance factor \cite{Yang2021CanPhase}.
 
@@ -26,7 +26,7 @@ An additional option for improving the stability of perovskite films, which is n
         \includegraphics[width=\textwidth]{chapters/stability/imeges/Stability_Lierature.pdf} % Replace with your image file                
     \end{subfigure}
 
-    \caption{Literature review on studies evaluating the phase stability of \ch{CsPbI_3} ans \ch{CsPbI_2Br} thin films. (a) Rate of brown-to-yellow phase conversion for CsBr-rich, stoichiometrically balanced, and \ch{PbI_2}-rich \ch{CsPbI_2Br} thin films. Reproduced from \cite{Ma2017TheCells}. (b) Appearance of phase boundary on an as-deposited \ch{CsPbI_3} thin film deposited via the co-evaporation of CsI and \ch{PbI_2} without substrate rotation. (c) According to XRF measurements, the boundary separates the Cs-rich from the Pb-rich region. Reproduced from \cite{Becker2019LowExperimentation}. (d) Impact of grain size on the Gibbs free energy difference between the $\delta-$ and the $\gamma-$phase ($\Delta G$).  (e) Once the grain size (r) is smaller than a critical value ($r^*$), the $\gamma-$phase is preferred. Reproduced from \cite{Dong2023GrowthFilm}. }
+    \caption[Literature review on studies evaluating the phase stability of \ch{CsPbI_3} ans \ch{CsPbI_2Br} thin films.]{Literature review on studies evaluating the phase stability of \ch{CsPbI_3} ans \ch{CsPbI_2Br} thin films. (a) Rate of brown-to-yellow phase conversion for CsBr-rich, stoichiometrically balanced, and \ch{PbI_2}-rich \ch{CsPbI_2Br} thin films. Reproduced from \cite{Ma2017TheCells}. (b) Appearance of phase boundary on an as-deposited \ch{CsPbI_3} thin film deposited via the co-evaporation of CsI and \ch{PbI_2} without substrate rotation. (c) According to XRF measurements, the boundary separates the Cs-rich from the Pb-rich region. Reproduced from \cite{Becker2019LowExperimentation}. (d) Impact of grain size on the Gibbs free energy difference between the $\delta-$ and the $\gamma-$phase ($\Delta G$).  (e) Once the grain size (r) is smaller than a critical value ($r^*$), the $\gamma-$phase is preferred. Reproduced from \cite{Dong2023GrowthFilm}. }
     \label{fig:stability:literature_review}
 \end{figure}
 
@@ -102,14 +102,14 @@ According to previous literature reports, the expected order of ambient stabilit
         \caption*{(c)}
     \end{subfigure}
 
-    \caption{Characterization of (a) ambient stability, (b) SSPL spectra, and (c) surface morphology of \ch{CsPbI_2Br} thin films with various nominal CsBr:\ch{PbI_2} molar ratios.}
+    \caption[Impact of nominal CsBr:\ch{PbI_2} molar ratio on ambient stability, PL, and surface morphology.]{Characterization of (a) ambient stability, (b) SSPL spectra, and (c) surface morphology of \ch{CsPbI_2Br} thin films with various nominal CsBr:\ch{PbI_2} molar ratios.}
     \label{fig:stability:stoichiomtries_rotation}
 \end{figure}
 
 To investigate potential differences that could explain their varying ambient stability, we conducted PL and AFM measurements on one black-phase sample from each deposition condition. PL measurements show that all samples exhibit a similar emission peak at 645 nm with comparable full width at half-maximum (FWHM) (Figure~\ref{fig:stability:stoichiomtries_rotation}b). The only notable exception is the stoichiometric (Stoich.) sample, which displays a slightly red-shifted peak at 650 nm and a marginally narrower FWHM. The redshift of the emission peak could be a first indication of a \ch{PbI_2}-rich composition, contrary to the intended stoichiometry. On the other hand, there are no discernible differences among the other 3 samples that could potentially account for the superior stability of the CsBr+ sample one day after exposure. A similar trend is observed in the surface morphology of the 4 samples (Figure~\ref{fig:stability:stoichiomtries_rotation}c). The only sample that stands out is the Stoich. one, with slightly larger RMS roughness (3.9 nm compared to 2.6 and 2.4 nm), with the rest of the samples exhibiting an almost identical morphology. 
 
 
-Since the optical and morphological properties of the samples did not sufficiently explain the ambient (in)stability of the deposited thin films, we employed Inductively Coupled Plasma Mass Spectrometry (ICP-MS) to investigate potential compositional differences. In ICP-MS, each sample is first digested in nitric acid to produce a homogeneous solution. This solution is then nebulized, vaporized, and ionized in a high-temperature argon plasma. The resulting ions are extracted and analyzed by a mass spectrometer, which identifies and quantifies them based on their mass-to-charge ratio. However, due to the poor ionization efficiency and volatility of halogens, it is not possible to accurately quantify iodine and bromine using this method. As a result, we focus on the measurable Cs:Pb mass ratio. Under the assumption that Cs originates solely from CsBr and Pb from \ch{PbI_2}, we can followingly use the Cs:Pb mass ratio to estimate the CsBr:\ch{PbI_2} molar ratio. Nevertheless, it should be noted that the measurement results are prone to errors, mainly introduced by the operator. Such errors can be appear, for instance, during the extrapolation of the calibration curve, the preparation of standard solutions and necessary dilutions, or the weighing of the samples. This is the reason why the measurement is repeated 3 times, allowing us to exact a mean value and its standard deviation. Therefore, the presented results should be treated qualitatively and as way to identify differences among the samples, rather than a precise quantification of their elemental composition. 
+Since the optical and morphological properties of the samples did not sufficiently explain the ambient (in)stability of the deposited thin films, we employed Inductively Coupled Plasma Mass Spectrometry (ICP-MS) to investigate potential compositional differences. In ICP-MS, each sample is first digested in nitric acid to produce a homogeneous solution. This solution is then nebulized, vaporized, and ionized in a high-temperature argon plasma. The resulting ions are extracted and analyzed by a mass spectrometer, which identifies and quantifies them based on their mass-to-charge ratio. However, due to the poor ionization efficiency and volatility of halogens, it is not possible to accurately quantify iodine and bromine using this method. As a result, we focus on the measurable Cs:Pb mass ratio. Under the assumption that Cs originates solely from CsBr and Pb from \ch{PbI_2}, we can followingly use the Cs:Pb mass ratio to estimate the CsBr:\ch{PbI_2} molar ratio. Nevertheless, it should be noted that the measurement results are prone to errors, mainly introduced by the operator. Such errors can appear, for instance, during the extrapolation of the calibration curve, the preparation of standard solutions and necessary dilutions, or the weighing of the samples. This is the reason why the measurement is repeated 3 times, allowing us to extract a mean value and its standard deviation. Therefore, the presented results should be treated qualitatively and as way to identify differences among the samples, rather than a precise quantification of their elemental composition. 
 
 \begin{figure}[htbp]
     \centering
@@ -119,7 +119,7 @@ Since the optical and morphological properties of the samples did not sufficient
         \includegraphics[width=\textwidth]{chapters/stability/imeges/Stability-ICP-MS.pdf} % Replace with your image file                
     \end{subfigure}
 
-    \caption{Comparison of the nominal CsBr:\ch{PbI_2} molar ratio with the experimentally determined one, obtained through ICP-MS measurements.}
+    \caption[Comparison of the nominal CsBr:\ch{PbI_2} molar ratio with the experimentally determined one, obtained through ICP-MS measurements.]{Comparison of the nominal CsBr:\ch{PbI_2} molar ratio with the experimentally determined one, obtained through ICP-MS measurements.}
     \label{fig:stability:icp_ms}
 \end{figure}
 
@@ -145,7 +145,7 @@ These results suggest that stoichiometry control is more challenging than initia
     \end{subfigure}
 
     % Caption for the whole figure
-    \caption{Comparison of XRD patterns for (a) CsBr and (b) \ch{PbI_2} powders in their fresh state and after being used for a single thermal evaporation process.}   
+    \caption[Comparison of XRD patterns for precursor powders in their fresh state and after being used for a single thermal evaporation process.]{Comparison of XRD patterns for (a) CsBr and (b) \ch{PbI_2} powders in their fresh state and after being used for a single thermal evaporation process.}   
     \label{fig:stability:fresh_used_powders}
 \end{figure}
 
@@ -198,11 +198,11 @@ Figure~\ref{fig:stability:repeatability}a shows a schematic of the substrate hol
         \centering
         \includegraphics[width=\textwidth]{chapters/stability/imeges/Stability - Rotation.pdf} % Replace with your image file                
     \end{subfigure}
-    \caption{(a) Schematic illustration of the substrate holder that can be loaded with up to nine $3\times 3$ $cm^2$ substrates. The position of each substrate on the holder is labeled as S1 to S9. Ambient stability of four samples from two, in principle, identical depositions, labeled as (b) A1 and (c) A2. The nominal CsBr:\ch{PbI_2} molar ratio was 1.05:1.00 for both. (d) Ambient stability of sample S9 from Deposition B1, which had a nominal CsBr:\ch{PbI_2} molar ratio equal to 1.1:1.0.}
+    \caption[Variability of \ch{CsPbI_2Br} films' ambient stability across different positions on the substrate holder and different deposition runs.]{(a) Schematic illustration of the substrate holder that can be loaded with up to nine $3\times 3$ $cm^2$ substrates. The position of each substrate on the holder is labeled as S1 to S9. Ambient stability of four samples from two, in principle, identical depositions, labeled as (b) A1 and (c) A2. The nominal CsBr:\ch{PbI_2} molar ratio was 1.05:1.00 for both. (d) Ambient stability of sample S9 from Deposition B1, which had a nominal CsBr:\ch{PbI_2} molar ratio equal to 1.1:1.0.}
     \label{fig:stability:repeatability}
 \end{figure}
 
-These results emphasize that even with a stricter protocol in terms of precursor powder and QCM usage, it is not possible to accurately predict and control the ambient stability of the \ch{CsPbi_2Br} thin films. One thing that can be excluded though is the potential sensitivity of ambient stability to the position of a sample within the substrate holder. It is likely that additional, less controllable, factors significantly influence the stability of the deposited films. These factors may include substrate preparation details, such as potential contamination between the cleaning process and transfer to the vacuum chamber, as well as conditions within the chamber itself. For instance, material buildup on the chamber walls might alter evaporation dynamics and affect film uniformity or composition. In any case, this study highlights the limited reproducibility of ambient stability experiments, at least in the context of thermally evaporated perovskite thin films. This finding stands in contrast to a common practice in literature, where stability data are often reported for only a small number of samples, potentially only the best-performing ones, without providing information on the repeatability of the results. Consequently, a more critical evaluation of reported findings in this field is essential.
+These results emphasize that even with a stricter protocol in terms of precursor powder and QCM usage, it is not possible to accurately predict and control the ambient stability of the \ch{CsPbI_2Br} thin films. One thing that can be excluded though is the potential sensitivity of ambient stability to the position of a sample within the substrate holder. It is likely that additional, less controllable, factors significantly influence the stability of the deposited films. These factors may include substrate preparation details, such as potential contamination between the cleaning process and transfer to the vacuum chamber, as well as conditions within the chamber itself. For instance, material buildup on the chamber walls might alter evaporation dynamics and affect film uniformity or composition. In any case, this study highlights the limited reproducibility of ambient stability experiments, at least in the context of thermally evaporated perovskite thin films. This finding stands in contrast to a common practice in literature, where stability data are often reported for only a small number of samples, potentially only the best-performing ones, without providing information on the repeatability of the results. Consequently, a more critical evaluation of reported findings in this field is essential.
 
 In the framework of this thesis, many efforts were dedicated to achieving a consistent improvement in the ambient stability of the \ch{CsPbI_2Br} thin films. Such efforts included the tuning of the total deposition rate, the annealing temperature, duration and environment, as well as the introduction of template layers (such as a thin layer of CsBr) on top or below the perovskite lattice. These strategies were guided by previously published studies, primarily focused on solution-processed films. Nevertheless, none of these approaches resulted in a repeatable ambient stability that consistently exceeded 48 hours.
 
@@ -229,7 +229,7 @@ The lack of repeatability and control over the ambient stability of the thermall
     \end{subfigure}
 
     % Caption for the whole figure
-    \caption{(a) Schematic representation of the vapor flux profile, illustrating higher intensity along the central axis and decreasing flux at larger angles from the source. When the rotation of the substrate holder is de-activated, this leads to (b) a gradient of perovskite compositions across the substrate holder. The position of the CsBr and \ch{PbI_2} sources with respect to the substrate holder is only a visual representation and does not represent the real arrangement inside the vacuum chamber.}   
+    \caption[Schematic illustration of compositional gradient across the substrate holder when the sample rotation during evaporation is de-activated. ]{(a) Schematic representation of the vapor flux profile, illustrating higher intensity along the central axis and decreasing flux at larger angles from the source. When the rotation of the substrate holder is de-activated, this leads to (b) a gradient of perovskite compositions across the substrate holder. The position of the CsBr and \ch{PbI_2} sources with respect to the substrate holder is only a visual representation and does not represent the real arrangement inside the vacuum chamber.}   
     \label{fig:stability:combinatorial_approach}
 \end{figure}
 
@@ -245,13 +245,13 @@ In order to overcome this challenge, we evaluate the use of combinatorial therma
     % First row
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/stability/imeges/CsBrMSE.pdf} % Replace with your image file
+        \includegraphics[width=\textwidth]{chapters/stability/imeges/CsBrThickness.pdf} % Replace with your image file
         \caption*{(a)}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/stability/imeges/CsBrThickness.pdf} % Replace with your image file
+        \includegraphics[width=\textwidth]{chapters/stability/imeges/CsBrMSE.pdf} % Replace with your image file
         \caption*{(b)}
     \end{subfigure}
 
@@ -259,20 +259,20 @@ In order to overcome this challenge, we evaluate the use of combinatorial therma
     % Second row
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/stability/imeges/PbI2MSE.pdf} % Replace with your image file
+        \includegraphics[width=\textwidth]{chapters/stability/imeges/PbI2Thickness.pdf} % Replace with your image file
         \caption*{(c)}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/stability/imeges/PbI2Thickness.pdf} % Replace with your image file
+        \includegraphics[width=\textwidth]{chapters/stability/imeges/PbI2MSE.pdf} % Replace with your image file
         \caption*{(d)}
     \end{subfigure}
-    \caption{Spectroscopic ellipsometry results showing (a) the fitting MSE and (b) the spatial thickness distribution of the CsBr layer following its deposition on a 6-inch wafer. Spectroscopic ellipsometry results showing (c) the fitting MSE and (d) the spatial thickness distribution of the \ch{PbI_2} layer following its deposition on a 6-inch wafer.}
+    \caption[Precursors' spatial thickness profile across a 6'' wafer, when deposited separately without substrate rotation. ]{Spectroscopic ellipsometry results showing (a) the spatial thickness distribution and (b) the MSE of the CsBr layer following its deposition on a 6-inch wafer. Spectroscopic ellipsometry results showing (c) the spatial thickness distribution and (d) the MSE of the \ch{PbI_2} layer following its deposition on a 6-inch wafer.}
     \label{fig:stability:ellipsometry:thickness_mse}
 \end{figure}
 
-In order to evaluate the compositional gradient across the whole substrate holder during a combinatorial deposition, we replace the $3\times3$ $cm^2$ coupons with 6'' (or $\approx$ 15 cm) wafer. This way, it is possible to deposit each precursor on a separate wafer and use a high-throughput characterization technique, such as spectroscopic ellipsometry, to extract information about the precursor's continuous thickness variation across a large area. This approach is illustrated in Figure~\ref{fig:stability:ellipsometry:thickness_mse}. While the MSE of model developed for the \ch{PbI_2} layer is maintained below 14 across the whole wafer (Figure~\ref{fig:stability:ellipsometry:thickness_mse}c), the deviation between experimental and simulated results is larger in the case of the CsBr layer (MSE is beyond 30 in certain areas in Figure~\ref{fig:ellipsometry:roughness_thickness}a). This is attributed to the hygroscopic nature of alkali halides and the fact that cesium halides' surface transitions from a transparent and reflective one to a rough and diffusive one within minutes of exposure to ambient moisture \cite{Chen2017All-Vacuum-Deposited11}. Nevertheless, there is a good agreement between the nominal thickness of each precursor (111 nm for CsBr and 164 nm for \ch{PbI_2}) and the modeled thickness in the center of each wafer (116 nm and 165 nm in Figure~\ref{fig:stability:ellipsometry:thickness_mse}b and d, respectively). Simultaneously, the iso-concentration lines for the thickness variation of each precursor exhibit a radial symmetry, with the thickness maxima indicating the position of the respective source crucible relative to the wafer holder. 
+In order to evaluate the compositional gradient across the whole substrate holder during a combinatorial deposition, we replace the $3\times3$ $cm^2$ coupons with a 6'' (or $\approx$ 15 cm) wafer. In this way, it is possible to deposit each precursor on a separate wafer and use a high-throughput characterization technique, such as spectroscopic ellipsometry, to extract information about the precursor's continuous thickness variation across a large area. This approach is illustrated in Figure~\ref{fig:stability:ellipsometry:thickness_mse}. While the MSE of model developed for the \ch{PbI_2} layer is maintained below 14 across the whole wafer (Figure~\ref{fig:stability:ellipsometry:thickness_mse}d), the deviation between experimental and simulated results is larger in the case of the CsBr layer (MSE is beyond 30 in certain areas in Figure~\ref{fig:ellipsometry:roughness_thickness}b). This is attributed to the hygroscopic nature of alkali halides and the fact that cesium halides' surface transitions from a transparent and reflective one to a rough and diffusive one within minutes of exposure to ambient moisture \cite{Chen2017All-Vacuum-Deposited11}. Nevertheless, there is a good agreement between the nominal thickness of each precursor (111 nm for CsBr and 164 nm for \ch{PbI_2}) and the modeled thickness in the center of each wafer (116 nm and 165 nm in Figure~\ref{fig:stability:ellipsometry:thickness_mse}a and c, respectively). Simultaneously, the iso-concentration lines for the thickness variation of each precursor exhibit a radial symmetry, with the thickness maxima indicating the position of the respective source crucible relative to the wafer holder. 
 
 \begin{figure}[htbp]
     \centering
@@ -290,7 +290,7 @@ In order to evaluate the compositional gradient across the whole substrate holde
         \caption*{(b)}
     \end{subfigure}
 
-\caption{(a) Spatial distribution of the CsBr to \ch{PbI_2} molar ratio across the 6-inch wafer. (b) Overlay comparison of the substrate holder and compositional spatial distribution.}
+\caption[Spatial distribution of the CsBr to \ch{PbI_2} molar ratio across the 6-inch wafer and overlay comparison with the substrate holder.]{(a) Spatial distribution of the CsBr to \ch{PbI_2} molar ratio across the 6-inch wafer. (b) Overlay comparison of the substrate holder and compositional spatial distribution.}
 \label{fig:stability:ellipsometry:molar_ratio}
 
 \end{figure}
@@ -313,7 +313,7 @@ Continuing with the combinatorial deposition approach, we performed three co-eva
                
     \end{subfigure}
 
-    \caption{Ambient stability of 300-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass substrates.}
+    \caption[Ambient stability of 300-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass substrates.]{Ambient stability of 300-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass substrates.}
     \label{fig:stability:no_rotation:300nm_glass}
 \end{figure}
 
@@ -329,7 +329,7 @@ The ambient stability of samples with 300 nm of \ch{CsPbI_2Br} films on glass su
         \includegraphics[width=\textwidth]{chapters/stability/imeges/Stability_No_Rotation_139nm_on_glass.pdf} % Replace with your image file                
     \end{subfigure}
 
-    \caption{Ambient stability of 150-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass substrates.}
+    \caption[Ambient stability of 150-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass substrates.]{Ambient stability of 150-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass substrates.}
     \label{fig:stability:no_rotation:150nm_glass}
 \end{figure}
 
@@ -343,14 +343,14 @@ Reducing the thickness of the perovskite film to half does not delay the convers
         \includegraphics[width=\textwidth]{chapters/stability/imeges/Stability_No_Rotation_275_on_nio.pdf} % Replace with your image file                
     \end{subfigure}
 
-    \caption{Ambient stability of 300-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass/ITO substrates, coated with 15 nm of \ch{NiO_x}.}
+    \caption[Ambient stability of 300-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass/ITO substrates coated with 15 nm of \ch{NiO_x}.]{Ambient stability of 300-nm-thick \ch{CsPbI_2Br} thin films deposited via combinatorial co-evaporation on glass/ITO substrates coated with 15 nm of \ch{NiO_x}.}
     \label{fig:stability:no_rotation:300nm_ito_nio}
 \end{figure}
 
 
 Lastly, Figure~\ref{fig:stability:no_rotation:300nm_ito_nio} demonstrates the stability of 300 nm \ch{CsPbI_2Br} films, deposited on glass/ITO substrates, coated with 15 nm on \ch{NiO_x}. The key difference in this case is that all samples on the right side of the phase boundary maintain their stability for over 26 days, even at a thickness of 300 nm. This further highlights the importance of the selected substrate on the ambient stability, which needs to be further evaluated in future experiments. To assess the repeatability of the experiment, an identical deposition was performed (Figure~\ref{fig:appendix:stability_on_NiO_v2}), demonstrating that all samples on the right side of the phase boundary remained stable for over six days. 
 
-As a result, through the combinatorial thermal co-evaporation approach, and only three depositions, it was possible to gain valuable insights into factors that affect the ambient stability of \ch{CsPbI_2Br} thin films, including their composition, thickness, and substrate type. Nevertheless, additional characterization measurements are required to further explain and quantify the underlying physical mechanisms. An additional parameter that needs to be evaluated in future studies is the absence of rotation itself on the stability of the deposited films. The aforementioned depositions revealed that depositing films with a nominal CsBr:\ch{PbI_2} molar ratio in the range of 1.2:1.0 should, in principle, boost the stability of the films beyond a couple days. However, this result could not be reproduced for samples deposited with substrate rotation activated. This could hint towards a fundamentally different growth and crystallization mechanism of films deposited with and without rotation, that has a critical impact on the strain on the lattice and by extension to the ambient stability of the films. 
+As a result, through the combinatorial thermal co-evaporation approach, and only three depositions, it was possible to gain valuable insights into factors that affect the ambient stability of \ch{CsPbI_2Br} thin films, including their composition, thickness, and substrate type. Nevertheless, additional characterization measurements are required to further explain and quantify the underlying physical mechanisms. An additional parameter that needs to be evaluated in future studies is the absence of rotation itself on the stability of the deposited films. The aforementioned depositions revealed that depositing films with a nominal CsBr:\ch{PbI_2} molar ratio in the range of 1.2:1.0 should, in principle, boost the stability of the films beyond a couple days. However, this result could not be reproduced for samples deposited with substrate rotation activated. This could hint towards a fundamentally different growth and crystallization mechanism of films deposited with and without rotation, that has a critical impact on the strain on the lattice and by extension to the ambient stability of the films. While a detailed exploration of this feature is outside the scope of this thesis, preliminary studies have already been initiated within our group.
 
 
 \subsection{Ambient Stability of PePDs}
@@ -384,7 +384,7 @@ As a result, through the combinatorial thermal co-evaporation approach, and only
         \includegraphics[width=\textwidth]{chapters/stability/imeges/AP44_4_Thesis.pdf} % Replace with your image file
         \caption*{(d)}
     \end{subfigure}
-    \caption{Statistical results of current density at -2 V in dark and under 1-sun illumination for the top illuminated PePDs (a) S4, (b) S8, (c) S2, and (d) S6 (labeled according to the position of the substrate in Figure~\ref{fig:stability:ellipsometry:molar_ratio}b) as a function of exposure days to ambient conditions.}
+    \caption[Statistical results of current density at -2 V in dark and under 1-sun illumination for the top illuminated PePDs as a function of exposure days to ambient conditions.]{Statistical results of current density at -2 V in dark and under 1-sun illumination for the top illuminated PePDs (a) S4, (b) S8, (c) S2, and (d) S6 (labeled according to the position of the substrate in Figure~\ref{fig:stability:ellipsometry:molar_ratio}b) as a function of exposure days to ambient conditions.}
     \label{fig:stability:pepd_stability}
 \end{figure}
 
