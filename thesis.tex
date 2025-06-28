@@ -20,13 +20,13 @@
 %\subtitle{Multiscale computing for Dummies}
 
 \author{Athina}{Papadopoulou}
-\president{Prof.~The~Chairman}{}
+\president{Prof.~dr.~ir.~Raf Dewil}{}
 \supervisor{Prof.~dr.~ir.~Jan Genoe}{}
 \supervisor{Prof.~dr.~ir.~Paul Leroux}{}
 \jurymember{Prof.~dr.~Pol Van Dorpe}{KU Leuven}
 \jurymember{Prof.~dr.~Johan Hofkens}{KU Leuven}
 \jurymember{Prof.~dr.~Maarten B. J. Roeffaers}{KU Leuven}
-\externaljurymember{Prof.~dr.~Rene A.J. Janssen}{TU Eindhoven}
+\externaljurymember{Prof.~dr.~ir.~Rene A.J. Janssen}{TU Eindhoven}
 \externaljurymember{Dr.~ir.~Sofie Put}{Mirion Technologies}
 
 % Your research group within the department
@@ -116,6 +116,8 @@
 \frontmatter % to get \pagenumbering{roman}
 
 \includepreface{preface}
+\includepopabstract{popabstract}
+\includepopabstractnl{popabstractnl}
 \includeabstract{abstract}
 \includeabstractnl{abstractnl}
 
@@ -175,6 +177,20 @@
 \bibliography{allpapers}
 % BibLatex (comment lines above and comment out biblatex lines in preamble)
 %\printbibliography[title=\bibname]
+
+% Uncomment the appropriate sentences in and expand the text where needed to make it more specific and add topics if they are not covered by any of the indicated topics.
+\useOfGenAI{%
+  I did not use generative AI assistance tools during the research/writing process of my thesis, except for mere language assistance. % The use of GenAI tools for language assistance does not need to be further specified. (The part 'except for mere language assistance' can be left out if not applicable)
+  % I did use the generative AI assistance tools ... % specify which e.g. MS Copilot/ ChatGPT/ResearchRabbit/... Please indicate in which way(s) you were using it and replace Generative AI with the specific AI tool(s) that was/were used:
+  % Generative AI was used as a search engine to learn about a particular topic. % If yes, please specify the usage.
+  % Generative AI was used for carrying out a literature review. % If yes, please specify the usage.
+  % Generative AI was used for short-form input assistance. % If yes, please specify the usage.
+  % Generative AI was used for generating programming code. % If yes, please specify the usage.
+  % Generative AI was used to generate new research ideas. % If yes, please specify the usage.
+  % Generative AI was used to generate visuals. % If yes, please specify the usage.
+  % Other (e.g. the development of a custom chatbot/genAI tool). % Please specify.
+}
+\includegenai{}
 
 
 \includecv{curriculum}

@@ -1,6 +1,9 @@
 % !TeX root = ../../thesis.tex
 \chapter{Fabrication, Characterization, and Optimization of \ch{CsPbI2Br} Photodiodes}\label{ch:transport_layer}
 
+\textit{This chapter was previously published as: Papadopoulou, A., Pintor-Monroy, M. I., Dayaran, S., Skvortsova, I., Dos Anjos, J.P., Subramaniam, S., Song, W., Lieberman, I., Kuang, Y., Hofkens, J., Roeffaers, M. B. J., Bals, S., Gehlhaar, R., \& Genoe, J. (2025). Electron Transport Layer Optimization for All-Inorganic, Vacuum-Deposited Perovskite-Based Photodiodes with Improved Reverse Bias Stability and High Speed. ACS Applied Materials \& Interfaces, \textbf{16(36), 47889–47901.}}
+
+\vspace{2em}
 
 Having established the optical, structural, and morphological properties of thermally co-evaporated \ch{CsPbI_2Br} thin films, the next step involves their integration into photodiodes for the evaluation of their optoelectronic properties. Although photodiodes designed for photovoltaic and photodetecting applications can share identical structures, differences in biasing regimes and end-use operation lead to distinct figures of merit for evaluating their performance. Both applications share the requirement for optimal absorption and extraction of the photo-generated carriers, typically quantified through the current density under illumination ($J_{photo}$) and external quantum efficiency (EQE). For photodetecting applications, the minimization of dark current ($J_d$) is of utmost importance for developing detectors with high sensitivity to signals of low intensity. On the other hand, solar cells benefit more from improvements in the open circuit voltage ($V_{oc}$), which further translate into enhanced power conversion efficiency (PCE). Nevertheless, equation $V_{oc} = \frac{nkT}{q}ln(\frac{J_{photo}}{J_{d}}+1)$, where n is the diode's ideality factor and kT/q is thermal voltage, reveals that improvements in $V_{oc}$ can be translated into lower $J_d$ and vice versa. 
 
@@ -132,34 +135,48 @@ However, an interesting feature comes across when trying to characterize the per
         \label{}
     \end{subfigure}
     
-    \caption[Schematic illustration of ETL combinations used in this study.]{(a) Schematic illustration of the bottom illuminated PePD. Variations of the ETL combinations used in this study, including (b) a single 40 nm \ch{TiO_2} layer, (c) a single 40 nm \ch{c_{60}} layer, and (d) a \ch{C_{60}} – \ch{TiO_2} bilayer, each 20 nm thick.}
+    \caption[Schematic illustration of ETL combinations used in this study.]{(a) Schematic illustration of the bottom illuminated PePD. Variations of the ETL combinations used in this study, including (b) a single 40 nm \ch{TiO_2} layer, (c) a single 40 nm \ch{C_{60}} layer, and (d) a \ch{C_{60}} – \ch{TiO_2} bilayer, each 20 nm thick. The samples are named according to their nominal thickness, while the value in the parenthesis indicates the real thickness, measured through their STEM cross-section (Figure~\ref{fig:etl_optimization:eds_tem_crossection}).}
     \label{fig:etl_optimization:stacks}
 \end{figure}
 
-Considering the importance of the ETL choice on the reverse-bias stability of perovskite-based diodes, we fabricated three variation of the same stack, employing 40 nm of \ch{TiO_2} (Sample 40\ch{TiO_2}), 40 nm of \ch{C_{60}} (Sample 40\ch{C_{60}}), and a 40 nm of a \ch{C_{60}}-\ch{TiO_2} bilayer (Sample 20\ch{C_{60}}-20\ch{TiO_2}) as the device's ETL, as shown in Figure~\ref{fig:etl_optimization:stacks}a-d. \ch{C_{60}} is considered as an alternative ETL in this study given its compatibility with vacuum deposition processes and its demonstrated thermal stability at temperatures exceeding 250 \degree C \cite{Sundar1992ThermalC60, Bracesco2024InPhotovoltaics}. In most cases, a buffer layer, such as bathocuproine (BCP) or lithium fluoride (LiF), is introduced above or below the \ch{C_{60}} layer to mitigate charge buildup and minimize non-radiative recombination losses \cite{Chen2017EffectCells, Ye2022OvercomingCarborane}. However, both materials have been linked with reducing a device's operational and thermal stability, which is why they were deliberately excluded from this study \cite{Al-Ashouri2020MonolithicExtraction, Zheng2020EnhancedStrategy}. Figure~\ref{fig:etl_optimization:eds_tem_crossection}a and b displays the scanning transmission electron microscopy (STEM) high-angle annular dark-field imaging (HAADF) cross-section of samples 40\ch{TiO_2} and 40\ch{C_{60}}, superimposed with their energy dispersive X-Ray spectroscopy (EDS) elemental mapping. All layers appear continuous and compact, with no visible pinholes, cracks, or defects. Based on EDS measurements, the perovskite composition is estimated to be \ch{Cs_{1.15}PbI_{1.83}Br_{1.24}} for both samples.
-
-
 \begin{figure}[ht!]
     \centering
-    % First plot
-    \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
+    % First row
+    \begin{subfigure}[t]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/EDS_TEM_TiO2.pdf} % Replace with your image
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/EDS_TEM_TiO2.pdf} % Replace with your image file
         \caption{}
         \label{}
     \end{subfigure}
-    \hfill % Space between the two plots
-    % Second plot
-    \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
+    \hspace{0.5cm}
+    \begin{subfigure}[t]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{chapters/transport_layers/images/EDS_TEM_C60.pdf} % Replace with your image
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/EDS_TEM_C60.pdf} 
+        % Replace with your image file
+        \caption{}
+        \label{}
+    \end{subfigure} 
+ % Second row
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/SEM_TiO2.pdf} % Replace with your image file
         \caption{}
         \label{}
     \end{subfigure}
-    % Caption for the whole figure
-    \caption[STEM-HAADF and EDS elemental map of the 40\ch{TiO_2} and 40\ch{C_{60}} samples.]{STEM-HAADF image of the (a) 40\ch{TiO_2} and (b) 40\ch{C_{60}} samples, both superimposed with the respective EDS elemental map.}
+    \hspace{0.5cm}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/SEM_C60.pdf} % Replace with your image file
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \caption[STEM-HAADF and EDS elemental map of the 40\ch{TiO_2} and 40\ch{C_{60}} samples.]{STEM-HAADF image of the (a) 40\ch{TiO_2} and (b) 40\ch{C_{60}} samples, both superimposed with the respective EDS elemental map. Magnification at the perovskite/ETL interface for (c) 40\ch{TiO_2} and (d) 40\ch{C_{60}} samples.}
     \label{fig:etl_optimization:eds_tem_crossection}
 \end{figure}
+
+
+Considering the importance of the ETL choice on the reverse-bias stability of perovskite-based diodes, we fabricated three variation of the same stack, employing 40 nm of \ch{TiO_2} (Sample 40\ch{TiO_2}), 40 nm of \ch{C_{60}} (Sample 40\ch{C_{60}}), and a 40 nm of a \ch{C_{60}}-\ch{TiO_2} bilayer (Sample 20\ch{C_{60}}-20\ch{TiO_2}) as the device's ETL, as shown in Figure~\ref{fig:etl_optimization:stacks}a-d. \ch{C_{60}} is considered as an alternative ETL in this study given its compatibility with vacuum deposition processes and its demonstrated thermal stability at temperatures exceeding 250 \degree C \cite{Sundar1992ThermalC60, Bracesco2024InPhotovoltaics}. In most cases, a buffer layer, such as bathocuproine (BCP) or lithium fluoride (LiF), is introduced above or below the \ch{C_{60}} layer to mitigate charge buildup and minimize non-radiative recombination losses \cite{Chen2017EffectCells, Ye2022OvercomingCarborane}. However, both materials have been linked with reducing a device's operational and thermal stability, which is why they were deliberately excluded from this study \cite{Al-Ashouri2020MonolithicExtraction, Zheng2020EnhancedStrategy}. Figure~\ref{fig:etl_optimization:eds_tem_crossection}a and b displays the scanning transmission electron microscopy (STEM) high-angle annular dark-field imaging (HAADF) cross-section of samples 40\ch{TiO_2} and 40\ch{C_{60}}, superimposed with their energy dispersive X-Ray spectroscopy (EDS) elemental mapping. All layers appear continuous and compact, with no visible pinholes, cracks, or defects. Based on EDS measurements, the perovskite composition is estimated to be \ch{Cs_{1.15}PbI_{1.83}Br_{1.24}} for both samples. Figure~\ref{fig:etl_optimization:eds_tem_crossection}c,d provide a close-up to the perovskite-ETL interface for samples 40\ch{TiO_2} and 40\ch{C_{60}}, respectively. An initial distinction that arises is that the boundary between \ch{TiO_2} and Al is sharp and well defined, while the boundary between \ch{C_{60}} and Al appears vague and fuzzy.
+
 
 \begin{figure}[ht!]
     \centering
@@ -231,18 +248,34 @@ Considering the importance of the ETL choice on the reverse-bias stability of pe
 Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a-i provide a complete overview of the PePD performance for the three stack variations. Specifically, Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a-c show the dynamic J-V scan in darkness and under 1 sun illumination, Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}d-f show the spectral EQE response of a single device, and lastly Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}g-i show the static $J_d$ measurements as function of time for increasing reverse bias steps. After each measurement, each device was given an additional 300 seconds to reset in dark. Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}g highlights the sensitivity of 40\ch{TiO_2} sample to reverse bias breakdown, which is not hinted by the dynamic scan of Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a. In more detail, $J_d$ is maintained below 0.1 $\mu A/cm^2$ after the end of the static scan at -0.5 and -1 V, however, a 3-order of magnitude increase is observed once the bias surpasses -2 V. It is important to emphasize that the primary objective of the work presented in this thesis is geared toward imager applications, where the PePDs operate under reverse bias conditions for sub-second durations during signal integration. The duration of this read-out cycle might not be sufficient for the manifestation of the $J_d$ increase, nonetheless, this bias sensitivity could be detrimental for alternative applications that require extensive reverse biasing. Additionally, the observed breakdown mechanism also points to the presence of a defective stack, which could affect device performance in unforeseen ways. Therefore, it is essential to further investigate and address this issue.
 
 
-\begin{figure}[htbp]
+\begin{figure}[ht!]
     \centering
-    % Second row
-    \begin{subfigure}[t]{0.5\textwidth}
+    % First plot
+    \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
         \centering
-        \includegraphics[width=\textwidth]{chapters/material_properties/images/C60-Compare.pdf} % Replace with your image file
-                
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Thickness_Effect.pdf} % Replace with your image
+        \caption{}
+        \label{}
     \end{subfigure}
-
-    \caption[Impact of perovskite annealing on the median current density and interquartile range in dark conditions for PePDs that feature a 40 nm \ch{C_{60}} layer.]{Impact of perovskite annealing on the median current density and interquartile range in dark conditions for PePDs that feature a 40 nm \ch{C_{60}} layer.}
+    \hfill % Space between the two plots
+    % Second plot
+    \begin{subfigure}[t]{0.45\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\textwidth]{chapters/transport_layers/images/Annealing_Effect.pdf} % Replace with your image
+        \caption{}
+        \label{}
+    \end{subfigure}
+    % Caption for the whole figure
+    \caption[Impact of grain size and \ch{C_{60} thickness on the current density variability.}]{(a) Impact of \ch{C_{60}} thickness and (b) perovskite annealing conditions on the PePDs' median current density and interquartile range in dark conditions.}
     \label{fig:et_optim:c60_variability}
 \end{figure}
+
+
+
+
+
+In contrary to sample 40\ch{TiO_2}, the static $J_d$ scan of sample 40\ch{C_{60}} (Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}h) shows an almost linear increase of $J_d$ as a function of applied reverse bias, with no indications of breaking down up to -3 V. This result further strengthens the assumption that the perovskite/ETL interface is one of the most critical factors for the reverse bias stability of a PePD. Despite the improved bias stability, sample 40\ch{C_{60}} is also associated with a large variability in device performance, as indicated by the spread of the interquartile range in Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}b. The fact that this variability is only observed for the 40\ch{C_{60}} sample is likely due to the penetration of Al through the fullerene layer, which leads to the formation of metallic shunts \cite{Lin2015LowImaging, Younes2021EnhancingLayer}. This hypothesis is hinted by the poorly defined \ch{C_{60}}/Al interface (Figure~\ref{fig:etl_optimization:eds_tem_crossection}d) and further supported by varying the thickness of the \ch{C_{60}} layer in Figure~\ref{fig:et_optim:c60_variability}a. Depositing only 20 nm of \ch{C_{60}} is not sufficient to provide a complete coverage of the perovskite film, hence the high leakage among all devices. Increasing the \ch{C_{60}} thickness to 40 and 60 nm has a positive effect in reducing the median $J_d$, yet the variability in device performance is magnified, pointing to the inherently statistical character of the shunt formation. Further increasing the thickness of the \ch{C_{60}} layer to 80 nm provides sufficient separation between the metal contact and the perovskite layer, hence the reduction in the variability of the PePD performance. This phenomenon seems to be aggravated by the perovskite's small grain size and large amount of grain boundaries, as indicated by the comparison of the J-V performance of two PePDs that employ an as-deposited and flash annealed \ch{CsPbI_2Br} thin film in Figure~\ref{fig:et_optim:c60_variability}b. Specifically, both the median $J_d$ and the interquartile range show improvement with annealing of the perovskite layer and the increase of the grain size from $\sim40$ nm to 100-800 nm (Figure~\ref{fig:ch2:afm_sem}). Nevertheless, the variability of the annealed 40\ch{C_{60}} sample is still significant and unsuitable for a reliable PePD. 
+
 
 \begin{figure}[htbp]
     \centering
@@ -256,10 +289,6 @@ Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}a-i provide a complete overview o
     \caption[Current density as a function of time for sample 20\ch{TiO_2}-20\ch{C_{60}} under prolonged (1 hr) biasing at -2 V.]{Current density as a function of time for sample 20\ch{TiO_2}-20\ch{C_{60}} under prolonged (1 hr) biasing at -2 V. No sings of breakdown are observed with the specific stack configuration.}
     \label{fig:et_optim:1hr_stability}
 \end{figure}
-
-
-In contrary to sample 40\ch{TiO_2}, the static $J_d$ scan of sample 40\ch{C_{60}} (Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}h) shows an almost linear increase of $J_d$ as a function of applied reverse bias, with no indications of breaking down up to -3 V. This result further strengthens the assumption that the perovskite/ETL interface is one of the most critical factors for the reverse bias stability of a PePD. Despite the improved bias stability, sample 40\ch{C_{60}} is also associated with a large variability in device performance, as indicated by the spread of the interquartile range in Figure~\ref{fig:etl_opt:dynamicjv_eqe_staticjv}b. The fact that this variability is only observed for the 40\ch{C_{60}} sample is likely due to the incomplete coverage of the perovskite film by the \ch{C_{60}} layer, which leads to the formation of contact pathways between the metal conductor and the perovskite layer \cite{Lin2015LowImaging, Younes2021EnhancingLayer}. This phenomenon seems to be aggravated by the perovskite's small grain size and large amount of grain boundaries, as indicated by the comparison of the J-V performance of two PePDs that employ an as-deposited and flash annealed \ch{CsPbI_2Br} thin film in Figure~\ref{fig:et_optim:c60_variability}). Specifically, both the median $J_d$ and the interquartile range show improvement with annealing of the perovskite layer. Nevertheless, the variability of the annealed 40\ch{C_{60}} sample is still significant and unsuitable for a reliable PePD. 
-
 
 
 
@@ -352,9 +381,6 @@ With the results presented so far, it is clear that the deposition of 20 nm of \
 \subsection{Defect Analysis of the Perovskite/ETL Interface}
 
 
-To further investigate the physical origin of the reverse bias instability of the 40\ch{TiO_2} sample as well as the performance variability the 40\ch{C_{60}}, we examine the EDS elemental concentration profiles of the three stacks, which are shown in Figure~\ref{fig:etl_opt:eds_concentration}a-c. Having as reference the onset of the \ch{Pb} signal, a dashed line is drawn in each plot to indicate the start of the perovskite layer. In contrast to sample 40\ch{C_{60}}, the Cs signal for sample 40\ch{TiO_2} is starting much earlier compared to Pb, I, and Br, pointing out to a significantly altered perovskite stoichiometry at the interface. The significant change in surface stoichiometry of the 40\ch{TiO_2} sample is likely responsible for increased inter-bandgap states, which enhance hole tunneling under reverse bias \cite{Huang2018IntrinsicCsPbI3, Kang2017HighCsPbBr3, Chu2020SoftDefects}. On the other hand, the elemental concentrations of sample 40\ch{C_{60}} reveal an overlapping of the Al signal and perovskite's constituents elements, further supporting the claim for incomplete surface coverage by the \ch{C_60} layer and the creation of metallic shorts that promote performance variability among devices fabricated on the same substrate. Finally, the elemental profile of sample 20\ch{C_{60}}-20\ch{TiO_2} indicates that the bilayer ETL configuration helps preserving the perovskite's surface stoichiometry, reducing the diffusion of Cs in the ETL (albeit not completely eliminating), while at the same time establishing a better separation between the Al contact and the perovskite. 
-
-
 
 \begin{figure}[htbp]
     \centering
@@ -383,10 +409,13 @@ To further investigate the physical origin of the reverse bias instability of th
     \label{fig:etl_opt:eds_concentration}
 \end{figure}
 
+To further investigate the physical origin of the reverse bias instability of the 40\ch{TiO_2} sample as well as the performance variability the 40\ch{C_{60}}, we examine the EDS elemental concentration profiles of the three stacks, which are shown in Figure~\ref{fig:etl_opt:eds_concentration}a-c. Having as reference the onset of the \ch{Pb} signal, a dashed line is drawn in each plot to indicate the start of the perovskite layer. In contrast to sample 40\ch{C_{60}}, the Cs signal for sample 40\ch{TiO_2} is starting much earlier compared to Pb, I, and Br, pointing out to a significantly altered perovskite stoichiometry at the interface. The significant change in surface stoichiometry of the 40\ch{TiO_2} sample is likely responsible for increased inter-bandgap states, which enhance hole tunneling under reverse bias \cite{Huang2018IntrinsicCsPbI3, Kang2017HighCsPbBr3, Chu2020SoftDefects}. On the other hand, the elemental concentrations of sample 40\ch{C_{60}} reveal an overlapping of the Al signal and perovskite's constituents elements, further supporting the claim for incomplete surface coverage by the \ch{C_60} layer and the creation of metallic shorts that promote performance variability among devices fabricated on the same substrate. Finally, the elemental profile of sample 20\ch{C_{60}}-20\ch{TiO_2} indicates that the bilayer ETL configuration helps preserving the perovskite's surface stoichiometry, reducing the diffusion of Cs in the ETL (albeit not completely eliminating), while at the same time establishing a better separation between the Al contact and the perovskite. 
+
+
 To further evaluate the perovskite/ETL interface quality we employ transient photocurrent (TPC) measurements, exciting the PePDs with two different light sources, a white and red (625 nm) light one. Their respective spectral profile is shown in Figure~\ref{fig:etl_opt:tpc_sources}a and b, where the LED irradiance has been tuned to yield a total intensity of 44.5 $mW/cm^2$ and 25.5 $mW/cm^2$ for the white and red light source, respectively. Using different light sources leads to different carrier generation profiles within the perovskite layer, enabling the disentanglement of bulk- and interface-dominated phenomena. The carrier generation rate as a function of distance inside the perovskite layer can be simulated using the optical constants of each device layer (obtained via spectroscopic ellipsometry) as an input in the transfer matrix algorithm (Figure~\ref{fig:tetl_opt:nk_transfer_materix})\cite{Burkhard2010AccountingCells}. The model developed for the simulation is illustrated in Figure~\ref{fig:etl_opt:tpc_simulation}a, while  the carrier generation rate within the \ch{CsPbI_2Br} layer for both light sources is shown in Figure~\ref{fig:etl_opt:tpc_simulation}b. 
 
 
-\begin{figure}[ht!]
+\begin{figure}[ht!=]
     \centering
     % First row
     \begin{subfigure}[t]{0.4\textwidth}

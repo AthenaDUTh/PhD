@@ -518,6 +518,8 @@
 % included tex file will be used!
 \newcommand{\prefname}{Preface}
 \newcommand{\prefnlname}{Dankwoord}
+\newcommand{\popabstname}{Popularized Abstract}
+\newcommand{\popabstnlname}{Gepopulariseerde Samenvatting}
 \newcommand{\abstname}{Abstract}
 \newcommand{\abstnlname}{Beknopte samenvatting}
 \newcommand{\tocname}{Contents}
@@ -903,6 +905,34 @@
   \fi
 }
 
+\newcommand{\includepopabstract}[1]{%
+  \IncludeUnnumberedChapterIfExists{#1}{\popabstname}{\instructionspopabstract}
+        {\phantomsection}
+}
+
+\newcommand{\includepopabstractnl}[1]{%
+  \selectlanguage{dutch}
+  \IncludeUnnumberedChapterIfExists{#1}{\popabstnlname}{\instructionspopabstract}
+        {\phantomsection}
+  \ifadsphd@british
+  \selectlanguage{british}
+  \else
+  \selectlanguage{english}
+  \fi
+}
+
+\newcommand{\instructionspopabstract}{
+  \ifadsphd@showinstructions
+\begin{ftw_instructions}
+The popularized abstract should be approximately 1 page long with
+contents and language that's suited to a wider circle of readers (not
+experts in your field). It should be easy to understand and enjoyable
+to read. Look at it as an advertisement for your PhD project. 
+\end{ftw_instructions}
+  \else
+  \fi
+}
+
 \newcommand{\includeabstract}[1]{%
   \IncludeUnnumberedChapterIfExists{#1}{\abstractname}{\instructionsabstract}
         {\phantomsection}
@@ -985,6 +1015,19 @@
     \instructionsappendices}}
   }
 }
+
+\newcommand{\includegenai}{%
+\chapter*{Statement on the use of Generative AI}
+  \instructionsgenai
+  \ifthenelse{\equal{\theUseOfGenAI}{}}{}{%
+    \theUseOfGenAI\\
+  }
+  The text, code, and images in this thesis are my own (unless otherwise specified). Generative AI has
+  only been used in accordance with the KU~Leuven guidelines and appropriate references have been added.
+  I have reviewed and edited the content as needed and I take full responsibility for the content of
+  the thesis.
+}
+
 
 \newcommand{\includecv}[1]{%
   \IncludeUnnumberedChapterIfExists{#1}{\cvname}{\instructionscv}%
@@ -1143,6 +1186,22 @@ Lijst van de publicaties door de doctorandus/a (auteur of co-auteur).
   \fi
 }
 
+\newcommand{\instructionsgenai}{
+  \ifadsphd@showinstructions
+\begin{ftw_instructions}
+Read the guidelines in relation to GenAI at KU Leuven and add the `statement
+on the use of Generative AI' in your manuscript.
+
+\ifthenelse{\equal{\theUseOfGenAI}{}}{%
+  Uncomment the appropriate sentences in the \textbackslash useOfGenAI command
+  and expand the text where needed to make it more specific and add topics if they are not covered
+  by any of the indicated topics.
+}{}
+\end{ftw_instructions}
+  \else
+  \fi
+}
+
 \newcommand{\instructionscv}{
   \ifadsphd@showinstructions
 \begin{ftw_instructions}
@@ -1166,6 +1225,9 @@ De appendices kunnen desgevallend worden gebundeld in een apart boekdeel.
   \else
   \fi
 }
+
+\newcommand{\theUseOfGenAI}{}
+\newcommand{\useOfGenAI}[1]{\renewcommand{\theUseOfGenAI}{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%% New commands for the Dutch summary  %%%%%%%%%%%%%%%%%%%
 
